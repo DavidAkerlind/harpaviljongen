@@ -1,16 +1,13 @@
-import {
-	createBrowserRouter,
-	RouterProvider,
-	HashRouter,
-	Routes,
-	Route,
-} from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const ErrorPage = lazy(() => import('./pages/ErrorPage/ErrorPage'));
 const WinePage = lazy(() => import('./pages/WinePage/WinePage'));
 const MenuPage = lazy(() => import('./pages/MenuPage/MenuPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage/ContactPage'));
+const NewsPage = lazy(() => import('./pages/NewsPage/NewsPage'));
+const FaqPage = lazy(() => import('./pages/FaqPage/FaqPage'));
 
 function App() {
 	return (
@@ -46,7 +43,40 @@ function App() {
 								fallback={
 									<div className="page">Loading...</div>
 								}>
-								{<WinePage />}
+								<WinePage />
+							</Suspense>
+						}
+					/>
+					<Route
+						path="/contact"
+						element={
+							<Suspense
+								fallback={
+									<div className="page">Loading...</div>
+								}>
+								<ContactPage />
+							</Suspense>
+						}
+					/>
+					<Route
+						path="/news"
+						element={
+							<Suspense
+								fallback={
+									<div className="page">Loading...</div>
+								}>
+								<NewsPage />
+							</Suspense>
+						}
+					/>
+					<Route
+						path="/faq"
+						element={
+							<Suspense
+								fallback={
+									<div className="page">Loading...</div>
+								}>
+								<FaqPage />
 							</Suspense>
 						}
 					/>
