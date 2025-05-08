@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:wght@400;700&display=swap');
+
+:root {
+	/* COLORS */
+	--color-bg: #f1f0ee;
+	--color-accent: #a3cbe5;
+	--color-white: #ffffff;
+	--color-text: #333333;
+	--black: #000000;
+	/* FONTS */
+	--font-base: 'Lora', serif;
+	--font-alt: 'Inter', sans-serif;
+	--font-size-base: 16px;
+}
+
+/*  ==== RESET ==== */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	border: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.page {
+	min-height: 100vh;
+	background-color: var(--color-bg);
+}
