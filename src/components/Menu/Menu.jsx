@@ -1,6 +1,6 @@
 import './menu.css';
 import MenuItem from '../MenuItem/MenuItem';
-import logo from '../../assets/hare-logo-blue.svg';
+import logo from '../../assets/logo/hare-logo-blue.svg';
 
 function Menu({ title, type, menu, hasLogo }) {
 	return (
@@ -16,9 +16,11 @@ function Menu({ title, type, menu, hasLogo }) {
 			)}
 
 			{type === 'wine' && (
-				<p className=" menu__description menu__description--price">
+				<h2
+					aria-label="pris per vinglas"
+					className=" menu__description menu__description--price">
 					165:- <strong>/glas</strong>
-				</p>
+				</h2>
 			)}
 
 			<section className="menu__items">
@@ -35,7 +37,7 @@ function Menu({ title, type, menu, hasLogo }) {
 
 			{hasLogo && (
 				<figure className="menu__logo">
-					<img src={logo} alt="logo" />
+					<img src={logo} alt="Harpaviljongen logo" />
 				</figure>
 			)}
 		</section>
