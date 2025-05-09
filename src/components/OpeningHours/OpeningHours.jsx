@@ -1,6 +1,5 @@
 import './openingHours.css';
 import openingHours from '../../data/openingHours';
-
 function OpeningHours() {
 	return (
 		<section className="opening-hours">

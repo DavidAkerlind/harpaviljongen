@@ -1,8 +1,8 @@
 import './menu.css';
 import MenuItem from '../MenuItem/MenuItem';
-import logo from '../../assets/logo/hare-logo-blue.svg';
+// import logo from '../../assets/logo/hare-logo-blue.svg';
 
-function Menu({ title, type, menu, hasLogo }) {
+function Menu({ title, type, menu, logo }) {
 	return (
 		<section className="menu">
 			<h2 className="menu__title">{title}</h2>
@@ -35,9 +35,9 @@ function Menu({ title, type, menu, hasLogo }) {
 				))}
 			</section>
 
-			{hasLogo && (
-				<figure className="menu__logo">
-					<img src={logo} alt="Harpaviljongen logo" />
+			{logo && (
+				<figure className={`menu__background-img ${type}`}>
+					<img src={logo} alt={logo} />
 				</figure>
 			)}
 		</section>

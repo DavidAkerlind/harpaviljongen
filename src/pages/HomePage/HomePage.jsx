@@ -5,6 +5,8 @@ import { lunches, wineList } from '../../data/data';
 import OpeningHours from '../../components/OpeningHours/OpeningHours';
 import Flexbox from '../../components/Flexbox/Flexbox';
 import Grid from '../../components/Grid/Grid';
+import hareLogo from '../../assets/logo/hare-logo-blue.svg';
+import wineIllustration from '../../assets/illustrations/wineglass-filled.svg';
 
 function HomePage() {
 	return (
@@ -20,11 +22,16 @@ function HomePage() {
 				title="VECKANS LUNCH"
 				type="lunch"
 				menu={lunches}
-				hasLogo={true}
+				logo={hareLogo}
 			/>
 
 			<Flexbox>
-				<Menu title="VECKANS VINER" type="wine" menu={wineList} />
+				<Menu
+					title="VECKANS VINER"
+					type="wine"
+					menu={wineList}
+					logo={wineIllustration}
+				/>
 				<OpeningHours />
 			</Flexbox>
 		</section>

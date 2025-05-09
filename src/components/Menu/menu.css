@@ -15,10 +15,10 @@
 	font-size: 1.3rem;
 }
 
-.menu__logo {
+.menu__background-img {
 	position: absolute;
-	top: 0rem;
-	right: 2rem;
+	top: 0;
+	right: 0;
 	width: 30rem;
 	height: 30rem;
 	z-index: -1;
@@ -26,6 +26,20 @@
 		height: 100%;
 		width: 100%;
 	}
+}
+
+.menu__background-img.lunch {
+	top: 0rem;
+	right: 4rem;
+	width: 30rem;
+	height: 30rem;
+}
+
+.menu__background-img.wine {
+	top: 6rem;
+	right: 7rem;
+	width: 10rem;
+	height: 10rem;
 }
 
 /* === Phones (e.g. iPhones, less than 768px) === */
