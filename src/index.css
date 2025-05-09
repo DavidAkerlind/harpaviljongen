@@ -69,6 +69,7 @@ ul {
 	width: 30rem;
 	height: 30rem;
 	z-index: -1;
+	transition: all ease-in-out 0.3s;
 	img {
 		height: 100%;
 		width: 100%;
@@ -94,6 +95,30 @@ ul {
 	right: 7rem;
 	width: 5rem;
 	height: 5rem;
+}
+
+@media (max-width: 768px) {
+	.background-img.lunch {
+		top: 0rem;
+		right: 50vw;
+		width: 15rem;
+		height: 15rem;
+	}
+
+	.background-img.wine {
+		top: 1rem;
+		left: 50vw;
+		width: 10rem;
+		height: 10rem;
+	}
+
+	.background-img.opening-hours {
+		z-index: -1;
+		top: -12.5rem;
+		right: 12vw;
+		width: 4rem;
+		height: 4rem;
+	}
 }
 
 /* === Tablets (e.g. iPads, 768px – 1024px) === */
