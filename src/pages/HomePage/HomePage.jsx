@@ -7,6 +7,7 @@ import Flexbox from '../../components/Flexbox/Flexbox';
 import Grid from '../../components/Grid/Grid';
 import hareLogo from '../../assets/logo/hare-logo-blue.svg';
 import wineIllustration from '../../assets/illustrations/wineglass-filled.svg';
+import clockIllustration from '../../assets/illustrations/clock.svg';
 
 function HomePage() {
 	return (
@@ -22,7 +23,7 @@ function HomePage() {
 				title="VECKANS LUNCH"
 				type="lunch"
 				menu={lunches}
-				logo={hareLogo}
+				img={hareLogo}
 			/>
 
 			<Flexbox>
@@ -30,9 +31,9 @@ function HomePage() {
 					title="VECKANS VINER"
 					type="wine"
 					menu={wineList}
-					logo={wineIllustration}
+					img={wineIllustration}
 				/>
-				<OpeningHours />
+				<OpeningHours img={clockIllustration} />
 			</Flexbox>
 		</section>
 	);

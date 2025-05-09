@@ -2,7 +2,7 @@ import './menu.css';
 import MenuItem from '../MenuItem/MenuItem';
 // import logo from '../../assets/logo/hare-logo-blue.svg';
 
-function Menu({ title, type, menu, logo }) {
+function Menu({ title, type, menu, img }) {
 	return (
 		<section className="menu">
 			<h2 className="menu__title">{title}</h2>
@@ -35,9 +35,9 @@ function Menu({ title, type, menu, logo }) {
 				))}
 			</section>
 
-			{logo && (
+			{img && (
 				<figure className={`menu__background-img ${type}`}>
-					<img src={logo} alt={logo} />
+					<img src={img} alt={img} />
 				</figure>
 			)}
 		</section>

@@ -42,6 +42,13 @@
 	height: 10rem;
 }
 
+.menu__background-img.opening {
+	top: 6rem;
+	right: 7rem;
+	width: 10rem;
+	height: 10rem;
+}
+
 /* === Phones (e.g. iPhones, less than 768px) === */
 @media screen and (max-width: 767px) {
 	/* Phone-specific styles here */

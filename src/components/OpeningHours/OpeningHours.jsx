@@ -1,6 +1,7 @@
 import './openingHours.css';
+import '../Menu/menu.css';
 import openingHours from '../../data/openingHours';
-function OpeningHours() {
+function OpeningHours({ img }) {
 	return (
 		<section className="opening-hours">
 			<h2 className="opening-hours__title">ÖPPETTIDER</h2>
@@ -12,6 +13,11 @@ function OpeningHours() {
 					</li>
 				))}
 			</ul>
+			{img && (
+				<figure className={`menu__background-img opening`}>
+					<img src={img} alt={img} />
+				</figure>
+			)}
 		</section>
 	);
 }
