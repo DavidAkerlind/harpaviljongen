@@ -1,0 +1,1 @@
+import{j as e}from"./index-CBcpplN0.js";const n="/harpaviljongen/assets/menu-09-may-BNCnnrm1.png";function t(){return e.jsx("section",{className:"page page-menu",children:e.jsx("iframe",{src:n,width:"100%",height:"600px",style:{border:"none"},title:"Meny"})})}export{t as default};
