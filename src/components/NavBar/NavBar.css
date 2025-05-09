@@ -1,0 +1,18 @@
+.nav {
+	position: fixed;
+	top: 1rem;
+	width: 100%;
+	text-align: center;
+	letter-spacing: normal;
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: center;
+	.nav__list {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: flex-start;
+		width: 33%;
+	}
+}

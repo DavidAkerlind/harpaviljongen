@@ -1,0 +1,20 @@
+.nav__list-item {
+	margin-right: 1rem;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	text-shadow: none;
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+
+.link,
+.active-link:hover {
+	color: var(--color-blue-dark);
+	-webkit-text-stroke: 1px transparent;
+}
+
+.active-link,
+.link--hover:hover {
+	color: transparent;
+	-webkit-text-stroke: 1px var(--color-blue-dark);
+}
