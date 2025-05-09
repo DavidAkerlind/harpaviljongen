@@ -16,8 +16,8 @@
 }
 
 .menu-item__price {
-	color: var(--color-blue-light);
-	font-weight: 900;
+	-webkit-text-stroke: 1px var(--color-blue-dark);
+
 	position: absolute;
 	right: 0px;
 	top: 40%;

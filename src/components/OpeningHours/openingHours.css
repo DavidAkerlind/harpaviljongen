@@ -1,8 +1,11 @@
 .opening-hours {
+	z-index: 999;
 	text-align: center;
+	max-width: 12.5rem;
 }
 
 .opening-hours__title {
+	margin-bottom: 1rem;
 }
 
 .opening-hours__day {

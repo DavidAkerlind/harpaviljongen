@@ -1,0 +1,14 @@
+.flexbox {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+
+/* === Tablets (e.g. iPads, 768px – 1024px) === */
+@media screen and (max-width: 1024px) {
+	/* Tablet-specific styles here */
+
+	.flexbox {
+		flex-direction: column;
+	}
+}

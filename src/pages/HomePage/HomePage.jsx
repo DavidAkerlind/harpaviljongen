@@ -3,6 +3,8 @@ import Menu from '../../components/Menu/Menu';
 import { Link } from 'react-router-dom';
 import { lunches, wineList } from '../../data/data';
 import OpeningHours from '../../components/OpeningHours/OpeningHours';
+import Flexbox from '../../components/Flexbox/Flexbox';
+import Grid from '../../components/Grid/Grid';
 
 function HomePage() {
 	return (
@@ -20,8 +22,11 @@ function HomePage() {
 				menu={lunches}
 				hasLogo={true}
 			/>
-			<Menu title="VECKANS VINER" type="wine" menu={wineList} />
-			<OpeningHours />
+
+			<Flexbox>
+				<Menu title="VECKANS VINER" type="wine" menu={wineList} />
+				<OpeningHours />
+			</Flexbox>
 		</section>
 	);
 }

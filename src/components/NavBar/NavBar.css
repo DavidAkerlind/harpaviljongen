@@ -3,7 +3,6 @@
 	text-align: center;
 	letter-spacing: normal;
 	.nav__list {
-		margin-top: 1rem;
 		display: flex;
 		flex-direction: row;
 		align-items: flex-start;

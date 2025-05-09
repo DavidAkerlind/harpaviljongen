@@ -1,23 +1,39 @@
 import './flexbox.css';
+import React from 'react';
 
 function Flexbox({
 	children,
 	direction = 'row',
 	wrap = 'nowrap',
-	justify = 'flex-start',
-	align = 'stretch',
+	justify = 'center',
+	align = 'center',
+	childFlex = true,
 }) {
+	const wrappedChildren = childFlex
+		? React.Children.map(children, (child) => (
+				<section
+					style={{
+						flex: 1,
+						display: 'flex',
+						alignItems: 'center',
+						justifyContent: 'center',
+					}}>
+					{child}
+				</section>
+		  ))
+		: children;
+
 	return (
-		<div
+		<section
+			className="flexbox"
 			style={{
 				display: 'flex',
-				flexDirection: direction,
 				flexWrap: wrap,
 				justifyContent: justify,
 				alignItems: align,
 			}}>
-			{children}
-		</div>
+			{wrappedChildren}
+		</section>
 	);
 }
 
