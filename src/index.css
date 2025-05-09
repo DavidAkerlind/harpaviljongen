@@ -35,14 +35,31 @@ ul {
 	list-style-type: none;
 }
 
+/* ==== BASIC STYLING ==== */
+
 .page {
 	min-height: 100vh;
 	background-color: var(--color-bg);
 	color: var(--color-blue-dark);
-	padding-inline: 2rem;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .page-header {
+	top: 2rem;
+	position: absolute;
 	font-size: 2rem;
 	font-weight: 600;
+}
+
+/* === Tablets (e.g. iPads, 768px – 1024px) === */
+@media screen and (max-width: 1024px) {
+	/* Tablet-specific styles here */
+}
+
+/* === Phones (e.g. iPhones, less than 768px) === */
+@media screen and (max-width: 767px) {
+	/* Phone-specific styles here */
 }

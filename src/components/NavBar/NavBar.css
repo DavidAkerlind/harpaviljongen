@@ -1,18 +1,27 @@
 .nav {
-	position: fixed;
-	top: 1rem;
 	width: 100%;
 	text-align: center;
 	letter-spacing: normal;
-	display: flex;
-	flex-direction: row;
-	justify-content: start;
-	align-items: center;
 	.nav__list {
+		margin-top: 1rem;
 		display: flex;
 		flex-direction: row;
 		align-items: flex-start;
 		justify-content: flex-start;
 		width: 33%;
+	}
+}
+
+/* === Tablets (e.g. iPads, 768px – 1024px) === */
+@media screen and (max-width: 1024px) {
+	/* Tablet-specific styles here */
+}
+
+/* === Phones (e.g. iPhones, less than 768px) === */
+@media screen and (max-width: 767px) {
+	/* Phone-specific styles here */
+
+	.nav {
+		display: none;
 	}
 }

@@ -1,7 +1,6 @@
-import { Link } from 'react-router-dom';
 import NavItem from '../NavItem/NavItem';
 
-import './NavBar.css';
+import './navBar.css';
 
 function NavBar() {
 	const navItems = [
@@ -28,11 +27,6 @@ function NavBar() {
 					/>
 				))}
 			</ul>
-			<h1 className="page-header">
-				<Link className="link" aria-label={`Go to Home page`} to={'/'}>
-					HARPAVILJONGEN
-				</Link>
-			</h1>
 		</nav>
 	);
 }

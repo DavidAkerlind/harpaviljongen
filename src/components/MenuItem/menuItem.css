@@ -1,0 +1,24 @@
+.menu-item {
+	position: relative;
+	margin-bottom: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.menu-item__title {
+	font-size: 1.2rem;
+}
+
+.menu-item__description {
+	font-size: 0.8rem;
+	max-width: 80%;
+}
+
+.menu-item__price {
+	color: var(--color-blue-light);
+	font-weight: 900;
+	position: absolute;
+	right: 0px;
+	top: 40%;
+}

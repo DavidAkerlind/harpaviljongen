@@ -1,9 +1,25 @@
 import NavBar from '../../components/NavBar/NavBar';
+import Menu from '../../components/Menu/Menu';
+import { Link } from 'react-router-dom';
+import { lunches, wineList } from '../../data/data';
 
 function HomePage() {
 	return (
 		<section className="page page-home">
 			<NavBar></NavBar>
+			<h1 className="page-header">
+				<Link className="link" aria-label={`Go to Home page`} to={'/'}>
+					HARPAVILJONGEN
+				</Link>
+			</h1>
+
+			<Menu
+				title="VECKANS LUNCH"
+				type="lunch"
+				menu={lunches}
+				hasLogo={true}
+			/>
+			<Menu title="VECKANS VINER" type="wine" menu={wineList} />
 		</section>
 	);
 }
