@@ -1,0 +1,13 @@
+.opening-hours {
+	text-align: center;
+}
+
+.opening-hours__title {
+}
+
+.opening-hours__day {
+	display: flex;
+	width: 100%;
+	gap: 2rem;
+	justify-content: space-between;
+}

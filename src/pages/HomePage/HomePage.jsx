@@ -2,6 +2,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import Menu from '../../components/Menu/Menu';
 import { Link } from 'react-router-dom';
 import { lunches, wineList } from '../../data/data';
+import OpeningHours from '../../components/OpeningHours/OpeningHours';
 
 function HomePage() {
 	return (
@@ -20,6 +21,7 @@ function HomePage() {
 				hasLogo={true}
 			/>
 			<Menu title="VECKANS VINER" type="wine" menu={wineList} />
+			<OpeningHours />
 		</section>
 	);
 }
