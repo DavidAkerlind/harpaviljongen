@@ -36,7 +36,7 @@ function Menu({ title, type, menu, img }) {
 			</section>
 
 			{img && (
-				<figure className={`menu__background-img ${type}`}>
+				<figure className={`background-img ${type}`}>
 					<img src={img} alt={img} />
 				</figure>
 			)}

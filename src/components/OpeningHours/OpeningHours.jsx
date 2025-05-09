@@ -14,7 +14,7 @@ function OpeningHours({ img }) {
 				))}
 			</ul>
 			{img && (
-				<figure className={`menu__background-img opening`}>
+				<figure className={`background-img opening-hours`}>
 					<img src={img} alt={img} />
 				</figure>
 			)}
