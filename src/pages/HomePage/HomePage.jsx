@@ -11,6 +11,7 @@ import hareLogo from '../../assets/logo/hare-logo-blue.svg';
 import wineIllustration from '../../assets/illustrations/wineglass-filled.svg';
 import clockIllustration from '../../assets/illustrations/clock.svg';
 import PageHeader from '../../components/PageHeader/PageHeader';
+import Button from '../../components/Button/Button';
 
 function HomePage() {
 	const location = useLocation();
@@ -29,7 +30,10 @@ function HomePage() {
 		<section className="page page-home">
 			<NavBar />
 			<PageHeader text="HARPAVILJONGEN" />
-
+			<section className="page__top-section">
+				<Button text="MENU" link="/menu" />
+				<Button text="HOME" link="/" />
+			</section>
 			<Menu menu={weeklyLunch} img={hareLogo} />
 
 			<Flexbox>

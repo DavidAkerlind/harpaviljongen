@@ -23,11 +23,3 @@
 	font-weight: 900;
 	font-size: 1.3rem;
 }
-
-/* === Phones (e.g. iPhones, less than 768px) === */
-@media screen and (max-width: 767px) {
-	/* Phone-specific styles here */
-	.menu:first-of-type {
-		margin-top: 3rem;
-	}
-}

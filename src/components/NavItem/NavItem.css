@@ -5,16 +5,19 @@
 	text-shadow: none;
 	font-weight: 700;
 	font-size: 1.5rem;
+	transition: all ease-in-out 0.1s;
 }
 
 .link,
 .active-link:hover {
 	color: var(--color-blue-dark);
 	-webkit-text-stroke: 1px transparent;
+	transition: all ease-in-out 0.1s;
 }
 
 .active-link,
 .link--hover:hover {
 	color: transparent;
 	-webkit-text-stroke: 1px var(--color-blue-dark);
+	transition: all ease-in-out 0.1s;
 }

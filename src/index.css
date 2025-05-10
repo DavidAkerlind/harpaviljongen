@@ -62,6 +62,14 @@ html {
 	min-width: 100vw;
 }
 
+.page__top-section {
+	margin-block: 2rem;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	gap: 2rem;
+}
+
 /* === Tablets (e.g. iPads, 768px – 1024px) === */
 @media screen and (max-width: 1024px) {
 	/* Tablet-specific styles here */

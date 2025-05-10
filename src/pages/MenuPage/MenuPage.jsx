@@ -1,3 +1,4 @@
+import './menuPage.css';
 import Menu from '../../components/Menu/Menu';
 import NavBar from '../../components/NavBar/NavBar';
 import PageHeader from '../../components/PageHeader/PageHeader';
@@ -8,12 +9,17 @@ import grapes from '../../assets/illustrations/grapes.svg';
 import BackgroundImage from '../../components/BackgroundImage/BackgroundImage';
 import Grid from '../../components/Grid/Grid';
 import { menuSnacks, menuAlways, menuSweet } from '../../data/data';
+import Button from '../../components/Button/Button';
 
 function MenuPage() {
 	return (
 		<section className="page page-menu">
 			<NavBar />
 			<PageHeader text="HARPAVILJONGEN" />
+			<section className="page__top-section">
+				<Button text="MENU" link="/menu" />
+				<Button text="HOME" link="/" />
+			</section>
 			<Menu menu={menuAlways} img={hareLogo} />
 			<Flexbox>
 				<Menu menu={menuSweet} img="" />
