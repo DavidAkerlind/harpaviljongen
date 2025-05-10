@@ -1,0 +1,1 @@
+import{j as e}from"./index-D5d65NDf.js";import{N as a,P as m,M as s,h as n,m as r,F as u,b as x,c as t}from"./PageHeader-Dt9VTAzd.js";function j(){return e.jsxs("section",{className:"page page-menu",children:[e.jsx(a,{}),e.jsx(m,{text:"HARPAVILJONGEN"}),e.jsx(s,{menu:r,img:n}),e.jsxs(u,{children:[e.jsx(s,{menu:x,img:""}),e.jsx(s,{menu:t,img:""})]})]})}export{j as default};
