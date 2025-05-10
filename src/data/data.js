@@ -34,7 +34,7 @@ export const weeklyWine = {
 export const weeklyLunch = {
 	title: 'VECKANS LUNCH',
 	description: `Serveras tisdag till söndag mellan 11:00 och 15:00`,
-	type: 'normal',
+	type: 'lunch',
 	price: '',
 	items: [
 		{
@@ -59,7 +59,7 @@ export const weeklyLunch = {
 export const menuAlways = {
 	title: 'ALLTID PÅ MENYN',
 	description: '',
-	type: 'normal',
+	type: 'all',
 	price: '',
 	items: [
 		{
@@ -86,7 +86,7 @@ export const menuSweet = {
 
 	description: '',
 
-	type: 'normal',
+	type: 'sweets',
 	price: '',
 
 	items: [
@@ -119,7 +119,7 @@ export const menuSnacks = {
 
 	description: '',
 
-	type: 'small',
+	type: 'small snack',
 	price: '',
 
 	items: [

@@ -35,12 +35,20 @@
 	height: 5rem;
 }
 
-.background-img.normal {
+.background-img.all {
 	transform: scaleX(-1);
 	top: -7rem;
 	right: -10rem;
 	width: 25rem;
 	height: 25rem;
+}
+
+.background-img.snack {
+	transform: scaleY(-1);
+	top: 5rem;
+	right: 15rem;
+	width: 5rem;
+	height: 5rem;
 }
 
 @media (max-width: 768px) {
@@ -64,5 +72,12 @@
 		right: 12vw;
 		width: 4rem;
 		height: 4rem;
+	}
+
+	.background-img.snack {
+		top: 5rem;
+		right: 10rem;
+		width: 5rem;
+		height: 5rem;
 	}
 }
