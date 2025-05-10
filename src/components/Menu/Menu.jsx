@@ -4,7 +4,7 @@ import MenuItem from '../MenuItem/MenuItem';
 
 function Menu({ title, type, menu, img }) {
 	return (
-		<section className="menu">
+		<section id={`menu ${type}`} className="menu">
 			<h2 className="menu__title">{title}</h2>
 
 			{type === 'lunch' && (

@@ -13,6 +13,10 @@ function NavBar() {
 			text: 'Meny',
 			link: '/menu',
 		},
+		{
+			text: 'Öppettider',
+			link: '#openingHours',
+		},
 	];
 
 	return (

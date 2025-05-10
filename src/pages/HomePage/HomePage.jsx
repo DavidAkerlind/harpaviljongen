@@ -1,7 +1,9 @@
+import { Link, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+
 import NavBar from '../../components/NavBar/NavBar';
 import Menu from '../../components/Menu/Menu';
-import { Link } from 'react-router-dom';
-import { lunches, wineList } from '../../data/data';
+import { weeklyLunch, weeklyWine } from '../../data/data';
 import OpeningHours from '../../components/OpeningHours/OpeningHours';
 import Flexbox from '../../components/Flexbox/Flexbox';
 import Grid from '../../components/Grid/Grid';
@@ -10,6 +12,18 @@ import wineIllustration from '../../assets/illustrations/wineglass-filled.svg';
 import clockIllustration from '../../assets/illustrations/clock.svg';
 
 function HomePage() {
+	const location = useLocation();
+
+	useEffect(() => {
+		if (location.hash) {
+			const id = location.hash.replace('#', '');
+			const el = document.getElementById(id);
+			if (el) {
+				el.scrollIntoView({ behavior: 'smooth' });
+			}
+		}
+	}, [location]);
+
 	return (
 		<section className="page page-home">
 			<NavBar></NavBar>
@@ -22,7 +36,7 @@ function HomePage() {
 			<Menu
 				title="VECKANS LUNCH"
 				type="lunch"
-				menu={lunches}
+				menu={weeklyLunch}
 				img={hareLogo}
 			/>
 
@@ -30,7 +44,7 @@ function HomePage() {
 				<Menu
 					title="VECKANS VINER"
 					type="wine"
-					menu={wineList}
+					menu={weeklyWine}
 					img={wineIllustration}
 				/>
 				<OpeningHours img={clockIllustration} />

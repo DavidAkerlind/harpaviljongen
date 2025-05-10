@@ -13,7 +13,7 @@ function MenuItem({ title, description, price, producer }) {
 				)}
 			</p>
 
-			<p className="menu-item__price">{price}</p>
+			{price && <p className="menu-item__price">{price}:-</p>}
 		</article>
 	);
 }

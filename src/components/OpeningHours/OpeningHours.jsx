@@ -3,9 +3,9 @@ import '../Menu/menu.css';
 import openingHours from '../../data/openingHours';
 function OpeningHours({ img }) {
 	return (
-		<section className="opening-hours">
+		<section id="openingHours" className="opening-hours">
 			<h2 className="opening-hours__title">ÖPPETTIDER</h2>
-			<ul>
+			<ul className="opening-hours__day-list">
 				{openingHours.map(({ day, hours }) => (
 					<li className="opening-hours__day" key={day}>
 						<span>{day}</span>

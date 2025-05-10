@@ -35,6 +35,10 @@ ul {
 	list-style-type: none;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 /* ==== BASIC STYLING ==== */
 
 .app {
@@ -56,6 +60,7 @@ ul {
 }
 
 .page-header {
+	z-index: 4;
 	top: 2rem;
 	position: absolute;
 	font-size: 2rem;
@@ -71,6 +76,7 @@ ul {
 	z-index: -1;
 	transition: all ease-in-out 0.3s;
 	img {
+		z-index: -1;
 		height: 100%;
 		width: 100%;
 	}

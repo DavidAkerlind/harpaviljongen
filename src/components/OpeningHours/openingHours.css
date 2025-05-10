@@ -3,6 +3,7 @@
 	z-index: 999;
 	text-align: center;
 	max-width: 12.5rem;
+	gap: 1rem;
 }
 
 .opening-hours__title {
@@ -10,8 +11,9 @@
 }
 
 .opening-hours__day {
+	margin-bottom: 0.3rem;
 	display: flex;
 	width: 100%;
-	gap: 2rem;
+	gap: 4rem;
 	justify-content: space-between;
 }
