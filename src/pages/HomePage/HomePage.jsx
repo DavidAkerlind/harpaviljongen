@@ -10,6 +10,7 @@ import Grid from '../../components/Grid/Grid';
 import hareLogo from '../../assets/logo/hare-logo-blue.svg';
 import wineIllustration from '../../assets/illustrations/wineglass-filled.svg';
 import clockIllustration from '../../assets/illustrations/clock.svg';
+import PageHeader from '../../components/PageHeader/PageHeader';
 
 function HomePage() {
 	const location = useLocation();
@@ -26,27 +27,13 @@ function HomePage() {
 
 	return (
 		<section className="page page-home">
-			<NavBar></NavBar>
-			<h1 className="page-header">
-				<Link className="link" aria-label={`Go to Home page`} to={'/'}>
-					HARPAVILJONGEN
-				</Link>
-			</h1>
+			<NavBar />
+			<PageHeader text="HARPAVILJONGEN" />
 
-			<Menu
-				title="VECKANS LUNCH"
-				type="lunch"
-				menu={weeklyLunch}
-				img={hareLogo}
-			/>
+			<Menu menu={weeklyLunch} img={hareLogo} />
 
 			<Flexbox>
-				<Menu
-					title="VECKANS VINER"
-					type="wine"
-					menu={weeklyWine}
-					img={wineIllustration}
-				/>
+				<Menu menu={weeklyWine} img={wineIllustration} />
 				<OpeningHours img={clockIllustration} />
 			</Flexbox>
 		</section>

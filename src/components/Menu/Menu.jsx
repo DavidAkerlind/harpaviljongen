@@ -1,30 +1,29 @@
 import './menu.css';
 import MenuItem from '../MenuItem/MenuItem';
+import BackgroundImage from '../BackgroundImage/BackgroundImage';
 // import logo from '../../assets/logo/hare-logo-blue.svg';
 
-function Menu({ title, type, menu, img }) {
+function Menu({ menu, img }) {
+	const { title, description, type, price, items } = menu;
+
 	return (
-		<section id={`menu ${type}`} className="menu">
+		<section id={`menu ${type}`} className={`menu ${type}`}>
 			<h2 className="menu__title">{title}</h2>
 
-			{type === 'lunch' && (
-				<p className="menu__description">
-					Serveras tisdag till söndag mellan
-					<br />
-					<strong>11:00 och 15:00</strong>
-				</p>
+			{type === 'normal' && description && (
+				<p className="menu__description">{description}</p>
 			)}
 
 			{type === 'wine' && (
 				<h2
 					aria-label="pris per vinglas"
 					className=" menu__description menu__description--price">
-					165:- <strong>/glas</strong>
+					{price} <strong>/glas</strong>
 				</h2>
 			)}
 
 			<section className="menu__items">
-				{menu.map((item, index) => (
+				{items.map((item, index) => (
 					<MenuItem
 						key={index}
 						title={item.title}
@@ -36,9 +35,11 @@ function Menu({ title, type, menu, img }) {
 			</section>
 
 			{img && (
-				<figure className={`background-img ${type}`}>
-					<img src={img} alt={img} />
-				</figure>
+				<BackgroundImage
+					img={img}
+					altText={`background image ${type}`}
+					type={type}
+				/>
 			)}
 		</section>
 	);

@@ -1,0 +1,7 @@
+.page-header {
+	z-index: 4;
+	top: 2rem;
+	position: absolute;
+	font-size: 2rem;
+	font-weight: 600;
+}

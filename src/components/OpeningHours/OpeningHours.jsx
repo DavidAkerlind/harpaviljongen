@@ -1,6 +1,7 @@
 import './openingHours.css';
 import '../Menu/menu.css';
-import openingHours from '../../data/openingHours';
+import { openingHours } from '../../data/data.js';
+import BackgroundImage from '../BackgroundImage/BackgroundImage.jsx';
 function OpeningHours({ img }) {
 	return (
 		<section id="openingHours" className="opening-hours">
@@ -14,9 +15,11 @@ function OpeningHours({ img }) {
 				))}
 			</ul>
 			{img && (
-				<figure className={`background-img opening-hours`}>
-					<img src={img} alt={img} />
-				</figure>
+				<BackgroundImage
+					img={img}
+					altText={`background image opening-hours`}
+					type="opening-hours"
+				/>
 			)}
 		</section>
 	);

@@ -1,7 +1,15 @@
 .menu {
+	min-width: 30vw;
 	z-index: 2;
 	text-align: center;
 	position: relative;
+}
+
+.menu.small article {
+	margin-bottom: 0.2rem;
+	.menu-item__title {
+		font-size: 1rem;
+	}
 }
 
 .menu__description {
@@ -28,31 +36,10 @@
 	}
 }
 
-.menu__background-img.lunch {
-	top: 0rem;
-	right: 4rem;
-	width: 30rem;
-	height: 30rem;
-}
-
-.menu__background-img.wine {
-	top: 6rem;
-	right: 7rem;
-	width: 10rem;
-	height: 10rem;
-}
-
-.menu__background-img.opening {
-	top: 6rem;
-	right: 7rem;
-	width: 10rem;
-	height: 10rem;
-}
-
 /* === Phones (e.g. iPhones, less than 768px) === */
 @media screen and (max-width: 767px) {
 	/* Phone-specific styles here */
-	.menu {
-		margin-top: 4rem;
+	.menu:first-of-type {
+		margin-top: 3rem;
 	}
 }
