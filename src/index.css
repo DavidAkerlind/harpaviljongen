@@ -71,8 +71,11 @@ html {
 }
 
 /* === Tablets (e.g. iPads, 768px – 1024px) === */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 767px) {
 	/* Tablet-specific styles here */
+	.page__top-section {
+		margin-top: 4rem;
+	}
 }
 
 /* === Phones (e.g. iPhones, less than 768px) === */
