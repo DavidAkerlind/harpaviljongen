@@ -1,20 +1,20 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-export function useMenus(menuID) {
-	const [fetchedMenu, setFetchedMenu] = useState([]);
+export function useOpeningHours(menuID) {
+	const [fetchedHours, setFetchedHours] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
 
 	useEffect(() => {
 		if (!menuID) return;
 		axios
-			.get(`http://localhost:7000/api/menus/${menuID}`)
+			.get(`http://localhost:7000/api/opening-hours`)
 			.then((res) => {
-				setFetchedMenu(res.data);
+				setFetchedHours(res.data);
 			})
 			.catch((error) => setError(error))
 			.finally(() => setLoading(false));
 	}, [menuID]);
-	return { fetchedMenu, loading, error };
+	return { fetchedHours, loading, error };
 }
