@@ -4,9 +4,6 @@ import { Link, useLocation } from 'react-router-dom';
 function NavItem({ text, link }) {
 	const location = useLocation();
 
-	console.log(location);
-	console.log(link);
-
 	let isActive = false;
 	if (link.startsWith('#')) {
 		link = '/' + link;

@@ -16,5 +16,6 @@ export function useMenus(menuID) {
 			.catch((error) => setError(error))
 			.finally(() => setLoading(false));
 	}, [menuID]);
+	console.log(fetchedMenu);
 	return { fetchedMenu, loading, error };
 }
