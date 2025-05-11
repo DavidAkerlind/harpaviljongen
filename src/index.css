@@ -24,6 +24,7 @@
 }
 
 a {
+	color: var(--color-blue-dark);
 	text-decoration: none;
 }
 

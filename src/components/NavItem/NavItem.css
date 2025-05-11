@@ -1,23 +1,15 @@
 .nav__list-item {
-	margin-right: 1rem;
-	padding-top: 0.5rem;
-	padding-bottom: 1.5rem;
+	margin-right: 0.7rem;
+	padding-top: 1rem;
+	padding-bottom: 0.2rem;
 	text-shadow: none;
 	font-weight: 700;
-	font-size: 1.5rem;
+	font-size: 1rem;
 	transition: all ease-in-out 0.1s;
 }
 
-.link,
-.active-link:hover {
-	color: var(--color-blue-dark);
-	-webkit-text-stroke: 1px transparent;
-	transition: all ease-in-out 0.1s;
-}
-
-.active-link,
+.link--active,
 .link--hover:hover {
-	color: transparent;
-	-webkit-text-stroke: 1px var(--color-blue-dark);
-	transition: all ease-in-out 0.1s;
+	border-bottom: 1px var(--color-blue-dark) solid;
+	transition: all ease-in-out 0.3s;
 }

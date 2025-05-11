@@ -31,7 +31,7 @@ function HomePage() {
 			<NavBar />
 			<PageHeader text="HARPAVILJONGEN" />
 			<section className="page__top-section">
-				<Button text="MENU" link="/menu" />
+				<Button text="MENY" link="/menu" />
 			</section>
 			<Menu menu={weeklyLunch} img={hareLogo} />
 
