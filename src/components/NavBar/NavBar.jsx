@@ -23,12 +23,7 @@ function NavBar() {
 		<nav className="nav">
 			<ul className="nav__list">
 				{navItems.map((item, index) => (
-					<NavItem
-						key={index}
-						text={item.text}
-						link={item.link}
-						type={item.header}
-					/>
+					<NavItem key={index} text={item.text} link={item.link} />
 				))}
 			</ul>
 		</nav>

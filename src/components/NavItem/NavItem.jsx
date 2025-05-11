@@ -1,15 +1,16 @@
-import { use, useEffect } from 'react';
 import './navItem.css';
 import { Link, useLocation } from 'react-router-dom';
 
-function NavItem({ text, link, type }) {
+function NavItem({ text, link }) {
 	const location = useLocation();
 
 	console.log(location);
 	console.log(link);
 
 	let isActive = false;
-
+	if (link.startsWith('#')) {
+		link = '/' + link;
+	}
 	isActive = location.pathname === link;
 
 	return (

@@ -20,8 +20,11 @@ function HomePage() {
 		if (location.hash) {
 			const id = location.hash.replace('#', '');
 			const el = document.getElementById(id);
+
 			if (el) {
 				el.scrollIntoView({ behavior: 'smooth' });
+			} else {
+				console.log('HEJ');
 			}
 		}
 	}, [location]);
