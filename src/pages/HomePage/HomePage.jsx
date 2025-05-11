@@ -32,7 +32,6 @@ function HomePage() {
 			<PageHeader text="HARPAVILJONGEN" />
 			<section className="page__top-section">
 				<Button text="MENU" link="/menu" />
-				<Button text="HOME" link="/" />
 			</section>
 			<Menu menu={weeklyLunch} img={hareLogo} />
 

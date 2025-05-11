@@ -10,9 +10,7 @@ function Menu({ menu, img }) {
 		<section id={`menu ${type}`} className={`menu ${type}`}>
 			<h2 className="menu__title">{title}</h2>
 
-			{type === 'normal' && description && (
-				<p className="menu__description">{description}</p>
-			)}
+			{description && <p className="menu__description">{description}</p>}
 
 			{type === 'wine' && (
 				<h2

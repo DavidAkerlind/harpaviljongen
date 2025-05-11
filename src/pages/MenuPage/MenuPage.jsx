@@ -17,8 +17,7 @@ function MenuPage() {
 			<NavBar />
 			<PageHeader text="HARPAVILJONGEN" />
 			<section className="page__top-section">
-				<Button text="MENU" link="/menu" />
-				<Button text="HOME" link="/" />
+				<Button text="HEM" link="/" />
 			</section>
 			<Menu menu={menuAlways} img={hareLogo} />
 			<Flexbox>
