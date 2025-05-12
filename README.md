@@ -1,128 +1,75 @@
-# Harpaviljongen Website
+# Harpaviljongen
 
-This is the website for **Harpaviljongen**, a cozy restaurant that offers weekly lunch menus. The website is built with **React** and **Vite** and is designed with a focus on simplicity and elegance. The project will later include a backend with **Node.js** and **Express** to dynamically load menus and other content.
+**Harpaviljongen** är ett digitalt menysystem byggt i JavaScript, med möjligheter att läsa, redigera och visa menyer med en enkel REST API-arkitektur. Projektet är utformat för att kunna användas i restaurangsammanhang där menyer ofta behöver justeras.
 
-## Project Setup
+## 🛠️ Teknisk översikt
 
-### 1. Clone the repository
+- **Backend**: Node.js med Express
+- **Datakälla**: JSON-fil (`data.json`)
+- **Endpoints**:
+  - `GET /api/menus` – Hämtar alla menyer
+  - `GET /api/menus/:menuId` – Hämtar en specifik meny
+  - `PUT /api/menus/:menuId/:field` – Uppdaterar ett fält (t.ex. `title`, `description`) i en meny
+  - `PUT /api/menus/:menuId/:itemId/:field` – Uppdaterar ett fält i ett enskilt menyobjekt
 
-To get started, clone the repository:
-
-```bash
-git clone <repository-url>
-cd harpaviljongen
-```
-
-### 2. Install dependencies
-
-Install all the necessary dependencies:
-
-```bash
-npm install
-```
-
-### 3. Start the development server
-
-Run the following command to start the development server:
-
-```bash
-npm run dev
-```
-
-The app will be live at `http://localhost:3000`.
-
-## Project Structure
+## 📁 Struktur
 
 ```
-harpaviljongen/
-├── public/
-│   └── logo.png            // your logo file
-├── src/
-│   ├── assets/
-│   │   └── logo.png        // logo and other media
-│   ├── components/
-│   │   ├── Header.jsx      // header component
-│   │   ├── Menu.jsx        // menu component
-│   │   └── Event.jsx       // event or special offers component
-│   ├── pages/
-│   │   └── Home.jsx        // homepage
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css           // global CSS
-├── package.json
-└── vite.config.js
+.
+├── api/
+│   └── menus.js        # Express-router för meny-API:t
+├── data/
+│   └── data.json       # Alla menyer och menyobjekt lagras här
+├── server.js           # Startar Express-servern
+└── public/             # Statisk front-end (valfritt)
 ```
 
-### Key Components:
+## ▶️ Starta projektet
 
--   **Header.jsx**: Contains the logo and main header.
--   **Menu.jsx**: Displays the weekly lunch menu.
--   **Home.jsx**: The homepage that ties together the `Header` and `Menu`.
+1. Klona repo:
+   ```bash
+   git clone https://github.com/DavidAkerlind/harpaviljongen.git
+   cd harpaviljongen
+   ```
 
-## Fonts
+2. Installera beroenden:
+   ```bash
+   npm install
+   ```
 
-This project uses the **Lora** font from Google Fonts for a clean and modern serif typography.
+3. Starta server:
+   ```bash
+   node server.js
+   ```
 
-```html
-<link
-	href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap"
-	rel="stylesheet" />
+4. Servern körs nu på:  
+   [http://localhost:3000](http://localhost:3000)
+
+## ✏️ Exempelanrop
+
+### Uppdatera titel på en meny
+```http
+PUT /api/menus/menu-snacks/title
+Body: { "value": "NY SNACKTITEL" }
 ```
 
-In the global CSS file (`index.css`), the following styles are applied:
-
-```css
-body {
-	margin: 0;
-	font-family: 'Lora', serif;
-	background-color: #f1f0ee;
-	color: #333;
-}
+### Uppdatera pris på ett menyobjekt
+```http
+PUT /api/menus/menu-snacks/snack-1/price
+Body: { "value": 89 }
 ```
 
-## Colors
+## 🔧 Att göra
 
-The website follows the color scheme to match the branding of **Harpaviljongen**:
+- ✅ Läsa och skriva till `data.json`
+- ✅ PUT-anrop för menyer och menyobjekt
+- ☐ Validering av indata
+- ☐ UI för hantering
 
--   **Background Color**: `#f1f0ee` (Light beige/cream)
--   **Primary Accent Color**: `#a3cbe5` (Light blue)
--   **Text Color**: `#333` (Dark grey)
--   **Button/Action Color**: `#1a4f6b` (Dark blue)
+## 📄 Licens
+
+MIT – använd fritt men nämn gärna upphovsmakaren.
 
 ---
 
-## Styling Guidelines
-
-### Layout
-
--   The header has a centered logo and the title "Veckans Lunch på Harpaviljongen."
--   The menu is displayed as a list, with each item having a light background and separated by margins.
--   The typography focuses on legibility and simplicity with a primary focus on the Lora font.
-
-### Components
-
--   **Header**: Displays the restaurant logo and main heading. The logo has a circular design with a light blue background.
--   **Menu**: Displays the weekly menu with names, descriptions, and prices. Each menu item has a consistent styling with a soft background color and bold headings.
-
-### Example Menu Item Structure
-
--   **Dish Name**: Bold and in dark blue color.
--   **Description**: Regular text, providing details of the dish.
--   **Price**: Highlighted in light blue color.
-
-### Responsive Design
-
--   The layout adjusts for mobile devices, ensuring the text is legible and the structure is organized properly.
-
-## Future Improvements
-
--   Add dynamic backend functionality with **Node.js** and **Express**.
--   Integrate a database for storing weekly menu data.
--   Implement a booking system for reservations.
--   Improve UI with animation libraries or transitions for interactivity.
-
----
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+🧑‍💻 Byggt av [David Åkerlind](https://github.com/DavidAkerlind)
