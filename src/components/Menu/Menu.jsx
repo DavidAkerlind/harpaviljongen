@@ -3,11 +3,12 @@ import MenuItem from '../MenuItem/MenuItem';
 import BackgroundImage from '../BackgroundImage/BackgroundImage';
 import { fetchMenuById } from '../../API/fetchMenuById';
 import { devfetchMenuById } from '../../API/devfetchMenuById';
+import MenuSkeleton from '../Skeleton/Skeleton.jsx';
 
 function Menu({ menuId, img }) {
 	const { fetchedMenu, loading, error } = fetchMenuById(menuId);
 
-	if (loading) return <p>Loading...</p>;
+	if (loading) return <MenuSkeleton />;
 	if (error) return <p>Error loading menu: {error.message}</p>;
 
 	const { title, description, type, price, items } = fetchedMenu;
