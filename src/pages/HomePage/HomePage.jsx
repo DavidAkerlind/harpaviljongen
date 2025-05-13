@@ -11,6 +11,7 @@ import wineIllustration from '../../assets/illustrations/wineglass-filled.svg';
 import clockIllustration from '../../assets/illustrations/clock.svg';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import Button from '../../components/Button/Button';
+import MenuSkeleton from '../../components/Skeleton/Skeleton';
 
 function HomePage() {
 	const location = useLocation();

@@ -8,6 +8,7 @@ const MenuPage = lazy(() => import('./pages/MenuPage/MenuPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage/ContactPage'));
 const NewsPage = lazy(() => import('./pages/NewsPage/NewsPage'));
 const FaqPage = lazy(() => import('./pages/FaqPage/FaqPage'));
+import MenuSkeleton from './components/Skeleton/Skeleton';
 
 function App() {
 	return (
@@ -17,10 +18,7 @@ function App() {
 					<Route
 						path="/"
 						element={
-							<Suspense
-								fallback={
-									<div className="page">Loading...</div>
-								}>
+							<Suspense fallback={<MenuSkeleton />}>
 								<HomePage />
 							</Suspense>
 						}
@@ -28,10 +26,7 @@ function App() {
 					<Route
 						path="/menu"
 						element={
-							<Suspense
-								fallback={
-									<div className="page">Loading...</div>
-								}>
+							<Suspense fallback={<MenuSkeleton />}>
 								<MenuPage />
 							</Suspense>
 						}
@@ -39,10 +34,7 @@ function App() {
 					<Route
 						path="/wine"
 						element={
-							<Suspense
-								fallback={
-									<div className="page">Loading...</div>
-								}>
+							<Suspense fallback={<MenuSkeleton />}>
 								<WinePage />
 							</Suspense>
 						}
@@ -50,10 +42,7 @@ function App() {
 					<Route
 						path="/contact"
 						element={
-							<Suspense
-								fallback={
-									<div className="page">Loading...</div>
-								}>
+							<Suspense fallback={<MenuSkeleton />}>
 								<ContactPage />
 							</Suspense>
 						}
@@ -61,10 +50,7 @@ function App() {
 					<Route
 						path="/news"
 						element={
-							<Suspense
-								fallback={
-									<div className="page">Loading...</div>
-								}>
+							<Suspense fallback={<MenuSkeleton />}>
 								<NewsPage />
 							</Suspense>
 						}
@@ -72,10 +58,7 @@ function App() {
 					<Route
 						path="/faq"
 						element={
-							<Suspense
-								fallback={
-									<div className="page">Loading...</div>
-								}>
+							<Suspense fallback={<MenuSkeleton />}>
 								<FaqPage />
 							</Suspense>
 						}
@@ -83,10 +66,7 @@ function App() {
 					<Route
 						path="*"
 						element={
-							<Suspense
-								fallback={
-									<div className="page">Loading...</div>
-								}>
+							<Suspense fallback={<MenuSkeleton />}>
 								<ErrorPage />
 							</Suspense>
 						}

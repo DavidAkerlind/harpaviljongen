@@ -9,6 +9,7 @@ import grapes from '../../assets/illustrations/grapes.svg';
 import BackgroundImage from '../../components/BackgroundImage/BackgroundImage';
 import Grid from '../../components/Grid/Grid';
 import Button from '../../components/Button/Button';
+import MenuSkeleton from '../../components/Skeleton/Skeleton';
 
 function MenuPage() {
 	return (
