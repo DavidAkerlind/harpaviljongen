@@ -2,6 +2,8 @@
 	display: flex;
 	flex-direction: row;
 	gap: 1rem;
+	margin-bottom: 1rem;
+	max-width: 1200px;
 }
 
 /* === Tablets (e.g. iPads, 768px – 1024px) === */

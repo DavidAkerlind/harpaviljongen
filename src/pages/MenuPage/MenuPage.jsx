@@ -8,7 +8,6 @@ import storeFront from '../../assets/illustrations/storefront.svg';
 import grapes from '../../assets/illustrations/grapes.svg';
 import BackgroundImage from '../../components/BackgroundImage/BackgroundImage';
 import Grid from '../../components/Grid/Grid';
-import { menuSnacks, menuAlways, menuSweet } from '../../data/data';
 import Button from '../../components/Button/Button';
 
 function MenuPage() {
@@ -19,10 +18,16 @@ function MenuPage() {
 			<section className="page__top-section">
 				<Button text="HEM" link="/" />
 			</section>
-			<Menu menu={menuAlways} img={hareLogo} />
+			<Menu menuId="menu-always" img={hareLogo} />
 			<Flexbox>
-				<Menu menu={menuSweet} img="" />
-				<Menu menu={menuSnacks} img={grapes} />
+				<Menu menuId="menu-sweets" img="" />
+				<Menu menuId="menu-snacks" img={grapes} />
+			</Flexbox>
+			<Flexbox></Flexbox>
+			<Flexbox>
+				<Menu menuId="menu-bubbels" img="" />
+				<Menu menuId="menu-coctails" img="" />
+				<Menu menuId="menu-beer" img="" />
 			</Flexbox>
 		</section>
 	);

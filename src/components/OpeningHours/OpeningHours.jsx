@@ -1,16 +1,26 @@
 import './openingHours.css';
 import '../Menu/menu.css';
-import { openingHours } from '../../data/data.js';
 import BackgroundImage from '../BackgroundImage/BackgroundImage.jsx';
+import { fetchOpeningHours } from '../../API/fetchOpeningHours.js';
+import { devfetchOpeningHours } from '../../API/devfetchOpeningHours.js';
 function OpeningHours({ img }) {
+	const { fetchedHours, loading, error } = fetchOpeningHours();
+
+	if (loading) return <p>Loading...</p>;
+	if (error) return <p>Error loading menu: {error.message}</p>;
+
 	return (
 		<section id="openingHours" className="opening-hours">
 			<h2 className="opening-hours__title">ÖPPETTIDER</h2>
 			<ul className="opening-hours__day-list">
-				{openingHours.map(({ day, hours }) => (
+				{fetchedHours.map(({ day, hours }) => (
 					<li className="opening-hours__day" key={day}>
 						<span>{day}</span>
-						<span>{hours}</span>
+						<span>
+							{hours.from === null && hours.to === null
+								? 'Stängt'
+								: `${hours.from}-${hours.to}`}
+						</span>
 					</li>
 				))}
 			</ul>

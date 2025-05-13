@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 
 import NavBar from '../../components/NavBar/NavBar';
 import Menu from '../../components/Menu/Menu';
-import { weeklyLunch, weeklyWine } from '../../data/data';
 import OpeningHours from '../../components/OpeningHours/OpeningHours';
 import Flexbox from '../../components/Flexbox/Flexbox';
 import Grid from '../../components/Grid/Grid';
@@ -23,8 +22,6 @@ function HomePage() {
 
 			if (el) {
 				el.scrollIntoView({ behavior: 'smooth' });
-			} else {
-				console.log('HEJ');
 			}
 		}
 	}, [location]);
@@ -36,10 +33,10 @@ function HomePage() {
 			<section className="page__top-section">
 				<Button text="MENY" link="/menu" />
 			</section>
-			<Menu menu={weeklyLunch} img={hareLogo} />
+			<Menu menuId="menu-lunch" img={hareLogo} />
 
 			<Flexbox>
-				<Menu menu={weeklyWine} img={wineIllustration} />
+				<Menu menuId="menu-wine" img={wineIllustration} />
 				<OpeningHours img={clockIllustration} />
 			</Flexbox>
 		</section>
