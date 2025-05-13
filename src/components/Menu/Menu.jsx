@@ -5,7 +5,7 @@ import { fetchMenuById } from '../../API/fetchMenuById';
 import { devfetchMenuById } from '../../API/devfetchMenuById';
 
 function Menu({ menuId, img }) {
-	const { fetchedMenu, loading, error } = devfetchMenuById(menuId);
+	const { fetchedMenu, loading, error } = fetchMenuById(menuId);
 
 	if (loading) return <p>Loading...</p>;
 	if (error) return <p>Error loading menu: {error.message}</p>;
