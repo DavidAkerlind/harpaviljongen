@@ -19,7 +19,7 @@ function OpeningHours({ img }) {
 					<li className="opening-hours__day" key={day}>
 						<span>{day}</span>
 						<span>
-							{hours.from === null && hours.to === null
+							{hours.from === '' && hours.to === ''
 								? 'Stängt'
 								: `${hours.from}-${hours.to}`}
 						</span>
