@@ -8,7 +8,8 @@ const MenuPage = lazy(() => import('./pages/MenuPage/MenuPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage/ContactPage'));
 const NewsPage = lazy(() => import('./pages/NewsPage/NewsPage'));
 const FaqPage = lazy(() => import('./pages/FaqPage/FaqPage'));
-import MenuSkeleton from './components/Skeleton/Skeleton';
+const MenuSkeleton = lazy(() => import('./components/Skeleton/Skeleton'));
+const LoadingPage = lazy(() => import('./pages/LoadingPage/LoadingPage'));
 
 function App() {
 	return (
@@ -60,6 +61,14 @@ function App() {
 						element={
 							<Suspense fallback={<MenuSkeleton />}>
 								<FaqPage />
+							</Suspense>
+						}
+					/>
+					<Route
+						path="/loading"
+						element={
+							<Suspense fallback={<MenuSkeleton />}>
+								<LoadingPage />
 							</Suspense>
 						}
 					/>
