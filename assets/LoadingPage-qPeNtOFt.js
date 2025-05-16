@@ -1,1 +1,0 @@
-import{j as e}from"./index-C3oumJZy.js";import{P as a}from"./PageHeader-pwP64dj6.js";import s from"./Skeleton-BFxvUFGi.js";function i(){return e.jsxs("section",{className:"page page-loading",children:[e.jsx(a,{text:"HARPAVILJONGEN"}),e.jsxs("section",{className:"page-loading__top-section",children:[e.jsx(s,{}),e.jsx(s,{})]})]})}export{i as default};
