@@ -141,7 +141,7 @@ export const data = {
 				},
 				{
 					id: 3,
-					active: false,
+					active: true,
 					title: 'Burrata sallad',
 					description:
 						'Burrata, kronärtskocka, tomater, variation av grönt',

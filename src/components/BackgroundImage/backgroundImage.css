@@ -51,6 +51,27 @@
 	height: 5rem;
 }
 
+.background-img.cocktails {
+	top: 5rem;
+	right: 8rem;
+	width: 5rem;
+	height: 5rem;
+}
+
+.background-img.beer {
+	top: 5rem;
+	right: 15rem;
+	width: 5rem;
+	height: 5rem;
+}
+
+.background-img.bubbels {
+	top: 3rem;
+	right: -5rem;
+	width: 5rem;
+	height: 5rem;
+}
+
 @media (max-width: 768px) {
 	.background-img.lunch {
 		top: 0rem;

@@ -69,6 +69,7 @@ html {
 	width: 100%;
 	justify-content: center;
 	gap: 2rem;
+	flex-wrap: wrap;
 }
 
 /* === Tablets (e.g. iPads, 768px – 1024px) === */
