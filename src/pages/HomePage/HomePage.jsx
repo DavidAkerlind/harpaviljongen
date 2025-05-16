@@ -1,17 +1,16 @@
-import { Link, useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 import NavBar from '../../components/NavBar/NavBar';
 import Menu from '../../components/Menu/Menu';
 import OpeningHours from '../../components/OpeningHours/OpeningHours';
 import Flexbox from '../../components/Flexbox/Flexbox';
-import Grid from '../../components/Grid/Grid';
 import hareLogo from '../../assets/logo/hare-logo-blue.svg';
 import wineIllustration from '../../assets/illustrations/wineglass-filled.svg';
 import clockIllustration from '../../assets/illustrations/clock.svg';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import Button from '../../components/Button/Button';
-import MenuSkeleton from '../../components/Skeleton/Skeleton';
+import Footer from '../../components/Footer/Footer';
 
 function HomePage() {
 	const location = useLocation();
@@ -42,6 +41,7 @@ function HomePage() {
 				<Menu menuId="menu-wine" img={wineIllustration} />
 				<OpeningHours img={clockIllustration} />
 			</Flexbox>
+			<Footer></Footer>
 		</section>
 	);
 }
