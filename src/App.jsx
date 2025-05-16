@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
@@ -13,7 +13,7 @@ import MenuSkeleton from './components/Skeleton/Skeleton';
 function App() {
 	return (
 		<div className="app">
-			<HashRouter>
+			<BrowserRouter>
 				<Routes>
 					<Route
 						path="/"
@@ -72,7 +72,7 @@ function App() {
 						}
 					/>
 				</Routes>
-			</HashRouter>
+			</BrowserRouter>
 		</div>
 	);
 }
