@@ -1,5 +1,6 @@
 import { FaInstagram } from 'react-icons/fa';
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 function Footer() {
 	return (
@@ -8,7 +9,7 @@ function Footer() {
 				<h3 className="footer__heading">Länkar</h3>
 				<ul className="footer__list">
 					<li className="footer__list-item">
-						<a href="/menu">Meny</a>
+						<Link to="/menu">Meny</Link>
 					</li>
 					<li className="footer__list-item">
 						<a href="mailto:exempel@mail.se">Mail</a>
