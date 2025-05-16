@@ -26,8 +26,8 @@ function Footer() {
 					className="footer__icon-wrapper"
 					href="https://www.instagram.com/harpaviljongen1912/">
 					<FaInstagram
-						size={40}
-						color="#5f789e"
+						size={50}
+						color="var(----color-blue-dark)"
 						className="footer__icon"
 					/>
 				</a>
@@ -44,6 +44,11 @@ function Footer() {
 						style={{ border: 0 }}
 						referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
+				<a
+					className="footer__list-item footer__list-item--small"
+					href="https://maps.app.goo.gl/S3mPSRHvyqAbTYzUA">
+					Södra Fiskartorpsvägen 29, 114 33 Stockholm
+				</a>
 			</address>
 		</footer>
 	);
