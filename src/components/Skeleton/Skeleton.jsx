@@ -8,23 +8,22 @@ function MenuSkeleton({ count = 1 }) {
 			{Array(count)
 				.fill(0)
 				.map((_, i) => (
-					<div className="menu-item" key={i}>
+					<div className="menu-item menu-item--skeleton" key={i}>
 						<h3>
 							<Skeleton
-								className="skeleton-animate"
+								className="skeleton"
 								width={200}
-								height={24}
+								height={30}
 								baseColor="#bccae2a4"
-								highlightColor="#cadcfb"
 							/>
 						</h3>
 						<p>
 							<Skeleton
-								className="skeleton-animate"
-								count={2}
+								className="skeleton"
+								count={1}
 								width={300}
+								height={150}
 								baseColor="#bccae2a4"
-								highlightColor="#cadcfb"
 							/>
 						</p>
 					</div>

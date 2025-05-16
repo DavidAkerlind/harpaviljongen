@@ -9,6 +9,7 @@ function LoadingPage() {
 			<PageHeader text="HARPAVILJONGEN" />
 			<section className="page-loading__top-section">
 				<MenuSkeleton />
+				<MenuSkeleton />
 			</section>
 		</section>
 	);

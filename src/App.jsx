@@ -19,7 +19,7 @@ function App() {
 					<Route
 						path="/"
 						element={
-							<Suspense fallback={<MenuSkeleton />}>
+							<Suspense fallback={<LoadingPage />}>
 								<HomePage />
 							</Suspense>
 						}
@@ -27,7 +27,7 @@ function App() {
 					<Route
 						path="/menu"
 						element={
-							<Suspense fallback={<MenuSkeleton />}>
+							<Suspense fallback={<LoadingPage />}>
 								<MenuPage />
 							</Suspense>
 						}
@@ -35,7 +35,7 @@ function App() {
 					<Route
 						path="/wine"
 						element={
-							<Suspense fallback={<MenuSkeleton />}>
+							<Suspense fallback={<LoadingPage />}>
 								<WinePage />
 							</Suspense>
 						}
@@ -43,7 +43,7 @@ function App() {
 					<Route
 						path="/contact"
 						element={
-							<Suspense fallback={<MenuSkeleton />}>
+							<Suspense fallback={<LoadingPage />}>
 								<ContactPage />
 							</Suspense>
 						}
@@ -51,7 +51,7 @@ function App() {
 					<Route
 						path="/news"
 						element={
-							<Suspense fallback={<MenuSkeleton />}>
+							<Suspense fallback={<LoadingPage />}>
 								<NewsPage />
 							</Suspense>
 						}
@@ -59,7 +59,7 @@ function App() {
 					<Route
 						path="/faq"
 						element={
-							<Suspense fallback={<MenuSkeleton />}>
+							<Suspense fallback={<LoadingPage />}>
 								<FaqPage />
 							</Suspense>
 						}
@@ -67,7 +67,7 @@ function App() {
 					<Route
 						path="/loading"
 						element={
-							<Suspense fallback={<MenuSkeleton />}>
+							<Suspense fallback={<LoadingPage />}>
 								<LoadingPage />
 							</Suspense>
 						}
