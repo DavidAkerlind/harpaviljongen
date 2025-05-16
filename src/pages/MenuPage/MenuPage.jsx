@@ -9,6 +9,7 @@ import BackgroundImage from '../../components/BackgroundImage/BackgroundImage';
 import Grid from '../../components/Grid/Grid';
 import Button from '../../components/Button/Button';
 import MenuSkeleton from '../../components/Skeleton/Skeleton';
+import Footer from '../../components/Footer/Footer';
 // Images
 import hareLogo from '../../assets/logo/hare-logo-blue.svg';
 import storeFront from '../../assets/illustrations/storefront.svg';
@@ -38,6 +39,7 @@ function MenuPage() {
 				<Menu menuId="menu-cocktails" img={cocktail} />
 				<Menu menuId="menu-beer" img="" />
 			</Flexbox>
+			<Footer />
 		</section>
 	);
 }
