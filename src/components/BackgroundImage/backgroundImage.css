@@ -44,16 +44,16 @@
 }
 
 .background-img.snack {
-	transform: scaleY(-1);
-	top: 5rem;
-	right: 15rem;
+	transform: scaleY(1);
+	top: 3rem;
+	right: 12rem;
 	width: 5rem;
 	height: 5rem;
 }
 
 .background-img.cocktails {
-	top: 5rem;
-	right: 8rem;
+	top: 2rem;
+	right: 9rem;
 	width: 5rem;
 	height: 5rem;
 }
@@ -96,8 +96,45 @@
 	}
 
 	.background-img.snack {
-		top: 5rem;
+		top: 4rem;
 		right: 10rem;
+		width: 5rem;
+		height: 5rem;
+	}
+
+	.background-img.bubbels {
+		top: 2rem;
+		right: -6rem;
+		width: 8rem;
+		height: 8rem;
+	}
+
+	.background-img.cocktails {
+		top: 1rem;
+		right: 10rem;
+		width: 5rem;
+		height: 5rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	/* From 1024 and up */
+	.background-img.snack {
+		top: 8rem;
+		right: 10rem;
+		width: 5rem;
+		height: 5rem;
+	}
+	.background-img.bubbels {
+		top: 2rem;
+		right: 8rem;
+		width: 8rem;
+		height: 8rem;
+	}
+
+	.background-img.cocktails {
+		top: -1rem;
+		right: -3rem;
 		width: 5rem;
 		height: 5rem;
 	}
