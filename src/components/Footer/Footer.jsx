@@ -1,46 +1,48 @@
-import './footer.css';
-
 import { FaInstagram } from 'react-icons/fa';
+import './Footer.css';
 
 function Footer() {
 	return (
 		<footer className="footer">
-			<div className="footer-section">
-				<h4>Länkar</h4>
-				<ul>
-					<li>
-						<a href="#/menu">Meny</a>
+			<nav className="footer__section" aria-label="Länkar">
+				<h3 className="footer__heading">Länkar</h3>
+				<ul className="footer__list">
+					<li className="footer__list-item">
+						<a href="/menu">Meny</a>
 					</li>
-					<li>
-						<a href="#/contact">Kontakt</a>
+					<li className="footer__list-item">
+						<a href="mailto:exempel@mail.se">Mail</a>
 					</li>
-					<li>
-						<a
-							href="https://www.instagram.com/harpaviljongen1912/"
-							target="_blank"
-							rel="noopener noreferrer">
-							Insta
-						</a>
+					<li className="footer__list-item">
+						<a href="tel:070123456789">070123456789</a>
 					</li>
 				</ul>
-			</div>
+			</nav>
 
-			<div className="footer-section">
-				<h4>Följ oss</h4>
-				<FaInstagram size={40} color="var(----color-blue-dark)" />
-			</div>
+			<section className="footer__section">
+				<h3 className="footer__heading">Följ oss</h3>
+				<a
+					className="footer__icon-wrapper"
+					href="https://www.instagram.com/harpaviljongen1912/">
+					<FaInstagram
+						size={40}
+						color="#5f789e"
+						className="footer__icon"
+					/>
+				</a>
+			</section>
 
-			<div className="footer-section">
-				<h4>Hitta oss</h4>
-				<iframe
-					title="Harpeviljongen"
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.243942982371!2d18.06621771588263!3d59.340619281662825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f77f6d1d9c1cf%3A0x4c5e7cf7ed27ee3a!2sHarpeviljongen!5e0!3m2!1ssv!2sse!4v1683211585957!5m2!1ssv!2sse"
-					width="200"
-					height="150"
-					style={{ border: 0 }}
-					allowFullScreen=""
-					loading="lazy"></iframe>
-			</div>
+			<address className="footer__section">
+				<h3 className="footer__heading">Hitta oss</h3>
+				<div className="footer__map-wrapper">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.598098706059!2d18.07819327711369!3d59.34991467462426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f77e4e4ac369f%3A0xea2a85e76094044d!2sHarpaviljongen!5e1!3m2!1ssv!2sse!4v1747399426405!5m2!1ssv!2sse&t=m"
+						width="100%"
+						height="100%"
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</address>
 		</footer>
 	);
 }
