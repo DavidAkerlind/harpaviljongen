@@ -1,0 +1,1 @@
+.flexbox{display:flex;flex-direction:row;gap:1rem;margin-bottom:1rem;max-width:1200px}@media screen and (max-width: 1024px){.flexbox{flex-direction:column}}.page-header{z-index:4;top:2rem;position:absolute;font-size:2rem;font-weight:600}
