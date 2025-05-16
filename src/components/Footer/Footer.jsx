@@ -9,13 +9,23 @@ function Footer() {
 				<h3 className="footer__heading">Länkar</h3>
 				<ul className="footer__list">
 					<li className="footer__list-item">
-						<Link to="/menu">Meny</Link>
+						<Link aria-label="Gå till våran meny" to="/menu">
+							Meny
+						</Link>
 					</li>
 					<li className="footer__list-item">
-						<a href="mailto:exempel@mail.se">Mail</a>
+						<a
+							aria-label="Maila till oss på Harpaviljongen"
+							href="mailto:exempel@mail.se">
+							Mail
+						</a>
 					</li>
 					<li className="footer__list-item">
-						<a href="tel:070123456789">070123456789</a>
+						<a
+							aria-label="Ring till oss på Harpaviljongen"
+							href="tel:070123456789">
+							070123456789
+						</a>
 					</li>
 				</ul>
 			</nav>
@@ -24,7 +34,8 @@ function Footer() {
 				<h3 className="footer__heading">Följ oss</h3>
 				<a
 					className="footer__icon-wrapper"
-					href="https://www.instagram.com/harpaviljongen1912/">
+					href="https://www.instagram.com/harpaviljongen1912/"
+					aria-label="Gå till våran instagram">
 					<FaInstagram
 						size={50}
 						color="var(----color-blue-dark)"
@@ -35,7 +46,9 @@ function Footer() {
 
 			<address className="footer__section">
 				<h3 className="footer__heading">Hitta oss</h3>
-				<div className="footer__map-wrapper">
+				<div
+					aria-label="En karta över övre östermalm med pin på Harpavilongens plats"
+					className="footer__map-wrapper">
 					<iframe
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.598098706059!2d18.07819327711369!3d59.34991467462426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f77e4e4ac369f%3A0xea2a85e76094044d!2sHarpaviljongen!5e1!3m2!1ssv!2sse!4v1747399426405!5m2!1ssv!2sse&t=m"
 						width="100%"
@@ -45,6 +58,7 @@ function Footer() {
 						referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 				<a
+					aria-label="Länk till google maps för att hitta till Harpaviljongen"
 					className="footer__list-item footer__list-item--small"
 					href="https://maps.app.goo.gl/S3mPSRHvyqAbTYzUA">
 					Södra Fiskartorpsvägen 29, 114 33 Stockholm
