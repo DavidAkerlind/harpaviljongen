@@ -1,9 +1,8 @@
 .footer {
 	display: flex;
 	justify-content: space-between;
-	text-align: center;
 	flex-wrap: wrap;
-	width: 70%;
+	width: 60%;
 	margin-top: 5rem;
 }
 
@@ -11,15 +10,16 @@
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-	width: 150px;
 	align-items: center;
+	width: 100%;
 }
 
 .footer__heading {
 	margin-block: 1rem;
 	font-weight: bold;
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 	font-style: normal;
+	text-align: left;
 }
 
 .footer__list {
@@ -28,25 +28,32 @@
 
 .footer__list-item {
 	margin-bottom: 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	text-align: right;
+}
+
+.list-item__title {
+	font-weight: 700;
+}
+
+.list-item__link:hover {
 	text-decoration: underline;
 }
 
-.footer__list-item--small {
-	font-style: normal;
-	color: var(--color-blue-light);
-	font-size: 0.8rem;
-	margin-top: 0.2rem;
-}
-
 .footer__icon-wrapper {
+	margin-top: 1rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: all 0.2s ease-in-out;
+}
+
+.footer__icon-wrapper:hover {
+	scale: 1.2;
 }
 
 .footer__map-wrapper {
-	display: flex;
-	margin-right: -0.5rem;
 	justify-content: center;
 	align-items: center;
 }
@@ -57,6 +64,7 @@
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
+		width: 95%;
 	}
 
 	.footer__map-wrapper {

@@ -1,37 +1,46 @@
 import { FaInstagram } from 'react-icons/fa';
 import './Footer.css';
-import { Link } from 'react-router-dom';
 
 function Footer() {
 	return (
 		<footer className="footer">
 			<nav className="footer__section" aria-label="Länkar">
-				<h3 className="footer__heading">Länkar</h3>
+				<h3 className="footer__heading">KONTAKT</h3>
 				<ul className="footer__list">
 					<li className="footer__list-item">
-						<Link aria-label="Gå till våran meny" to="/menu">
-							Meny
-						</Link>
-					</li>
-					<li className="footer__list-item">
+						<span className="list-item__title">Telefon</span>
 						<a
+							className="list-item__link"
 							aria-label="Maila till oss på Harpaviljongen"
 							href="mailto:exempel@mail.se">
-							Mail
+							08-123456
 						</a>
 					</li>
 					<li className="footer__list-item">
+						<span className="list-item__title">Email</span>
 						<a
+							className="list-item__link"
 							aria-label="Ring till oss på Harpaviljongen"
 							href="tel:070123456789">
-							070123456789
+							info@example.se
+						</a>
+					</li>
+					<li className="footer__list-item">
+						<span className="list-item__title">Adress</span>
+						<a
+							aria-label="Länk till google maps för att hitta till Harpaviljongen"
+							className="list-item__link"
+							href="https://maps.app.goo.gl/S3mPSRHvyqAbTYzUA">
+							Södra Fiskartorpsvägen 29
+							<br />
+							114 33 Stockholm
 						</a>
 					</li>
 				</ul>
 			</nav>
 
 			<section className="footer__section">
-				<h3 className="footer__heading">Följ oss</h3>
+				<h3 className="footer__heading">FÖLJ OSS</h3>
 				<a
 					className="footer__icon-wrapper"
 					href="https://www.instagram.com/harpaviljongen1912/"
@@ -45,7 +54,7 @@ function Footer() {
 			</section>
 
 			<address className="footer__section">
-				<h3 className="footer__heading">Hitta oss</h3>
+				<h3 className="footer__heading">HITTA OSS</h3>
 				<div
 					aria-label="En karta över övre östermalm med pin på Harpavilongens plats"
 					className="footer__map-wrapper">
@@ -57,12 +66,6 @@ function Footer() {
 						style={{ border: 0 }}
 						referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
-				<a
-					aria-label="Länk till google maps för att hitta till Harpaviljongen"
-					className="footer__list-item footer__list-item--small"
-					href="https://maps.app.goo.gl/S3mPSRHvyqAbTYzUA">
-					Södra Fiskartorpsvägen 29, 114 33 Stockholm
-				</a>
 			</address>
 		</footer>
 	);
