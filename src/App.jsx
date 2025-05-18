@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
@@ -14,7 +14,7 @@ const LoadingPage = lazy(() => import('./pages/LoadingPage/LoadingPage'));
 function App() {
 	return (
 		<div className="app">
-			<BrowserRouter>
+			<HashRouter>
 				<Routes>
 					<Route
 						path="/"
@@ -81,7 +81,7 @@ function App() {
 						}
 					/>
 				</Routes>
-			</BrowserRouter>
+			</HashRouter>
 		</div>
 	);
 }

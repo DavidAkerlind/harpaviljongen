@@ -34,6 +34,12 @@
 	width: 5rem;
 	height: 5rem;
 }
+.background-img.error {
+	position: relative;
+	width: 8rem;
+	height: 8rem;
+	z-index: 1;
+}
 
 .background-img.all {
 	transform: scaleX(-1);
