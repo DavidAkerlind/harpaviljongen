@@ -12,7 +12,7 @@ function Footer() {
 						<a
 							className="list-item__link"
 							aria-label="Maila till oss på Harpaviljongen"
-							href="mailto:exempel@mail.se">
+							href="tel:070123456789">
 							08-123456
 						</a>
 					</li>
@@ -21,7 +21,7 @@ function Footer() {
 						<a
 							className="list-item__link"
 							aria-label="Ring till oss på Harpaviljongen"
-							href="tel:070123456789">
+							href="mailto:exempel@mail.se">
 							info@example.se
 						</a>
 					</li>
