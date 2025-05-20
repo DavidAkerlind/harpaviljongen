@@ -12,6 +12,8 @@ function Menu({ menuId, img }) {
 	if (error) return <p>Error loading menu: {error.message}</p>;
 
 	const { title, description, type, price, items } = fetchedMenu;
+	// Verify items exists before mapping
+	if (!items) return <p>No menu items available</p>;
 
 	return (
 		<section id={`menu ${type}`} className={`menu ${type}`}>
