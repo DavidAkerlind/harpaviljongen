@@ -9,7 +9,9 @@ export function fetchMenuById(menuID) {
 	useEffect(() => {
 		if (!menuID) return;
 		axios
-			.get(`https://harpaviljongen-api.onrender.com/api/menus/${menuID}`)
+			.get(
+				`https://harpaviljongen-db-api.onrender.com/api/menus/${menuID}`
+			)
 			.then((res) => {
 				setFetchedMenu(res.data.data[0]);
 			})

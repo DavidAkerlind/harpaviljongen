@@ -30,6 +30,7 @@ function Footer() {
 						<a
 							aria-label="Länk till google maps för att hitta till Harpaviljongen"
 							className="list-item__link"
+							target="_blank"
 							href="https://maps.app.goo.gl/S3mPSRHvyqAbTYzUA">
 							Södra Fiskartorpsvägen 29
 							<br />
@@ -43,6 +44,7 @@ function Footer() {
 				<h3 className="footer__heading">FÖLJ OSS</h3>
 				<a
 					className="footer__icon-wrapper"
+					target="_blank"
 					href="https://www.instagram.com/harpaviljongen1912/"
 					aria-label="Gå till våran instagram">
 					<FaInstagram
