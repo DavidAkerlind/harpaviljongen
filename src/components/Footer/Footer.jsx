@@ -66,7 +66,7 @@ function Footer() {
 						height="100%"
 						loading="lazy"
 						style={{ border: 0 }}
-						referrerpolicy="no-referrer-when-downgrade"></iframe>
+						referrerPolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 			</address>
 		</footer>

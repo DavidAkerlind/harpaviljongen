@@ -13,6 +13,7 @@ export function fetchMenuById(menuID) {
 				`https://harpaviljongen-db-api.onrender.com/api/menus/${menuID}`
 			)
 			.then((res) => {
+				// console.log(res.data.message);
 				setFetchedMenu(res.data.data);
 			})
 			.catch((error) => setError(error))
