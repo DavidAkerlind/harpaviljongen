@@ -42,7 +42,7 @@
 }
 
 .footer__icon-wrapper {
-	margin-top: 1rem;
+	margin-block: 1rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;

@@ -1,26 +1,60 @@
 import './chambreSection.css';
 import banner from '../../assets/illustrations/banner.svg';
-import chambreImage from '../../assets/pictures/chambre-separe.JPEG';
+import chambreImage from '../../assets/pictures/chambre-separe.jpg';
 import bannerGroup from '../../assets/illustrations/bannerGroup.svg';
+import Button from '../Button/Button';
+
+// const ChambreSection = () => {
+// 	return (
+// 		<section className="chambre">
+// 			<header className="chambre__header">
+// 				<h2 className="chambre__title">CHAMBRE SÈPARÈE</h2>
+// 				<p className="chambre__text">
+// 					I vårat chambre séparée är du välkommen att boka för större
+// 					sällskap, för födelsedagen eller för festen!
+// 				</p>
+// 			</header>
+
+// 			<p className="chambre__subtext">
+// 				För bokning eller mer info vänligen maila
+// 			</p>
+// 			<a href="mailto:info@exempel.se" className="chambre__banner">
+// 				<img src={bannerGroup} alt="Banner for email" />
+// 			</a>
+// 			{/* <p className="chambre__email">example@harpaviljongen.se</p> */}
+// 			<figure className="chambre__image-container">
+// 				<img
+// 					src={chambreImage}
+// 					alt="Rund dukad middag i chambre séparée"
+// 					className="chambre__image"
+// 				/>
+// 			</figure>
+// 		</section>
+// 	);
+// };
 
 const ChambreSection = () => {
 	return (
 		<section className="chambre">
 			<header className="chambre__header">
-				<h2 className="chambre__title">CHAMBRE SÈPARÈE</h2>
+				<h2 className="section__title">CHAMBRE SÈPARÈE</h2>
 				<p className="chambre__text">
-					I vårat chambre séparée är du välkommen att boka för större
-					sällskap, för födelsedagen eller för festen!
+					En kväll i vår mest omsorgsfulla vrå. Där glas klingar
+					lågmält, smaker dröjer sig kvar och tiden tycks sakta in.
+					Fem serveringar. Noggrant utvalda råvaror. Viner med själ.
+					<br /> <br />
+					Vill du förfina upplevelsen ytterligare, står vår sommelier
+					Elsa Hurtig redo att guida dig genom vinets värld – och
+					självklart har vi omsorgsfullt utvalda alkoholfria
+					alternativ. <br /> <br /> En kväll i vårt chambre séparée är
+					mer än en middag. Det är ett minne i vardande. Välkommen.
 				</p>
 			</header>
 
-			<p className="chambre__subtext">
-				För bokning eller mer info vänligen maila
-			</p>
-			<a href="mailto:info@exempel.se" className="chambre__banner">
-				<img src={bannerGroup} alt="Banner for email" />
-			</a>
-			{/* <p className="chambre__email">example@harpaviljongen.se</p> */}
+			<section className="page__top-section page__top-section--no-margin">
+				<Button text={'MER INFO'} link="/chambre" />
+				<Button text={'BOKA'} link={'mailto:info@exempel.se'} />
+			</section>
 			<figure className="chambre__image-container">
 				<img
 					src={chambreImage}

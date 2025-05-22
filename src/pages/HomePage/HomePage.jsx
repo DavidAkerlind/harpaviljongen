@@ -12,6 +12,7 @@ import PageHeader from '../../components/PageHeader/PageHeader';
 import Button from '../../components/Button/Button';
 import Footer from '../../components/Footer/Footer';
 import ChambreSection from '../../components/ChambreSection/ChambreSection';
+import EventCalendar from '../../components/EventCalendar/EventCalendar';
 
 function HomePage() {
 	const location = useLocation();
@@ -45,6 +46,10 @@ function HomePage() {
 			<Flexbox>
 				<ChambreSection />
 			</Flexbox>
+			<Flexbox>
+				<EventCalendar />
+			</Flexbox>
+
 			<Footer></Footer>
 		</section>
 	);

@@ -5,7 +5,7 @@ const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const ErrorPage = lazy(() => import('./pages/ErrorPage/ErrorPage'));
 const WinePage = lazy(() => import('./pages/WinePage/WinePage'));
 const MenuPage = lazy(() => import('./pages/MenuPage/MenuPage'));
-const ContactPage = lazy(() => import('./pages/ContactPage/ContactPage'));
+const ChambrePage = lazy(() => import('./pages/ChambrePage/ChambrePage'));
 const NewsPage = lazy(() => import('./pages/NewsPage/NewsPage'));
 const FaqPage = lazy(() => import('./pages/FaqPage/FaqPage'));
 const MenuSkeleton = lazy(() => import('./components/Skeleton/Skeleton'));
@@ -41,10 +41,10 @@ function App() {
 						}
 					/>
 					<Route
-						path="/contact"
+						path="/chambre"
 						element={
 							<Suspense fallback={<LoadingPage />}>
-								<ContactPage />
+								<ChambrePage />
 							</Suspense>
 						}
 					/>
