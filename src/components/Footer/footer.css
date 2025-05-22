@@ -56,6 +56,9 @@
 .footer__map-wrapper {
 	justify-content: center;
 	align-items: center;
+	* {
+		width: 100%;
+	}
 }
 
 /* Responsiv justering */

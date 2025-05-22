@@ -11,6 +11,7 @@ import clockIllustration from '../../assets/illustrations/clock.svg';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import Button from '../../components/Button/Button';
 import Footer from '../../components/Footer/Footer';
+import ChambreSection from '../../components/ChambreSection/ChambreSection';
 
 function HomePage() {
 	const location = useLocation();
@@ -33,13 +34,16 @@ function HomePage() {
 			<section className="page__top-section">
 				<Button text="MENY" link="/menu" />
 				<Button text="ÖPPETTIDER" link="#openingHours" />
-				<Button text="NYHETER" link="/" />
+				<Button text="NYHETER" link="/news" />
 			</section>
 			<Menu menuId="menu-lunch" img={hareLogo} />
 
 			<Flexbox>
 				<Menu menuId="menu-wine" img={wineIllustration} />
 				<OpeningHours img={clockIllustration} />
+			</Flexbox>
+			<Flexbox>
+				<ChambreSection />
 			</Flexbox>
 			<Footer></Footer>
 		</section>

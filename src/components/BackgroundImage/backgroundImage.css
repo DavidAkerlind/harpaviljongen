@@ -5,7 +5,8 @@
 	width: 30rem;
 	height: 30rem;
 	z-index: -1;
-	transition: all ease-in-out 0.3s;
+	/* transition: all ease-in-out 0.3s; */
+	will-change: transform;
 	img {
 		z-index: -1;
 		height: 100%;
@@ -21,7 +22,7 @@
 }
 
 .background-img.wine {
-	top: 6rem;
+	top: 8rem;
 	right: 7rem;
 	width: 10rem;
 	height: 10rem;
@@ -42,7 +43,6 @@
 }
 
 .background-img.all {
-	transform: scaleX(-1);
 	top: -7rem;
 	right: -10rem;
 	width: 25rem;
@@ -50,7 +50,6 @@
 }
 
 .background-img.snack {
-	transform: scaleY(1);
 	top: 3rem;
 	right: 12rem;
 	width: 5rem;

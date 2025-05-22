@@ -1,11 +1,38 @@
-import './BackgroundImage.css'; // om du har någon CSS för den
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import './BackgroundImage.css';
+
+const yMaxOffsetMap = {
+	lunch: 150,
+	wine: 100,
+	snack: 50,
+	default: 40,
+};
+const scaleMap = {
+	all: 'scaleX(-1)',
+	snack: 'scaleY(1)',
+	default: '',
+};
 
 function BackgroundImage({ img, altText = 'harpaviljongen logo', type = '' }) {
-	// let typeo = img.split('/').pop().split('.')[0];
+	const { scrollY } = useScroll(); // detta observerar hela sidans scroll
+	const transform = useTransform(
+		scrollY,
+		[0, 1000],
+		[
+			`translateY(0px) ${scaleMap[type] || scaleMap.default}`,
+			`translateY(${yMaxOffsetMap[type] || yMaxOffsetMap.default}px) ${
+				scaleMap[type] || scaleMap.default
+			}`,
+		]
+	);
+
 	return (
-		<figure className={`background-img ${type}`}>
+		<motion.figure
+			className={`background-img ${type}`}
+			style={{ transform }}>
 			<img src={img} alt={altText} loading="lazy" />
-		</figure>
+		</motion.figure>
 	);
 }
 
