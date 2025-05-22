@@ -12,7 +12,7 @@ function EventCalendar() {
 
 	return (
 		<section className="event-calendar">
-			<h2>Evenemang</h2>
+			<h2 className="section__title">Evenemang</h2>
 			{upcomingEvents.length > 0 ? (
 				<ul className="event-list">
 					{upcomingEvents.map((event) => (

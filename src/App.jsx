@@ -3,12 +3,9 @@ import { lazy, Suspense } from 'react';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const ErrorPage = lazy(() => import('./pages/ErrorPage/ErrorPage'));
-const WinePage = lazy(() => import('./pages/WinePage/WinePage'));
 const MenuPage = lazy(() => import('./pages/MenuPage/MenuPage'));
 const ChambrePage = lazy(() => import('./pages/ChambrePage/ChambrePage'));
 const NewsPage = lazy(() => import('./pages/NewsPage/NewsPage'));
-const FaqPage = lazy(() => import('./pages/FaqPage/FaqPage'));
-const MenuSkeleton = lazy(() => import('./components/Skeleton/Skeleton'));
 const LoadingPage = lazy(() => import('./pages/LoadingPage/LoadingPage'));
 
 function App() {
@@ -32,14 +29,7 @@ function App() {
 							</Suspense>
 						}
 					/>
-					<Route
-						path="/wine"
-						element={
-							<Suspense fallback={<LoadingPage />}>
-								<WinePage />
-							</Suspense>
-						}
-					/>
+
 					<Route
 						path="/chambre"
 						element={
@@ -56,14 +46,7 @@ function App() {
 							</Suspense>
 						}
 					/>
-					<Route
-						path="/faq"
-						element={
-							<Suspense fallback={<LoadingPage />}>
-								<FaqPage />
-							</Suspense>
-						}
-					/>
+
 					<Route
 						path="/loading"
 						element={
@@ -75,7 +58,7 @@ function App() {
 					<Route
 						path="*"
 						element={
-							<Suspense fallback={<MenuSkeleton />}>
+							<Suspense fallback={<LoadingPage />}>
 								<ErrorPage />
 							</Suspense>
 						}

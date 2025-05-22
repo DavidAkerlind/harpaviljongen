@@ -81,6 +81,7 @@ html {
 	font-size: 2rem;
 	font-weight: 600;
 	letter-spacing: 2px;
+	text-align: center;
 }
 
 /* === Tablets (e.g. iPads, 768px – 1024px) === */
@@ -98,6 +99,6 @@ html {
 		margin: 1rem;
 	}
 	.section__title {
-		font-size: 1rem;
+		font-size: 1.7rem;
 	}
 }

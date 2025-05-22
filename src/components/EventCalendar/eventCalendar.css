@@ -1,18 +1,15 @@
 .event-calendar {
-	padding: 2rem;
-	border-radius: 1rem;
-	max-width: 600px;
-}
-
-.event-calendar h2 {
-	margin-bottom: 1rem;
+	margin-top: 2rem;
+	max-width: 90%;
 }
 
 .event-calendar ul {
 	min-width: 100%;
 	list-style: none;
-	padding: 0;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
 	gap: 2rem;
+	margin-top: 2rem;
 }

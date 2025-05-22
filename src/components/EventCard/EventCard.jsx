@@ -1,4 +1,6 @@
 import './eventCard.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 
 function EventCard({ event }) {
 	const date = new Date(event.date);
@@ -8,20 +10,23 @@ function EventCard({ event }) {
 	const day = date.getDate();
 
 	return (
-		<div className="event-card">
+		<a href="/" className="event-card">
 			<img src={event.image} alt={event.title} className="event-img" />
-			<div className="event-date">
+			<section className="event-date">
 				<span className="event-month">{month}</span>
 				<span className="event-day">{day}</span>
-			</div>
-			<div className="event-info">
+			</section>
+			<article className="event-info">
 				<h3>{event.title}</h3>
 				<p className="event-time">
 					{event.startTime} – {event.endTime}
 				</p>
-				<p>{event.description}</p>
-			</div>
-		</div>
+				<p>{event.shortDescription}</p>
+				<p className="event-card__read-more">
+					Läs mer <FontAwesomeIcon icon={faArrowRightLong} />
+				</p>
+			</article>
+		</a>
 	);
 }
 

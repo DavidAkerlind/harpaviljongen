@@ -1,12 +1,16 @@
 .event-card {
 	position: relative;
 	background: white;
-
+	width: 250px;
+	height: 300px;
 	overflow: hidden;
-	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 	display: flex;
 	flex-direction: column;
-	border: 2px solid var(--color-blue-light);
+	outline: 2px solid transparent;
+	transition: all 0.2s ease-in-out;
+}
+.event-card:hover {
+	outline: 2px solid var(--color-blue-light);
 }
 
 .event-img {
@@ -49,6 +53,25 @@
 
 .event-time {
 	font-weight: bold;
-	color: #444;
+	color: var(--color-text);
 	margin-bottom: 0.5rem;
+}
+
+.event-card__read-more {
+	margin-top: auto;
+	gap: 0.3rem;
+	display: inline-flex;
+	align-items: center;
+	color: var(--color-text);
+}
+.event-card__read-more:hover {
+	border-bottom: 1px solid var(--color-text);
+}
+
+.event-card__read-more svg {
+	transition: transform 0.2s ease;
+}
+
+.event-card__read-more:hover svg {
+	transform: translateX(5px);
 }
