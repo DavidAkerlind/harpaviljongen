@@ -1,6 +1,7 @@
 import './chambreSection.css';
 import banner from '../../assets/illustrations/banner.svg';
 import chambreImage from '../../assets/pictures/chambre-separe.JPEG';
+import bannerGroup from '../../assets/illustrations/bannerGroup.svg';
 
 const ChambreSection = () => {
 	return (
@@ -16,13 +17,10 @@ const ChambreSection = () => {
 			<p className="chambre__subtext">
 				För bokning eller mer info vänligen maila
 			</p>
-			<figure className="chambre__banner">
-				<img src={banner} alt="Banner for email" />
-			</figure>
-			<a href="mailto:info@exempel.se" className="chambre__email">
-				info@exempel.se
+			<a href="mailto:info@exempel.se" className="chambre__banner">
+				<img src={bannerGroup} alt="Banner for email" />
 			</a>
-
+			{/* <p className="chambre__email">example@harpaviljongen.se</p> */}
 			<figure className="chambre__image-container">
 				<img
 					src={chambreImage}

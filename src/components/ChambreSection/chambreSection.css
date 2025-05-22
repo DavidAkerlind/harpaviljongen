@@ -29,27 +29,18 @@
 .chambre__banner {
 	display: flex;
 	justify-content: center;
-	margin-bottom: 1rem;
+	width: 50%;
+	padding: 1rem;
+	transition: all ease-in-out 0.1s;
+}
+.chambre__banner:hover {
+	scale: 1.05;
 }
 
 .chambre__banner img {
-	max-width: 300px;
+	min-width: 100%;
+	max-width: 400px;
 	height: auto;
-	margin-bottom: -3.4rem;
-}
-
-.chambre__email {
-	display: block;
-	text-align: center;
-	font-size: 1.125rem;
-
-	text-decoration: none;
-	margin-bottom: 2rem;
-}
-
-.chambre__email:hover,
-.chambre__email:focus {
-	text-decoration: underline;
 }
 
 .chambre__image-container {
