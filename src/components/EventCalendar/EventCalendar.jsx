@@ -1,6 +1,7 @@
 import React from 'react';
 import { events } from '../../testData/mockEvents';
 import EventCard from '../EventCard/EventCard';
+
 import './eventCalendar.css';
 
 function EventCalendar() {

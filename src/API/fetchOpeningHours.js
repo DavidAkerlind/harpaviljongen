@@ -8,7 +8,7 @@ export function fetchOpeningHours() {
 
 	useEffect(() => {
 		axios
-			.get(`https://harpaviljongen-api.onrender.com/api/opening-hours`)
+			.get(`https://harpaviljongen-db-api.onrender.com/api/openingHours`)
 			.then((res) => {
 				setFetchedHours(res.data.data);
 			})
