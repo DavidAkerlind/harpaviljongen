@@ -1,29 +1,55 @@
+import { useState } from 'react';
 import NavItem from '../NavItem/NavItem';
-
+import hareImg from '../../assets/logo/hare-logo-blue.svg';
 import './navBar.css';
+import { Link } from 'react-router-dom';
+import { link, text } from 'framer-motion/client';
 
 function NavBar() {
+	const [open, setOpen] = useState(false);
+
 	const navItems = [
-		{
-			text: 'Hem',
-			link: '/',
-			header: true,
-		},
-		{
-			text: 'Meny',
-			link: '/menu',
-		},
-		{
-			text: 'Öppettider',
-			link: '#openingHours',
-		},
+		{ text: 'Hem', link: '/' },
+		{ text: 'Meny', link: '/menu' },
+		{ text: 'Chambre', link: '/chambre' },
+		{ text: 'Öppettider', link: '#openingHours' },
+		{ text: 'Kontakt', link: '/#' },
 	];
 
 	return (
 		<nav className="nav">
-			<ul className="nav__list">
+			{/* Overlay */}
+			{open && (
+				<div
+					className="nav__overlay"
+					onClick={() => setOpen(false)}></div>
+			)}
+
+			<button
+				className={`nav__hamburger${
+					open ? ' nav__hamburger--open' : ''
+				}`}
+				aria-label={open ? 'Stäng meny' : 'Öppna meny'}
+				aria-expanded={open}
+				onClick={() => setOpen((prev) => !prev)}>
+				<span className="nav__hamburger-bar"></span>
+				<span className="nav__hamburger-bar"></span>
+				<span className="nav__hamburger-bar"></span>
+			</button>
+
+			<ul className={`nav__list${open ? ' nav__list--open' : ''}`}>
+				<li className="nav__logo-item">
+					<Link to="/" className="nav__logo" aria-label="Startsida">
+						<img src={hareImg} alt="Harpaviljongen logo" />
+					</Link>
+				</li>
 				{navItems.map((item, index) => (
-					<NavItem key={index} text={item.text} link={item.link} />
+					<li
+						className="nav__item"
+						key={index}
+						onClick={() => setOpen(false)}>
+						<NavItem text={item.text} link={item.link} />
+					</li>
 				))}
 			</ul>
 		</nav>

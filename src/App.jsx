@@ -1,5 +1,6 @@
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const ErrorPage = lazy(() => import('./pages/ErrorPage/ErrorPage'));
@@ -15,6 +16,7 @@ function App() {
 	return (
 		<div className="app">
 			<HashRouter>
+				<ScrollToTop />
 				<Routes>
 					<Route
 						path="/"

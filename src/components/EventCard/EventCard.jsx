@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function EventCard({ event }) {
 	const date = new Date(event.date);
 	const month = date
-		.toLocaleDateString('en-US', { month: 'short' })
+		.toLocaleDateString('sv-SW', { month: 'short' })
 		.toUpperCase();
 	const day = date.getDate();
 

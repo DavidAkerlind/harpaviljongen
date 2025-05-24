@@ -8,7 +8,6 @@ import './eventCalendar.css';
 
 function EventCalendar() {
 	const { fetchedEvents, loading, error } = fetchAllEvents();
-	const today = new Date();
 	console.log(fetchedEvents);
 
 	if (loading) return <MenuSkeleton />;
