@@ -13,7 +13,7 @@
 	padding: 0.7rem;
 	position: absolute;
 	right: 0rem;
-	top: 3.5rem;
+	top: 0rem;
 	z-index: 20;
 	background-color: var(--color-bg);
 	border: 2px solid var(--color-blue-light);
@@ -33,6 +33,7 @@
 .nav__hamburger--open {
 	border: 2px solid transparent;
 	border-top: 2px solid var(--color-blue-light);
+	border-left: 2px solid var(--color-blue-light);
 }
 
 .nav__hamburger--open .nav__hamburger-bar:nth-child(1) {
@@ -88,7 +89,7 @@
 		z-index: 998;
 		flex-direction: column;
 		position: fixed;
-		top: 3.5rem;
+		top: 3.8rem;
 		right: -2rem;
 		width: 70vw;
 		max-width: 320px;
