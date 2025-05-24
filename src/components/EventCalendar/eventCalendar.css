@@ -1,6 +1,7 @@
 .event-calendar {
 	margin-top: 2rem;
-	max-width: 90%;
+	max-width: 100%;
+	min-width: 400px;
 }
 
 .event-calendar ul {

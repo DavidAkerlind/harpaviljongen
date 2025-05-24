@@ -7,6 +7,9 @@ const MenuPage = lazy(() => import('./pages/MenuPage/MenuPage'));
 const ChambrePage = lazy(() => import('./pages/ChambrePage/ChambrePage'));
 const NewsPage = lazy(() => import('./pages/NewsPage/NewsPage'));
 const LoadingPage = lazy(() => import('./pages/LoadingPage/LoadingPage'));
+const SingleEventPage = lazy(() =>
+	import('./pages/SingleEventPage/SingleEventPage')
+);
 
 function App() {
 	return (
@@ -43,6 +46,14 @@ function App() {
 						element={
 							<Suspense fallback={<LoadingPage />}>
 								<NewsPage />
+							</Suspense>
+						}
+					/>
+					<Route
+						path="/event/:eventId"
+						element={
+							<Suspense fallback={<LoadingPage />}>
+								<SingleEventPage />
 							</Suspense>
 						}
 					/>

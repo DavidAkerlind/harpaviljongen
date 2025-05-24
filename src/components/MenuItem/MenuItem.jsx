@@ -8,6 +8,7 @@ function MenuItem({ title, description, price, producer }) {
 				{description}
 				{producer && (
 					<>
+						<br />
 						<strong> Producent:</strong> <em>{producer}</em>
 					</>
 				)}

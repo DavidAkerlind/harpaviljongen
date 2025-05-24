@@ -2,6 +2,7 @@ import './eventCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 import eventImg from '../../assets/pictures/event.png';
+import { Link } from 'react-router-dom';
 
 function EventCard({ event }) {
 	const date = new Date(event.date);
@@ -11,7 +12,7 @@ function EventCard({ event }) {
 	const day = date.getDate();
 
 	return (
-		<a href={`/event/${event.eventId}`} className="event-card">
+		<Link to={`/event/${event.eventId}`} className="event-card">
 			<img src={eventImg} alt={event.title} className="event-img" />
 			<section className="event-date">
 				<span className="event-month">{month}</span>
@@ -27,7 +28,7 @@ function EventCard({ event }) {
 					Läs mer <FontAwesomeIcon icon={faArrowRightLong} />
 				</p>
 			</article>
-		</a>
+		</Link>
 	);
 }
 
