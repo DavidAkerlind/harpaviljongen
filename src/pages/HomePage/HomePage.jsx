@@ -35,7 +35,7 @@ function HomePage() {
 			<section className="page__top-section">
 				<Button text="MENY" link="/menu" />
 				<Button text="ÖPPETTIDER" link="#openingHours" />
-				<Button text="NYHETER" link="/news" />
+				<Button text="CHAMBRÈ" link="/chambre" />
 			</section>
 			<Menu menuId="menu-lunch" img={hareLogo} />
 

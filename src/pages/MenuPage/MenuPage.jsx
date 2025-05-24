@@ -22,11 +22,10 @@ function MenuPage() {
 	return (
 		<section className="page page-menu">
 			<NavBar />
-			<PageHeader text="HARPAVILJONGEN" />
+			<PageHeader text="VÅRAN MENY" />
 			<section className="page__top-section">
 				<Button text="HEM" link="/" />
 				<Button text="ÖPPETTIDER" link="/" />
-				<Button text="NYHETER" link="/" />
 			</section>
 			<Menu menuId="menu-always" img={hareLogo} />
 			<Flexbox>
