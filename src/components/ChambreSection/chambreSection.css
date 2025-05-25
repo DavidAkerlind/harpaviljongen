@@ -15,9 +15,8 @@
 
 .chambre__text {
 	font-size: 1.125rem;
-	margin-top: 1rem;
+	margin-top: 2rem;
 	padding-bottom: 0.5rem;
-
 	border-bottom: 1px solid var(--color-blue-dark);
 }
 
@@ -63,11 +62,12 @@
 
 	.chambre {
 		width: 100vw;
-		padding: 1rem;
+		padding: 1.5rem 1rem 2rem 1rem;
+		background-color: #f9f9f9d5;
+		border-block: 2px solid var(--color-blue-dark);
 		.button {
 			font-size: 1rem;
 		}
-		background-color: #f9f9f9d5;
 	}
 
 	.chambre__header {

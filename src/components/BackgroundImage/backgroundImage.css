@@ -22,15 +22,15 @@
 }
 
 .background-img.wine {
-	top: 8rem;
-	right: 7rem;
+	top: 2rem;
+	right: 1rem;
 	width: 10rem;
 	height: 10rem;
 }
 
 .background-img.opening-hours {
 	z-index: -1;
-	top: -17rem;
+	top: -21rem;
 	right: 8rem;
 	width: 5rem;
 	height: 5rem;
@@ -94,8 +94,8 @@
 
 	.background-img.opening-hours {
 		z-index: -1;
-		top: -17.5rem;
-		right: 7rem;
+		top: -25rem;
+		right: 8.5rem;
 		width: 4rem;
 		height: 4rem;
 	}

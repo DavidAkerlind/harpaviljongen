@@ -1,6 +1,6 @@
 .event-calendar {
 	margin-top: 2rem;
-	max-width: 100%;
+	max-width: 1080px;
 	min-width: 400px;
 	text-align: left;
 	display: flex;
@@ -15,19 +15,21 @@
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
-	gap: 2rem;
+	gap: 4rem;
 	margin-top: 2rem;
 }
 
 .event-calendar__subtitle {
-	padding-block: 1rem;
-	width: 80%;
+	padding: 2rem;
+	width: 90%;
 	text-align: center;
+	font-size: 1.5rem;
+	font-weight: 600;
 	border-bottom: 1px solid var(--color-blue-dark);
 }
 
 @media screen and (max-width: 767px) {
-	.event-calendar {
-		max
+	.event-calendar__subtitle {
+		width: 100%;
 	}
 }

@@ -4,6 +4,8 @@
 	gap: 1rem;
 	margin-bottom: 1rem;
 	max-width: 1200px;
+	align-items: flex-start;
+	justify-content: flex-start;
 }
 
 /* === Tablets (e.g. iPads, 768px – 1024px) === */

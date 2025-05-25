@@ -32,8 +32,8 @@ function MenuPage() {
 				<Menu menuId="menu-sweets" img="" />
 				<Menu menuId="menu-snacks" img={cheese} />
 			</Flexbox>
-			<Flexbox></Flexbox>
-			<Flexbox>
+
+			<Flexbox align="center">
 				<Menu menuId="menu-bubbels" img={bubblesglass} />
 				<Menu menuId="menu-cocktails" img={cocktail} />
 				<Menu menuId="menu-beer" img="" />

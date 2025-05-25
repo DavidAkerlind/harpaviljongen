@@ -36,6 +36,7 @@
 	line-height: 1.6;
 	margin-bottom: 3rem;
 	max-width: 800px;
+	font-weight: 600;
 }
 @media screen and (max-width: 767px) {
 	/* Phone-specific styles here */

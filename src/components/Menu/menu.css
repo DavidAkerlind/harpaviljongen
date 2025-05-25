@@ -5,16 +5,19 @@
 }
 
 .menu.small article {
-	margin-bottom: 0.2rem;
+	margin-bottom: 0.5rem;
 	min-width: 200px;
 	.menu-item__title {
 		font-size: 1rem;
 	}
 }
 
+.menu__items {
+	margin-top: 1.5rem;
+}
+
 .menu__description {
 	margin-top: 0.3rem;
-	margin-bottom: 1rem;
 }
 
 .menu__description--price {

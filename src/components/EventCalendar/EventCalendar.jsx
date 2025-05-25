@@ -18,8 +18,9 @@ function EventCalendar() {
 		<section id="events" className="event-calendar">
 			<h2 className="section__title">EVENEMANG</h2>
 			<h3 className="event-calendar__subtitle">
-				På harpaviljongen kör vi event hela sommaren! Dj-spelingar, vin
-				provningar, och mycket mer
+				På harpaviljongen kör vi event hela sommaren! Dj-spelingar,
+				vin-provningar, och mycket mer. Kom och häng i våran lilla oas i
+				sommar
 			</h3>
 			{fetchedEvents.length > 0 ? (
 				<ul className="event-list">
@@ -28,10 +29,10 @@ function EventCalendar() {
 					))}
 				</ul>
 			) : (
-				<p>Inga kommande evenemang.</p>
+				<p>Inga kommande evenemang</p>
 			)}
 			<br />
-			<Button text="ALLA EVENT" link={`/events}`} />
+			<Button text="ALLA EVENEMANG" link={`/events}`} />
 		</section>
 	);
 }

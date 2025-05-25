@@ -6,7 +6,7 @@ function Flexbox({
 	direction = 'row',
 	wrap = 'nowrap',
 	justify = 'center',
-	align = 'center',
+	align = 'start',
 	childFlex = true,
 }) {
 	const wrappedChildren = childFlex
