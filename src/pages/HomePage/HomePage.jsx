@@ -37,6 +37,7 @@ function HomePage() {
 				<Button text="MENY" link="/menu" />
 				<Button text="ÖPPETTIDER" link="#openingHours" />
 				<Button text="EVENEMANG" link="#events" />
+				<Button text="VINLISTA" link="/" />
 			</section>
 			<Menu menuId="menu-lunch" img={hareLogo} />
 
