@@ -5,6 +5,7 @@ import { fetchAllEvents } from '../../API/fetchAllEvents.js';
 import MenuSkeleton from '../Skeleton/Skeleton.jsx';
 
 import './eventCalendar.css';
+import Button from '../Button/Button.jsx';
 
 function EventCalendar() {
 	const { fetchedEvents, loading, error } = fetchAllEvents();
@@ -29,6 +30,8 @@ function EventCalendar() {
 			) : (
 				<p>Inga kommande evenemang.</p>
 			)}
+			<br />
+			<Button text="ALLA EVENT" link={`/events}`} />
 		</section>
 	);
 }
