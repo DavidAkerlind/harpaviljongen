@@ -40,7 +40,7 @@
 	.menu.wine-all {
 		min-width: 350px;
 		.menu-item__price {
-			right: -0.5rem;
+			right: -0.1rem;
 			text-align: left;
 		}
 	}
