@@ -17,7 +17,7 @@ function OpeningHours({ img }) {
 			<ul className="opening-hours__day-list">
 				{fetchedHours.map(({ day, hours }) => (
 					<li className="opening-hours__day" key={day}>
-						<span>{day}</span>
+						<span className="opening-hours__day-name">{day}</span>
 						<span>
 							{hours.from === '' && hours.to === ''
 								? 'Stängt'

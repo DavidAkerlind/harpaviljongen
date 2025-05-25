@@ -4,6 +4,7 @@
 	text-align: center;
 	max-width: 14rem;
 	gap: 1rem;
+	min-width: 250px;
 }
 
 .opening-hours__title {
@@ -14,9 +15,14 @@
 }
 
 .opening-hours__day {
-	margin-bottom: 0.3rem;
+	margin-bottom: 0.4rem;
 	display: flex;
 	width: 100%;
 	gap: 4rem;
+	font-size: 1.2rem;
 	justify-content: space-between;
+}
+
+.opening-hours__day-name {
+	font-weight: 600;
 }

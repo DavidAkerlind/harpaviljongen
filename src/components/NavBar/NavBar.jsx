@@ -13,7 +13,7 @@ function NavBar() {
 		{ text: 'Meny', link: '/menu' },
 		{ text: 'Chambre', link: '/chambre' },
 		{ text: 'Öppettider', link: '#openingHours' },
-		{ text: 'Kontakt', link: '/#' },
+		{ text: 'Kontakt', link: '#contactInfo' },
 	];
 
 	return (

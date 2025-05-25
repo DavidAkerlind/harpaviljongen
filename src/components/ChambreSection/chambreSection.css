@@ -15,7 +15,7 @@
 
 .chambre__text {
 	font-size: 1.125rem;
-	margin-block: 1rem;
+	margin-top: 1rem;
 	padding-bottom: 0.5rem;
 
 	border-bottom: 1px solid var(--color-blue-dark);
@@ -62,10 +62,12 @@
 	/* Phone-specific styles here */
 
 	.chambre {
-		width: 100%;
+		width: 100vw;
+		padding: 1rem;
 		.button {
 			font-size: 1rem;
 		}
+		background-color: #f9f9f9d5;
 	}
 
 	.chambre__header {

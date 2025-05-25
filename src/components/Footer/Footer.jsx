@@ -3,7 +3,7 @@ import './Footer.css';
 
 function Footer() {
 	return (
-		<footer className="footer">
+		<footer id="contactInfo" className="footer">
 			<nav className="footer__section" aria-label="Länkar">
 				<h3 className="footer__heading">KONTAKT</h3>
 				<ul className="footer__list">

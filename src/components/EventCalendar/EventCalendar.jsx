@@ -14,8 +14,12 @@ function EventCalendar() {
 	if (error) return <p>Error loading menu: {error.message}</p>;
 
 	return (
-		<section className="event-calendar">
+		<section id="events" className="event-calendar">
 			<h2 className="section__title">EVENEMANG</h2>
+			<h3 className="event-calendar__subtitle">
+				På harpaviljongen kör vi event hela sommaren! Dj-spelingar, vin
+				provningar, och mycket mer
+			</h3>
 			{fetchedEvents.length > 0 ? (
 				<ul className="event-list">
 					{fetchedEvents.map((event, index) => (

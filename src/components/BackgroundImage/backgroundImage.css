@@ -30,8 +30,8 @@
 
 .background-img.opening-hours {
 	z-index: -1;
-	top: -12rem;
-	right: 3rem;
+	top: -17rem;
+	right: 8rem;
 	width: 5rem;
 	height: 5rem;
 }
@@ -94,8 +94,8 @@
 
 	.background-img.opening-hours {
 		z-index: -1;
-		top: -12.5rem;
-		right: 12vw;
+		top: -17.5rem;
+		right: 7rem;
 		width: 4rem;
 		height: 4rem;
 	}
