@@ -28,6 +28,13 @@ function Menu({ menuId, img }) {
 					{price} <strong>/glas</strong>
 				</h2>
 			)}
+			{type === 'wine-all' && (
+				<h2
+					aria-label="pris per vinglas"
+					className=" menu__description menu__description--price">
+					{price} <strong></strong>
+				</h2>
+			)}
 
 			<section className="menu__items">
 				{items

@@ -77,6 +77,13 @@
 	height: 5rem;
 }
 
+.background-img.wine-all {
+	top: -4rem;
+	right: 15rem;
+	width: 8rem;
+	height: 8rem;
+}
+
 @media (max-width: 768px) {
 	.background-img.lunch {
 		top: 0rem;

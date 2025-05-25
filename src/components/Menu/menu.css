@@ -12,6 +12,14 @@
 	}
 }
 
+.menu.wine-all {
+	min-width: 350px;
+	.menu-item__price {
+		right: -1.5rem;
+		text-align: left;
+	}
+}
+
 .menu__items {
 	margin-top: 1.5rem;
 }
@@ -24,4 +32,16 @@
 	color: var(--color-blue-dark);
 	font-weight: 900;
 	font-size: 1.3rem;
+}
+
+@media screen and (max-width: 1024px) {
+	/* Tablet-specific styles here */
+
+	.menu.wine-all {
+		min-width: 350px;
+		.menu-item__price {
+			right: -0.5rem;
+			text-align: left;
+		}
+	}
 }

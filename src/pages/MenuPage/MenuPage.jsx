@@ -17,6 +17,7 @@ import grapes from '../../assets/illustrations/grapes.svg';
 import bubblesglass from '../../assets/illustrations/bubblesglass.svg';
 import cocktail from '../../assets/illustrations/cocktail.svg';
 import cheese from '../../assets/illustrations/cheese.svg';
+import wineImg from '../../assets/illustrations/winebottle.svg';
 
 function MenuPage() {
 	return (
@@ -27,9 +28,16 @@ function MenuPage() {
 				<Button text="HEM" link="/" />
 				<Button text="ÖPPETTIDER" link="/" />
 			</section>
-			<Menu menuId="menu-always" img={hareLogo} />
 			<Flexbox>
+				<Menu menuId="menu-always" img={hareLogo} />
 				<Menu menuId="menu-sweets" img="" />
+			</Flexbox>
+
+			<Flexbox>
+				<Flexbox align="flex-start">
+					<Menu menuId="menu-all-wine" img="" />
+					<Menu menuId="menu-wine-red" img={wineImg} />
+				</Flexbox>
 				<Menu menuId="menu-snacks" img={cheese} />
 			</Flexbox>
 
