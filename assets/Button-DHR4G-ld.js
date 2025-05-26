@@ -1,0 +1,1 @@
+import{j as n,L as o}from"./index-Blj8PQ-h.js";function i({text:a,onClick:s,link:r}){return r?n.jsx(o,{to:r,className:"button","aria-label":`GO TO ${a}`,children:a}):n.jsx("button",{className:"button","aria-label":a,onClick:s,children:a})}export{i as B};
