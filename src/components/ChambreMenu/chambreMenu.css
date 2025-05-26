@@ -1,6 +1,7 @@
 .chambre-menu {
 	max-width: 700px;
 	margin: 0 auto;
+	word-spacing: 0.5ch;
 }
 
 .chambre-menu__courses {
@@ -18,7 +19,7 @@
 }
 
 .chambre-menu__course-text {
-	font-size: 1.1rem;
+	font-size: 1rem;
 	margin-bottom: 0.5rem;
 }
 
@@ -30,6 +31,9 @@
 .chambre-menu__course-list-item {
 	margin-bottom: 0.5rem;
 }
+.chambre-menu__price-list-item--price {
+	font-size: 1.3rem;
+}
 
 .chambre-menu__price-info {
 	margin: 3rem 0;
@@ -39,13 +43,12 @@
 }
 
 .chambre-menu__price-title {
-	font-size: 1.2rem;
+	font-size: 1.6rem;
 	margin-bottom: 1rem;
 }
 
 .chambre-menu__price-list {
 	list-style: none;
-	padding: 0;
 }
 
 .chambre-menu__price-list-item {

@@ -2,27 +2,30 @@ import './chambreMenu.css';
 
 function ChambreMenu() {
 	return (
-		<article className="chambre-menu">
+		<article id="chambreMenu" className="chambre-menu">
 			<section className="chambre-menu__courses">
 				<article className="chambre-menu__course">
-					<h3 className="chambre-menu__course-title">Förrätt</h3>
+					<h3 className="chambre-menu__course-title">FÖRRÄTT</h3>
 					<p className="chambre-menu__course-text">
-						Vi vevar ut ett urval av finaste charkuterier från vår
-						Berkel Volano P15 – ett startskott med både hantverk och
-						tradition i varje skiva.
+						Vi vevar ut ett urval av finaste{' '}
+						<strong>charkuterier</strong> från vår Berkel Volano P15
+						– ett startskott med både hantverk och tradition i varje
+						skiva.
 					</p>
 					<p className="chambre-menu__course-text">
-						Därefter serveras vår signatur: en krokett på
-						Västerbottensost, toppad med exklusiv störcaviar.
+						Därefter serveras vår signatur: en{' '}
+						<strong>krokett</strong> krokett på Västerbottensost,
+						toppad med exklusiv störcaviar.
 					</p>
 					<p className="chambre-menu__course-text">
-						Toast Skagen, serverad på smörstekt bröd från Två
-						Systrars Bageri, generöst toppad med Kalix löjrom.
+						<strong>Toast Skagen</strong>, serverad på smörstekt
+						bröd från Två Systrars Bageri, generöst toppad med Kalix
+						löjrom.
 					</p>
 				</article>
 
 				<article className="chambre-menu__course">
-					<h3 className="chambre-menu__course-title">Huvudrätt</h3>
+					<h3 className="chambre-menu__course-title">HUVUDRÄTT</h3>
 					<p className="chambre-menu__course-text">Välj mellan:</p>
 					<ul className="chambre-menu__course-list">
 						<li className="chambre-menu__course-list-item">
@@ -36,7 +39,7 @@ function ChambreMenu() {
 				</article>
 
 				<article className="chambre-menu__course">
-					<h3 className="chambre-menu__course-title">Dessert</h3>
+					<h3 className="chambre-menu__course-title">DESSERT</h3>
 					<p className="chambre-menu__course-text">
 						Varm Tarte Tatin på Calvados, serverad med len
 						vaniljglass
@@ -45,12 +48,12 @@ function ChambreMenu() {
 			</section>
 
 			<section className="chambre-menu__price-info">
-				<h3 className="chambre-menu__price-title">Pris</h3>
+				<h3 className="chambre-menu__price-title">PRIS</h3>
 				<ul className="chambre-menu__price-list">
-					<li className="chambre-menu__price-list-item">
+					<li className="chambre-menu__price-list-item chambre-menu__price-list-item--price">
 						Meny: 1250 kr
 					</li>
-					<li className="chambre-menu__price-list-item">
+					<li className="chambre-menu__price-list-item chambre-menu__price-list-item--price">
 						Vinpaket: 850 kr
 					</li>
 				</ul>
@@ -60,8 +63,9 @@ function ChambreMenu() {
 				<p className="chambre-menu__footer-text">
 					Vi inspireras av det franska köket men låter även våra egna
 					minnen, favoriter och smaker få ta plats. Hos oss är chambre
-					séparée inte bara ett rum – det är en upplevelse. Välkommen
-					hem till Harpaviljongen.
+					séparée inte bara ett rum – det är en upplevelse. <br />
+					<br />
+					Välkommen hem till Harpaviljongen.
 				</p>
 			</section>
 		</article>

@@ -19,6 +19,10 @@
 		right: -1.5rem;
 		text-align: left;
 	}
+
+	.menu-item__title {
+		max-width: 230px;
+	}
 }
 
 .menu__items {
@@ -41,7 +45,8 @@
 	.menu.wine-all {
 		min-width: 350px;
 		.menu-item__price {
-			right: -0.5rem;
+			font-size: 0.8rem;
+			right: 1rem;
 			text-align: left;
 		}
 	}

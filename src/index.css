@@ -29,6 +29,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: var(--font-base);
+	word-spacing: 0.4ch;
 }
 
 a {
@@ -105,6 +106,10 @@ html {
 /* === Phones (e.g. iPhones, less than 768px) === */
 @media screen and (max-width: 767px) {
 	/* Phone-specific styles here */
+
+	.page {
+		padding: 4rem 1rem;
+	}
 
 	.section__title {
 		font-size: 1.7rem;

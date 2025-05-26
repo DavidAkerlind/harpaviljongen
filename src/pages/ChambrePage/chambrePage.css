@@ -8,7 +8,7 @@
 .page-chambre__subtitle {
 	text-align: center;
 	font-size: 1.5rem;
-	margin-block: 2rem;
+	margin-bottom: 2rem;
 	font-weight: 400;
 	font-style: italic;
 }
@@ -40,9 +40,6 @@
 }
 @media screen and (max-width: 767px) {
 	/* Phone-specific styles here */
-	.page-chambre__subtitle {
-		margin-top: 4rem;
-	}
 
 	.page-chambre__image-container {
 		max-width: 100%;

@@ -1,7 +1,5 @@
 import './chambreSection.css';
-import banner from '../../assets/illustrations/banner.svg';
 import chambreImage from '../../assets/pictures/chambre-separe.jpg';
-import bannerGroup from '../../assets/illustrations/bannerGroup.svg';
 import Button from '../Button/Button';
 
 const ChambreSection = () => {
