@@ -5,7 +5,6 @@
 	max-width: 14rem;
 	gap: 1rem;
 	min-width: 300px;
-	border-top: 2px solid var(--color-blue-dark);
 	padding-top: 2rem;
 }
 
@@ -27,4 +26,11 @@
 
 .opening-hours__day-name {
 	font-weight: 600;
+}
+
+@media screen and (max-width: 767px) {
+	/* Phone-specific styles here */
+	.opening-hours-section {
+		border-top: 2px solid var(--color-blue-dark);
+	}
 }
