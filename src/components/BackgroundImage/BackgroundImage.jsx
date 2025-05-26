@@ -11,6 +11,7 @@ const yMaxOffsetMap = {
 const scaleMap = {
 	all: 'scaleX(-1)',
 	snack: 'scaleY(1)',
+	event: 'scaleX(-1)',
 	default: '',
 };
 

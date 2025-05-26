@@ -45,8 +45,7 @@ function EventCard({ event }) {
 				{event.shortDescription.toUpperCase()}
 			</div>
 			<div className="event-card__date">
-				{month} {day} — {event.startTime} –{' '}
-				{event.endTime.toUpperCase()}
+				{month} {day} | {event.startTime}–{event.endTime.toUpperCase()}
 			</div>
 			<p className="event-card__read-more">
 				LÄS MER

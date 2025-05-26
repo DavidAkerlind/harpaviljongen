@@ -27,7 +27,7 @@ function ChambrePage() {
 		<main className="page page-chambre">
 			<NavBar />
 			<PageHeader text="CHAMBRE SÈPARÈE" />
-			<section className="page__top-section">
+			<section className="page__top-section page__top-section--chambre">
 				<Button text="BOKA NU" link={'mailto:info@exempel.se'} />
 				<Button text="CHAMBRE MENYN" link={'#chambreMenu'} />
 			</section>

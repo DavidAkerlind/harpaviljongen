@@ -12,6 +12,7 @@
 }
 
 .menu-item__description {
+	margin-top: 0.3rem;
 	font-size: 0.8rem;
 	max-width: 80%;
 }

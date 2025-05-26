@@ -3,6 +3,7 @@
 	align-items: center;
 	flex-direction: column;
 	max-width: 1000px;
+	margin-top: 3rem;
 }
 
 .page-chambre__subtitle {
@@ -43,5 +44,12 @@
 
 	.page-chambre__image-container {
 		max-width: 100%;
+	}
+
+	.page-chambre__content {
+		margin-top: 2rem;
+		.page__top-section {
+			margin-top: 4rem;
+		}
 	}
 }

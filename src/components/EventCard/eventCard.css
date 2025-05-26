@@ -63,7 +63,7 @@
 	align-items: center;
 	justify-content: center;
 	/* color: var(--color-text); */
-	border: 1px solid var(--color-blue-light);
+	border: 1px solid var(--color-bg);
 	padding: 0.2rem;
 	margin-bottom: 0.2rem;
 	width: 80%;
@@ -99,7 +99,6 @@
 	overflow: hidden;
 	text-decoration: none;
 	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
-	font-family: 'Source Serif Pro', serif;
 }
 
 .event-card__vertical {
@@ -164,9 +163,8 @@
 .event-card__date {
 	font-size: 1.15rem;
 	letter-spacing: 0.08em;
-	font-family: 'Source Serif Pro', serif;
-	font-weight: 400;
-	margin-block: 0.5rem;
+	font-weight: 700;
+	margin-block: 0.4rem;
 }
 
 @media (max-width: 400px) {

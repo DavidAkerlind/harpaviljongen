@@ -91,6 +91,10 @@
 	height: 8rem;
 }
 
+.background-img.event {
+	display: none;
+}
+
 @media (max-width: 768px) {
 	.background-img.lunch {
 		top: 0rem;
@@ -147,6 +151,17 @@
 		right: 10rem;
 		width: 5rem;
 		height: 5rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.background-img.event {
+		top: 14rem;
+		right: 0rem;
+		width: 12rem;
+		height: 12rem;
+		z-index: 0;
+		display: block;
 	}
 }
 

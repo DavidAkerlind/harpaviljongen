@@ -8,7 +8,7 @@
 	--color-borders: #d5d5d5;
 
 	--color-bg: #063424;
-	--color-blue-light: ;
+	--color-blue-light: #9aabc9;
 	--color-blue-dark: #d5d5d5;
 	--color-illustrations: #051d46;
 	--color-chambre-section: #405c3f;
@@ -65,7 +65,7 @@ html {
 	background-color: var(--color-bg);
 	color: var(--color-blue-dark);
 	padding: 2rem;
-	padding-top: 4rem;
+	padding-top: 0rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -100,6 +100,9 @@ html {
 	/* Tablet-specific styles here */
 	.page__top-section {
 		margin-top: 2rem;
+	}
+	.page__top-section--chambre {
+		margin-top: 4rem;
 	}
 }
 
