@@ -12,7 +12,7 @@ function OpeningHours({ img }) {
 	if (error) return <p>Error loading menu: {error.message}</p>;
 
 	return (
-		<section id="openingHours" className="opening-hours">
+		<section id="openingHours" className="opening-hours-section">
 			<h2 className="opening-hours__title">ÖPPETTIDER</h2>
 			<ul className="opening-hours__day-list">
 				{fetchedHours.map(({ day, hours }) => (

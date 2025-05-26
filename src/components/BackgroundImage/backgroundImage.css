@@ -15,8 +15,8 @@
 }
 
 .background-img.lunch {
-	top: -10rem;
-	right: 12rem;
+	top: -12rem;
+	right: 16rem;
 	width: 30rem;
 	height: 30rem;
 }
@@ -101,8 +101,8 @@
 
 	.background-img.opening-hours {
 		z-index: -1;
-		top: -25rem;
-		right: 8.5rem;
+		top: -2rem;
+		right: 16.5rem;
 		width: 4rem;
 		height: 4rem;
 	}

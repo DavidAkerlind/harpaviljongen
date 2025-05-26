@@ -2,9 +2,16 @@
 
 :root {
 	/* COLORS */
-	--color-bg: #f2f0ef;
-	--color-blue-light: #9aabc9; /* Ljusblå */
-	--color-blue-dark: #4e769c; /* Mörkblå */
+	/* --color-bg: #f2f0ef;
+	--color-blue-light: #9aabc9;
+	--color-blue-dark: #4e769c; */
+
+	--color-bg: #063424;
+	--color-blue-light: ;
+	--color-blue-dark: #d5d5d5;
+	--color-illustrations: #6a6a6a;
+	--color-chambre-section: #405c3f;
+
 	--color-white: #ffffff;
 	--color-text: #333333;
 	--color-black: #000000;
@@ -68,7 +75,7 @@ html {
 }
 
 .page__top-section {
-	display: flex;
+	display: none;
 	width: 100%;
 	justify-content: center;
 	gap: 2rem;
@@ -100,5 +107,8 @@ html {
 
 	.section__title {
 		font-size: 1.7rem;
+	}
+	.page__top-section {
+		display: flex;
 	}
 }

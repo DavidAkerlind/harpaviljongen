@@ -24,7 +24,7 @@ const ChambreSection = () => {
 				</p>
 			</header>
 
-			<section className="page__top-section page__top-section--margin">
+			<section className="chambre__button-section">
 				<Button text={'MER INFO'} link="/chambre" />
 				<Button text={'BOKA'} link={'mailto:info@exempel.se'} />
 			</section>

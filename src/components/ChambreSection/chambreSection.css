@@ -17,7 +17,7 @@
 	font-size: 1.125rem;
 	margin-top: 2rem;
 	padding-bottom: 0.5rem;
-	border-bottom: 1px solid var(--color-blue-dark);
+	border-bottom: 2px solid var(--color-blue-dark);
 }
 
 .chambre__subtext {
@@ -56,6 +56,18 @@
 	height: auto;
 }
 
+.chambre__button-section {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	gap: 2rem;
+	flex-wrap: wrap;
+}
+
+.chambre__button-section {
+	margin: 2rem;
+}
+
 /* === Phones (e.g. iPhones, less than 768px) === */
 @media screen and (max-width: 767px) {
 	/* Phone-specific styles here */
@@ -63,7 +75,7 @@
 	.chambre {
 		width: 100vw;
 		padding: 1.5rem 1rem 2rem 1rem;
-		background-color: #f9f9f9d5;
+		background-color: var(--color-chambre-section);
 		border-block: 2px solid var(--color-blue-dark);
 		.button {
 			font-size: 1rem;

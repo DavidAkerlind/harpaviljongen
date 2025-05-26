@@ -12,6 +12,7 @@ function Flexbox({
 	const wrappedChildren = childFlex
 		? React.Children.map(children, (child) => (
 				<section
+					className="flexbox-inside"
 					style={{
 						flex: 1,
 						display: 'flex',

@@ -12,5 +12,10 @@
 
 	.flexbox {
 		flex-direction: column;
+
+		/* .flexbox-inside:first-of-type {
+			border-block: 2px solid var(--color-blue-dark);
+			padding-block: 2rem;
+		} */
 	}
 }

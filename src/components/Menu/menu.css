@@ -2,6 +2,8 @@
 	z-index: 2;
 	text-align: center;
 	position: relative;
+	border-top: 2px solid var(--color-blue-dark);
+	padding-top: 2rem;
 }
 
 .menu.small article {
