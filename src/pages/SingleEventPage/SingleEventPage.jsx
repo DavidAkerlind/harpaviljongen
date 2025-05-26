@@ -10,9 +10,20 @@ import './singleEventPage.css';
 
 import MenuSkeleton from '../../components/Skeleton/Skeleton';
 
+import dj2Img from '../../assets//pictures/dj2.jpg';
+import wineImg from '../../assets/pictures/wine-tasting2.jpg';
+import privateImg from '../../assets/pictures/private.png';
+import eventImg from '../../assets/pictures/event.png';
+
 function SingleEventPage() {
 	const { eventId } = useParams();
 	const { fetchedEvent, loading, error } = fetchEventById(eventId);
+
+	// Välj bild beroende på event.type
+	let imageSrc = eventImg;
+	if (fetchedEvent.type === 'dj') imageSrc = dj2Img;
+	else if (fetchedEvent.type === 'wine') imageSrc = wineImg;
+	else if (fetchedEvent.type === 'private') imageSrc = privateImg;
 
 	if (loading) {
 		return (
@@ -45,7 +56,7 @@ function SingleEventPage() {
 			<article className="single-event">
 				<section className="single-event__hero">
 					<img
-						src={fetchedEvent.image}
+						src={imageSrc}
 						alt={fetchedEvent.title}
 						className="single-event__hero-img"
 					/>
