@@ -14,6 +14,7 @@ import Button from '../../components/Button/Button';
 import Footer from '../../components/Footer/Footer';
 import ChambreSection from '../../components/ChambreSection/ChambreSection';
 import EventCalendar from '../../components/EventCalendar/EventCalendar';
+import PageDesc from '../../components/PageDesc/PageDesc';
 
 function HomePage() {
 	const location = useLocation();
@@ -39,6 +40,7 @@ function HomePage() {
 				<Button text="EVENEMANG" link="#events" />
 				<Button text="VINLISTA" link="/" />
 			</section>
+			<PageDesc />
 			<Menu menuId="menu-lunch" img={hareLogo} />
 
 			<Flexbox>

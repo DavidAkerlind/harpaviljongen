@@ -1,0 +1,15 @@
+.page__desc {
+	margin-top: 4rem;
+	max-width: 70%;
+	z-index: 999;
+}
+
+@media screen and (max-width: 767px) {
+	/* Phone-specific styles here */
+
+	.page__desc {
+		margin-top: 0;
+		max-width: 100%;
+		z-index: 999;
+	}
+}

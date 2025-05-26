@@ -19,6 +19,7 @@ import cocktail from '../../assets/illustrations/cocktail.svg';
 import cheese from '../../assets/illustrations/cheese.svg';
 import wineImg from '../../assets/illustrations/winebottle.svg';
 import cakeImg from '../../assets/illustrations/Cake2.svg';
+import PageDesc from '../../components/PageDesc/PageDesc';
 
 function MenuPage() {
 	return (
@@ -29,6 +30,8 @@ function MenuPage() {
 				<Button text="HEM" link="/" />
 				<Button text="ÖPPETTIDER" link="/" />
 			</section>
+
+			<PageDesc />
 			<Flexbox>
 				<Menu menuId="menu-always" img={hareLogo} />
 				<Menu menuId="menu-sweets" img={cakeImg} />
