@@ -1,0 +1,1 @@
+import{j as e}from"./index-CUF1sVhT.js";import{E as r}from"./EventCalendar-B8YJaiF4.js";import"./private-Cy9yTzyG.js";import"./index-xsH4HHeE.js";import"./Skeleton-CzCiWyFN.js";import"./Button-DFYaNz9X.js";function p(){return e.jsx("section",{className:"page page-news",children:e.jsx(r,{})})}export{p as default};
