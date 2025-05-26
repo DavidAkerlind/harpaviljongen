@@ -39,10 +39,10 @@ function ChambrePage() {
 				<section className="page-chambre__intro">
 					<p>
 						Välkommen in i vår chambre séparée – en plats där tiden
-						saktar ner, där smakerna fördjupas och där vinet alltid
-						står i centrum. Här bjuder vi in till en kväll som lika
-						gärna kunde ha ägt rum hemma hos någon av oss. Fast med
-						det lilla extra.
+						saktar ner, där smakerna fördjupas och där vinet{' '}
+						<u>alltid</u> står i centrum. Här bjuder vi in till en
+						kväll som lika gärna kunde ha ägt rum hemma hos någon av
+						oss. Fast med det lilla extra.
 					</p>
 				</section>
 				<figure className="page-chambre__image-container">
