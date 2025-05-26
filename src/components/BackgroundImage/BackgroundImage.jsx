@@ -4,9 +4,9 @@ import './BackgroundImage.css';
 
 const yMaxOffsetMap = {
 	lunch: 150,
-	wine: 100,
-	snack: 50,
-	default: 40,
+	wine: 200,
+	snack: 200,
+	default: 200,
 };
 const scaleMap = {
 	all: 'scaleX(-1)',

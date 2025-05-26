@@ -56,6 +56,13 @@
 	height: 5rem;
 }
 
+.background-img.sweets {
+	top: 1rem;
+	right: -2rem;
+	width: 8rem;
+	height: 8rem;
+}
+
 .background-img.cocktails {
 	top: 2rem;
 	right: 9rem;
@@ -71,14 +78,14 @@
 }
 
 .background-img.bubbels {
-	top: 3rem;
+	top: 1rem;
 	right: -5rem;
 	width: 5rem;
 	height: 5rem;
 }
 
 .background-img.wine-all {
-	top: 5rem;
+	top: 4rem;
 	right: 15.5rem;
 	width: 8rem;
 	height: 8rem;
@@ -101,17 +108,31 @@
 
 	.background-img.opening-hours {
 		z-index: -1;
-		top: -1rem;
-		right: 16.5rem;
+		top: -3rem;
+		right: 10rem;
 		width: 4rem;
 		height: 4rem;
+		display: none;
+	}
+
+	.background-img.wine-all {
+		top: -10rem;
+		right: 15.5rem;
+		width: 8rem;
+		height: 8rem;
 	}
 
 	.background-img.snack {
-		top: 4rem;
-		right: 10rem;
+		top: 6rem;
+		right: 12rem;
 		width: 5rem;
 		height: 5rem;
+	}
+	.background-img.sweets {
+		top: 2rem;
+		right: 13rem;
+		width: 8rem;
+		height: 8rem;
 	}
 
 	.background-img.bubbels {
@@ -138,15 +159,15 @@
 		height: 5rem;
 	}
 	.background-img.bubbels {
-		top: 2rem;
+		top: 1rem;
 		right: 8rem;
 		width: 8rem;
 		height: 8rem;
 	}
 
 	.background-img.cocktails {
-		top: -1rem;
-		right: -3rem;
+		top: -2rem;
+		right: -4rem;
 		width: 5rem;
 		height: 5rem;
 	}
