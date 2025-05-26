@@ -1,1 +1,0 @@
-import{j as n,L as s}from"./index-D8BLzF7F.js";/* empty css               */function u({text:a,onClick:o,link:r}){return r?n.jsx(s,{to:r,className:"button","aria-label":`GO TO ${a}`,children:a}):n.jsx("button",{className:"button","aria-label":a,onClick:o,children:a})}export{u as B};
