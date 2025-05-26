@@ -18,6 +18,7 @@ import bubblesglass from '../../assets/illustrations/bubblesglass.svg';
 import cocktail from '../../assets/illustrations/cocktail.svg';
 import cheese from '../../assets/illustrations/cheese.svg';
 import wineImg from '../../assets/illustrations/winebottle.svg';
+import cakeImg from '../../assets/illustrations/Cake2.svg';
 
 function MenuPage() {
 	return (
@@ -30,7 +31,7 @@ function MenuPage() {
 			</section>
 			<Flexbox>
 				<Menu menuId="menu-always" img={hareLogo} />
-				<Menu menuId="menu-sweets" img="" />
+				<Menu menuId="menu-sweets" img={cakeImg} />
 			</Flexbox>
 
 			<Flexbox>
