@@ -14,8 +14,22 @@ import dj2Img from '../../assets//pictures/dj2.jpg';
 import wineImg from '../../assets/pictures/wine-tasting2.jpg';
 import privateImg from '../../assets/pictures/private.png';
 import eventImg from '../../assets/pictures/event.png';
-
+import Footer from '../../components/Footer/Footer';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 function SingleEventPage() {
+	const location = useLocation();
+
+	useEffect(() => {
+		if (location.hash) {
+			const id = location.hash.replace('#', '');
+			const el = document.getElementById(id);
+
+			if (el) {
+				el.scrollIntoView({ behavior: 'smooth' });
+			}
+		}
+	}, [location]);
 	const { eventId } = useParams();
 	const { fetchedEvent, loading, error } = fetchEventById(eventId);
 
@@ -141,6 +155,8 @@ function SingleEventPage() {
 					</aside>
 				</section>
 			</article>
+			<Button text="TILL TOPPEN" link={'#top'} />
+			<Footer />
 		</main>
 	);
 }

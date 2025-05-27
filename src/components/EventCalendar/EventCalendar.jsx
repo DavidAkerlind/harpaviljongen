@@ -1,5 +1,3 @@
-import React from 'react';
-import { events } from '../../testData/mockEvents';
 import EventCard from '../EventCard/EventCard';
 import { fetchAllEvents } from '../../API/fetchAllEvents.js';
 import MenuSkeleton from '../Skeleton/Skeleton.jsx';

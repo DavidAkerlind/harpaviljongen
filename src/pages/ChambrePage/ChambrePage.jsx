@@ -55,6 +55,7 @@ function ChambrePage() {
 
 				<ChambreMenu />
 			</section>
+			<Button text="TILL TOPPEN" link={'#top'} />
 			<Footer />
 		</main>
 	);

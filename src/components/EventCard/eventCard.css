@@ -99,6 +99,11 @@
 	overflow: hidden;
 	text-decoration: none;
 	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+	transition: 0.2s all ease-in-out;
+}
+
+.event-card--poster:hover {
+	scale: 1.01;
 }
 
 .event-card__vertical {

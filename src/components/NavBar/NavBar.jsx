@@ -18,7 +18,7 @@ function NavBar() {
 	];
 
 	return (
-		<nav className="nav">
+		<nav id="top" className="nav">
 			{/* Overlay */}
 			{open && (
 				<div

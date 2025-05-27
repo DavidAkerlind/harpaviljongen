@@ -20,8 +20,21 @@ import cheese from '../../assets/illustrations/cheese.svg';
 import wineImg from '../../assets/illustrations/winebottle.svg';
 import cakeImg from '../../assets/illustrations/Cake2.svg';
 import PageDesc from '../../components/PageDesc/PageDesc';
-
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 function MenuPage() {
+	const location = useLocation();
+
+	useEffect(() => {
+		if (location.hash) {
+			const id = location.hash.replace('#', '');
+			const el = document.getElementById(id);
+
+			if (el) {
+				el.scrollIntoView({ behavior: 'smooth' });
+			}
+		}
+	}, [location]);
 	return (
 		<section className="page page-menu">
 			<NavBar />
@@ -50,6 +63,7 @@ function MenuPage() {
 				<Menu menuId="menu-cocktails" img={cocktail} />
 				<Menu menuId="menu-beer" img="" />
 			</Flexbox>
+			<Button text="TILL TOPPEN" link={'#top'} />
 			<Footer />
 		</section>
 	);

@@ -1,4 +1,5 @@
 import './chambreMenu.css';
+import Button from '../Button/Button';
 
 function ChambreMenu() {
 	return (
@@ -50,11 +51,17 @@ function ChambreMenu() {
 			<section className="chambre-menu__price-info">
 				<h3 className="chambre-menu__price-title">PRIS</h3>
 				<ul className="chambre-menu__price-list">
-					<li className="chambre-menu__price-list-item chambre-menu__price-list-item--price">
+					<li className="chambre-menu__price-list-item ">
 						Meny: 1250 kr
 					</li>
-					<li className="chambre-menu__price-list-item chambre-menu__price-list-item--price">
+					<li className="chambre-menu__price-list-item">
 						Vinpaket: 850 kr
+					</li>
+					<li className="chambre-menu__price-list-item chambre-menu__price-list-item--button">
+						<Button
+							text="BOKA NU"
+							link={'mailto:info@exempel.se'}
+						/>
 					</li>
 				</ul>
 			</section>

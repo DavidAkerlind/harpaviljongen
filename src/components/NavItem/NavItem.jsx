@@ -13,7 +13,9 @@ function NavItem({ text, link }) {
 	return (
 		<li className="nav__list-item">
 			<Link
-				className={isActive ? 'link--active' : 'link link--hover'}
+				className={`link ${
+					isActive ? 'link--active' : 'link link--hover'
+				}`}
 				aria-label={`Go to ${text} page`}
 				to={link}>
 				{text}

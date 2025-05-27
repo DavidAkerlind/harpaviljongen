@@ -31,9 +31,6 @@
 .chambre-menu__course-list-item {
 	margin-bottom: 0.5rem;
 }
-.chambre-menu__price-list-item--price {
-	font-size: 1.3rem;
-}
 
 .chambre-menu__price-info {
 	margin: 3rem 0;
@@ -49,10 +46,19 @@
 
 .chambre-menu__price-list {
 	list-style: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .chambre-menu__price-list-item {
 	margin-bottom: 0.5rem;
+	font-size: 1.3rem;
+}
+
+.chambre-menu__price-list-item--button {
+	margin-top: 1rem;
+	font-size: 1rem;
 }
 
 .chambre-menu__footer {

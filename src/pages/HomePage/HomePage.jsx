@@ -54,6 +54,7 @@ function HomePage() {
 				<EventCalendar />
 			</Flexbox>
 
+			<Button text="TILL TOPPEN" link={'#top'} />
 			<Footer></Footer>
 		</section>
 	);
