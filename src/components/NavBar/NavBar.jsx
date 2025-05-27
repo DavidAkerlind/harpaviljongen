@@ -14,6 +14,7 @@ function NavBar() {
 		{ text: 'Chambre', link: '/chambre' },
 		{ text: 'Öppettider', link: '#openingHours' },
 		{ text: 'Kontakt', link: '#contactInfo' },
+		{ text: 'Galleri', link: '/gallery' },
 	];
 
 	return (

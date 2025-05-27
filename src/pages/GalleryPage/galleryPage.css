@@ -1,0 +1,11 @@
+.gallery__footer-text {
+	width: 50%;
+	font-style: italic;
+}
+@media screen and (max-width: 767px) {
+	/* Phone-specific styles here */
+	.gallery__footer-text {
+		width: 100%;
+		font-style: italic;
+	}
+}

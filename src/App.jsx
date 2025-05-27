@@ -6,11 +6,11 @@ const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const ErrorPage = lazy(() => import('./pages/ErrorPage/ErrorPage'));
 const MenuPage = lazy(() => import('./pages/MenuPage/MenuPage'));
 const ChambrePage = lazy(() => import('./pages/ChambrePage/ChambrePage'));
-const NewsPage = lazy(() => import('./pages/NewsPage/NewsPage'));
 const LoadingPage = lazy(() => import('./pages/LoadingPage/LoadingPage'));
 const SingleEventPage = lazy(() =>
 	import('./pages/SingleEventPage/SingleEventPage')
 );
+const GalleryPage = lazy(() => import('./pages/GalleryPage/GalleryPage'));
 
 function App() {
 	return (
@@ -44,10 +44,10 @@ function App() {
 						}
 					/>
 					<Route
-						path="/news"
+						path="/gallery"
 						element={
 							<Suspense fallback={<LoadingPage />}>
-								<NewsPage />
+								<GalleryPage />
 							</Suspense>
 						}
 					/>
