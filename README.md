@@ -6,6 +6,6 @@ Den hämtar sin data från en databas på MongoDB från ett API som är externt 
 ## 🛠️ Teknisk översikt
 
 - **Backend**: Node.js med Express
-- **Datakälla**: MongoDB + REST API via Render
+- **Datakälla**: MongoDB + REST API via Render [API-repo](https://github.com/DavidAkerlind/harpaviljongen-DB-API)
 
 🧑‍💻 Byggt av [David Åkerlind](https://github.com/DavidAkerlind)
