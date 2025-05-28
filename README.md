@@ -1,28 +1,12 @@
 # Harpaviljongen
 
-**Harpaviljongen** är ett digitalt menysystem byggt i JavaScript, med möjligheter att läsa, redigera och visa menyer med en enkel REST API-arkitektur. Projektet är utformat för att kunna användas i restaurangsammanhang där menyer ofta behöver justeras.
+**Harpaviljongen** är en hemsida för resturangen Harpaviljongen i Stockholm. Den är byggd med React i JavaScript utav David Åkerlind 2025. Den innehåller en övergripande Startsida, Meny-sida, Chambre sépareé-sida,  Galleri-sida och Event-sida. Sidan är uppe på en egen domän www.davidakerlind.com, och hostas med hjälp av Github-pages och Spaceship.com.
+Den hämtar sin data från en databas på MongoDB från ett API som är externt och hostas på Render. Det finns även en Admin tänst kopplat till detta API som är byggt också med Ract och Mu-material, Som är mitta andra repo ```harpaviljongen-admin-service``` Där kan man ändra menyerna, eventen och öppettiderna som visas på hemsidan. Det är en relativ säkr tjänst som ygger på inloggning med krypterat lösenord och separation of concerns är applicerat. Den använder dock inga JWT-Tokens. 
 
 ## 🛠️ Teknisk översikt
 
 - **Backend**: Node.js med Express
-- **Datakälla**: JSON-fil (`data.json`)
-- **Endpoints**:
-  - `GET /api/menus` – Hämtar alla menyer
-  - `GET /api/menus/:menuId` – Hämtar en specifik meny
-  - `PUT /api/menus/:menuId/:field` – Uppdaterar ett fält (t.ex. `title`, `description`) i en meny
-  - `PUT /api/menus/:menuId/:itemId/:field` – Uppdaterar ett fält i ett enskilt menyobjekt
-
-## 📁 Struktur
-
-```
-.
-├── api/
-│   └── menus.js        # Express-router för meny-API:t
-├── data/
-│   └── data.json       # Alla menyer och menyobjekt lagras här
-├── server.js           # Startar Express-servern
-└── public/             # Statisk front-end (valfritt)
-```
+- **Datakälla**: MongoDB + REST API via Render
 
 ## ▶️ Starta projektet
 
