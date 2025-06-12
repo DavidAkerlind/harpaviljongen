@@ -86,7 +86,7 @@
 
 .event-card--poster {
 	position: relative;
-	width: 350px;
+	width: 300px;
 	height: 480px;
 	background: var(--color-blue-dark);
 	color: var(--color-bg);
@@ -130,7 +130,6 @@
 }
 
 .event-card__header {
-	margin-bottom: -1rem;
 	width: 100%;
 	text-align: center;
 	z-index: 999;
@@ -177,5 +176,6 @@
 		width: 90vw;
 		height: auto;
 		min-height: 400px;
+		margin-bottom: -0.7rem;
 	}
 }

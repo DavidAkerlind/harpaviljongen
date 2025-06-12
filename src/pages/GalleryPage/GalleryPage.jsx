@@ -74,8 +74,7 @@ function GalleryPage() {
 
 			<p className="gallery__footer-text">
 				Vi inspireras av det franska köket men låter även våra egna
-				minnen, favoriter och smaker få ta plats. Hos oss är chambre
-				séparée inte bara ett rum – det är en upplevelse. <br />
+				minnen, favoriter och smaker få ta plats. <br />
 				<br />
 				Välkommen hem till Harpaviljongen.
 			</p>
