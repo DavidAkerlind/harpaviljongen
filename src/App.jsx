@@ -11,6 +11,7 @@ const SingleEventPage = lazy(() =>
 	import('./pages/SingleEventPage/SingleEventPage')
 );
 const GalleryPage = lazy(() => import('./pages/GalleryPage/GalleryPage'));
+const WineListPage = lazy(() => import('./pages/WineListPage/WineListPage'));
 
 function App() {
 	return (
@@ -63,8 +64,16 @@ function App() {
 					<Route
 						path="/loading"
 						element={
-							<Suspense fallback={<LoadingPage />}>
+							<Suspense fallback={<ErrorPage />}>
 								<LoadingPage />
+							</Suspense>
+						}
+					/>
+					<Route
+						path="/wine-list"
+						element={
+							<Suspense fallback={<LoadingPage />}>
+								<WineListPage />
 							</Suspense>
 						}
 					/>
