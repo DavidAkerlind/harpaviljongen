@@ -1,1 +1,0 @@
-import{j as s}from"./index-DFLsmmId.js";import{N as e}from"./NavBar-BV_glKSD.js";function t(){return s.jsx("section",{})}function r(){return s.jsxs("section",{className:"page page-winelist",children:[s.jsx(e,{}),s.jsx(t,{})]})}export{r as default};
