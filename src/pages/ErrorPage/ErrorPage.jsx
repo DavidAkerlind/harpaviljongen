@@ -8,7 +8,7 @@ import Flexbox from '../../components/Flexbox/Flexbox';
 function ErrorPage() {
 	return (
 		<section className="page page-error">
-			<NavBar />
+			{/* <NavBar /> */}
 			<PageHeader text="HARPAVILJONGEN" />
 			<Flexbox>
 				<section className="page__error-section">
@@ -23,7 +23,7 @@ function ErrorPage() {
 					type="error"
 				/>
 			</Flexbox>
-			<Button text="GÅ TILL HEMSIDAN" link="/" />
+			{/* <Button text="GÅ TILL HEMSIDAN" link="/" /> */}
 		</section>
 	);
 }

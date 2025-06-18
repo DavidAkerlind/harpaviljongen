@@ -145,12 +145,12 @@ function SingleEventPage() {
 							<li>
 								<strong>Var</strong> Harpaviljongen
 							</li>
-							<li>
+							{/* <li>
 								<strong>Ålder</strong> 18+
 							</li>
 							<li>
 								<strong>Biljetter</strong> 450:-
-							</li>
+							</li> */}
 						</ul>
 					</aside>
 				</section>

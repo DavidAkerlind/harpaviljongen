@@ -13,6 +13,26 @@ const SingleEventPage = lazy(() =>
 const GalleryPage = lazy(() => import('./pages/GalleryPage/GalleryPage'));
 const WineListPage = lazy(() => import('./pages/WineListPage/WineListPage'));
 
+// function App() {
+// 	return (
+// 		<div className="app">
+// 			<HashRouter>
+// 				<ScrollToTop />
+// 				<Routes>
+// 					<Route
+// 						path="/"
+// 						element={
+// 							<Suspense fallback={<ErrorPage />}>
+// 								<ErrorPage />
+// 							</Suspense>
+// 						}
+// 					/>
+// 				</Routes>
+// 			</HashRouter>
+// 		</div>
+// 	);
+// }
+
 function App() {
 	return (
 		<div className="app">
