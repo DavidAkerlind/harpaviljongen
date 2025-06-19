@@ -10,11 +10,11 @@ function ErrorPage() {
 		<section className="page page-error">
 			{/* <NavBar /> */}
 			<PageHeader text="HARPAVILJONGEN" />
-			<Flexbox marginBlock="8rem">
+			<Flexbox>
 				<section className="page__error-section">
 					<h2 className="error-section__title">404</h2>
 					<p className="error-section__subtitle">
-						Sidan hittades inte
+						Sidan hittades tyvärr inte
 					</p>
 				</section>
 				<BackgroundImage

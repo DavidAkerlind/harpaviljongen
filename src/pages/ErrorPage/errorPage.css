@@ -2,7 +2,7 @@
 	.flexbox {
 		width: 90%;
 		max-width: 400px;
-		margin-block: 3rem;
+		margin: 8rem 0 1rem 0;
 		padding: 1rem;
 		border: solid var(--color-blue-dark) 4px;
 	}
