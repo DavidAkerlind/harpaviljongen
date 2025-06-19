@@ -9,7 +9,7 @@ function OpeningHours({ img }) {
 	const { fetchedHours, loading, error } = fetchOpeningHours();
 
 	if (loading) return <MenuSkeleton />;
-	if (error) return <p>Error loading menu: {error.message}</p>;
+	if (error) return <MenuSkeleton />;
 
 	return (
 		<section id="openingHours" className="opening-hours-section">

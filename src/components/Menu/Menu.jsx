@@ -9,11 +9,11 @@ function Menu({ menuId, img }) {
 	const { fetchedMenu, loading, error } = fetchMenuById(menuId);
 
 	if (loading) return <MenuSkeleton />;
-	if (error) return <p>Error loading menu: {error.message}</p>;
+	if (error) return <MenuSkeleton />;
 
 	const { title, description, type, price, items } = fetchedMenu;
 	// Verify items exists before mapping
-	if (!items) return <p>No menu items available</p>;
+	if (!items) return <MenuSkeleton />;
 
 	return (
 		<section id={`menu ${type}`} className={`menu ${type}`}>

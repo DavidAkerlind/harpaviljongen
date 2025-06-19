@@ -10,11 +10,11 @@ function EventCalendar() {
 	console.log(fetchedEvents);
 
 	if (loading) return <MenuSkeleton />;
-	if (error) return <p>Error loading menu: {error.message}</p>;
+	if (error) return <MenuSkeleton />;
 
 	return (
 		<section id="events" className="event-calendar">
-			<h2 className="section__title">EVENEMANG</h2>
+			<h2 className="section__title">HAPPENINGS</h2>
 			<h3 className="event-calendar__subtitle">
 				På harpaviljongen kör vi event hela sommaren! Dj-spelingar,
 				vin-provningar, och mycket mer. Kom och häng i våran lilla oas i
@@ -29,8 +29,8 @@ function EventCalendar() {
 			) : (
 				<p>Inga kommande evenemang</p>
 			)}
-			<br />
-			<Button text="ALLA EVENEMANG" link={`/events}`} />
+
+			<Button text="ALLA EVENEMANG" link={`/events`} />
 		</section>
 	);
 }

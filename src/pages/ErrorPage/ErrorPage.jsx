@@ -10,7 +10,7 @@ function ErrorPage() {
 		<section className="page page-error">
 			{/* <NavBar /> */}
 			<PageHeader text="HARPAVILJONGEN" />
-			<Flexbox>
+			<Flexbox marginBlock="8rem">
 				<section className="page__error-section">
 					<h2 className="error-section__title">404</h2>
 					<p className="error-section__subtitle">
@@ -23,7 +23,7 @@ function ErrorPage() {
 					type="error"
 				/>
 			</Flexbox>
-			{/* <Button text="GÅ TILL HEMSIDAN" link="/" /> */}
+			<Button text="GÅ TILL HEMSIDAN" link="/" />
 		</section>
 	);
 }
