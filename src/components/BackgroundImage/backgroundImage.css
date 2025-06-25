@@ -64,7 +64,7 @@
 }
 
 .background-img.cocktails {
-	top: 2rem;
+	top: -6rem;
 	right: 9rem;
 	width: 5rem;
 	height: 5rem;
@@ -78,7 +78,7 @@
 }
 
 .background-img.bubbels {
-	top: 1rem;
+	top: -6em;
 	right: -5rem;
 	width: 5rem;
 	height: 5rem;
@@ -140,14 +140,14 @@
 	}
 
 	.background-img.bubbels {
-		top: 2rem;
+		top: -6rem;
 		right: -6rem;
 		width: 8rem;
 		height: 8rem;
 	}
 
 	.background-img.cocktails {
-		top: 1rem;
+		top: -8rem;
 		right: 10rem;
 		width: 5rem;
 		height: 5rem;
@@ -181,8 +181,8 @@
 	}
 
 	.background-img.cocktails {
-		top: -2rem;
-		right: -4rem;
+		top: -1rem;
+		right: -4.5rem;
 		width: 5rem;
 		height: 5rem;
 	}

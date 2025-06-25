@@ -24,6 +24,7 @@
 
 .footer__list {
 	width: 100%;
+	margin-block: 2rem;
 }
 
 .footer__list-item {
