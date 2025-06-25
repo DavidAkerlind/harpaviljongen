@@ -11,7 +11,7 @@ function Footer() {
 						<span className="list-item__title">Telefon</span>
 						<a
 							className="list-item__link"
-							aria-label="Maila till oss på Harpaviljongen"
+							aria-label="Ring till oss på Harpaviljongen"
 							href="tel:070123456789">
 							08-123456
 						</a>
@@ -20,9 +20,9 @@ function Footer() {
 						<span className="list-item__title">Email</span>
 						<a
 							className="list-item__link"
-							aria-label="Ring till oss på Harpaviljongen"
-							href="mailto:exempel@mail.se">
-							info@example.se
+							aria-label="Maila till oss på Harpaviljongen"
+							href="mailto:info@harpaviljongen.se">
+							info@harpaviljongen.se
 						</a>
 					</li>
 					<li className="footer__list-item">

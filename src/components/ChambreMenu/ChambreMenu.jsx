@@ -60,7 +60,7 @@ function ChambreMenu() {
 					<li className="chambre-menu__price-list-item chambre-menu__price-list-item--button">
 						<Button
 							text="BOKA NU"
-							link={'mailto:info@exempel.se'}
+							link={'mailto:info@harpaviljongen.com'}
 						/>
 					</li>
 				</ul>
