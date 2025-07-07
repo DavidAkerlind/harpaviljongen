@@ -11,6 +11,7 @@ function NavBar() {
 	const navItems = [
 		{ text: 'Hem', link: '/' },
 		{ text: 'Meny', link: '/menu' },
+		{ text: 'Vinlista', link: '/wine-list' },
 		{ text: 'Chambre', link: '/chambre' },
 		{ text: 'Öppettider', link: '#openingHours' },
 		{ text: 'Kontakt', link: '#contactInfo' },
