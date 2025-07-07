@@ -55,7 +55,7 @@ function HomePage() {
 			</Flexbox>
 
 			<Button text="TILL TOPPEN" link={'#top'} />
-			<Footer></Footer>
+			<Footer />
 		</section>
 	);
 }

@@ -45,3 +45,14 @@
 .wine-list__wine-price {
 	white-space: nowrap;
 }
+@media screen and (max-width: 767px) {
+	/* Phone-specific styles here */
+	.wine-list {
+		width: 100%;
+	}
+
+	.wine-list__wine-name {
+		font-size: 0.7rem;
+		word-spacing: 0.1ch;
+	}
+}
