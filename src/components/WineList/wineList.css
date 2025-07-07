@@ -1,0 +1,47 @@
+.wine-list {
+	width: 80%;
+	* {
+		font-weight: 200;
+	}
+}
+
+.wine-list__title {
+	margin-top: 2rem;
+	padding: 0.5rem;
+	border-bottom: solid 2px var(--color-blue-dark);
+}
+
+.wine-list__country-name {
+	font-size: 1.3rem;
+	font-weight: 100;
+}
+
+.wine-list__country-name,
+.wine-list__area {
+	text-align: left;
+	margin-block: 1rem;
+}
+
+.wine-list__wine-row {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 0.1rem;
+}
+
+.wine-list__wine-name {
+	white-space: nowrap;
+}
+
+.wine-list__wine-dots {
+	flex: 1 1 auto;
+	border-bottom: 1.5px dotted #888;
+	height: 1em;
+	margin: 0 0.1rem;
+	margin-bottom: 0.5rem;
+	opacity: 0.7;
+}
+
+.wine-list__wine-price {
+	white-space: nowrap;
+}

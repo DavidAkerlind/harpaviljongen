@@ -15,50 +15,52 @@ function WineList() {
 	return (
 		<section className="wine-list">
 			{fetchedWineList.map((wineCategory) => (
-				<div key={wineCategory._id} className="wine-list__category">
+				<section key={wineCategory._id} className="wine-list__category">
 					{/* Titel, t.ex. VITT */}
 					<h2 className="wine-list__title">{wineCategory.title}</h2>
 					{wineCategory.countries &&
 						Object.values(wineCategory.countries).map((country) => (
-							<div
+							<section
 								key={country.country}
 								className="wine-list__country">
 								{/* Land i italic */}
-								<div className="wine-list__country-name">
+								<h3 className="wine-list__country-name">
 									<em>{country.country}</em>
-								</div>
+								</h3>
 								{country.areas.map((areaObj, i) => (
-									<div
+									<section
 										key={areaObj.area || i}
 										className="wine-list__area-block">
 										{/* Om area är "other", visa inget, annars visa area i versaler */}
 										{areaObj.area &&
 										areaObj.area.toLowerCase() !==
 											'other' ? (
-											<div className="wine-list__area">
+											<h4 className="wine-list__area">
 												{areaObj.area.toUpperCase()}
-											</div>
+											</h4>
 										) : (
-											<div className="wine-list__area wine-list__area--empty"></div>
+											<h4 className="wine-list__area wine-list__area--empty"></h4>
 										)}
 										{/* Lista viner */}
 										{areaObj.items.map((item) => (
-											<div
+											<article
 												key={item._id}
 												className="wine-list__wine-row">
-												<span className="wine-list__wine-name">
+												<h5 className="wine-list__wine-name">
 													{item.name}
-												</span>
-												<span className="wine-list__wine-price">
+												</h5>
+												<span className="wine-list__wine-dots"></span>
+
+												<h5 className="wine-list__wine-price">
 													{item.price} kr
-												</span>
-											</div>
+												</h5>
+											</article>
 										))}
-									</div>
+									</section>
 								))}
-							</div>
+							</section>
 						))}
-				</div>
+				</section>
 			))}
 		</section>
 	);
