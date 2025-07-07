@@ -7,7 +7,6 @@ import Button from '../Button/Button.jsx';
 
 function EventCalendar() {
 	const { fetchedEvents, loading, error } = fetchAllEvents();
-	console.log(fetchedEvents);
 
 	if (loading) return <MenuSkeleton />;
 	if (error) return <MenuSkeleton />;
