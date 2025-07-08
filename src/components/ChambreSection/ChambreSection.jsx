@@ -12,10 +12,10 @@ const ChambreSection = () => {
 
 				<p className="chambre__text">
 					En kväll i vår mest omsorgsfulla vrå. Där glas klingar
-					lågmält, smaker dröjer sig kvar och tiden tycks sakta in.
+					lågmält, smaker dröjer sig kvar och tiden tycks sakta ned.
 					Fem serveringar. Noggrant utvalda råvaror. Viner med själ.
 					<br /> <br /> <br />
-					Vill du förfina upplevelsen ytterligare, står vår sommelier
+					Vill du förfina upplevelsen ytterligare står vår sommelier
 					Elsa Hurtig redo att guida dig genom vinets värld – och
 					självklart har vi omsorgsfullt utvalda alkoholfria
 					alternativ. <br /> <br /> <br /> En kväll i vårt chambre
@@ -31,12 +31,12 @@ const ChambreSection = () => {
 			<figure className="chambre__image-container">
 				<img
 					src={chambreImage1}
-					alt="Rund dukad middag i chambre séparée"
+					alt="dukad middag i chambre séparée"
 					className="chambre__image"
 				/>
 				<img
 					src={chambreImage2}
-					alt="Rund dukad middag i chambre séparée"
+					alt="Vitrinskål med vinglas"
 					className="chambre__image"
 				/>
 			</figure>

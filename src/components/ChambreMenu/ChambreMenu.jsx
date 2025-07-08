@@ -8,15 +8,15 @@ function ChambreMenu() {
 				<article className="chambre-menu__course">
 					<h3 className="chambre-menu__course-title">FÖRRÄTT</h3>
 					<p className="chambre-menu__course-text">
-						Vi vevar ut ett urval av finaste{' '}
+						Vi vevar ut ett urval av våra finaste{' '}
 						<strong>charkuterier</strong> från vår Berkel Volano P15
 						– ett startskott med både hantverk och tradition i varje
 						skiva.
 					</p>
 					<p className="chambre-menu__course-text">
 						Därefter serveras vår signatur: en{' '}
-						<strong>krokett</strong> krokett på Västerbottensost,
-						toppad med exklusiv störcaviar.
+						<strong>krokett</strong> på Västerbottensost, toppad med
+						exklusiv störcaviar.
 					</p>
 					<p className="chambre-menu__course-text">
 						<strong>Toast Skagen</strong>, serverad på smörstekt
@@ -33,7 +33,7 @@ function ChambreMenu() {
 							Côte de bœuf med klassiska tillbehör
 						</li>
 						<li className="chambre-menu__course-list-item">
-							Piggvar på ben – varsamt tillagad med noggrant
+							Piggvar på benet – varsamt tillagad med noggrant
 							utvalda ackompanjemang
 						</li>
 					</ul>
@@ -68,7 +68,7 @@ function ChambreMenu() {
 
 			<section className="chambre-menu__footer">
 				<p className="chambre-menu__footer-text">
-					Vi inspireras av det franska köket men låter även våra egna
+					Vi inspireras av det franska köket, men låter även våra egna
 					minnen, favoriter och smaker få ta plats. Hos oss är chambre
 					séparée inte bara ett rum – det är en upplevelse. <br />
 					<br />

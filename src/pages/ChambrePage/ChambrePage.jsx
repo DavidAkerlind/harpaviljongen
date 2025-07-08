@@ -28,7 +28,7 @@ function ChambrePage() {
 	return (
 		<main className="page page-chambre">
 			<NavBar />
-			<PageHeader text="CHAMBRE SÈPARÈE" />
+			<PageHeader text="CHAMBRE SÉPARÉE" />
 			<section className="page__top-section page__top-section--chambre">
 				<Button text="BOKA NU" link={'mailto:info@exempel.se'} />
 				<Button text="CHAMBRE MENYN" link={'#chambreMenu'} />
@@ -55,7 +55,7 @@ function ChambrePage() {
 					/>
 					<img
 						src={chambreImage2}
-						alt="Rund dukad middag i chambre séparée"
+						alt="Vitrinskåp med vinglas"
 						className="page-chambre__image"
 					/>
 				</figure>

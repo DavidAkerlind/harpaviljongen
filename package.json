@@ -1,6 +1,6 @@
 {
 	"name": "harpaviljongen",
-	"homepage": "https://davidakerlind.com/",
+	"homepage": "https://harpaviljongen.com/",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
@@ -9,7 +9,7 @@
 		"build": "vite build",
 		"lint": "eslint .",
 		"preview": "vite preview",
-		"predeploy": "npm run build && echo www.davidakerlind.com > dist/CNAME",
+		"predeploy": "npm run build && echo www.harpaviljongen.com > dist/CNAME",
 		"deploy": "gh-pages -d dist"
 	},
 	"dependencies": {

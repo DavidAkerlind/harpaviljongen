@@ -23,7 +23,7 @@ function ErrorPage() {
 					type="error"
 				/>
 			</Flexbox>
-			<Button text="GÅ TILL HEMSIDAN" link="/" />
+			{/* <Button text="GÅ TILL HEMSIDAN" link="/" /> */}
 		</section>
 	);
 }
