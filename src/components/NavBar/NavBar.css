@@ -5,6 +5,11 @@
 	position: sticky;
 }
 
+.nav--hero {
+	padding-right: 2rem;
+	position: absolute;
+}
+
 .nav__hamburger {
 	display: none;
 	background: none;

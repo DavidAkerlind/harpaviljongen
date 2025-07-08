@@ -15,6 +15,7 @@ import Footer from '../../components/Footer/Footer';
 import ChambreSection from '../../components/ChambreSection/ChambreSection';
 import EventCalendar from '../../components/EventCalendar/EventCalendar';
 import PageDesc from '../../components/PageDesc/PageDesc';
+import HeroSection from '../../components/HeroSection/HeroSection';
 
 function HomePage() {
 	const location = useLocation();
@@ -32,8 +33,9 @@ function HomePage() {
 
 	return (
 		<section className="page page-home">
-			<NavBar />
-			<PageHeader text="HARPAVILJONGEN" />
+			{/* <NavBar /> */}
+			{/* <PageHeader text="HARPAVILJONGEN" /> */}
+			<HeroSection />
 			<section className="page__top-section">
 				<Button text="MENY" link="/menu" />
 				<Button text="ÖPPETTIDER" link="#openingHours" />
@@ -42,7 +44,6 @@ function HomePage() {
 			</section>
 			<PageDesc />
 			<Menu menuId="menu-lunch" img={hareLogo} />
-
 			<Flexbox>
 				<Menu menuId="menu-wine" img={wineIllustration} />
 				<OpeningHours img={clockIllustration} />
@@ -53,7 +54,6 @@ function HomePage() {
 			<Flexbox>
 				<EventCalendar />
 			</Flexbox>
-
 			<Button text="TILL TOPPEN" link={'#top'} />
 			<Footer />
 		</section>

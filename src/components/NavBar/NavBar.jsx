@@ -5,7 +5,7 @@ import './navBar.css';
 import { Link } from 'react-router-dom';
 import { link, text } from 'framer-motion/client';
 
-function NavBar() {
+function NavBar({ type = 'normal' }) {
 	const [open, setOpen] = useState(false);
 
 	const navItems = [
@@ -19,7 +19,7 @@ function NavBar() {
 	];
 
 	return (
-		<nav id="top" className="nav">
+		<nav id="top" className={`nav${type === 'hero' ? ' nav--hero' : ''}`}>
 			{/* Overlay */}
 			{open && (
 				<div
