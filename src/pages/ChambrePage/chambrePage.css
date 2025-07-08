@@ -15,12 +15,13 @@
 
 .page-chambre__image-container {
 	display: flex;
+	gap: 1rem;
 	justify-content: center;
 	margin-bottom: 2rem;
 }
 
 .page-chambre__image {
-	max-width: 100%;
+	max-width: 50%;
 }
 
 .page-chambre__image-container {

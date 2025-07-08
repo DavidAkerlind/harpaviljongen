@@ -1,7 +1,9 @@
 import ChambreMenu from '../../components/ChambreMenu/ChambreMenu';
 import NavBar from '../../components/NavBar/NavBar';
 import PageHeader from '../../components/PageHeader/PageHeader';
-import chambreImage from '../../assets/pictures/chambre-separe.jpg';
+import chambreImage1 from '../../assets/pictures/ProImages/thumbnail_Restaurangporträtt_Harpaviljongen_IG_A-8.jpg';
+import chambreImage2 from '../../assets/pictures/ProImages/thumbnail_Restaurangporträtt_Harpaviljongen_IG_A-11.jpg';
+
 import './chambrePage.css';
 import ChambreSection from '../../components/ChambreSection/ChambreSection';
 import Footer from '../../components/Footer/Footer';
@@ -47,7 +49,12 @@ function ChambrePage() {
 				</section>
 				<figure className="page-chambre__image-container">
 					<img
-						src={chambreImage}
+						src={chambreImage1}
+						alt="Rund dukad middag i chambre séparée"
+						className="page-chambre__image"
+					/>
+					<img
+						src={chambreImage2}
 						alt="Rund dukad middag i chambre séparée"
 						className="page-chambre__image"
 					/>

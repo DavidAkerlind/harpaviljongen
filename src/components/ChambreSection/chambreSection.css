@@ -47,12 +47,13 @@
 	display: flex;
 	justify-content: center;
 	background-position: center;
+	gap: 1rem;
 
 	/* border: 5px solid var(--color-blue-dark); */
 }
 
 .chambre__image {
-	max-width: 100%;
+	max-width: 39%;
 	height: auto;
 }
 

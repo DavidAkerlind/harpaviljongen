@@ -1,5 +1,7 @@
 import './chambreSection.css';
-import chambreImage from '../../assets/pictures/chambre-separe.jpg';
+import chambreImage1 from '../../assets/pictures/ProImages/thumbnail_Restaurangporträtt_Harpaviljongen_IG_A-8.jpg';
+import chambreImage2 from '../../assets/pictures/ProImages/thumbnail_Restaurangporträtt_Harpaviljongen_IG_A-11.jpg';
+
 import Button from '../Button/Button';
 
 const ChambreSection = () => {
@@ -28,7 +30,12 @@ const ChambreSection = () => {
 			</section>
 			<figure className="chambre__image-container">
 				<img
-					src={chambreImage}
+					src={chambreImage1}
+					alt="Rund dukad middag i chambre séparée"
+					className="chambre__image"
+				/>
+				<img
+					src={chambreImage2}
 					alt="Rund dukad middag i chambre séparée"
 					className="chambre__image"
 				/>
