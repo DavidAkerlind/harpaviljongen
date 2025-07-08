@@ -124,6 +124,11 @@ body {
 		padding: 4rem 1rem;
 	}
 
+	.page-home,
+	.page-winelist {
+		padding-top: 0;
+	}
+
 	.section__title {
 		font-size: 1.7rem;
 	}
