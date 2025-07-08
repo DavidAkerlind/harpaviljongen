@@ -42,6 +42,7 @@ function MenuPage() {
 			<section className="page__top-section">
 				<Button text="HEM" link="/" />
 				<Button text="ÖPPETTIDER" link="/" />
+				<Button text="VINLISTA" link="/wine-list" />
 			</section>
 
 			<PageDesc />
