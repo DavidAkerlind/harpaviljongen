@@ -40,7 +40,7 @@ function HomePage() {
 			<section className="page__top-section">
 				<Button text="MENY" link="/menu" />
 				<Button text="ÖPPETTIDER" link="#openingHours" />
-				<Button text="EVENEMANG" link="#events" />
+				{/* <Button text="EVENEMANG" link="#events" /> */}
 				<Button text="VINLISTA" link="/wine-list" />
 			</section>
 			<PageDesc />
@@ -52,9 +52,9 @@ function HomePage() {
 			<Flexbox>
 				<ChambreSection />
 			</Flexbox>
-			<Flexbox>
+			{/* <Flexbox>
 				<EventCalendar />
-			</Flexbox>
+			</Flexbox> */}
 			<Button text="TILL TOPPEN" link={'#top'} />
 			<Footer />
 		</section>
