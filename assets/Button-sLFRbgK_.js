@@ -1,0 +1,1 @@
+import{j as a,L as r}from"./index-CejtRq7j.js";function i({text:o,onClick:s,link:t}){if(t){const n=t==="#top";return a.jsx(r,{to:t,className:`button ${n?"button--full-width":""}`,"aria-label":`GO TO ${o}`,children:o})}return a.jsx("button",{className:"button","aria-label":o,onClick:s,children:o})}export{i as B};
