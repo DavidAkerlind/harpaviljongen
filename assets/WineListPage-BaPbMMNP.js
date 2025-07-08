@@ -1,1 +1,0 @@
-import{j as s}from"./index-CmPBSZKu.js";import{N as t}from"./NavBar-BnmVZv3b.js";/* empty css               */function e(){return s.jsx("section",{})}function a(){return s.jsxs("section",{className:"page page-winelist",children:[s.jsx(t,{}),s.jsx(e,{})]})}export{a as default};
