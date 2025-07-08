@@ -1,6 +1,6 @@
 import './heroSection.css';
-import homePicture from '../../assets/pictures/gallery/sasi-4xOsg3MW7cQ-unsplash.jpg';
-import winePicture from '../../assets/pictures/wineHero.jpg';
+import homePicture from '../../assets/pictures/ProImages/thumbnail_Restaurangporträtt_Harpaviljongen_IG_A-3.jpg';
+import winePicture from '../../assets/pictures/ProImages/thumbnail_Restaurangporträtt_Harpaviljongen_IG_A-11.jpg';
 import logoBlue from '../../assets/logo/hare-logo-blue.svg';
 import logoWhite from '../../assets/logo/hare-logo-white.svg';
 import NavBar from '../../components/NavBar/NavBar';

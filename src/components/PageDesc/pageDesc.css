@@ -9,7 +9,7 @@
 
 	.page__desc {
 		margin-top: 0;
-		max-width: 100%;
+		max-width: 95%;
 		z-index: 9;
 	}
 }
