@@ -1,13 +1,13 @@
 .nav {
 	width: 100%;
-	/* position: relative; */
-	z-index: 10;
+	z-index: 9999;
+	top: 0;
 	position: sticky;
 }
 
 .nav--hero {
 	padding-right: 2rem;
-	position: absolute;
+	/* position: absolute; */
 }
 
 .nav__hamburger {

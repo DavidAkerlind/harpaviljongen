@@ -49,6 +49,11 @@ html {
 	scroll-behavior: smooth;
 }
 
+html,
+body {
+	overflow-x: hidden;
+}
+
 /* ==== BASIC STYLING ==== */
 
 .app {
@@ -56,8 +61,8 @@ html {
 	align-items: center;
 	justify-content: center;
 	background-color: var(--color-bg);
-	min-width: 100vw;
-	overflow: hidden;
+	min-width: 100%;
+	/* overflow: hidden; */
 }
 
 .page {
@@ -71,7 +76,7 @@ html {
 	align-items: center;
 	max-width: 1200px;
 	min-width: 100vw;
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 	text-align: center;
 	gap: 2rem;
 }

@@ -34,8 +34,9 @@ function HomePage() {
 	return (
 		<section className="page page-home">
 			{/* <NavBar /> */}
-			{/* <PageHeader text="HARPAVILJONGEN" /> */}
+
 			<HeroSection />
+			<PageHeader text="HARPAVILJONGEN" />
 			<section className="page__top-section">
 				<Button text="MENY" link="/menu" />
 				<Button text="ÖPPETTIDER" link="#openingHours" />

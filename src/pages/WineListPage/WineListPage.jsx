@@ -6,7 +6,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import Button from '../../components/Button/Button';
 import Footer from '../../components/Footer/Footer';
 import PageHeader from '../../components/PageHeader/PageHeader';
-
+import HeroSection from '../../components/HeroSection/HeroSection';
 function WineListPage() {
 	const location = useLocation();
 
@@ -22,7 +22,8 @@ function WineListPage() {
 	}, [location]);
 	return (
 		<section className="page page-winelist">
-			<NavBar />
+			{/* <NavBar /> */}
+			<HeroSection type="wine" />
 			<PageHeader text="VINLISTA" /> <WineList />
 			<Button text="TILL TOPPEN" link={'#top'} />
 			<Footer />

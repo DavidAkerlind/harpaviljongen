@@ -32,8 +32,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 220px;
-	height: 220px;
+	width: 350px;
+	height: 350px;
 	opacity: 0;
 	animation: fadeInLogo 1.6s ease 0.4s forwards;
 	z-index: 2;
