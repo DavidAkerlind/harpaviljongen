@@ -57,7 +57,7 @@ function Footer() {
 
 			<address className="footer__section">
 				<h3 className="footer__heading">HITTA OSS</h3>
-				<div
+				<section
 					aria-label="En karta över övre östermalm med pin på Harpavilongens plats"
 					className="footer__map-wrapper">
 					<iframe
@@ -67,8 +67,12 @@ function Footer() {
 						loading="lazy"
 						style={{ border: 0 }}
 						referrerPolicy="no-referrer-when-downgrade"></iframe>
-				</div>
+				</section>
 			</address>
+
+			<div className="footer__copyright">
+				<p>© 2025 Harpaviljongen</p>
+			</div>
 		</footer>
 	);
 }
