@@ -4,6 +4,7 @@
 Den hämtar sin data från en databas på MongoDB från ett API som är externt och hostas på Render. Det finns även en Admin tänst kopplat till detta API som är byggt också med Ract och Mu-material, Som är mitta andra repo [harpaviljongen-admin-service](https://github.com/DavidAkerlind/harpaviljongen-admin-service) Där kan man ändra menyerna, eventen och öppettiderna som visas på hemsidan. Det är en relativ säkr tjänst som ygger på inloggning med krypterat lösenord och separation of concerns är applicerat. Den använder dock inga JWT-Tokens. 
 
 ## 🛠️ Teknisk översikt
+- **Frontend**: React + JavaScript [Hemsidan](https://harpaviljongen.com/)
 
 - **Backend**: Node.js med Express [ADMIN-repo](https://github.com/DavidAkerlind/harpaviljongen-admin-service)
 - **Datakälla**: MongoDB + REST API via Render [API-repo](https://github.com/DavidAkerlind/harpaviljongen-DB-API)
