@@ -1,1 +1,0 @@
-import{j as a,L as n}from"./index-QOaw6lB1.js";/* empty css               */function l({text:o,onClick:r,link:t}){if(t){const s=t==="#top";return a.jsx(n,{to:t,className:`button ${s?"button--full-width":""}`,"aria-label":`GO TO ${o}`,children:o})}return a.jsx("button",{className:"button","aria-label":o,onClick:r,children:o})}export{l as B};
