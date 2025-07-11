@@ -45,9 +45,10 @@ function NavBar({ type = 'normal' }) {
 						<img src={hareImg} alt="Harpaviljongen logo" />
 					</Link>
 				</li>
+
 				{navItems.map((item, index) => (
 					<li
-						className="nav__item"
+						className="nav__list-item"
 						key={index}
 						onClick={() => setOpen(false)}>
 						<NavItem text={item.text} link={item.link} />

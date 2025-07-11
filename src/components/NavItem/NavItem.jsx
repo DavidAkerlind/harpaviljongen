@@ -11,16 +11,12 @@ function NavItem({ text, link }) {
 	isActive = location.pathname === link;
 
 	return (
-		<li className="nav__list-item">
-			<Link
-				className={`link ${
-					isActive ? 'link--active' : 'link link--hover'
-				}`}
-				aria-label={`Go to ${text} page`}
-				to={link}>
-				{text}
-			</Link>
-		</li>
+		<Link
+			className={`link ${isActive ? 'link--active' : 'link link--hover'}`}
+			aria-label={`Go to ${text} page`}
+			to={link}>
+			{text}
+		</Link>
 	);
 }
 

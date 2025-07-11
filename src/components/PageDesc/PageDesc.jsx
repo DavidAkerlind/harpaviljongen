@@ -3,7 +3,7 @@ import './pageDesc.css';
 function PageDesc() {
 	return (
 		<p className="page__desc">
-			<h3>Välkommen till Harpaviljongen </h3>
+			<h2>Välkommen till Harpaviljongen </h2>
 			<br />
 			<br /> Där glasen fylls med omsorg, träden skänker svalka och
 			stämningen rör sig mellan samtal, skratt och stilla pauser. <br />

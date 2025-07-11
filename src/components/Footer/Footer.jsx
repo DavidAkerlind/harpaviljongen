@@ -58,7 +58,7 @@ function Footer() {
 			<address className="footer__section">
 				<h3 className="footer__heading">HITTA OSS</h3>
 				<section
-					aria-label="En karta över övre östermalm med pin på Harpavilongens plats"
+					title="Karta över Harpaviljongens location på Södra Fiskartorpsvägen 29, Stockholm"
 					className="footer__map-wrapper">
 					<iframe
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.598098706059!2d18.07819327711369!3d59.34991467462426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f77e4e4ac369f%3A0xea2a85e76094044d!2sHarpaviljongen!5e0!3m2!1ssv!2sse!4v1747399426405!5m2!1ssv!2sse&t=m"
