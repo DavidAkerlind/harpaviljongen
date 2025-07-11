@@ -1,7 +1,18 @@
 .wine-list {
 	width: 80%;
+	opacity: 0;
+	animation: fadeIn 0.8s ease forwards;
 	* {
 		font-weight: 200;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }
 

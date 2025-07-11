@@ -24,7 +24,8 @@ function WineListPage() {
 		<section className="page page-winelist">
 			{/* <NavBar /> */}
 			<HeroSection type="wine" />
-			<PageHeader text="VINLISTA" /> <WineList />
+			<PageHeader text="VINLISTA" />
+			<WineList />
 			<Button text="TILL TOPPEN" link={'#top'} />
 			<Footer />
 		</section>
