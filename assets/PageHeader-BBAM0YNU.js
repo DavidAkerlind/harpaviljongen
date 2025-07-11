@@ -1,0 +1,1 @@
+import{j as e,L as s}from"./index-No6-cv4X.js";function i({text:a,link:r="/"}){return e.jsx("h1",{className:"page-header",children:e.jsx(s,{className:"link","aria-label":"Go to Home page",to:r,children:a})})}export{i as P};
