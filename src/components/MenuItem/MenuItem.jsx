@@ -5,13 +5,14 @@ function MenuItem({ title, description, price, producer }) {
 		<article className="menu-item">
 			<h3 className="menu-item__title">{title}</h3>
 			<p className="menu-item__description">
-				{description}
 				{producer && (
 					<>
-						<br />
 						<strong> Producent:</strong> <em>{producer}</em>
+						<br />
+						<br />
 					</>
 				)}
+				{description}
 			</p>
 
 			{price && <p className="menu-item__price">{price}:-</p>}

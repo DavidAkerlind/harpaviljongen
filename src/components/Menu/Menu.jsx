@@ -20,21 +20,21 @@ function Menu({ menuId, img }) {
 			<h2 className="menu__title">{title}</h2>
 
 			{description && <p className="menu__description">{description}</p>}
-
+			{/* 
 			{type === 'wine' && (
 				<h2
 					aria-label="pris per vinglas"
 					className=" menu__description menu__description--price">
 					{price} <strong>/glas</strong>
 				</h2>
-			)}
-			{type === 'wine-all' && (
+			)} */}
+			{/* {type === 'wine-all' && (
 				<h2
 					aria-label="pris per vinglas"
 					className=" menu__description menu__description--price">
 					{price} <strong></strong>
 				</h2>
-			)}
+			)} */}
 
 			<section className="menu__items">
 				{items

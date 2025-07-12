@@ -5,4 +5,11 @@ export default defineConfig({
 	plugins: [react()],
 	base: '/',
 	assetsInclude: ['**/*.pdf'],
+	build: {
+		rollupOptions: {
+			output: {
+				manualChunks: undefined, // Förhindra problem med chunks
+			},
+		},
+	},
 });
