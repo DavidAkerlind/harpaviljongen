@@ -6,6 +6,13 @@
 	overflow: hidden;
 }
 
+.hero-section--wine {
+	.hero-section__figure {
+		width: 200px;
+		height: 200px;
+	}
+}
+
 .hero-section__img {
 	width: 100vw;
 	height: 100vh;
