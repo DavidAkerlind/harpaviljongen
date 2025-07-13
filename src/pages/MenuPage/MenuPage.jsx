@@ -48,19 +48,19 @@ function MenuPage() {
 			<PageDesc />
 			<Flexbox>
 				<Menu menuId="menu-always" img={hareLogo} />
+				<Menu menuId="menu-snacks" img={cheese} />
 				<Menu menuId="menu-sweets" img={cakeImg} />
 			</Flexbox>
 
 			<Flexbox>
 				<Flexbox align="flex-start">
+					<Menu menuId="menu-bubbels" img={bubblesglass} />
 					<Menu menuId="menu-all-wine" img="" />
 					<Menu menuId="menu-wine-red" img={wineImg} />
 				</Flexbox>
-				<Menu menuId="menu-snacks" img={cheese} />
 			</Flexbox>
 
 			<Flexbox align="center">
-				<Menu menuId="menu-bubbels" img={bubblesglass} />
 				<Menu menuId="menu-cocktails" img={cocktail} />
 				<Menu menuId="menu-beer" img="" />
 			</Flexbox>
