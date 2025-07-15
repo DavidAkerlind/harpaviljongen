@@ -1,4 +1,4 @@
-import { FaInstagram } from 'react-icons/fa';
+import { FaInstagram, FaFacebook } from 'react-icons/fa';
 import './Footer.css';
 import OpeningHours from '../OpeningHours/OpeningHours';
 function Footer() {
@@ -42,33 +42,35 @@ function Footer() {
 
 			<section className="footer__section">
 				<h3 className="footer__heading">FÖLJ OSS</h3>
-				<a
-					className="footer__icon-wrapper"
-					target="_blank"
-					href="https://www.instagram.com/harpaviljongen1912/"
-					aria-label="Gå till våran instagram">
-					<FaInstagram
-						size={50}
-						color="var(----color-blue-dark)"
-						className="footer__icon"
-					/>
-				</a>
+				<section className="footer__icon-frame">
+					<a
+						className="footer__icon-wrapper"
+						target="_blank"
+						href="https://www.instagram.com/harpaviljongen1912/"
+						aria-label="Gå till våran instagram">
+						<FaInstagram
+							size={50}
+							color="var(----color-blue-dark)"
+							className="footer__icon"
+						/>
+					</a>
+					<a
+						className="footer__icon-wrapper"
+						target="_blank"
+						href="https://www.facebook.com/people/Harpaviljongen/61575221844274/"
+						aria-label="Gå till våran Facebook">
+						<FaFacebook
+							size={50}
+							color="var(----color-blue-dark)"
+							className="footer__icon"
+						/>
+					</a>
+				</section>
 			</section>
 
 			<address className="footer__section">
-				{/* <h3 className="footer__heading">HITTA OSS</h3> */}
-				<section
-					id="openingHours"
-					title="Karta över Harpaviljongens location på Södra Fiskartorpsvägen 29, Stockholm"
-					className="footer__map-wrapper">
+				<section id="openingHours" className="footer__map-wrapper">
 					<OpeningHours type="small" />
-					{/* 					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.598098706059!2d18.07819327711369!3d59.34991467462426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f77e4e4ac369f%3A0xea2a85e76094044d!2sHarpaviljongen!5e0!3m2!1ssv!2sse!4v1747399426405!5m2!1ssv!2sse&t=m"
-						width="100%"
-						height="100%"
-						loading="lazy"
-						style={{ border: 0 }}
-						referrerPolicy="no-referrer-when-downgrade"></iframe> */}
 				</section>
 			</address>
 
