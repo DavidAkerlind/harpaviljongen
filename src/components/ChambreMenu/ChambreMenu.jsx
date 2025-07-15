@@ -30,11 +30,12 @@ function ChambreMenu() {
 					<p className="chambre-menu__course-text">Välj mellan:</p>
 					<ul className="chambre-menu__course-list">
 						<li className="chambre-menu__course-list-item">
-							Côte de bœuf med klassiska tillbehör
+							<strong>Côte de bœuf</strong> med klassiska
+							tillbehör
 						</li>
 						<li className="chambre-menu__course-list-item">
-							Piggvar på benet – varsamt tillagad med noggrant
-							utvalda ackompanjemang
+							<strong>Piggvar på benet</strong> – varsamt tillagad
+							med noggrant utvalda ackompanjemang
 						</li>
 					</ul>
 				</article>
@@ -42,8 +43,8 @@ function ChambreMenu() {
 				<article className="chambre-menu__course">
 					<h3 className="chambre-menu__course-title">DESSERT</h3>
 					<p className="chambre-menu__course-text">
-						Varm Tarte Tatin på Calvados, serverad med len
-						vaniljglass
+						Varm <strong>Tarte Tatin</strong> på Calvados, serverad
+						med len vaniljglass
 					</p>
 				</article>
 			</section>
@@ -52,11 +53,12 @@ function ChambreMenu() {
 				<h3 className="chambre-menu__price-title">PRIS</h3>
 				<ul className="chambre-menu__price-list">
 					<li className="chambre-menu__price-list-item ">
-						Meny: 1250 kr
+						<strong>Meny: 1250:- </strong> /person
 					</li>
 					<li className="chambre-menu__price-list-item">
-						Vinpaket: 850 kr
+						Vinpaket: 850:- /person
 					</li>
+
 					<li className="chambre-menu__price-list-item chambre-menu__price-list-item--button">
 						<Button
 							text="BOKA NU"
