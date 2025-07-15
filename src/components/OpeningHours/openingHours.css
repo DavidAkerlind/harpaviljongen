@@ -40,9 +40,33 @@
 	font-weight: 600;
 }
 
+.opening-hours-section--small {
+	padding: 0;
+	min-width: 220px;
+	.opening-hours__title {
+		margin-block: 1rem;
+		font-weight: bold;
+		font-size: 1.5rem;
+		font-style: normal;
+		/* text-align: left; */
+	}
+	.opening-hours__day {
+		margin-bottom: 0.1rem;
+		text-align: right;
+		gap: 0;
+		.opening-hours__day-name {
+			text-align: left;
+		}
+	}
+}
+
 @media screen and (max-width: 767px) {
 	/* Phone-specific styles here */
 	.opening-hours-section {
 		border-top: 2px solid var(--color-blue-dark);
+	}
+
+	.opening-hours-section--small {
+		border: none;
 	}
 }

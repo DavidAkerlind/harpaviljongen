@@ -5,14 +5,18 @@ import { fetchOpeningHours } from '../../API/fetchOpeningHours.js';
 import { devfetchOpeningHours } from '../../API/devfetchOpeningHours.js';
 import MenuSkeleton from '../Skeleton/Skeleton.jsx';
 
-function OpeningHours({ img }) {
+function OpeningHours({ img, type }) {
 	const { fetchedHours, loading, error } = fetchOpeningHours();
 
 	if (loading) return <MenuSkeleton />;
 	if (error) return <MenuSkeleton />;
 
 	return (
-		<section id="openingHours" className="opening-hours-section">
+		<section
+			id="openingHours"
+			className={`opening-hours-section${
+				type === 'small' ? ' opening-hours-section--small' : ''
+			}`}>
 			<h2 className="opening-hours__title">ÖPPETTIDER</h2>
 			<ul className="opening-hours__day-list">
 				{fetchedHours.map(({ day, hours }) => (
