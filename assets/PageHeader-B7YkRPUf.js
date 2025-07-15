@@ -1,0 +1,1 @@
+import{j as e,L as s}from"./index-DpQ8b8Y8.js";function i({text:a,link:r="/"}){return e.jsx("h1",{className:"page-header",children:e.jsx(s,{className:"link","aria-label":"Go to Home page",to:r,children:a})})}export{i as P};
