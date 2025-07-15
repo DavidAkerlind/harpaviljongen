@@ -53,11 +53,9 @@ function MenuPage() {
 			</Flexbox>
 
 			<Flexbox>
-				<Flexbox align="flex-start">
-					<Menu menuId="menu-bubbels" img={bubblesglass} />
-					<Menu menuId="menu-all-wine" img="" />
-					<Menu menuId="menu-wine-red" img={wineImg} />
-				</Flexbox>
+				<Menu menuId="menu-bubbels" img={bubblesglass} />
+				<Menu menuId="menu-all-wine" img="" />
+				<Menu menuId="menu-wine-red" img={wineImg} />
 			</Flexbox>
 
 			<Flexbox align="center">

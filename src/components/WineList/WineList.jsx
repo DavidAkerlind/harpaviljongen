@@ -19,47 +19,84 @@ function WineList() {
 					{/* Titel, t.ex. VITT */}
 					<h2 className="wine-list__title">{wineCategory.title}</h2>
 					{wineCategory.countries &&
-						Object.values(wineCategory.countries).map((country) => (
-							<section
-								key={country.country}
-								className="wine-list__country">
-								{/* Land i italic */}
-								<h3 className="wine-list__country-name">
-									<em>{country.country}</em>
-								</h3>
-								{country.areas.map((areaObj, i) => (
-									<section
-										key={areaObj.area || i}
-										className="wine-list__area-block">
-										{/* Om area är "other", visa inget, annars visa area i versaler */}
-										{areaObj.area &&
-										areaObj.area.toLowerCase() !==
-											'other' ? (
-											<h4 className="wine-list__area">
-												{areaObj.area.toUpperCase()}
-											</h4>
-										) : (
-											<h4 className="wine-list__area wine-list__area--empty"></h4>
-										)}
-										{/* Lista viner */}
-										{areaObj.items.map((item) => (
-											<article
-												key={item._id}
-												className="wine-list__wine-row">
-												<h5 className="wine-list__wine-name">
-													{item.name}
-												</h5>
-												<span className="wine-list__wine-dots"></span>
-
-												<h5 className="wine-list__wine-price">
-													{item.price} kr
-												</h5>
-											</article>
+						Object.values(wineCategory.countries)
+							.filter((country) => {
+								// Filtrera bort länder som inte har några aktiva viner
+								return (
+									country.areas &&
+									country.areas.some(
+										(areaObj) =>
+											areaObj.items &&
+											areaObj.items.some(
+												(item) =>
+													item.active !== false &&
+													item.name &&
+													item.price
+											)
+									)
+								);
+							})
+							.map((country) => (
+								<section
+									key={country.country}
+									className="wine-list__country">
+									{/* Land i italic */}
+									<h3 className="wine-list__country-name">
+										<em>{country.country}</em>
+									</h3>
+									{country.areas
+										.filter((areaObj) => {
+											// Filtrera bort områden som inte har några aktiva viner
+											return (
+												areaObj.items &&
+												areaObj.items.some(
+													(item) =>
+														item.active !== false &&
+														item.name &&
+														item.price
+												)
+											);
+										})
+										.map((areaObj, i) => (
+											<section
+												key={areaObj.area || i}
+												className="wine-list__area-block">
+												{/* Om area är "other", visa inget, annars visa area i versaler */}
+												{areaObj.area &&
+												areaObj.area.toLowerCase() !==
+													'other' ? (
+													<h4 className="wine-list__area">
+														{areaObj.area.toUpperCase()}
+													</h4>
+												) : (
+													<h4 className="wine-list__area wine-list__area--empty"></h4>
+												)}
+												{/* Lista endast aktiva viner */}
+												{areaObj.items
+													.filter(
+														(item) =>
+															item.active !==
+																false &&
+															item.name &&
+															item.price
+													)
+													.map((item) => (
+														<article
+															key={item._id}
+															className="wine-list__wine-row">
+															<h5 className="wine-list__wine-name">
+																{item.name}
+															</h5>
+															<span className="wine-list__wine-dots"></span>
+															<h5 className="wine-list__wine-price">
+																{item.price} kr
+															</h5>
+														</article>
+													))}
+											</section>
 										))}
-									</section>
-								))}
-							</section>
-						))}
+								</section>
+							))}
 				</section>
 			))}
 		</section>
