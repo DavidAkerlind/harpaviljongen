@@ -147,6 +147,9 @@ function SingleEventPage() {
 								<strong>Var</strong> Harpaviljongen
 							</li>
 							<li>
+								<strong>Mat & dryck för två</strong> 1499:-
+							</li>
+							<li>
 								<strong>Boka</strong>{' '}
 								<a href="mailto:jonathan@harpaviljongen.com?subject=Boka%20event%20Kräftvinylskiva">
 									<u>mejla</u>
