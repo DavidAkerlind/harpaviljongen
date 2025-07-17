@@ -155,9 +155,10 @@
 @media (max-width: 600px) {
 	.page-single-event {
 		padding-inline: 0rem;
+		padding-top: 0;
 	}
 	.single-event__hero {
-		height: 170px;
+		height: 230px;
 		width: 100vw;
 		border-radius: 0;
 	}

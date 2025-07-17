@@ -29,7 +29,7 @@ function EventCalendar() {
 				<p>Inga kommande evenemang</p>
 			)}
 
-			<Button text="ALLA EVENEMANG" link={`/events`} />
+			{/* <Button text="ALLA EVENEMANG" link={`/events`} /> */}
 		</section>
 	);
 }

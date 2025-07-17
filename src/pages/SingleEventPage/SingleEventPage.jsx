@@ -67,6 +67,7 @@ function SingleEventPage() {
 	return (
 		<main className="page page-single-event">
 			<NavBar />
+			<PageHeader text={fetchedEvent.title} />
 			<article className="single-event">
 				<section className="single-event__hero">
 					<img
@@ -76,9 +77,9 @@ function SingleEventPage() {
 					/>
 					<div className="single-event__hero-overlay" />
 					<div className="single-event__hero-content">
-						<h1 className="single-event__hero-title">
+						{/* <h1 className="single-event__hero-title">
 							{fetchedEvent.title.toUpperCase()}
-						</h1>
+						</h1> */}
 						<p className="single-event__hero-shortdesc">
 							{fetchedEvent.shortDescription}
 						</p>
@@ -107,11 +108,11 @@ function SingleEventPage() {
 							Harpaviljongen
 						</span>
 					</div>
-					{fetchedEvent.type === 'private' && (
+					{fetchedEvent.type === 'dj' && (
 						<div className="single-event__detail single-event__detail--button">
 							<Button
-								text="BOKA EVENT"
-								link="mailto:info@harpaviljongen.se?subject=Boka%20eget%20event"
+								text="BOKA BORDSPAKETET"
+								link="mailto:info@harpaviljongen.com?subject=Boka%20event%20Kräftvinylskiva"
 							/>
 						</div>
 					)}
@@ -145,12 +146,16 @@ function SingleEventPage() {
 							<li>
 								<strong>Var</strong> Harpaviljongen
 							</li>
-							{/* <li>
-								<strong>Ålder</strong> 18+
-							</li>
 							<li>
-								<strong>Biljetter</strong> 450:-
-							</li> */}
+								<strong>Boka</strong>{' '}
+								<a href="mailto:jonathan@harpaviljongen.com?subject=Boka%20event%20Kräftvinylskiva">
+									<u>mejla</u>
+								</a>{' '}
+								eller{' '}
+								<a href="tel:076-777 16 67">
+									<u>ring</u>
+								</a>
+							</li>
 						</ul>
 					</aside>
 				</section>

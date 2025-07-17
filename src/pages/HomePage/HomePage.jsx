@@ -50,6 +50,9 @@ function HomePage() {
 				<OpeningHours img={clockIllustration} />
 			</Flexbox>
 			<Flexbox>
+				<EventCalendar />
+			</Flexbox>
+			<Flexbox>
 				<ChambreSection />
 			</Flexbox>
 			{/* <Flexbox>

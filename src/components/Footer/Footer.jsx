@@ -21,8 +21,8 @@ function Footer() {
 						<a
 							className="list-item__link"
 							aria-label="Maila till oss på Harpaviljongen"
-							href="mailto:info@harpaviljongen.se">
-							info@harpaviljongen.se
+							href="mailto:info@harpaviljongen.com">
+							info@harpaviljongen.com
 						</a>
 					</li>
 					<li className="footer__list-item">
