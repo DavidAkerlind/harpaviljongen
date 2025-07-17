@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 import eventImg from '../../assets/pictures/event.png';
-import dj2Img from '../../assets//pictures/dj2.jpg';
+import dj2Img from '../../assets/pictures/ProImages/thumbnail_Restaurangporträtt_Harpaviljongen_IG_A-16.jpg';
 import wineImg from '../../assets/pictures/wine-tasting2.jpg';
 import privateImg from '../../assets/pictures/private.png';
 function EventCard({ event }) {

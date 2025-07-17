@@ -11,7 +11,7 @@ import './singleEventPage.css';
 import MenuSkeleton from '../../components/Skeleton/Skeleton';
 
 import dj2Img from '../../assets//pictures/dj2.jpg';
-import wineImg from '../../assets/pictures/wine-tasting2.jpg';
+import wineImg from '../../assets/pictures/ProImages/thumbnail_Restaurangporträtt_Harpaviljongen_IG_A-16.jpg';
 import privateImg from '../../assets/pictures/private.png';
 import eventImg from '../../assets/pictures/event.png';
 import Footer from '../../components/Footer/Footer';
@@ -35,7 +35,7 @@ function SingleEventPage() {
 
 	// Välj bild beroende på event.type
 	let imageSrc = eventImg;
-	if (fetchedEvent.type === 'dj') imageSrc = dj2Img;
+	if (fetchedEvent.type === 'dj') imageSrc = wineImg;
 	else if (fetchedEvent.type === 'wine') imageSrc = wineImg;
 	else if (fetchedEvent.type === 'private') imageSrc = privateImg;
 

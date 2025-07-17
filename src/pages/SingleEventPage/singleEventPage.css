@@ -34,11 +34,7 @@
 .single-event__hero-overlay {
 	position: absolute;
 	inset: 0;
-	background: linear-gradient(
-		180deg,
-		rgba(24, 24, 24, 0.2) 0%,
-		rgba(24, 24, 24, 0.85) 90%
-	);
+	background: #00000097;
 	z-index: 2;
 }
 
