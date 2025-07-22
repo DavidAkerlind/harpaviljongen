@@ -6,6 +6,8 @@ import eventImg from '../../assets/pictures/event.png';
 import dj2Img from '../../assets/pictures/ProImages/thumbnail_Restaurangporträtt_Harpaviljongen_IG_A-16.jpg';
 import wineImg from '../../assets/pictures/wine-tasting2.jpg';
 import privateImg from '../../assets/pictures/private.png';
+import event02 from '../../assets/pictures/images/event02-08-flat.PNG';
+
 function EventCard({ event }) {
 	const date = new Date(event.date);
 	const month = date
@@ -15,7 +17,7 @@ function EventCard({ event }) {
 
 	// Välj bild beroende på event.type
 	let imageSrc = eventImg;
-	if (event.type === 'dj') imageSrc = dj2Img;
+	if (event.type === 'dj') imageSrc = event02;
 	else if (event.type === 'wine') imageSrc = wineImg;
 	else if (event.type === 'private') imageSrc = privateImg;
 
