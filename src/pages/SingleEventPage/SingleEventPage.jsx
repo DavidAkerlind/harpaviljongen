@@ -63,6 +63,7 @@ function SingleEventPage() {
 	const date = new Date(fetchedEvent.date);
 	const month = date.toLocaleDateString('sv-SE', { month: 'long' });
 	const day = date.getDate();
+	const weekday = date.toLocaleDateString('sv-SE', { weekday: 'long' }); // Lägg till denna
 
 	return (
 		<main className="page page-single-event">
@@ -91,7 +92,7 @@ function SingleEventPage() {
 							Datum
 						</span>
 						<span className="single-event__detail-value">
-							{day} {month}
+							{weekday} {day} {month}
 						</span>
 					</div>
 					<div className="single-event__detail">
@@ -128,7 +129,30 @@ function SingleEventPage() {
 				<section className="single-event__main-content">
 					<div className="single-event__desc">
 						<p className="single-event__desc-lead">
-							{fetchedEvent.longDescription}
+							{/* {fetchedEvent.longDescription} */}
+							LÖRDAG 2 AUGUSTI drar vi igång kräftsäsongen med
+							stil – och med snurr! <br /> <br /> DJ Aspen sätter
+							första vinylen kl. 13:00, och vi fyller dagen med
+							kräftor, vin, nubbe och skivor i solen. <br />{' '}
+							<br /> Paket för 2 personer – 1499 kr <br />{' '}
+							Innehåller:
+							<ul className="single-event__list">
+								<li>1 flaska vin</li>
+								<li>2 snaps</li>
+								<li>Kräftor med alla klassiska tillbehör</li>
+							</ul>
+							<br />
+							Platserna är begränsade och kommer garanterat ta
+							slut – först till kvarn gäller.
+							<br /> <br />
+							Boka via telefon eller mejl:{' '}
+							<a href="tel:076-777 16 67">
+								<u>076-777 16 67</u>
+							</a>{' '}
+							/{' '}
+							<a href="mailto:jonathan@harpaviljongen.com?subject=Boka%20event%20Kräftvinylskiva">
+								<u>jonathan@harpaviljongen.com</u>
+							</a>{' '}
 						</p>
 					</div>
 					<aside className="single-event__aside">

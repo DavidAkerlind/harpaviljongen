@@ -101,6 +101,11 @@
 	padding: 2rem;
 }
 
+.single-event__list {
+	list-style-type: disc;
+	margin-left: 1rem;
+}
+
 .single-event__desc-lead {
 	font-size: 1.2rem;
 	line-height: 1.4;
