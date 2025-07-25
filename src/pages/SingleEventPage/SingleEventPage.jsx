@@ -10,7 +10,7 @@ import './singleEventPage.css';
 
 import MenuSkeleton from '../../components/Skeleton/Skeleton';
 
-import event02 from '../../assets/pictures/images/event02-08-flat.PNG';
+import event02 from '../../assets/pictures/images/event02-08-flat-big.PNG';
 import wineImg from '../../assets/pictures/ProImages/thumbnail_Restaurangporträtt_Harpaviljongen_IG_A-16.jpg';
 import privateImg from '../../assets/pictures/private.png';
 import eventImg from '../../assets/pictures/event.png';
@@ -67,7 +67,7 @@ function SingleEventPage() {
 	return (
 		<main className="page page-single-event">
 			<NavBar />
-			<PageHeader text={fetchedEvent.title} />
+			{/* <PageHeader text={fetchedEvent.title} /> */}
 			<article className="single-event">
 				<section className="single-event__hero">
 					<img
@@ -77,9 +77,9 @@ function SingleEventPage() {
 					/>
 					<div className="single-event__hero-overlay" />
 					<div className="single-event__hero-content">
-						{/* <h1 className="single-event__hero-title">
+						<h1 className="single-event__hero-title">
 							{fetchedEvent.title.toUpperCase()}
-						</h1> */}
+						</h1>
 						<p className="single-event__hero-shortdesc">
 							{fetchedEvent.shortDescription}
 						</p>
