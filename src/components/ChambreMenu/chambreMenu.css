@@ -56,8 +56,15 @@
 	font-size: 1.3rem;
 }
 
+.chambre-menu__price-list-item--fine-print {
+	/* margin: 0rem; */
+	font-size: 0.7rem;
+	font-style: italic;
+	font-family: 'Petit Formal Script', cursive;
+}
+
 .chambre-menu__price-list-item--button {
-	margin-top: 1rem;
+	margin: 1rem;
 	font-size: 1rem;
 }
 

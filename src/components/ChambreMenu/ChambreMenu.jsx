@@ -58,6 +58,9 @@ function ChambreMenu() {
 					<li className="chambre-menu__price-list-item">
 						Vinpaket: 850:- /person
 					</li>
+					<li className="chambre-menu__price-list-item chambre-menu__price-list-item--fine-print">
+						Minimumspend 15.000:-
+					</li>
 
 					<li className="chambre-menu__price-list-item chambre-menu__price-list-item--button">
 						<Button
