@@ -131,13 +131,13 @@ function SingleEventPage() {
 				<section className="single-event__main-content">
 					<div className="single-event__desc">
 						<p className="single-event__desc-lead">
-							{/* {fetchedEvent.longDescription} */}
-							LÖRDAG 2 AUGUSTI går startskottet för Harpaviljongen
-							Open – vår egen bouletävling på Harpaviljongen.{' '}
-							<br /> Det är första upplagan av vad vi vill ska bli
-							en återkommande tradition, där sensommaren alltid
-							får sitt avstamp i spelglädje, rosé i glasen och
-							gemenskap runt boulebanan 
+							{/* {fetchedEvent.longDescription} */}I år går
+							startskottet för Harpaviljongen Open – vår egen
+							bouletävling på Harpaviljongen. <br /> Det är första
+							upplagan av vad vi vill ska bli en återkommande
+							tradition, där sensommaren alltid får sitt avstamp i
+							spelglädje, rosé i glasen och gemenskap runt
+							boulebanan 
 							<br />
 							<br /> Anmälan inkl 1 glas rosé – 200 kr <br />
 							<br />
