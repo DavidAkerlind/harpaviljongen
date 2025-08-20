@@ -115,7 +115,7 @@ function SingleEventPage() {
 						<div className="single-event__detail single-event__detail--button">
 							<Button
 								text="ANMÄL DIG NU 200kr"
-								link="mailto:info@harpaviljongen.com?subject=Bouleturnering%20anmälan%20"
+								link="https://docs.google.com/forms/d/e/1FAIpQLSedV-FACztwjMdGLFk4gR8mxpaFGXKnWM1rsl6PksdXHkuAVw/viewform?fbclid=PAZXh0bgNhZW0CMTEAAadVPjExdMHUVP2R4wgWdMCzDoiospfQ4XoNMmikuVaPHpOfNEGFyyEWt6is-A_aem_zOiulzRsCSf8s5sFg_U87A"
 							/>
 						</div>
 					)}
@@ -132,14 +132,15 @@ function SingleEventPage() {
 					<div className="single-event__desc">
 						<p className="single-event__desc-lead">
 							{/* {fetchedEvent.longDescription} */}I år går
-							startskottet för Harpaviljongen Open – vår egen
-							bouletävling på Harpaviljongen. <br /> Det är första
-							upplagan av vad vi vill ska bli en återkommande
-							tradition, där sensommaren alltid får sitt avstamp i
-							spelglädje, rosé i glasen och gemenskap runt
-							boulebanan 
+							startskottet för{' '}
+							<strong>Harpaviljongen Open</strong> – vår egen
+							bouletävling <br /> Det är första upplagan av vad vi
+							vill ska bli en återkommande tradition, där
+							sensommaren alltid får sitt avstamp i spelglädje,
+							rosé i glasen och gemenskap runt boulebanan 
 							<br />
-							<br /> Anmälan inkl 1 glas rosé – 200 kr <br />
+							<br /> <strong>Anmälan</strong> inklusive 1 glas
+							rosé & 1 pastis– 200 kr <br />
 							<br />
 							Platserna är begränsade och kommer garanterat ta
 							slut – först till kvarn gäller.
@@ -166,7 +167,8 @@ function SingleEventPage() {
 								<strong>Var</strong> Harpaviljongen
 							</li>
 							<li>
-								<strong>Biljett</strong> 200:- inkl 1 glas rosé
+								<strong>Anmälan</strong> 200:- (inkl 1 glas rosé
+								& 1 pastis)
 							</li>
 							<li>
 								<strong>Anmäl dig</strong>{' '}
