@@ -143,6 +143,8 @@
 @media (max-width: 900px) {
 	.single-event {
 		padding: 0;
+		margin-top: 0;
+		width: 100%;
 	}
 	.single-event__main-content {
 		flex-direction: column;
