@@ -14,6 +14,7 @@ import event02 from '../../assets/pictures/images/event02-08-flat-big.PNG';
 import wineImg from '../../assets/pictures/ProImages/thumbnail_Restaurangporträtt_Harpaviljongen_IG_A-16.jpg';
 import privateImg from '../../assets/pictures/private.png';
 import eventImg from '../../assets/pictures/event.png';
+import bouleImg from '../../assets/pictures/images/Harpaviljongen-open-2025.jpg';
 import Footer from '../../components/Footer/Footer';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -38,6 +39,7 @@ function SingleEventPage() {
 	if (fetchedEvent.type === 'dj') imageSrc = event02;
 	else if (fetchedEvent.type === 'wine') imageSrc = wineImg;
 	else if (fetchedEvent.type === 'private') imageSrc = privateImg;
+	else if (fetchedEvent.type === 'boule') imageSrc = bouleImg;
 
 	if (loading) {
 		return (
@@ -109,11 +111,11 @@ function SingleEventPage() {
 							Harpaviljongen
 						</span>
 					</div>
-					{fetchedEvent.type === 'dj' && (
+					{fetchedEvent.type === 'boule' && (
 						<div className="single-event__detail single-event__detail--button">
 							<Button
-								text="BOKA BORDSPAKETET"
-								link="mailto:info@harpaviljongen.com?subject=Boka%20event%20Kräftvinylskiva"
+								text="ANMÄL DIG NU 200kr"
+								link="mailto:info@harpaviljongen.com?subject=Bouleturnering%20anmälan%20"
 							/>
 						</div>
 					)}
@@ -130,28 +132,21 @@ function SingleEventPage() {
 					<div className="single-event__desc">
 						<p className="single-event__desc-lead">
 							{/* {fetchedEvent.longDescription} */}
-							LÖRDAG 2 AUGUSTI drar vi igång kräftsäsongen med
-							stil – och med snurr! <br /> <br /> DJ Aspen sätter
-							första vinylen kl. 13:00, och vi fyller dagen med
-							kräftor, vin, nubbe och skivor i solen. <br />{' '}
-							<br /> Paket för 2 personer – 1499 kr <br />{' '}
-							Innehåller:
-							<ul className="single-event__list">
-								<li>1 flaska vin</li>
-								<li>2 snaps</li>
-								<li>Kräftor med alla klassiska tillbehör</li>
-							</ul>
+							LÖRDAG 2 AUGUSTI går startskottet för Harpaviljongen
+							Open – vår egen bouletävling på Harpaviljongen.{' '}
+							<br /> Det är första upplagan av vad vi vill ska bli
+							en återkommande tradition, där sensommaren alltid
+							får sitt avstamp i spelglädje, rosé i glasen och
+							gemenskap runt boulebanan 
+							<br />
+							<br /> Anmälan inkl 1 glas rosé – 200 kr <br />
 							<br />
 							Platserna är begränsade och kommer garanterat ta
 							slut – först till kvarn gäller.
 							<br /> <br />
-							Boka via telefon eller mejl:{' '}
-							<a href="tel:076-777 16 67">
-								<u>076-777 16 67</u>
-							</a>{' '}
-							/{' '}
-							<a href="mailto:jonathan@harpaviljongen.com?subject=Boka%20event%20Kräftvinylskiva">
-								<u>jonathan@harpaviljongen.com</u>
+							Anmäl dig via formuläret:{' '}
+							<a href="https://docs.google.com/forms/d/e/1FAIpQLSedV-FACztwjMdGLFk4gR8mxpaFGXKnWM1rsl6PksdXHkuAVw/viewform?fbclid=PAZXh0bgNhZW0CMTEAAadVPjExdMHUVP2R4wgWdMCzDoiospfQ4XoNMmikuVaPHpOfNEGFyyEWt6is-A_aem_zOiulzRsCSf8s5sFg_U87A">
+								<u>Länk här</u>
 							</a>{' '}
 						</p>
 					</div>
@@ -171,16 +166,12 @@ function SingleEventPage() {
 								<strong>Var</strong> Harpaviljongen
 							</li>
 							<li>
-								<strong>Mat & dryck för två</strong> 1499:-
+								<strong>Biljett</strong> 200:- inkl 1 glas rosé
 							</li>
 							<li>
-								<strong>Boka</strong>{' '}
-								<a href="mailto:jonathan@harpaviljongen.com?subject=Boka%20event%20Kräftvinylskiva">
-									<u>mejla</u>
-								</a>{' '}
-								eller{' '}
-								<a href="tel:076-777 16 67">
-									<u>ring</u>
+								<strong>Anmäl dig</strong>{' '}
+								<a href="https://docs.google.com/forms/d/e/1FAIpQLSedV-FACztwjMdGLFk4gR8mxpaFGXKnWM1rsl6PksdXHkuAVw/viewform?fbclid=PAZXh0bgNhZW0CMTEAAadVPjExdMHUVP2R4wgWdMCzDoiospfQ4XoNMmikuVaPHpOfNEGFyyEWt6is-A_aem_zOiulzRsCSf8s5sFg_U87A">
+									<u>här</u>
 								</a>
 							</li>
 						</ul>

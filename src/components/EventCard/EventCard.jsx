@@ -7,6 +7,7 @@ import dj2Img from '../../assets/pictures/ProImages/thumbnail_Restaurangporträ
 import wineImg from '../../assets/pictures/wine-tasting2.jpg';
 import privateImg from '../../assets/pictures/private.png';
 import event02 from '../../assets/pictures/images/event02-08-flat.PNG';
+import bouleImg from '../../assets/pictures/images/Harpaviljongen-open-2025.jpg';
 
 function EventCard({ event }) {
 	const date = new Date(event.date);
@@ -20,6 +21,7 @@ function EventCard({ event }) {
 	if (event.type === 'dj') imageSrc = event02;
 	else if (event.type === 'wine') imageSrc = wineImg;
 	else if (event.type === 'private') imageSrc = privateImg;
+	else if (event.type === 'boule') imageSrc = bouleImg;
 
 	return (
 		<Link
