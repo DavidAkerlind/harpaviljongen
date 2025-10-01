@@ -45,13 +45,13 @@ function HomePage() {
 			</section>
 			<PageDesc />
 			<Menu menuId="menu-lunch" img={hareLogo} />
-			<Flexbox gap="10rem">
+			<Flexbox gap="8rem">
 				<Menu menuId="menu-wine" img={wineIllustration} />
 				<OpeningHours img={clockIllustration} />
 			</Flexbox>
-			<Flexbox>
+			{/* <Flexbox>
 				<EventCalendar />
-			</Flexbox>
+			</Flexbox> */}
 			<Flexbox>
 				<ChambreSection />
 			</Flexbox>

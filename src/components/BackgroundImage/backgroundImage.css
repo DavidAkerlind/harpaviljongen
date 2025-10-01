@@ -22,8 +22,8 @@
 }
 
 .background-img.wine {
-	top: 2rem;
-	right: 1rem;
+	top: -4rem;
+	right: 10rem;
 	width: 10rem;
 	height: 10rem;
 }
@@ -78,14 +78,14 @@
 }
 
 .background-img.bubbels {
-	top: -6em;
-	right: -5rem;
+	top: -10em;
+	right: -4rem;
 	width: 5rem;
 	height: 5rem;
 }
 
 .background-img.wine-all {
-	top: 4rem;
+	top: -20rem;
 	right: 15.5rem;
 	width: 8rem;
 	height: 8rem;
@@ -104,19 +104,19 @@
 	}
 
 	.background-img.wine {
-		top: 1rem;
-		left: 50vw;
+		top: -4rem;
+		left: 40vw;
 		width: 10rem;
 		height: 10rem;
 	}
 
 	.background-img.opening-hours {
 		z-index: -1;
-		top: -3rem;
-		right: 10rem;
+		top: -10rem;
+		right: 16.5rem;
 		width: 4rem;
 		height: 4rem;
-		display: none;
+		/* display: none; */
 	}
 
 	.background-img.wine-all {
@@ -140,7 +140,7 @@
 	}
 
 	.background-img.bubbels {
-		top: -6rem;
+		top: -10rem;
 		right: -6rem;
 		width: 8rem;
 		height: 8rem;
@@ -174,8 +174,8 @@
 		height: 5rem;
 	}
 	.background-img.bubbels {
-		top: 1rem;
-		right: 8rem;
+		top: -5rem;
+		right: 9.5rem;
 		width: 8rem;
 		height: 8rem;
 	}
@@ -185,5 +185,11 @@
 		right: -4.5rem;
 		width: 5rem;
 		height: 5rem;
+	}
+	.background-img.wine-all {
+		top: -1rem;
+		right: 15.5rem;
+		width: 8rem;
+		height: 8rem;
 	}
 }
