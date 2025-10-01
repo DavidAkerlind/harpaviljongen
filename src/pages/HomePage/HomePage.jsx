@@ -45,7 +45,7 @@ function HomePage() {
 			</section>
 			<PageDesc />
 			<Menu menuId="menu-lunch" img={hareLogo} />
-			<Flexbox>
+			<Flexbox gap="10rem">
 				<Menu menuId="menu-wine" img={wineIllustration} />
 				<OpeningHours img={clockIllustration} />
 			</Flexbox>

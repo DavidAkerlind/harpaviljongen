@@ -8,6 +8,7 @@ function Flexbox({
 	justify = 'center',
 	align = 'center',
 	childFlex = true,
+	gap = '2',
 }) {
 	const wrappedChildren = childFlex
 		? React.Children.map(children, (child) => (
@@ -32,6 +33,7 @@ function Flexbox({
 				flexWrap: wrap,
 				justifyContent: justify,
 				alignItems: align,
+				gap: gap,
 			}}>
 			{wrappedChildren}
 		</section>

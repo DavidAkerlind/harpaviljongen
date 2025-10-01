@@ -34,6 +34,7 @@
 	gap: 4rem;
 	font-size: 1.2rem;
 	justify-content: space-between;
+	font-style: normal;
 }
 
 .opening-hours__day-name {
