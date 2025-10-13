@@ -16,6 +16,7 @@ import ChambreSection from '../../components/ChambreSection/ChambreSection';
 import EventCalendar from '../../components/EventCalendar/EventCalendar';
 import PageDesc from '../../components/PageDesc/PageDesc';
 import HeroSection from '../../components/HeroSection/HeroSection';
+import SeasonBookings from '../../components/SeasonBookings/SeasonBookings';
 
 function HomePage() {
 	const location = useLocation();
@@ -44,7 +45,10 @@ function HomePage() {
 				<Button text="VINLISTA" link="/wine-list" />
 			</section>
 			<PageDesc />
-			<Menu menuId="menu-lunch" img={hareLogo} />
+			{/* <Menu menuId="menu-lunch" img={hareLogo} /> */}
+			<Flexbox>
+				<SeasonBookings />
+			</Flexbox>
 			<Flexbox gap="8rem">
 				<Menu menuId="menu-wine" img={wineIllustration} />
 				<OpeningHours img={clockIllustration} />
