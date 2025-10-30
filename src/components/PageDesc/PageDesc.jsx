@@ -3,7 +3,7 @@ import './pageDesc.css';
 function PageDesc() {
 	return (
 		<p className="page__desc">
-			<h2>Harpaviljongen har stängt för säsongen</h2>
+			<h2>STÄNGT FÖR SÄSONGEN</h2>
 			<br />
 			<br />
 			Tack för en fantastisk säsong! Vi har nu stängt våra dörrar för

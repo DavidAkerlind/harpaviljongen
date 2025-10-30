@@ -44,7 +44,7 @@ function HomePage() {
 				{/* <Button text="EVENEMANG" link="#events" /> */}
 				<Button text="VINLISTA" link="/wine-list" />
 			</section>
-			<PageDesc />
+			{/* <PageDesc /> */}
 			{/* <Menu menuId="menu-lunch" img={hareLogo} /> */}
 			<Flexbox>
 				<SeasonBookings />
