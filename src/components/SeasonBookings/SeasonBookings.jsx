@@ -7,7 +7,7 @@ import seasonImage2 from '../../assets/pictures/ProImages/thumbnail_Restaurangpo
 
 function SeasonBookings() {
 	return (
-		<section className="chambre">
+		<section className="chambre chambre--no-background">
 			<header className="chambre__header">
 				<h2 className="section__title">STÄNGT FÖR SÄSONGEN</h2>
 

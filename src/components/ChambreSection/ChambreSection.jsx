@@ -26,7 +26,10 @@ const ChambreSection = () => {
 
 			<section className="chambre__button-section">
 				<Button text={'MER INFO'} link="/chambre" />
-				<Button text={'BOKA'} link={'mailto:info@harpaviljongen.com'} />
+				<Button
+					text={'BOKA CHAMBRE 2026'}
+					link={'mailto:info@harpaviljongen.com'}
+				/>
 			</section>
 			<figure className="chambre__image-container">
 				<img

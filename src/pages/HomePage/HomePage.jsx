@@ -38,21 +38,25 @@ function HomePage() {
 
 			<HeroSection />
 			<PageHeader text="HARPAVILJONGEN" />
+
+			{/* <PageDesc /> */}
+			{/* <Menu menuId="menu-lunch" img={hareLogo} /> */}
+			<Flexbox>
+				<SeasonBookings />
+			</Flexbox>
 			<section className="page__top-section">
 				<Button text="MENY" link="/menu" />
 				<Button text="ÖPPETTIDER" link="#openingHours" />
 				{/* <Button text="EVENEMANG" link="#events" /> */}
 				<Button text="VINLISTA" link="/wine-list" />
 			</section>
-			{/* <PageDesc /> */}
-			{/* <Menu menuId="menu-lunch" img={hareLogo} /> */}
-			<Flexbox>
-				<SeasonBookings />
-			</Flexbox>
+
 			<Flexbox gap="8rem">
-				<Menu menuId="menu-wine" img={wineIllustration} />
+				{/* <Menu menuId="menu-wine" img={wineIllustration} /> */}
+
 				<OpeningHours img={clockIllustration} />
 			</Flexbox>
+
 			{/* <Flexbox>
 				<EventCalendar />
 			</Flexbox> */}

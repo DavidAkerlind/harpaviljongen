@@ -82,6 +82,11 @@
 			font-size: 1rem;
 		}
 	}
+	.chambre--no-background {
+		background-color: var(--color-bg);
+		border-block: none;
+		padding-top: 0;
+	}
 
 	.chambre__header {
 		max-width: 100%;
