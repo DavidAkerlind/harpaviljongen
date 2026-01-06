@@ -75,7 +75,7 @@ function Footer() {
 			</address>
 
 			<div className="footer__copyright">
-				<p>Copyright © 2025 Harpaviljongen AB</p>
+				<p>Copyright © 2026 Harpaviljongen AB</p>
 			</div>
 		</footer>
 	);
