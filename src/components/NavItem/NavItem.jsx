@@ -9,7 +9,7 @@ function NavItem({ text, link }) {
 			<a
 				className="link link--hover"
 				aria-label={`Go to ${text} page`}
-				href={link}
+				href={`${link}#zoom=70`}
 				target="_blank"
 				rel="noopener noreferrer">
 				{text}
