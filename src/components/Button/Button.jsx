@@ -13,6 +13,19 @@ function Button({ text, onClick, link }) {
 		);
 	}
 
+	if (link && (link.startsWith('http') || link.endsWith('.pdf'))) {
+		return (
+			<a
+				href={link}
+				className="button"
+				aria-label={`GO TO ${text}`}
+				target="_blank"
+				rel="noopener noreferrer">
+				{text}
+			</a>
+		);
+	}
+
 	if (link) {
 		return (
 			<Link to={link} className="button" aria-label={`GO TO ${text}`}>
