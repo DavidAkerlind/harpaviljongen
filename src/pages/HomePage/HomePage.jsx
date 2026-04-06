@@ -35,7 +35,7 @@ function HomePage() {
 
 	return (
 		<section className="page page-home">
-			{/* <NavBar /> */}
+			<NavBar />
 
 			<HeroSection />
 

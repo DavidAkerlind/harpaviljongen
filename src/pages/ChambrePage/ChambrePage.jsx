@@ -28,7 +28,7 @@ function ChambrePage() {
 
 	return (
 		<main className="page page-chambre">
-			{/* <NavBar /> */}
+			<NavBar />
 
 			<PageHeader text="CHAMBRE SÉPARÉE" />
 
