@@ -55,8 +55,9 @@ function HomePage() {
 				<section className="page__button-section">
 					<Button text="MENY" link="/menu" />
 					<Button text="ÖPPETTIDER" link="#openingHours" />
-					<Button text="EVENEMANG" link="#events" />
+					<Button text="EVENEMANG" link="events" />
 					<Button text="VINLISTA" link="/wine-list" />
+					<Button text="BOKA BORD" link={'mailto:info@exempel.se'} />
 					<Button text={'CHAMBRE SÉPARÉE'} link="/chambre" />
 				</section>
 			</FadeIn>

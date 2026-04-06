@@ -26,8 +26,8 @@ function NavBar({ type = 'normal' }) {
 		{ text: 'Vinlista', link: '/wine-list' },
 		{ text: 'Chambre', link: '/chambre' },
 		{ text: 'Öppettider', link: '#openingHours' },
-		{ text: 'Kontakt', link: '#contactInfo' },
 		{ text: 'Galleri', link: '/gallery' },
+		{ text: 'Kontakt', link: '#contactInfo' },
 	];
 
 	return (

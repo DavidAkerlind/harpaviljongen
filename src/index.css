@@ -98,6 +98,7 @@ body {
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
+	margin-block: 3rem;
 }
 
 .page__top-section--margin {
@@ -132,7 +133,8 @@ body {
 	/* Phone-specific styles here */
 
 	.page {
-		padding: 4rem 1rem;
+		padding: 4rem 0rem;
+		padding-bottom: 0rem;
 	}
 
 	.page-home,

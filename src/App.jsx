@@ -7,11 +7,12 @@ const ErrorPage = lazy(() => import('./pages/ErrorPage/ErrorPage'));
 const MenuPage = lazy(() => import('./pages/MenuPage/MenuPage'));
 const ChambrePage = lazy(() => import('./pages/ChambrePage/ChambrePage'));
 const LoadingPage = lazy(() => import('./pages/LoadingPage/LoadingPage'));
-const SingleEventPage = lazy(() =>
-	import('./pages/SingleEventPage/SingleEventPage')
+const SingleEventPage = lazy(
+	() => import('./pages/SingleEventPage/SingleEventPage'),
 );
 const GalleryPage = lazy(() => import('./pages/GalleryPage/GalleryPage'));
 const WineListPage = lazy(() => import('./pages/WineListPage/WineListPage'));
+const EventsPage = lazy(() => import('./pages/EventsPage/EventsPage'));
 
 // function App() {
 // 	return (
@@ -77,6 +78,14 @@ function App() {
 						element={
 							<Suspense fallback={<LoadingPage />}>
 								<SingleEventPage />
+							</Suspense>
+						}
+					/>
+					<Route
+						path="/events"
+						element={
+							<Suspense fallback={<LoadingPage />}>
+								<EventsPage />
 							</Suspense>
 						}
 					/>
