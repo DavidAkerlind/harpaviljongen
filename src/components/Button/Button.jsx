@@ -14,9 +14,10 @@ function Button({ text, onClick, link }) {
 	}
 
 	if (link && (link.startsWith('http') || link.endsWith('.pdf'))) {
+		const href = link.endsWith('.pdf') ? `${link}#zoom=70` : link;
 		return (
 			<a
-				href={link}
+				href={href}
 				className="button"
 				aria-label={`GO TO ${text}`}
 				target="_blank"
