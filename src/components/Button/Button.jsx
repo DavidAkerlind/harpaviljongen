@@ -2,13 +2,20 @@ import './button.css';
 import { Link } from 'react-router-dom';
 
 function Button({ text, onClick, link }) {
-	if (link) {
-		const isToTop = link === '#top';
+	if (link === '#top') {
 		return (
-			<Link
-				to={link}
-				className={`button ${isToTop ? 'button--full-width' : ''}`}
-				aria-label={`GO TO ${text}`}>
+			<button
+				className="button button--full-width"
+				aria-label="Gå till toppen"
+				onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+				{text}
+			</button>
+		);
+	}
+
+	if (link) {
+		return (
+			<Link to={link} className="button" aria-label={`GO TO ${text}`}>
 				{text}
 			</Link>
 		);

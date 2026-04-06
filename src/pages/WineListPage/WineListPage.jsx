@@ -23,7 +23,7 @@ function WineListPage() {
 	}, [location]);
 	return (
 		<section className="page page-winelist">
-			{/* <NavBar /> */}
+			<NavBar />
 			<HeroSection type="wine" />
 
 			<PageHeader text="VINLISTA" />
