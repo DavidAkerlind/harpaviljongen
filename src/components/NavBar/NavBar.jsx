@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import NavItem from '../NavItem/NavItem';
-import hareImg from '../../assets/logo/hare-logo-blue.svg';
+import hareImg from '../../assets/logo/hare-logo-green.svg';
 import './navBar.css';
 import { Link } from 'react-router-dom';
 import { link, text } from 'framer-motion/client';
