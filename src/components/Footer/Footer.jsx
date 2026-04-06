@@ -46,7 +46,7 @@ function Footer() {
 					<a
 						className="footer__icon-wrapper"
 						target="_blank"
-						href="https://www.instagram.com/harpaviljongen1912/"
+						href="https://www.instagram.com/cafeharpaviljongen/"
 						aria-label="Gå till våran instagram">
 						<FaInstagram
 							size={50}
