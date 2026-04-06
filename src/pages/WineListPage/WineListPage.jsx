@@ -7,6 +7,7 @@ import Button from '../../components/Button/Button';
 import Footer from '../../components/Footer/Footer';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import HeroSection from '../../components/HeroSection/HeroSection';
+import FadeIn from '../../components/FadeIn/FadeIn';
 function WineListPage() {
 	const location = useLocation();
 
@@ -24,10 +25,18 @@ function WineListPage() {
 		<section className="page page-winelist">
 			{/* <NavBar /> */}
 			<HeroSection type="wine" />
-			<PageHeader text="VINLISTA" />
-			<WineList />
-			<Button text="TILL TOPPEN" link={'#top'} />
-			<Footer />
+			<FadeIn>
+				<PageHeader text="VINLISTA" />
+			</FadeIn>
+			<FadeIn delay={100}>
+				<WineList />
+			</FadeIn>
+			<FadeIn>
+				<Button text="TILL TOPPEN" link={'#top'} />
+			</FadeIn>
+			<FadeIn>
+				<Footer />
+			</FadeIn>
 		</section>
 	);
 }

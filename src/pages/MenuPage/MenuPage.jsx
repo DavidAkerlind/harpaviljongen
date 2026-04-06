@@ -20,6 +20,7 @@ import cheese from '../../assets/illustrations/cheese.svg';
 import wineImg from '../../assets/illustrations/winebottle.svg';
 import cakeImg from '../../assets/illustrations/Cake2.svg';
 import PageDesc from '../../components/PageDesc/PageDesc';
+import FadeIn from '../../components/FadeIn/FadeIn';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 function MenuPage() {
@@ -38,6 +39,7 @@ function MenuPage() {
 	return (
 		<section className="page page-menu">
 			<NavBar />
+
 			<PageHeader text="VÅRAN MENY" />
 			<section className="page__top-section">
 				<Button text="HEM" link="/" />
@@ -45,25 +47,37 @@ function MenuPage() {
 				<Button text="VINLISTA" link="/wine-list" />
 			</section>
 
-			<PageDesc />
-			<Flexbox>
-				<Menu menuId="menu-always" img={hareLogo} />
-				<Menu menuId="menu-snacks" img={cheese} />
-				<Menu menuId="menu-sweets" img={cakeImg} />
-			</Flexbox>
+			<FadeIn>
+				<PageDesc />
+			</FadeIn>
+			<FadeIn>
+				<Flexbox>
+					<Menu menuId="menu-always" img={hareLogo} />
+					<Menu menuId="menu-snacks" img={cheese} />
+					<Menu menuId="menu-sweets" img={cakeImg} />
+				</Flexbox>
+			</FadeIn>
 
-			<Flexbox>
-				<Menu menuId="menu-bubbels" img={bubblesglass} />
-				<Menu menuId="menu-all-wine" img="" />
-				<Menu menuId="menu-wine-red" img={wineImg} />
-			</Flexbox>
+			<FadeIn delay={100}>
+				<Flexbox>
+					<Menu menuId="menu-bubbels" img={bubblesglass} />
+					<Menu menuId="menu-all-wine" img="" />
+					<Menu menuId="menu-wine-red" img={wineImg} />
+				</Flexbox>
+			</FadeIn>
 
-			<Flexbox align="center">
-				<Menu menuId="menu-cocktails" img={cocktail} />
-				<Menu menuId="menu-beer" img="" />
-			</Flexbox>
-			<Button text="TILL TOPPEN" link={'#top'} />
-			<Footer />
+			<FadeIn delay={200}>
+				<Flexbox align="center">
+					<Menu menuId="menu-cocktails" img={cocktail} />
+					<Menu menuId="menu-beer" img="" />
+				</Flexbox>
+			</FadeIn>
+			<FadeIn>
+				<Button text="TILL TOPPEN" link={'#top'} />
+			</FadeIn>
+			<FadeIn>
+				<Footer />
+			</FadeIn>
 		</section>
 	);
 }

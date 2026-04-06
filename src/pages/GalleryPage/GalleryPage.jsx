@@ -30,6 +30,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import Carousel from '../../components/Carousel/Carousel';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import Footer from '../../components/Footer/Footer';
+import FadeIn from '../../components/FadeIn/FadeIn';
 
 // Lägg till de nya bilderna i karusellerna
 const largeImages = [
@@ -66,18 +67,30 @@ function GalleryPage() {
 	return (
 		<main className="page page-gallery">
 			<NavBar />
-			<PageHeader text={'GALLERI'} />
-			<Carousel images={largeImages} type="big" />
-			<Carousel images={smallImages2} type="small" />
-			<Carousel images={smallImages} type="small" />
 
-			<p className="gallery__footer-text">
-				Vi inspireras av det franska köket men låter även våra egna
-				minnen, favoriter och smaker få ta plats. <br />
-				<br />
-				Välkommen hem till Harpaviljongen.
-			</p>
-			<Footer />
+			<PageHeader text={'GALLERI'} />
+
+			<FadeIn delay={50}>
+				<Carousel images={largeImages} type="big" />
+			</FadeIn>
+			<FadeIn delay={100}>
+				<Carousel images={smallImages2} type="small" />
+			</FadeIn>
+			<FadeIn delay={150}>
+				<Carousel images={smallImages} type="small" />
+			</FadeIn>
+
+			<FadeIn>
+				<p className="gallery__footer-text">
+					Vi inspireras av det franska köket men låter även våra egna
+					minnen, favoriter och smaker få ta plats. <br />
+					<br />
+					Välkommen hem till Harpaviljongen.
+				</p>
+			</FadeIn>
+			<FadeIn>
+				<Footer />
+			</FadeIn>
 		</main>
 	);
 }

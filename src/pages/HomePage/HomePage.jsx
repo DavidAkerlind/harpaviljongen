@@ -1,6 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import './homePage.css';
+import FadeIn from '../../components/FadeIn/FadeIn';
 
 import NavBar from '../../components/NavBar/NavBar';
 import Menu from '../../components/Menu/Menu';
@@ -37,37 +38,48 @@ function HomePage() {
 			{/* <NavBar /> */}
 
 			<HeroSection />
+
 			<PageHeader text="HARPAVILJONGEN" />
 
 			{/* <PageDesc /> */}
 			{/* <Menu menuId="menu-lunch" img={hareLogo} /> */}
-			<Flexbox>
-				<SeasonBookings />
-			</Flexbox>
+			<FadeIn delay={100}>
+				<Flexbox>
+					<SeasonBookings />
+				</Flexbox>
+			</FadeIn>
 			<section className="page__top-section">
-				<Button text="MENY" link="/menu" />
+				<Button text="MENYN" link="/menu" />
 				<Button text="ÖPPETTIDER" link="#openingHours" />
 				{/* <Button text="EVENEMANG" link="#events" /> */}
 				<Button text="VINLISTA" link="/wine-list" />
 			</section>
 
-			<Flexbox gap="8rem">
-				{/* <Menu menuId="menu-wine" img={wineIllustration} /> */}
+			<FadeIn>
+				<Flexbox gap="8rem">
+					{/* <Menu menuId="menu-wine" img={wineIllustration} /> */}
 
-				<OpeningHours img={clockIllustration} />
-			</Flexbox>
+					<OpeningHours img={clockIllustration} />
+				</Flexbox>
+			</FadeIn>
 
 			{/* <Flexbox>
 				<EventCalendar />
 			</Flexbox> */}
-			<Flexbox>
-				<ChambreSection />
-			</Flexbox>
+			<FadeIn>
+				<Flexbox>
+					<ChambreSection />
+				</Flexbox>
+			</FadeIn>
 			{/* <Flexbox>
 				<EventCalendar />
 			</Flexbox> */}
-			<Button text="TILL TOPPEN" link={'#top'} />
-			<Footer />
+			<FadeIn>
+				<Button text="TILL TOPPEN" link={'#top'} />
+			</FadeIn>
+			<FadeIn>
+				<Footer />
+			</FadeIn>
 		</section>
 	);
 }

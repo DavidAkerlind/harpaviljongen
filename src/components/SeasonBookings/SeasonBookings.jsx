@@ -9,26 +9,29 @@ function SeasonBookings() {
 	return (
 		<section className="chambre chambre--no-background">
 			<header className="chambre__header">
-				<h2 className="section__title">STÄNGT FÖR SÄSONGEN</h2>
+				<h2 className="section__title">Öppnar fredag 10/4!</h2>
 
 				<p className="chambre__text">
-					Harpaviljongen håller just nu stängt för säsongen medan vi
-					genomför en omfattande renovering inför nästa år. <br />{' '}
-					<br /> Vi tar redan nu emot förfrågningar om abonnering och
-					bokningar av större sällskap inför 2026 oavsett om det
-					gäller en somrig företagsmiddag, födelsedag eller ett
-					kvällsmingel under trädkronorna. <br />
+					<br /> Vi smygstartar säsongen i april med öppet
+					fredag–söndag från 14:00 till sent.
 					<br />
-					Vi ses nästa säsong! <br />
 					<br />
+					De allra soligaste dagarna kan det även dyka upp dagens
+					lunch. Då vädret är föränderligt uppdaterar vi löpande våra
+					sociala kanaler med aktuell information.
+					<br />
+					<br />
+					Chambre séparée går givetvis att boka som vanligt. Från och
+					med maj går vi upp i full drift med frukostservering från
+					08:00 och öppet sju dagar i veckan.
+					<br />
+					<br />
+					Varmt välkommna!
 				</p>
 			</header>
 
 			<section className="chambre__button-section">
-				<Button
-					text={'BOKA 2026'}
-					link={'mailto:info@harpaviljongen.com'}
-				/>
+				<Button text={'BOKA'} link={'mailto:info@harpaviljongen.com'} />
 				<Button text={'RING'} link={'mailto:info@harpaviljongen.com'} />
 			</section>
 			<figure className="chambre__image-container">
