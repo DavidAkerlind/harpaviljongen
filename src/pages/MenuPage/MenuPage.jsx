@@ -47,9 +47,9 @@ function MenuPage() {
 				<Button text="VINLISTA" link="/wine-list" />
 			</section>
 
-			<FadeIn>
+			{/* <FadeIn>
 				<PageDesc />
-			</FadeIn>
+			</FadeIn> */}
 			<FadeIn>
 				<Flexbox>
 					<Menu menuId="menu-always" img={hareLogo} />

@@ -25,9 +25,9 @@ function WineListPage() {
 		<section className="page page-winelist">
 			{/* <NavBar /> */}
 			<HeroSection type="wine" />
-			<FadeIn>
-				<PageHeader text="VINLISTA" />
-			</FadeIn>
+
+			<PageHeader text="VINLISTA" />
+
 			<FadeIn delay={100}>
 				<WineList />
 			</FadeIn>

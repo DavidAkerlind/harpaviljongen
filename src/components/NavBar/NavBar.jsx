@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import NavItem from '../NavItem/NavItem';
 import hareImg from '../../assets/logo/hare-logo-blue.svg';
 import './navBar.css';
@@ -7,6 +7,18 @@ import { link, text } from 'framer-motion/client';
 
 function NavBar({ type = 'normal' }) {
 	const [open, setOpen] = useState(false);
+	const [scrolled, setScrolled] = useState(false);
+
+	useEffect(() => {
+		if (type !== 'hero') return;
+
+		const handleScroll = () => {
+			setScrolled(window.scrollY > window.innerHeight * 0.85);
+		};
+
+		window.addEventListener('scroll', handleScroll, { passive: true });
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, [type]);
 
 	const navItems = [
 		{ text: 'Hem', link: '/' },
@@ -19,7 +31,11 @@ function NavBar({ type = 'normal' }) {
 	];
 
 	return (
-		<nav id="top" className={`nav${type === 'hero' ? ' nav--hero' : ''}`}>
+		<nav
+			id="top"
+			className={`nav${
+				type === 'hero' ? ' nav--hero' : ''
+			}${scrolled ? ' nav--scrolled' : ''}`}>
 			{/* Overlay */}
 			{open && (
 				<div
