@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './homePage.css';
 import FadeIn from '../../components/FadeIn/FadeIn';
 
@@ -22,6 +22,8 @@ import SeasonBookings from '../../components/SeasonBookings/SeasonBookings';
 function HomePage() {
 	const location = useLocation();
 
+	const [menuUrl, setMenuUrl] = useState(null);
+
 	useEffect(() => {
 		if (location.hash) {
 			const id = location.hash.replace('#', '');
@@ -33,6 +35,21 @@ function HomePage() {
 		}
 	}, [location]);
 
+	useEffect(() => {
+		fetch(
+			'https://harpaviljongen-db-api.onrender.com/api/menu-pdfs/active?type=food',
+		)
+			.then((res) => res.json())
+			.then((data) => {
+				if (data.success) {
+					const url = data.data.url.replace(
+						'/raw/upload/',
+						'/image/upload/',
+					);
+					setMenuUrl(url);
+				}
+			});
+	}, []);
 	return (
 		<section className="page page-home">
 			<NavBar />
@@ -53,7 +70,7 @@ function HomePage() {
 			</FadeIn>
 			<FadeIn>
 				<section className="page__button-section">
-					<Button text="MENY" link="/MENY_HARPAN_4_april.pdf" />
+					{menuUrl && <Button text="MENY" link={menuUrl} />}
 					<Button text="ÖPPETTIDER" link="#openingHours" />
 					<Button text="EVENEMANG" link="events" />
 					<Button
