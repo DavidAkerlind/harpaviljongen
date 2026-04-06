@@ -50,28 +50,24 @@ function MenuPage() {
 			{/* <FadeIn>
 				<PageDesc />
 			</FadeIn> */}
-			<FadeIn>
-				<Flexbox>
-					<Menu menuId="menu-always" img={hareLogo} />
-					<Menu menuId="menu-snacks" img={cheese} />
-					<Menu menuId="menu-sweets" img={cakeImg} />
-				</Flexbox>
-			</FadeIn>
 
-			<FadeIn delay={100}>
-				<Flexbox>
-					<Menu menuId="menu-bubbels" img={bubblesglass} />
-					<Menu menuId="menu-all-wine" img="" />
-					<Menu menuId="menu-wine-red" img={wineImg} />
-				</Flexbox>
-			</FadeIn>
+			<Flexbox>
+				<Menu menuId="menu-always" img={hareLogo} />
+				<Menu menuId="menu-snacks" img={cheese} />
+				<Menu menuId="menu-sweets" img={cakeImg} />
+			</Flexbox>
 
-			<FadeIn delay={200}>
-				<Flexbox align="center">
-					<Menu menuId="menu-cocktails" img={cocktail} />
-					<Menu menuId="menu-beer" img="" />
-				</Flexbox>
-			</FadeIn>
+			<Flexbox>
+				<Menu menuId="menu-bubbels" img={bubblesglass} />
+				<Menu menuId="menu-all-wine" img="" />
+				<Menu menuId="menu-wine-red" img={wineImg} />
+			</Flexbox>
+
+			<Flexbox align="center">
+				<Menu menuId="menu-cocktails" img={cocktail} />
+				<Menu menuId="menu-beer" img="" />
+			</Flexbox>
+
 			<FadeIn>
 				<Button text="TILL TOPPEN" link={'#top'} />
 			</FadeIn>

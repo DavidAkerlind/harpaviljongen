@@ -36,6 +36,7 @@ function ChambrePage() {
 				<section className="page__top-section page__top-section--chambre">
 					<Button text="BOKA NU" link={'mailto:info@exempel.se'} />
 					<Button text="CHAMBRE MENYN" link={'#chambreMenu'} />
+					<Button text="HEM" link={'/'} />
 				</section>
 			</FadeIn>
 

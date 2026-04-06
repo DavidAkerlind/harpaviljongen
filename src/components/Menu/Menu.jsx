@@ -5,6 +5,8 @@ import { fetchMenuById } from '../../API/fetchMenuById';
 import { devfetchMenuById } from '../../API/devfetchMenuById';
 import MenuSkeleton from '../Skeleton/Skeleton.jsx';
 
+import FadeIn from '../../components/FadeIn/FadeIn';
+
 function Menu({ menuId, img }) {
 	const { fetchedMenu, loading, error } = fetchMenuById(menuId);
 
@@ -16,11 +18,15 @@ function Menu({ menuId, img }) {
 	if (!items) return <MenuSkeleton />;
 
 	return (
-		<section id={`menu ${type}`} className={`menu ${type}`}>
-			<h2 className="menu__title">{title}</h2>
+		<div>
+			<FadeIn>
+				<section id={`menu ${type}`} className={`menu ${type}`}>
+					<h2 className="menu__title">{title}</h2>
 
-			{description && <p className="menu__description">{description}</p>}
-			{/* 
+					{description && (
+						<p className="menu__description">{description}</p>
+					)}
+					{/* 
 			{type === 'wine' && (
 				<h2
 					aria-label="pris per vinglas"
@@ -28,7 +34,7 @@ function Menu({ menuId, img }) {
 					{price} <strong>/glas</strong>
 				</h2>
 			)} */}
-			{/* {type === 'wine-all' && (
+					{/* {type === 'wine-all' && (
 				<h2
 					aria-label="pris per vinglas"
 					className=" menu__description menu__description--price">
@@ -36,28 +42,30 @@ function Menu({ menuId, img }) {
 				</h2>
 			)} */}
 
-			<section className="menu__items">
-				{items
-					.filter((item) => item.active)
-					.map((item, index) => (
-						<MenuItem
-							key={index}
-							title={item.title}
-							description={item.description}
-							price={item.price}
-							producer={item.producer}
-						/>
-					))}
-			</section>
+					<section className="menu__items">
+						{items
+							.filter((item) => item.active)
+							.map((item, index) => (
+								<MenuItem
+									key={index}
+									title={item.title}
+									description={item.description}
+									price={item.price}
+									producer={item.producer}
+								/>
+							))}
+					</section>
 
-			{img && (
-				<BackgroundImage
-					img={img}
-					altText={`background image ${type}`}
-					type={type}
-				/>
-			)}
-		</section>
+					{img && (
+						<BackgroundImage
+							img={img}
+							altText={`background image ${type}`}
+							type={type}
+						/>
+					)}
+				</section>
+			</FadeIn>
+		</div>
 	);
 }
 
