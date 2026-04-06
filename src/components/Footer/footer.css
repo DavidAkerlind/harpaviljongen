@@ -1,11 +1,13 @@
 .footer {
+	background-color: var(--color-illustrations);
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	width: 80%;
+	width: 100vw;
 	margin-top: 5rem;
 	position: relative;
-	padding-bottom: 4rem;
+	padding-bottom: 2rem;
+	padding-inline: 3rem;
 }
 
 .footer__section {
@@ -25,8 +27,9 @@
 }
 
 .footer__list {
-	width: 100%;
-	margin-block: 1rem;
+	width: 80%;
+
+	padding-top: 1.5rem;
 }
 
 .footer__list-item {
@@ -72,7 +75,7 @@
 .footer__copyright {
 	font-style: italic;
 	position: absolute;
-	bottom: -1.3rem;
+	bottom: 0.5rem;
 	left: 50%;
 	transform: translateX(-50%);
 	text-align: center;
@@ -87,12 +90,12 @@
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
-		width: 95%;
+		width: 100%;
 		padding-bottom: 3rem;
+		padding-inline: 0px;
 	}
-
-	.footer__copyright {
-		bottom: -1rem;
+	.footer__list {
+		padding: 1.5rem;
 	}
 
 	.footer__map-wrapper {

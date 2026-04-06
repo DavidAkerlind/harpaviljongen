@@ -28,7 +28,7 @@ function ChambrePage() {
 
 	return (
 		<main className="page page-chambre">
-			<NavBar />
+			{/* <NavBar /> */}
 
 			<PageHeader text="CHAMBRE SÉPARÉE" />
 
@@ -71,9 +71,7 @@ function ChambrePage() {
 					</figure>
 				</FadeIn>
 
-				<FadeIn>
-					<ChambreMenu />
-				</FadeIn>
+				<ChambreMenu />
 			</section>
 			<FadeIn>
 				<Button text="TILL TOPPEN" link={'#top'} />

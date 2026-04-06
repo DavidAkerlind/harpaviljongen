@@ -43,40 +43,47 @@ function HomePage() {
 
 			{/* <PageDesc /> */}
 			{/* <Menu menuId="menu-lunch" img={hareLogo} /> */}
-			<FadeIn delay={100}>
+			{/* <FadeIn delay={100}>
 				<Flexbox>
 					<SeasonBookings />
 				</Flexbox>
-			</FadeIn>
-			<section className="page__top-section">
-				<Button text="MENYN" link="/menu" />
-				<Button text="ÖPPETTIDER" link="#openingHours" />
-				{/* <Button text="EVENEMANG" link="#events" /> */}
-				<Button text="VINLISTA" link="/wine-list" />
-			</section>
-
+			</FadeIn> */}
 			<FadeIn>
+				<h2 className="section__title">Öppnar fredag 10/4!</h2>
+			</FadeIn>
+			<FadeIn>
+				<section className="page__button-section">
+					<Button text="MENY" link="/menu" />
+					<Button text="ÖPPETTIDER" link="#openingHours" />
+					<Button text="EVENEMANG" link="#events" />
+					<Button text="VINLISTA" link="/wine-list" />
+					<Button text={'CHAMBRE SÉPARÉE'} link="/chambre" />
+				</section>
+			</FadeIn>
+
+			{/* <FadeIn>
 				<Flexbox gap="8rem">
-					{/* <Menu menuId="menu-wine" img={wineIllustration} /> */}
+					<Menu menuId="menu-wine" img={wineIllustration} /> 
 
 					<OpeningHours img={clockIllustration} />
 				</Flexbox>
-			</FadeIn>
+			</FadeIn> 
+			*/}
 
 			{/* <Flexbox>
 				<EventCalendar />
 			</Flexbox> */}
-			<FadeIn>
+			{/* <FadeIn>
 				<Flexbox>
 					<ChambreSection />
 				</Flexbox>
-			</FadeIn>
+			</FadeIn> */}
 			{/* <Flexbox>
 				<EventCalendar />
 			</Flexbox> */}
-			<FadeIn>
+			{/* <FadeIn>
 				<Button text="TILL TOPPEN" link={'#top'} />
-			</FadeIn>
+			</FadeIn> */}
 			<FadeIn>
 				<Footer />
 			</FadeIn>

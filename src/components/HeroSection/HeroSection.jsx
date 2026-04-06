@@ -19,7 +19,7 @@ function HeroSection({ type = 'home' }) {
 	}
 	return (
 		<section className={`hero-section hero-section--${type}`}>
-			<NavBar type="hero" />
+			{/* <NavBar type="hero" /> */}
 			<img
 				className="hero-section__img"
 				src={imageSrc}

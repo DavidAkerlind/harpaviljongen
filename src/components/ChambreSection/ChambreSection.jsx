@@ -27,7 +27,7 @@ const ChambreSection = () => {
 			<section className="chambre__button-section">
 				<Button text={'MER INFO'} link="/chambre" />
 				<Button
-					text={'BOKA CHAMBRE 2026'}
+					text={'BOKA CHAMBRE'}
 					link={'mailto:info@harpaviljongen.com'}
 				/>
 			</section>

@@ -32,9 +32,7 @@ function OpeningHours({ img, type }) {
 				type === 'small' ? ' opening-hours-section--small' : ''
 			}`}>
 			<h2 className="opening-hours__title">ÖPPETTIDER</h2>
-			<article>
-				<h3>Stängt för säsongen</h3> <br />
-			</article>
+
 			<ul className="opening-hours__day-list">
 				{sortedHours.map(({ day, hours }) => (
 					<li className="opening-hours__day" key={day}>
