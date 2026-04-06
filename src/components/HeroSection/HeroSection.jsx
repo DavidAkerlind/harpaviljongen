@@ -2,7 +2,7 @@ import './heroSection.css';
 import homePicture from '../../assets/pictures/ProImages/thumbnail_Restaurangporträtt_Harpaviljongen_IG_A-3.jpg';
 import winePicture from '../../assets/pictures/ProImages/thumbnail_Restaurangporträtt_Harpaviljongen_IG_A-11.jpg';
 import wineLogo from '../../assets/wine-logo.svg';
-import logoWhite from '../../assets/logo/hare-logo-white.svg';
+import logoWhite from '../../assets/logo/hare-logo-green.svg';
 import NavBar from '../../components/NavBar/NavBar';
 
 function HeroSection({ type = 'home' }) {
