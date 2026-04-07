@@ -53,11 +53,13 @@ ul {
 
 html {
 	scroll-behavior: smooth;
+	background-color: var(--color-bg);
 }
 
 html,
 body {
 	overflow-x: hidden;
+	background-color: var(--color-bg);
 }
 
 /* ==== BASIC STYLING ==== */
