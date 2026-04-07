@@ -1,5 +1,8 @@
 .page-events {
 	gap: 2rem;
+	.footer {
+		margin-top: 0px;
+	}
 }
 
 .events-coming__content {
@@ -9,7 +12,8 @@
 	max-width: 700px;
 	gap: 2.5rem;
 	padding: 9rem 1rem;
-	height: 60vh;
+	height: 100vh;
+	justify-content: center;
 }
 
 .events-coming__banner {
@@ -23,7 +27,7 @@
 	font-weight: 400;
 	font-style: italic;
 	text-align: center;
-	padding-block: 3rem;
+	padding-bottom: 3rem;
 	margin-bottom: -0.5rem;
 }
 

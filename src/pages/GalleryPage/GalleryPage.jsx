@@ -80,14 +80,14 @@ function GalleryPage() {
 				<Carousel images={smallImages} type="small" />
 			</FadeIn>
 
-			<FadeIn>
+			{/* <FadeIn>
 				<p className="gallery__footer-text">
-					Vi inspireras av det franska köket men låter även våra egna
+					 Vi inspireras av det franska köket men låter även våra egna
 					minnen, favoriter och smaker få ta plats. <br />
-					<br />
+					<br /> 
 					Välkommen hem till Harpaviljongen.
 				</p>
-			</FadeIn>
+			</FadeIn> */}
 			<FadeIn>
 				<Footer />
 			</FadeIn>

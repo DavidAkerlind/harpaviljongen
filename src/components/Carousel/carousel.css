@@ -32,7 +32,7 @@
 	object-fit: cover;
 	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
 	display: block;
-	margin-inline: 0.5rem;
+	margin-inline: 0.6rem;
 }
 
 @media (max-width: 900px) {
@@ -50,7 +50,7 @@
 		height: 300px;
 	}
 	.small-carousel__img {
-		width: 100px;
-		height: 100px;
+		width: 110px;
+		height: 110px;
 	}
 }

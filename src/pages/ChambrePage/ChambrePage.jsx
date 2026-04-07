@@ -35,7 +35,7 @@ function ChambrePage() {
 			<FadeIn delay={100}>
 				<section className="page__top-section page__top-section--chambre">
 					<Button text="BOKA NU" link={'mailto:info@exempel.se'} />
-					<Button text="CHAMBRE MENYN" link={'#chambreMenu'} />
+					{/* <Button text="CHAMBRE MENYN" link={'#chambreMenu'} /> */}
 					<Button text="HEM" link={'/'} />
 				</section>
 			</FadeIn>
@@ -43,17 +43,15 @@ function ChambrePage() {
 			<section className="page-chambre__content">
 				<FadeIn delay={150}>
 					<h2 className="page-chambre__subtitle">
-						En middag värd att minnas
+						Välkommen in i vår chambre séparée
 					</h2>
 				</FadeIn>
 				<FadeIn delay={250}>
 					<section className="page-chambre__intro">
 						<p>
-							Välkommen in i vår chambre séparée – en plats där
-							tiden saktar ner, där smakerna fördjupas och där
-							vinet <u>alltid</u> står i centrum. Här bjuder vi in
-							till en kväll som lika gärna kunde ha ägt rum hemma
-							hos någon av oss. Fast med det lilla extra.
+							Här bjuder vi in till en kväll som lika gärna kunde
+							ha ägt rum hemma hos någon av oss. Fast med det
+							lilla extra.
 						</p>
 					</section>
 				</FadeIn>
