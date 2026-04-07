@@ -68,21 +68,33 @@ function HomePage() {
 			<FadeIn>
 				<h2 className="section__title">ÖPPNAR FREDAG 10/4!</h2>
 			</FadeIn>
-			<FadeIn>
-				<section className="page__button-section">
+
+			<section className="page__button-section">
+				<FadeIn>
 					<Button text="MENY" link="/MENY_HARPAN_4_april.pdf" />
+				</FadeIn>
+				<FadeIn>
 					<Button
 						text="VINLISTA"
 						link="/VINLISTA_HARPAN_4_april.pdf"
 					/>
+				</FadeIn>
+				<FadeIn>
 					<Button text="ÖPPETTIDER" link="#openingHours" />
+				</FadeIn>
+				<FadeIn>
 					<Button text="EVENEMANG" link="events" />
-
+				</FadeIn>
+				<FadeIn>
 					<Button text="BOKA BORD" link={'mailto:info@exempel.se'} />
+				</FadeIn>
+				<FadeIn>
 					<Button text={'CHAMBRE SÉPARÉE'} link="/chambre" />
+				</FadeIn>
+				<FadeIn>
 					<Button text={'GALLERI'} link="/gallery" />
-				</section>
-			</FadeIn>
+				</FadeIn>
+			</section>
 
 			{/* <FadeIn>
 				<Flexbox gap="8rem">
