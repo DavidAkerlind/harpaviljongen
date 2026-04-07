@@ -11,12 +11,15 @@
 
 	--color-bg: #063424;
 	--color-blue-light: #9aabc9;
-	--color-blue-dark: #d5d5d5;
+	--color-blue-dark: #a7b19c;
 	--color-illustrations-old: #051d46;
 	--color-illustrations-v2: #a7b19d;
 	--color-illustrations: #405c3f;
 	--color-chambre-section: #405c3f;
-	--color-illustrations-v1: #556e50;
+	--color-dark-light-green: #576e50;
+	--color-dark-light-green-lighter: #576e50;
+	--color-footer: #405c3f;
+	--color-new-logo-bg: #243e27;
 
 	--color-white: #ffffff;
 	--color-text: #333333;

@@ -56,7 +56,7 @@ function HomePage() {
 
 			<HeroSection />
 
-			<PageHeader text="HARPAVILJONGEN" />
+			<PageHeader text="HARPAVILJONGEN" page="home" />
 
 			{/* <PageDesc /> */}
 			{/* <Menu menuId="menu-lunch" img={hareLogo} /> */}
