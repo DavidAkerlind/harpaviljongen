@@ -66,7 +66,7 @@ function HomePage() {
 				</Flexbox>
 			</FadeIn> */}
 			<FadeIn>
-				<h2 className="section__title">Öppnar fredag 10/4!</h2>
+				<h2 className="section__title">ÖPPNAR FREDAG 10/4!</h2>
 			</FadeIn>
 			<FadeIn>
 				<section className="page__button-section">
