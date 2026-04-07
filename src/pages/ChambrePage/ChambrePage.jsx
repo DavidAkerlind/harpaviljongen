@@ -72,11 +72,11 @@ function ChambrePage() {
 					</figure>
 				</FadeIn>
 
-				<ChambreMenu />
+				{/* <ChambreMenu /> */}
 			</section>
-			<FadeIn>
+			{/* <FadeIn>
 				<Button text="TILL TOPPEN" link={'#top'} />
-			</FadeIn>
+			</FadeIn> */}
 			<FadeIn>
 				<Footer />
 			</FadeIn>
