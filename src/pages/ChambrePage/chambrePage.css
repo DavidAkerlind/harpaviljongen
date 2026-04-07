@@ -1,3 +1,9 @@
+.page-chambre {
+	.footer {
+		margin-top: 6rem;
+	}
+}
+
 .page-chambre__content {
 	padding: 1rem;
 	display: flex;
