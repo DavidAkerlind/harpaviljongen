@@ -80,6 +80,7 @@ function HomePage() {
 
 					<Button text="BOKA BORD" link={'mailto:info@exempel.se'} />
 					<Button text={'CHAMBRE SÉPARÉE'} link="/chambre" />
+					<Button text={'GALLERI'} link="/gallery" />
 				</section>
 			</FadeIn>
 
