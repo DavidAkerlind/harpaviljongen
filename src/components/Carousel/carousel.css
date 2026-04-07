@@ -18,7 +18,7 @@
 .big-carousel {
 	width: 100%;
 	max-width: 900px;
-	margin-top: 4rem;
+	margin-top: 10rem;
 }
 .big-carousel__slide {
 	display: flex !important;
@@ -28,7 +28,7 @@
 .big-carousel__img {
 	width: 100%;
 	max-width: 100%;
-	height: 340px;
+	height: 500px;
 	object-fit: cover;
 	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
 	display: block;
@@ -46,6 +46,9 @@
 	}
 }
 @media (max-width: 600px) {
+	.big-carousel {
+		margin-top: 4rem;
+	}
 	.big-carousel__img {
 		height: 300px;
 	}

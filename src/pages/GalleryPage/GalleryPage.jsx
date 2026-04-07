@@ -31,6 +31,7 @@ import Carousel from '../../components/Carousel/Carousel';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import Footer from '../../components/Footer/Footer';
 import FadeIn from '../../components/FadeIn/FadeIn';
+import Button from '../../components/Button/Button';
 
 // Lägg till de nya bilderna i karusellerna
 const largeImages = [
@@ -88,6 +89,9 @@ function GalleryPage() {
 					Välkommen hem till Harpaviljongen.
 				</p>
 			</FadeIn> */}
+			<FadeIn>
+				<Button text="HEM" link="/" />
+			</FadeIn>
 			<FadeIn>
 				<Footer />
 			</FadeIn>

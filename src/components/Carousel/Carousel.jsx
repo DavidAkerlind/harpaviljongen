@@ -27,7 +27,7 @@ function Carousel({ images, type = 'small' }) {
 						settings: { slidesToShow: 3 },
 					},
 				],
-		  }
+			}
 		: {
 				dots: true,
 				infinite: true,
@@ -38,7 +38,7 @@ function Carousel({ images, type = 'small' }) {
 				autoplaySpeed: 6000,
 				cssEase: 'ease-in-out',
 				arrows: false,
-		  };
+			};
 
 	return (
 		<div className={isSmall ? 'small-carousel' : 'big-carousel'}>
