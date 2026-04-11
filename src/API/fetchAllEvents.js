@@ -10,9 +10,15 @@ export function fetchAllEvents() {
 		axios
 			.get(`https://harpaviljongen-db-api.onrender.com/api/events`)
 			.then((res) => {
-				setFetchedEvents(res.data.data);
+				setFetchedEvents(res.data.data ?? []);
 			})
-			.catch((error) => setError(error))
+			.catch((err) => {
+				if (err.response?.status === 404) {
+					setFetchedEvents([]);
+				} else {
+					setError(err);
+				}
+			})
 			.finally(() => setLoading(false));
 	}, []);
 	return { fetchedEvents, loading, error };

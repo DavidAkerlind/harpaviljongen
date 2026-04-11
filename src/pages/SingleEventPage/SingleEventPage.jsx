@@ -4,7 +4,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import Button from '../../components/Button/Button';
 import BackgroundImage from '../../components/BackgroundImage/BackgroundImage';
-import hareLogo from '../../assets/logo/hare-logo-blue.svg';
+import hareLogo from '../../assets/logo/hare-logo-green.svg';
 
 import './singleEventPage.css';
 
