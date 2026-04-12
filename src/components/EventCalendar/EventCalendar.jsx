@@ -358,7 +358,7 @@ function EventCalendar() {
 															src={getEventImage(
 																event.type,
 															)}
-															alt={event.title}
+															alt={event.type}
 															className="event-calendar__card-img"
 														/>
 													</div>

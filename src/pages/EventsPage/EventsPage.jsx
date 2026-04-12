@@ -27,6 +27,10 @@ function EventsPage() {
 			</FadeIn> */}
 
 			<FadeIn delay={150}>
+				<Button link={'#top'} text={'TILL TOPPEN'} />
+			</FadeIn>
+
+			<FadeIn delay={150}>
 				<Footer />
 			</FadeIn>
 		</main>
