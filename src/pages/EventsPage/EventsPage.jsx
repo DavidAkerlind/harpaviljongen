@@ -12,6 +12,13 @@ function EventsPage() {
 		<main className="page page-events">
 			<NavBar />
 			<PageHeader text="EVENEMANG" />
+			<FadeIn delay={100}>
+				<section className="page__top-section page__top-section--events">
+					<Button text="BOKA NU" link={'mailto:info@exempel.se'} />
+					{/* <Button text="CHAMBRE MENYN" link={'#chambreMenu'} /> */}
+					<Button text="HEM" link={'/'} />
+				</section>
+			</FadeIn>
 			<FadeIn>
 				<EventCalendar />
 			</FadeIn>

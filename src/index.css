@@ -118,6 +118,11 @@ body {
 	display: flex;
 }
 
+.page__top-section--events {
+	display: flex;
+	margin-top: 9rem;
+}
+
 .section__title {
 	font-size: 1.8rem;
 	font-weight: 500;
