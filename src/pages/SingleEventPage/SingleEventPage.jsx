@@ -74,55 +74,63 @@ function SingleEventPage() {
 			{/* <PageHeader text={fetchedEvent.title} /> */}
 			<FadeIn>
 				<article className="single-event">
-					<section className="single-event__hero">
-						<img
-							src={imageSrc}
-							alt={fetchedEvent.title}
-							className="single-event__hero-img"
-						/>
-						<div className="single-event__hero-overlay" />
-						<div className="single-event__hero-content">
-							<h1 className="single-event__hero-title">
-								{fetchedEvent.title.toUpperCase()}
-							</h1>
-							<p className="single-event__hero-shortdesc">
-								{fetchedEvent.shortDescription}
-							</p>
-						</div>
-					</section>
-					<section className="single-event__details-row">
-						<div className="single-event__detail">
-							<span className="single-event__detail-label">
-								Datum
-							</span>
-							<span className="single-event__detail-value">
-								{weekday} {day} {month}
-							</span>
-						</div>
-						<div className="single-event__detail">
-							<span className="single-event__detail-label">
-								Tid
-							</span>
-							<span className="single-event__detail-value">
-								{fetchedEvent.startTime} –{' '}
-								{fetchedEvent.endTime}
-							</span>
-						</div>
-						<div className="single-event__detail">
-							<span className="single-event__detail-label">
-								Plats
-							</span>
-							<span className="single-event__detail-value">
-								Harpaviljongen
-							</span>
-						</div>
-						{fetchedEvent.type === 'boule' && (
-							<div className="single-event__detail single-event__detail--button">
-								<Button
-									text="ANMÄL DIG NU 200kr"
-									link="https://docs.google.com/forms/d/e/1FAIpQLSedV-FACztwjMdGLFk4gR8mxpaFGXKnWM1rsl6PksdXHkuAVw/viewform?fbclid=PAZXh0bgNhZW0CMTEAAadVPjExdMHUVP2R4wgWdMCzDoiospfQ4XoNMmikuVaPHpOfNEGFyyEWt6is-A_aem_zOiulzRsCSf8s5sFg_U87A"
-								/>
+					<FadeIn>
+						<section className="single-event__hero">
+							<img
+								src={imageSrc}
+								alt={fetchedEvent.title}
+								className="single-event__hero-img"
+							/>
+							<div className="single-event__hero-overlay" />
+							<div className="single-event__hero-content">
+								<h1 className="single-event__hero-title">
+									{fetchedEvent.title.toUpperCase()}
+								</h1>
 							</div>
+						</section>
+					</FadeIn>
+					<section className="single-event__details-row">
+						<FadeIn delay={200}>
+							<div className="single-event__detail">
+								<span className="single-event__detail-label">
+									Datum
+								</span>
+
+								<span className="single-event__detail-value">
+									{weekday} {day} {month}
+								</span>
+							</div>
+						</FadeIn>
+						<FadeIn delay={300}>
+							<div className="single-event__detail">
+								<span className="single-event__detail-label">
+									Tid
+								</span>
+								<span className="single-event__detail-value">
+									{fetchedEvent.startTime} –{' '}
+									{fetchedEvent.endTime}
+								</span>
+							</div>
+						</FadeIn>
+						<FadeIn delay={400}>
+							<div className="single-event__detail">
+								<span className="single-event__detail-label">
+									Plats
+								</span>
+								<span className="single-event__detail-value">
+									Harpaviljongen
+								</span>
+							</div>
+						</FadeIn>
+						{fetchedEvent.type === 'boule' && (
+							<FadeIn delay={500}>
+								<div className="single-event__detail single-event__detail--button">
+									<Button
+										text="ANMÄL DIG NU 200kr"
+										link="https://docs.google.com/forms/d/e/1FAIpQLSedV-FACztwjMdGLFk4gR8mxpaFGXKnWM1rsl6PksdXHkuAVw/viewform?fbclid=PAZXh0bgNhZW0CMTEAAadVPjExdMHUVP2R4wgWdMCzDoiospfQ4XoNMmikuVaPHpOfNEGFyyEWt6is-A_aem_zOiulzRsCSf8s5sFg_U87A"
+									/>
+								</div>
+							</FadeIn>
 						)}
 
 						{hareLogo && (
@@ -134,9 +142,11 @@ function SingleEventPage() {
 						)}
 					</section>
 					<section className="single-event__main-content">
-						<div className="single-event__desc">
-							<p className="single-event__desc-lead">
-								{/* {fetchedEvent.longDescription} */}I år går
+						<FadeIn delay={300}>
+							<div className="single-event__desc">
+								<p className="single-event__desc-lead">
+									{fetchedEvent.longDescription}
+									{/* I år går
 								startskottet för{' '}
 								<strong>Harpaviljongen Open</strong> – vår egen
 								bouletävling <br /> Det är första upplagan av
@@ -154,44 +164,47 @@ function SingleEventPage() {
 								Anmäl dig via formuläret:{' '}
 								<a href="https://docs.google.com/forms/d/e/1FAIpQLSedV-FACztwjMdGLFk4gR8mxpaFGXKnWM1rsl6PksdXHkuAVw/viewform?fbclid=PAZXh0bgNhZW0CMTEAAadVPjExdMHUVP2R4wgWdMCzDoiospfQ4XoNMmikuVaPHpOfNEGFyyEWt6is-A_aem_zOiulzRsCSf8s5sFg_U87A">
 									<u>Länk här</u>
-								</a>{' '}
-							</p>
-						</div>
-						<aside className="single-event__aside">
-							<h2 className="single-event__aside-title">
-								Mer information
-							</h2>
-							<ul className="single-event__aside-list">
-								<li>
-									<strong>När</strong> {day} {month}
-								</li>
-								<li>
-									<strong>Tid</strong>{' '}
-									{fetchedEvent.startTime} –{' '}
-									{fetchedEvent.endTime}
-								</li>
-								<li>
-									<strong>Var</strong> Harpaviljongen
-								</li>
-								<li>
+								</a>{' '} */}
+								</p>
+							</div>
+						</FadeIn>
+						<FadeIn delay={450}>
+							<aside className="single-event__aside">
+								<h2 className="single-event__aside-title">
+									Mer information
+								</h2>
+								<ul className="single-event__aside-list">
+									<li>
+										<strong>När</strong> {day} {month}
+									</li>
+									<li>
+										<strong>Tid</strong>{' '}
+										{fetchedEvent.startTime} –{' '}
+										{fetchedEvent.endTime}
+									</li>
+									<li>
+										<strong>Var</strong> Harpaviljongen
+									</li>
+									{/* <li>
 									<strong>Anmälan</strong> 200:- (inkl 1 glas
 									rosé & 1 pastis)
-								</li>
-								<li>
+								</li> */}
+									{/* <li>
 									<strong>Anmäl dig</strong>{' '}
 									<a href="https://docs.google.com/forms/d/e/1FAIpQLSedV-FACztwjMdGLFk4gR8mxpaFGXKnWM1rsl6PksdXHkuAVw/viewform?fbclid=PAZXh0bgNhZW0CMTEAAadVPjExdMHUVP2R4wgWdMCzDoiospfQ4XoNMmikuVaPHpOfNEGFyyEWt6is-A_aem_zOiulzRsCSf8s5sFg_U87A">
 										<u>här</u>
 									</a>
-								</li>
-							</ul>
-						</aside>
+								</li> */}
+								</ul>
+							</aside>
+						</FadeIn>
 					</section>
 				</article>
 			</FadeIn>
-			<FadeIn>
+			<FadeIn delay={600}>
 				<Button text="TILL TOPPEN" link={'#top'} />
 			</FadeIn>
-			<FadeIn>
+			<FadeIn delay={150}>
 				<Footer />
 			</FadeIn>
 		</main>

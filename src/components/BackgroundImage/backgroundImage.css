@@ -93,6 +93,7 @@
 
 .background-img.event {
 	display: none;
+	will-change: auto;
 }
 
 @media (max-width: 768px) {

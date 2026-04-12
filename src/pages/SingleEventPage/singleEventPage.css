@@ -21,6 +21,7 @@
 	display: flex;
 	align-items: center;
 	overflow: hidden;
+	justify-content: center;
 }
 
 .single-event__hero-img {
@@ -43,16 +44,25 @@
 .single-event__hero-content {
 	position: relative;
 	z-index: 3;
-	width: 100%;
-	padding: 0rem 2rem 1.5rem 0rem;
+	width: auto;
+	max-width: 560px;
+	padding: 1.8rem 2.5rem;
 	text-align: center;
+	border: 2px solid var(--color-blue-dark);
 }
 
 .single-event__hero-title {
 	font-size: 2.5rem;
 	font-weight: 700;
-	margin: 0 0 0.5rem 0;
+
 	letter-spacing: 0.01em;
+}
+
+.single-event__hero-time {
+	font-size: 1.8rem;
+	font-weight: 400;
+	letter-spacing: 0.08em;
+	margin: 0.4rem 0 0;
 }
 
 .single-event__hero-shortdesc {
@@ -67,7 +77,10 @@
 	width: 100%;
 	padding: 2rem 0rem 1rem 0rem;
 	gap: 2rem;
-	border-bottom: 1px solid var(--color-borders, #ffffff);
+	border-bottom: 1px solid var(--color-borders-events);
+	.fade-in {
+		justify-content: flex-start;
+	}
 }
 
 .single-event__detail {
@@ -95,11 +108,21 @@
 	padding-block: 2rem;
 }
 
+.single-event__main-content > .fade-in:first-child {
+	flex: 3;
+	min-width: 0;
+}
+
+.single-event__main-content > .fade-in:last-child {
+	flex: 1;
+	min-width: 0;
+}
+
 .single-event__desc {
 	flex: 3;
 	text-align: left;
-	background-color: var(--color-chambre-section);
-	border: 1px solid var(--color-borders);
+	background-color: var(--color-bg-widget-card);
+	border: 1px solid var(--color-borders-events);
 	padding: 2rem;
 }
 
@@ -118,8 +141,8 @@
 	padding: 1.5rem 1.2rem;
 	min-width: 200px;
 	max-height: 240px;
-	background-color: var(--color-chambre-section);
-	border: 1px solid var(--color-borders);
+	background-color: var(--color-bg-widget-card);
+	border: 1px solid var(--color-borders-events);
 	text-align: left;
 }
 
@@ -163,15 +186,20 @@
 		padding-top: 0;
 	}
 	.single-event__hero {
-		height: 230px;
+		height: 280px;
 		width: 100vw;
 		border-radius: 0;
-		align-items: flex-end;
+		align-items: center;
+		justify-content: center;
 	}
 	.single-event__hero-content {
-		padding: 1.2rem 0.7rem 0.7rem 0.7rem;
+		padding: 1.4rem 1.2rem;
+		max-width: 90%;
 	}
 	.single-event__hero-title {
+		font-size: 1.6rem;
+	}
+	.single-event__hero-time {
 		font-size: 1.3rem;
 	}
 	.single-event__hero-shortdesc {
