@@ -363,11 +363,11 @@ function EventCalendar() {
 														/>
 													</div>
 													<div className="event-calendar__card-info">
-														<span className="event-calendar__card-category">
+														{/* <span className="event-calendar__card-category">
 															{getCategory(
 																event.type,
 															)}
-														</span>
+														</span> */}
 														<h3 className="event-calendar__card-title">
 															{event.title}
 														</h3>
