@@ -119,10 +119,11 @@ body {
 }
 
 .section__title {
-	font-size: 1.8rem;
+	font-size: 1.2rem;
 	font-weight: 500;
 	letter-spacing: 2px;
 	text-align: center;
+	margin-bottom: -2rem;
 }
 
 /* === Tablets (e.g. iPads, 768px – 1024px) === */
@@ -151,7 +152,7 @@ body {
 	}
 
 	.section__title {
-		font-size: 1.7rem;
+		font-size: 1.2rem;
 	}
 
 	.page__top-section {
