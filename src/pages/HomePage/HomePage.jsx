@@ -53,11 +53,8 @@ function HomePage() {
 	return (
 		<section className="page page-home">
 			<NavBar />
-
 			<HeroSection />
-
 			<PageHeader text="HARPAVILJONGEN" page="home" />
-
 			{/* <PageDesc /> */}
 			{/* <Menu menuId="menu-lunch" img={hareLogo} /> */}
 			{/* <FadeIn delay={100}>
@@ -65,8 +62,17 @@ function HomePage() {
 					<SeasonBookings />
 				</Flexbox>
 			</FadeIn> */}
+
 			<FadeIn>
-				<h2 className="section__title">ÖPPNAR FREDAG 10/4!</h2>
+				<h2 className="section__title">
+					CAFÈ & RESTAURANG I STOCKHOLM
+				</h2>
+			</FadeIn>
+			<FadeIn>
+				<h3 className="section__title">
+					<br />
+					FREDAG - SÖNDAG
+				</h3>
 			</FadeIn>
 
 			<section className="page__button-section">
@@ -95,7 +101,6 @@ function HomePage() {
 					<Button text={'GALLERI'} link="/gallery" />
 				</FadeIn>
 			</section>
-
 			{/* <FadeIn>
 				<Flexbox gap="8rem">
 					<Menu menuId="menu-wine" img={wineIllustration} /> 
@@ -104,7 +109,6 @@ function HomePage() {
 				</Flexbox>
 			</FadeIn> 
 			*/}
-
 			{/* <Flexbox>
 				<EventCalendar />
 			</Flexbox> */}

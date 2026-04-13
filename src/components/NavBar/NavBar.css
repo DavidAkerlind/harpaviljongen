@@ -61,7 +61,7 @@
 .nav__hamburger--open {
 	background-color: var(--color-bg);
 	border: 2px solid var(--color-bg);
-	border-left: 2px solid var(--color-borders);
+	border-left: 2px solid var(--color-blue-dark);
 }
 
 .nav__hamburger--open .nav__hamburger-bar:nth-child(1) {
@@ -83,11 +83,11 @@
 	position: fixed;
 	top: 3.8rem;
 	right: -2rem;
-	width: 70vw;
+	width: 60vw;
 	max-width: 320px;
 	background: var(--color-bg);
 	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
-	padding: 1.2rem 1.5rem;
+	padding: 1.5rem;
 	border: 2px solid var(--color-blue-dark);
 	gap: 1.5rem;
 	align-items: flex-start;
@@ -111,8 +111,8 @@
 
 .nav__logo {
 	display: block;
-	width: 48px;
-	height: 48px;
+	width: 54px;
+	height: 54px;
 }
 
 .nav__logo img {

@@ -40,7 +40,7 @@ function Footer() {
 				</ul>
 			</nav>
 
-			<section className="footer__section">
+			<section className="footer__section footer__section--follow">
 				<h3 className="footer__heading">FÖLJ OSS</h3>
 				<section className="footer__icon-frame">
 					<a
