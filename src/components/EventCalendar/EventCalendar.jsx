@@ -89,26 +89,20 @@ function EventCalendar() {
 	const { fetchedEvents, loading, error } = fetchAllEvents();
 	const today = new Date();
 
-	// Fixed season tabs: April (3) through September (8)
-	const SEASON_YEAR =
-		today.getMonth() >= 3 && today.getMonth() <= 8
-			? today.getFullYear()
-			: today.getMonth() < 3
-				? today.getFullYear()
-				: today.getFullYear() + 1;
-
+	// Rolling 6-month tabs starting from the current month
 	const seasonTabs = useMemo(() => {
-		return [3, 4, 5, 6, 7, 8].map((month) => ({
-			key: `${SEASON_YEAR}-${month}`,
-			year: SEASON_YEAR,
-			month,
-		}));
-	}, [SEASON_YEAR]);
+		const now = new Date();
+		const tabs = [];
+		for (let i = 0; i < 6; i++) {
+			const totalMonths = now.getMonth() + i;
+			const month = totalMonths % 12;
+			const year = now.getFullYear() + Math.floor(totalMonths / 12);
+			tabs.push({ key: `${year}-${month}`, year, month });
+		}
+		return tabs;
+	}, []);
 
-	const defaultTab = useMemo(() => {
-		const todayKey = `${today.getFullYear()}-${today.getMonth()}`;
-		return seasonTabs.find((m) => m.key === todayKey) || seasonTabs[0];
-	}, [seasonTabs]);
+	const defaultTab = seasonTabs[0];
 
 	const [selectedTabKey, setSelectedTabKey] = useState(null);
 	const [calDisplay, setCalDisplay] = useState(null);
