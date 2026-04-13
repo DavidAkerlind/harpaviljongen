@@ -66,9 +66,7 @@ function HomePage() {
 				</Flexbox>
 			</FadeIn> */}
 			<FadeIn>
-				<h2 className="section__title">
-					Café & Resturang på östermalmn{' '}
-				</h2>
+				<h2 className="section__title">Café & Resturang</h2>
 			</FadeIn>
 
 			<section className="page__button-section">
