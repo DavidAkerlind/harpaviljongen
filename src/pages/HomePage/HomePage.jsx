@@ -91,9 +91,9 @@ function HomePage() {
 				<FadeIn>
 					<Button text="EVENEMANG" link="events" />
 				</FadeIn>
-				<FadeIn>
+				{/* <FadeIn>
 					<Button text="BOKA BORD" link={'mailto:info@exempel.se'} />
-				</FadeIn>
+				</FadeIn> */}
 				<FadeIn>
 					<Button text={'CHAMBRE SÉPARÉE'} link="/chambre" />
 				</FadeIn>
