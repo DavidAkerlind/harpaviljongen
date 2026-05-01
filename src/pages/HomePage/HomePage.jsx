@@ -77,12 +77,12 @@ function HomePage() {
 
 			<section className="page__button-section">
 				<FadeIn>
-					<Button text="MENY" link="/MENY_HARPAN_4_april.pdf" />
+					<Button text="MENY" link="/MENY_HARPAN_v18_2026.pdf" />
 				</FadeIn>
 				<FadeIn>
 					<Button
 						text="VINLISTA"
-						link="/VINLISTA_HARPAN_4_april.pdf"
+						link="/VINLISTA_HARPAN_v18_2026.pdf"
 					/>
 				</FadeIn>
 				<FadeIn>
