@@ -25,9 +25,17 @@ function BackgroundImage({ img, altText = 'harpaviljongen logo', type = '' }) {
 			`translateY(${yMaxOffsetMap[type] || yMaxOffsetMap.default}px) ${
 				scaleMap[type] || scaleMap.default
 			}`,
-		]
+		],
 	);
 
+	if (type === 'event') {
+		return;
+		<motion.figure
+			className={`background-img ${type}`}
+			style={{ transform }}>
+			<img src={img} alt={altText} loading="lazy" />
+		</motion.figure>;
+	}
 	return (
 		<motion.figure
 			className={`background-img ${type}`}

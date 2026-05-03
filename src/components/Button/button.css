@@ -16,8 +16,9 @@
 
 .button--full-width {
 	width: 80%;
-	margin-top: 10rem;
+	margin-top: 2rem;
 	padding-block: 1rem;
+	margin-bottom: 2rem;
 }
 
 /* === Phones (e.g. iPhones, less than 768px) === */

@@ -5,14 +5,25 @@ import PageHeader from '../../components/PageHeader/PageHeader';
 import Footer from '../../components/Footer/Footer';
 import Button from '../../components/Button/Button';
 import FadeIn from '../../components/FadeIn/FadeIn';
+import EventCalendar from '../../components/EventCalendar/EventCalendar';
 
 function EventsPage() {
 	return (
 		<main className="page page-events">
 			<NavBar />
 			<PageHeader text="EVENEMANG" />
-
+			<FadeIn delay={100}>
+				<section className="page__top-section page__top-section--events">
+					<Button text="BOKA NU" link={'mailto:info@exempel.se'} />
+					{/* <Button text="CHAMBRE MENYN" link={'#chambreMenu'} /> */}
+					<Button text="← TILLBAKA" link={'/'} />
+				</section>
+			</FadeIn>
 			<FadeIn>
+				<EventCalendar />
+			</FadeIn>
+
+			{/* <FadeIn>
 				<section className="events-coming__content">
 					<h2 className="events-coming__title">
 						Snart händer det saker här!
@@ -20,6 +31,10 @@ function EventsPage() {
 
 					<Button text="← TILLBAKA" link="/" />
 				</section>
+			</FadeIn> */}
+
+			<FadeIn delay={150}>
+				<Button link={'#top'} text={'TILL TOPPEN'} />
 			</FadeIn>
 
 			<FadeIn delay={150}>
