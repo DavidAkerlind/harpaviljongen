@@ -160,6 +160,7 @@ body {
 
 	.section__title {
 		font-size: 1.2rem;
+		margin-inline: 0.5rem;
 	}
 
 	.page__top-section {
