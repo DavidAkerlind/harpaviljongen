@@ -34,6 +34,7 @@ function SingleEventPage() {
 	}, [location]);
 	const { eventId } = useParams();
 	const { fetchedEvent, loading, error } = fetchEventById(eventId);
+	let longDesc = fetchedEvent.longDesc;
 
 	// Välj bild beroende på event.type
 	let imageSrc = eventImg;
@@ -145,7 +146,26 @@ function SingleEventPage() {
 						<FadeIn delay={300}>
 							<div className="single-event__desc">
 								<p className="single-event__desc-lead">
-									{fetchedEvent.longDescription}
+									{fetchedEvent.type === 'private' ? (
+										<>
+											Välkommen att inviga säsongen hos
+											oss, med ny meny och nya viner, i en
+											grönskande miljö. Njut av noggrant
+											utvalda rätter, svalkande drycker
+											och en stämning som sätter tonen för
+											sommaren.
+											<br />
+											<br />
+											Under kvällen spelar{' '}
+											<strong>DJ ASPEN! </strong>
+											<br />
+											<br />
+											Vi ser fram emot att fira
+											tillsammans med dig. Syns!
+										</>
+									) : (
+										fetchedEvent.longDescription
+									)}
 									{/* I år går
 								startskottet för{' '}
 								<strong>Harpaviljongen Open</strong> – vår egen

@@ -16,7 +16,7 @@ function EventsPage() {
 				<section className="page__top-section page__top-section--events">
 					<Button text="BOKA NU" link={'mailto:info@exempel.se'} />
 					{/* <Button text="CHAMBRE MENYN" link={'#chambreMenu'} /> */}
-					<Button text="HEM" link={'/'} />
+					<Button text="← TILLBAKA" link={'/'} />
 				</section>
 			</FadeIn>
 			<FadeIn>
