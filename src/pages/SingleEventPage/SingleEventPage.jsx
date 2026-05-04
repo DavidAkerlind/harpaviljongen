@@ -149,10 +149,19 @@ function SingleEventPage() {
 									{fetchedEvent.type === 'private' ? (
 										<>
 											Välkommen att inviga säsongen hos
-											oss, med ny meny och nya viner, i en
-											grönskande miljö. Njut av noggrant
-											utvalda rätter, svalkande drycker
-											och en stämning som sätter tonen för
+											oss!
+											<br />
+											<br />
+											Solen blir starkare, dagarna blir
+											längre och det är på Café
+											Harpaviljongen ni vill vara.
+											<br /> <br />
+											Vi serverar från en{' '}
+											<strong>
+												ny meny och med nya viner
+											</strong>
+											, i en grönskande miljö med en
+											stämning som sätter tonen för
 											sommaren.
 											<br />
 											<br />
@@ -160,8 +169,13 @@ function SingleEventPage() {
 											<strong>DJ ASPEN! </strong>
 											<br />
 											<br />
-											Vi ser fram emot att fira
-											tillsammans med dig. Syns!
+											<strong>
+												Bordsbokningar accepteras innom
+												kort!
+											</strong>
+											<br />
+											<br />
+											Vi syns där!
 										</>
 									) : (
 										fetchedEvent.longDescription
@@ -203,7 +217,8 @@ function SingleEventPage() {
 										{fetchedEvent.endTime}
 									</li>
 									<li>
-										<strong>Var</strong> Harpaviljongen
+										<strong>Vad</strong> DJ Aspen, nya
+										viner, ny meny
 									</li>
 									{/* <li>
 									<strong>Anmälan</strong> 200:- (inkl 1 glas
