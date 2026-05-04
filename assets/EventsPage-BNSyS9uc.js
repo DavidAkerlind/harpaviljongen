@@ -1,4 +1,4 @@
-import{r as d,j as a,L}from"./index-DLmP8uHG.js";import{N as A,B as y}from"./Button-DvyRw1K1.js";import{P as C}from"./PageHeader-Cfb6nMrT.js";import{b as R,F as _,a as F}from"./Footer-Cmcrf7Ur.js";import{F as j}from"./eventCalendar-DK32Js7u.js";import{M as B}from"./Skeleton-C9oWhkYu.js";import{p as O,b as P,e as K}from"./Harpaviljongen-open-2025-C6tAE2iG.js";/*!
+import{r as d,j as a,L}from"./index-DKC-5OPc.js";import{N as A,B as y}from"./Button-DSOGt_MA.js";import{P as C}from"./PageHeader-C9FVWDRd.js";import{b as R,F as _,a as F}from"./Footer-nYhfZiDH.js";import{F as j}from"./eventCalendar-C9ahrXU1.js";import{M as B}from"./Skeleton-DRxL8Vr3.js";import{p as O,b as P,e as K}from"./Harpaviljongen-open-2025-C6tAE2iG.js";/*!
  * Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  * Copyright 2024 Fonticons, Inc.
