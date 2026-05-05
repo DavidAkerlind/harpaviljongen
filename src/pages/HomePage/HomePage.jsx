@@ -92,7 +92,7 @@ function HomePage() {
 					<Button text="EVENEMANG" link="events" />
 				</FadeIn>
 				{/* <FadeIn>
-					<Button text="BOKA BORD" link={'mailto:info@exempel.se'} />
+					<Button text="BOKA BORD" link={'mailto:info@harpaviljongen.com'} />
 				</FadeIn> */}
 				<FadeIn>
 					<Button text={'CHAMBRE SÉPARÉE'} link="/chambre" />

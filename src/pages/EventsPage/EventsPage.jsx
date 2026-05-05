@@ -14,7 +14,10 @@ function EventsPage() {
 			<PageHeader text="EVENEMANG" />
 			<FadeIn delay={100}>
 				<section className="page__top-section page__top-section--events">
-					<Button text="BOKA NU" link={'mailto:info@exempel.se'} />
+					<Button
+						text="BOKA NU"
+						link={'mailto:info@harpaviljongen.com'}
+					/>
 					{/* <Button text="CHAMBRE MENYN" link={'#chambreMenu'} /> */}
 					<Button text="← TILLBAKA" link={'/'} />
 				</section>
