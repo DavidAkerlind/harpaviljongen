@@ -1,5 +1,5 @@
 import { FaInstagram, FaFacebook } from 'react-icons/fa';
-import './Footer.css';
+import './footer.css';
 import OpeningHours from '../OpeningHours/OpeningHours';
 function Footer() {
 	return (

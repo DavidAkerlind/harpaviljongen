@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import './BackgroundImage.css';
+import './backgroundImage.css';
 
 const yMaxOffsetMap = {
 	lunch: 150,
