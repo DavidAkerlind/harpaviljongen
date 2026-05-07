@@ -10,7 +10,7 @@ import './singleEventPage.css';
 
 import MenuSkeleton from '../../components/Skeleton/Skeleton';
 
-import event02 from '../../assets/pictures/images/event02-08-flat-big.PNG';
+import event02 from '../../assets/pictures/images/event02-08-flat-big.png';
 import wineImg from '../../assets/pictures/ProImages/thumbnail_Restaurangporträtt_Harpaviljongen_IG_A-16.jpg';
 import privateImg from '../../assets/pictures/private.png';
 import eventImg from '../../assets/pictures/event.png';
