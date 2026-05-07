@@ -1,4 +1,4 @@
-import './navItem.css';
+import './NavItem.css';
 import { Link, useLocation } from 'react-router-dom';
 
 function NavItem({ text, link }) {

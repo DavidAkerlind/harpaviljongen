@@ -1,4 +1,4 @@
-import './menuPage.css';
+import './menuPageSimple.css';
 
 // Components
 import Menu from '../../components/Menu/Menu';
