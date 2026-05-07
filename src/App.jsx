@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
@@ -37,7 +37,7 @@ const EventsPage = lazy(() => import('./pages/EventsPage/EventsPage'));
 function App() {
 	return (
 		<div className="app">
-			<HashRouter>
+			<BrowserRouter>
 				<ScrollToTop />
 				<Routes>
 					<Route
@@ -115,7 +115,7 @@ function App() {
 						}
 					/>
 				</Routes>
-			</HashRouter>
+			</BrowserRouter>
 		</div>
 	);
 }
