@@ -12,6 +12,10 @@ function WineListPage() {
 	const location = useLocation();
 
 	useEffect(() => {
+		document.title = 'Vinlista – Harpaviljongen';
+	}, []);
+
+	useEffect(() => {
 		if (location.hash) {
 			const id = location.hash.replace('#', '');
 			const el = document.getElementById(id);

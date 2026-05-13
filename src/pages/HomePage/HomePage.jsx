@@ -25,6 +25,10 @@ function HomePage() {
 	const [menuUrl, setMenuUrl] = useState(null);
 
 	useEffect(() => {
+		document.title = 'Harpaviljongen – Café & Bistro i Stockholm';
+	}, []);
+
+	useEffect(() => {
 		if (location.hash) {
 			const id = location.hash.replace('#', '');
 			const el = document.getElementById(id);

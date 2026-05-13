@@ -16,6 +16,10 @@ function ChambrePage() {
 	const location = useLocation();
 
 	useEffect(() => {
+		document.title = 'Chambre Séparée – Harpaviljongen';
+	}, []);
+
+	useEffect(() => {
 		if (location.hash) {
 			const id = location.hash.replace('#', '');
 			const el = document.getElementById(id);

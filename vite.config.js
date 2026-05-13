@@ -8,7 +8,11 @@ export default defineConfig({
 	build: {
 		rollupOptions: {
 			output: {
-				manualChunks: undefined, // Förhindra problem med chunks
+				manualChunks: {
+					react: ['react', 'react-dom'],
+					router: ['react-router-dom'],
+					motion: ['framer-motion'],
+				},
 			},
 		},
 	},

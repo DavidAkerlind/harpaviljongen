@@ -34,6 +34,13 @@ function SingleEventPage() {
 	}, [location]);
 	const { eventId } = useParams();
 	const { fetchedEvent, loading, error } = fetchEventById(eventId);
+
+	useEffect(() => {
+		if (fetchedEvent?.title) {
+			document.title = `${fetchedEvent.title} – Harpaviljongen`;
+		}
+	}, [fetchedEvent]);
+
 	let longDesc = fetchedEvent.longDesc;
 
 	// Välj bild beroende på event.type

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import NavBar from '../../components/NavBar/NavBar';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import BackgroundImage from '../../components/BackgroundImage/BackgroundImage';
@@ -6,6 +7,9 @@ import Button from '../../components/Button/Button';
 import './errorPage.css';
 import Flexbox from '../../components/Flexbox/Flexbox';
 function ErrorPage() {
+	useEffect(() => {
+		document.title = '404 – Harpaviljongen';
+	}, []);
 	return (
 		<section className="page page-error">
 			<NavBar />

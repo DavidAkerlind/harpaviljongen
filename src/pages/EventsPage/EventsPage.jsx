@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './eventsPage.css';
 import NavBar from '../../components/NavBar/NavBar';
 import PageHeader from '../../components/PageHeader/PageHeader';
@@ -8,6 +8,9 @@ import FadeIn from '../../components/FadeIn/FadeIn';
 import EventCalendar from '../../components/EventCalendar/EventCalendar';
 
 function EventsPage() {
+	useEffect(() => {
+		document.title = 'Evenemang – Harpaviljongen';
+	}, []);
 	return (
 		<main className="page page-events">
 			<NavBar />

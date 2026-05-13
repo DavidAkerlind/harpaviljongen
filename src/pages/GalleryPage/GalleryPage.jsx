@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './galleryPage.css';
 // Importera ALLA bilder från assets/pictures/gallery
 import img1 from '../../assets/pictures/ProImages/thumbnail_Restaurangporträtt_Harpaviljongen_IG_A-1.jpg';
@@ -65,6 +66,9 @@ const smallImages2 = [
 ];
 
 function GalleryPage() {
+	useEffect(() => {
+		document.title = 'Galleri – Harpaviljongen';
+	}, []);
 	return (
 		<main className="page page-gallery">
 			<NavBar />
