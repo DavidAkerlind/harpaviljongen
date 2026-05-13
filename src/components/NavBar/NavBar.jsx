@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import NavItem from '../NavItem/NavItem';
+import '../NavItem/navItem.css';
 import hareImg from '../../assets/logo/hare-logo-green.svg';
 import './NavBar.css';
 import { Link } from 'react-router-dom';
@@ -61,6 +62,20 @@ function NavBar({ type = 'normal' }) {
 					<Link to="/" className="nav__logo" aria-label="Startsida">
 						<img src={hareImg} alt="Harpaviljongen logo" />
 					</Link>
+				</li>
+
+				<li className="nav__list-item--book">
+					<button
+						className="nav__list-item nav__book-btn link"
+						onClick={() => {
+							setOpen(false);
+							window.caspecoBooking?.openModal({
+								system: 'se_caferes01',
+								unit: '13',
+							});
+						}}>
+						Boka bord
+					</button>
 				</li>
 
 				{navItems.map((item, index) => (
