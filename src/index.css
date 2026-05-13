@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400&family=Petit+Formal+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Andale+Mono&display=swap');
 
+/* ==== CASPECO BOOKING MODAL ==== */
+.caspeco-booking-modal-iframe {
+	width: 103% !important;
+	left: 0 !important;
+}
+
 :root {
 	/* COLORS */
 	/* --color-bg: #f2f0ef;
@@ -47,6 +53,7 @@ a {
 
 button {
 	border: none;
+	font-size: 16px;
 }
 
 ul {

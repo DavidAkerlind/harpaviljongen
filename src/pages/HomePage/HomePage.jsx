@@ -86,6 +86,17 @@ function HomePage() {
 					/>
 				</FadeIn>
 				<FadeIn>
+					<Button
+						text="BOKA BORD"
+						onClick={() =>
+							window.caspecoBooking?.openModal({
+								system: 'se_caferes01',
+								unit: '13',
+							})
+						}
+					/>
+				</FadeIn>
+				<FadeIn>
 					<Button text="ÖPPETTIDER" link="#openingHours" />
 				</FadeIn>
 				<FadeIn>
