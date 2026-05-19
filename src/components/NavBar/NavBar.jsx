@@ -22,8 +22,8 @@ function NavBar({ type = 'normal' }) {
 
 	const navItems = [
 		{ text: 'Hem', link: '/' },
-		{ text: 'Meny', link: '/MENY_HARPAN_v18_2026.pdf' },
-		{ text: 'Vinlista', link: '/VINLISTA_HARPAN_v18_2026.pdf' },
+		{ text: 'Meny', link: '/MENY_HARPAN_v21_2026.pdf' },
+		{ text: 'Vinlista', link: '/VINLISTA_HARPAN_19_maj.pdf' },
 		{ text: 'Chambre', link: '/chambre' },
 		{ text: 'Öppettider', link: '#openingHours' },
 		{ text: 'Evenemang', link: '/events' },

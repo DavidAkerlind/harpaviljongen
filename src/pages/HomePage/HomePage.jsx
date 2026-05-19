@@ -72,21 +72,21 @@ function HomePage() {
 					CAFÈ & RESTAURANG I STOCKHOLM
 				</h2>
 			</FadeIn>
-			<FadeIn>
+			{/* <FadeIn>
 				<h3 className="section__title">
 					<br />
 					FREDAG - SÖNDAG
 				</h3>
-			</FadeIn>
+			</FadeIn> */}
 
 			<section className="page__button-section">
 				<FadeIn>
-					<Button text="MENY" link="/MENY_HARPAN_v18_2026.pdf" />
+					<Button text="MENY" link="/MENY_HARPAN_v21_2026.pdf" />
 				</FadeIn>
 				<FadeIn>
 					<Button
 						text="VINLISTA"
-						link="/VINLISTA_HARPAN_v18_2026.pdf"
+						link="/VINLISTA_HARPAN_19_maj.pdf"
 					/>
 				</FadeIn>
 				<FadeIn>
