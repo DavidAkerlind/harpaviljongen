@@ -31,6 +31,12 @@
 	max-width: 50%;
 }
 
+.page-chambre__image:first-child {
+	aspect-ratio: 4 / 5;
+	object-fit: cover;
+	object-position: center;
+}
+
 .page-chambre__image-container {
 	max-width: 80%;
 	display: flex;
@@ -42,9 +48,13 @@
 .page-chambre__intro {
 	font-size: 1.2rem;
 	line-height: 1.6;
-	margin-bottom: 3rem;
+	margin-bottom: 2rem;
 	max-width: 800px;
 	font-weight: 600;
+}
+
+.page-chambre__fineprint {
+	margin-bottom: 2.5rem;
 }
 @media screen and (max-width: 767px) {
 	/* Phone-specific styles here */
@@ -54,7 +64,7 @@
 	}
 
 	.page-chambre__content {
-		margin-top: 2rem;
+		margin-top: 0rem;
 		.page__top-section {
 			margin-top: 4rem;
 		}

@@ -1,7 +1,7 @@
 import ChambreMenu from '../../components/ChambreMenu/ChambreMenu';
 import NavBar from '../../components/NavBar/NavBar';
 import PageHeader from '../../components/PageHeader/PageHeader';
-import chambreImage1 from '../../assets/pictures/ProImages/thumbnail_Restaurangporträtt_Harpaviljongen_IG_A-8.jpg';
+import chambreImage1 from '../../assets/pictures/NewChambreJuni/7_CHAMBRE_25_JUNI.jpeg';
 import chambreImage2 from '../../assets/pictures/ProImages/thumbnail_Restaurangporträtt_Harpaviljongen_IG_A-11.jpg';
 
 import './chambrePage.css';
@@ -60,6 +60,11 @@ function ChambrePage() {
 							ha ägt rum hemma hos någon av oss. Fast med det
 							lilla extra.
 						</p>
+					</section>
+				</FadeIn>
+				<FadeIn delay={300}>
+					<section className="page-chambre__fineprint">
+						<i>Bokning endast via mail</i>
 					</section>
 				</FadeIn>
 				<FadeIn delay={350}>
