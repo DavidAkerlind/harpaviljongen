@@ -12,8 +12,8 @@ function Footer() {
 						<a
 							className="list-item__link"
 							aria-label="Ring till oss på Harpaviljongen"
-							href="tel:0767771667">
-							076-777 16 67
+							href="tel:0701551078">
+							070-155 10 78
 						</a>
 					</li>
 					<li className="footer__list-item">
