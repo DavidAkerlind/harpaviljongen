@@ -11,11 +11,16 @@ function Menu({ menuId, img }) {
 	const { fetchedMenu, loading, error } = fetchMenuById(menuId);
 
 	if (loading) return <MenuSkeleton />;
-	if (error) return <MenuSkeleton />;
+	if (error)
+		return (
+			<p className="fetch-error">
+				Kunde inte hämta menyn. Kontrollera nätverket och försök igen.
+			</p>
+		);
 
 	const { title, description, type, price, items } = fetchedMenu;
 	// Verify items exists before mapping
-	if (!items) return <MenuSkeleton />;
+	if (!items) return <p className="fetch-error">Menyn saknar innehåll.</p>;
 
 	return (
 		<div>

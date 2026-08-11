@@ -23,7 +23,13 @@ function OpeningHours({ img, type }) {
 	);
 
 	if (loading) return <MenuSkeleton />;
-	if (error) return <MenuSkeleton />;
+	if (error)
+		return (
+			<p className="fetch-error">
+				Kunde inte hämta öppettider. Kontrollera nätverket och försök
+				igen.
+			</p>
+		);
 
 	return (
 		<section

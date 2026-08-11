@@ -6,7 +6,13 @@ function WineList() {
 	const { fetchedWineList, loading, error } = fetchWineList();
 
 	if (loading) return <MenuSkeleton />;
-	if (error) return <MenuSkeleton />;
+	if (error)
+		return (
+			<p className="fetch-error">
+				Kunde inte hämta vinlistan. Kontrollera nätverket och försök
+				igen.
+			</p>
+		);
 
 	if (!Array.isArray(fetchedWineList)) {
 		return <p>Ingen vinlista hittades.</p>;
@@ -31,8 +37,8 @@ function WineList() {
 												(item) =>
 													item.active !== false &&
 													item.name &&
-													item.price
-											)
+													item.price,
+											),
 									)
 								);
 							})
@@ -53,7 +59,7 @@ function WineList() {
 													(item) =>
 														item.active !== false &&
 														item.name &&
-														item.price
+														item.price,
 												)
 											);
 										})
@@ -78,7 +84,7 @@ function WineList() {
 															item.active !==
 																false &&
 															item.name &&
-															item.price
+															item.price,
 													)
 													.map((item) => (
 														<article

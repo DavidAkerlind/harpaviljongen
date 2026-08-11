@@ -10,12 +10,18 @@ export function fetchMenuById(menuID) {
 		if (!menuID) return;
 		axios
 			.get(
-				`https://harpaviljongen-db-api.onrender.com/api/menus/${menuID}`
+				`https://harpaviljongen-db-api.onrender.com/api/menus/${menuID}`,
 			)
 			.then((res) => {
 				setFetchedMenu(res.data.data);
 			})
-			.catch((error) => setError(error))
+			.catch((err) => {
+				console.error(
+					'[fetchMenuById] CORS or network error – check that the backend allows https://harpaviljongen.com:',
+					err.message,
+				);
+				setError(err);
+			})
 			.finally(() => setLoading(false));
 	}, [menuID]);
 

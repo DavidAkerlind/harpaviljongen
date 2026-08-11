@@ -9,12 +9,18 @@ export function fetchEventById(eventId) {
 	useEffect(() => {
 		axios
 			.get(
-				`https://harpaviljongen-db-api.onrender.com/api/events/${eventId}`
+				`https://harpaviljongen-db-api.onrender.com/api/events/${eventId}`,
 			)
 			.then((res) => {
 				setFetchedEvent(res.data.data);
 			})
-			.catch((error) => setError(error))
+			.catch((err) => {
+				console.error(
+					'[fetchEventById] CORS or network error – check that the backend allows https://harpaviljongen.com:',
+					err.message,
+				);
+				setError(err);
+			})
 			.finally(() => setLoading(false));
 	}, []);
 	return { fetchedEvent, loading, error };

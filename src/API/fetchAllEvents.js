@@ -16,6 +16,10 @@ export function fetchAllEvents() {
 				if (err.response?.status === 404) {
 					setFetchedEvents([]);
 				} else {
+					console.error(
+						'[fetchAllEvents] CORS or network error – check that the backend allows https://harpaviljongen.com:',
+						err.message,
+					);
 					setError(err);
 				}
 			})

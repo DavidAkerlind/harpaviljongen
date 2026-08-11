@@ -12,7 +12,13 @@ export function fetchOpeningHours() {
 			.then((res) => {
 				setFetchedHours(res.data.data);
 			})
-			.catch((error) => setError(error))
+			.catch((err) => {
+				console.error(
+					'[fetchOpeningHours] CORS or network error – check that the backend allows https://harpaviljongen.com:',
+					err.message,
+				);
+				setError(err);
+			})
 			.finally(() => setLoading(false));
 	}, []);
 	return { fetchedHours, loading, error };

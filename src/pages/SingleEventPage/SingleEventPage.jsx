@@ -60,6 +60,12 @@ function SingleEventPage() {
 	}
 
 	if (error || !fetchedEvent) {
+		if (error) {
+			console.error(
+				'[SingleEventPage] CORS or network error – check that the backend allows https://harpaviljongen.com:',
+				error.message,
+			);
+		}
 		return (
 			<section className="page page-single-event">
 				<NavBar />

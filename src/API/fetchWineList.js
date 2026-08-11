@@ -12,7 +12,13 @@ export function fetchWineList() {
 			.then((res) => {
 				setFetchedWineList(res.data.data);
 			})
-			.catch((error) => setError(error))
+			.catch((err) => {
+				console.error(
+					'[fetchWineList] CORS or network error – check that the backend allows https://harpaviljongen.com:',
+					err.message,
+				);
+				setError(err);
+			})
 			.finally(() => setLoading(false));
 	}, []);
 	return { fetchedWineList, loading, error };

@@ -219,6 +219,13 @@ function EventCalendar() {
 	};
 
 	if (loading) return <MenuSkeleton />;
+	if (error)
+		return (
+			<p className="fetch-error">
+				Kunde inte hämta evenemang. Kontrollera nätverket och försök
+				igen.
+			</p>
+		);
 
 	return (
 		<section id="events" className="event-calendar">
