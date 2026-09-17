@@ -67,11 +67,11 @@ function HomePage() {
 				</Flexbox>
 			</FadeIn> */}
 
-			<FadeIn>
+			{/* <FadeIn>
 				<h2 className="section__title">
 					CAFÈ & RESTAURANG I STOCKHOLM
 				</h2>
-			</FadeIn>
+			</FadeIn> */}
 			{/* <FadeIn>
 				<h3 className="section__title">
 					<br />
@@ -80,16 +80,18 @@ function HomePage() {
 			</FadeIn> */}
 
 			<section className="page__button-section">
-				<FadeIn>
-					<Button text="MENY" link="/MENY_HARPAN_23_JUNI.pdf" />
-				</FadeIn>
-				<FadeIn>
-					<Button
-						text="VINLISTA"
-						link="/VINLISTA_HARPAN_19_maj.pdf"
-					/>
-				</FadeIn>
-				<FadeIn>
+				<section className="page__button-section--horizontal">
+					<FadeIn>
+						<Button text="MENY" link="/MENY_HARPAN_23_JUNI.pdf" />
+					</FadeIn>
+					<FadeIn>
+						<Button
+							text="VINLISTA"
+							link="/VINLISTA_HARPAN_19_maj.pdf"
+						/>
+					</FadeIn>
+				</section>
+				{/* <FadeIn>
 					<Button
 						text="BOKA BORD"
 						onClick={() =>
@@ -99,22 +101,22 @@ function HomePage() {
 							})
 						}
 					/>
-				</FadeIn>
-				<FadeIn>
+				</FadeIn> */}
+				{/* <FadeIn>
 					<Button text="ÖPPETTIDER" link="#openingHours" />
-				</FadeIn>
-				<FadeIn>
+				</FadeIn> */}
+				{/* <FadeIn>
 					<Button text="EVENEMANG" link="events" />
-				</FadeIn>
+				</FadeIn> */}
 				{/* <FadeIn>
 					<Button text="BOKA BORD" link={'mailto:info@harpaviljongen.com'} />
 				</FadeIn> */}
-				<FadeIn>
+				{/* <FadeIn>
 					<Button text={'CHAMBRE SÉPARÉE'} link="/chambre" />
-				</FadeIn>
-				<FadeIn>
+				</FadeIn> */}
+				{/* <FadeIn>
 					<Button text={'GALLERI'} link="/gallery" />
-				</FadeIn>
+				</FadeIn> */}
 			</section>
 			{/* <FadeIn>
 				<Flexbox gap="8rem">
