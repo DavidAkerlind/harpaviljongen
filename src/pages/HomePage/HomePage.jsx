@@ -10,7 +10,7 @@ import Flexbox from '../../components/Flexbox/Flexbox';
 import hareLogo from '../../assets/logo/hare-logo-blue.svg';
 import wineIllustration from '../../assets/illustrations/wineglass-filled.svg';
 import clockIllustration from '../../assets/illustrations/clock.svg';
-import PageHeader from '../../components/PageHeader/PageHeader';
+// import PageHeader from '../../components/PageHeader/PageHeader';
 import Button from '../../components/Button/Button';
 // import Footer from '../../components/Footer/Footer';
 import FooterSection from '../../components/FooterSection/FooterSection';
@@ -59,7 +59,7 @@ function HomePage() {
 		<section className="page page-home">
 			<NavBar />
 			<HeroSection />
-			<PageHeader text="HARPAVILJONGEN" page="home" />
+			{/* <PageHeader text="HARPAVILJONGEN" page="home" /> */}
 			{/* <PageDesc /> */}
 			{/* <Menu menuId="menu-lunch" img={hareLogo} /> */}
 			{/* <FadeIn delay={100}>
@@ -79,6 +79,10 @@ function HomePage() {
 					FREDAG - SÖNDAG
 				</h3>
 			</FadeIn> */}
+
+			<FadeIn>
+				<h1 className="home__title">HARPAVILJONGEN</h1>
+			</FadeIn>
 
 			<section className="page__button-section">
 				<section className="page__button-section--horizontal">
