@@ -1,0 +1,39 @@
+.contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	text-align: center;
+}
+
+.contact__title {
+	margin-block: 1rem;
+	margin-bottom: 2rem;
+	font-size: 1.5rem;
+	font-weight: bold;
+	font-style: normal;
+	letter-spacing: 2px;
+}
+
+.contact__list {
+	width: 100%;
+	min-width: 220px;
+	max-width: 320px;
+}
+
+.contact__item {
+	margin-bottom: 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	text-align: right;
+}
+
+.contact__label {
+	font-weight: 700;
+	text-align: left;
+}
+
+.contact__link:hover {
+	text-decoration: underline;
+}

@@ -24,11 +24,11 @@ function NavBar({ type = 'normal' }) {
 		{ text: 'Hem', link: '/' },
 		{ text: 'Meny', link: '/MENY_HARPAN_23_JUNI.pdf' },
 		{ text: 'Vinlista', link: '/VINLISTA_HARPAN_19_maj.pdf' },
-		{ text: 'Chambre', link: '/chambre' },
+		// { text: 'Chambre', link: '/chambre' },
 		{ text: 'Öppettider', link: '#openingHours' },
-		{ text: 'Evenemang', link: '/events' },
-		{ text: 'Galleri', link: '/gallery' },
-		{ text: 'Kontakt', link: '#contactInfo' },
+		// { text: 'Evenemang', link: '/events' },
+		// { text: 'Galleri', link: '/gallery' },
+		// { text: 'Kontakt', link: '#contactInfo' },
 	];
 
 	return (

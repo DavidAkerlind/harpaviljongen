@@ -12,7 +12,8 @@ import wineIllustration from '../../assets/illustrations/wineglass-filled.svg';
 import clockIllustration from '../../assets/illustrations/clock.svg';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import Button from '../../components/Button/Button';
-import Footer from '../../components/Footer/Footer';
+// import Footer from '../../components/Footer/Footer';
+import FooterSection from '../../components/FooterSection/FooterSection';
 import ChambreSection from '../../components/ChambreSection/ChambreSection';
 import EventCalendar from '../../components/EventCalendar/EventCalendar';
 import PageDesc from '../../components/PageDesc/PageDesc';
@@ -141,7 +142,7 @@ function HomePage() {
 				<Button text="TILL TOPPEN" link={'#top'} />
 			</FadeIn> */}
 			<FadeIn>
-				<Footer />
+				<FooterSection />
 			</FadeIn>
 		</section>
 	);
