@@ -1,5 +1,5 @@
 import EventCalendar from '../../components/EventCalendar/EventCalendar';
-
+// empty commit
 function NewsPage() {
 	return (
 		<section className="page page-news">
