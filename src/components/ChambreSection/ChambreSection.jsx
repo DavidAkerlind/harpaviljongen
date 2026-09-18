@@ -36,11 +36,15 @@ const ChambreSection = () => {
 					src={chambreImage1}
 					alt="dukad middag i chambre séparée"
 					className="chambre__image"
+					loading="lazy"
+					decoding="async"
 				/>
 				<img
 					src={chambreImage2}
 					alt="Vitrinskål med vinglas"
 					className="chambre__image"
+					loading="lazy"
+					decoding="async"
 				/>
 			</figure>
 		</section>

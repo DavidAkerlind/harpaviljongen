@@ -14,6 +14,8 @@ function ImagesSection() {
 						src={img1}
 						alt="Bild 1"
 						className="images-section__img"
+						loading="lazy"
+						decoding="async"
 					/>
 				</figure>
 				<figure className="small-section__img-container">
@@ -21,6 +23,8 @@ function ImagesSection() {
 						src={img2}
 						alt="Bild 2"
 						className="images-section__img"
+						loading="lazy"
+						decoding="async"
 					/>
 				</figure>
 				<figure className="small-section__img-container">
@@ -28,6 +32,8 @@ function ImagesSection() {
 						src={img3}
 						alt="Bild 3"
 						className="images-section__img"
+						loading="lazy"
+						decoding="async"
 					/>
 				</figure>
 			</section>
@@ -37,6 +43,8 @@ function ImagesSection() {
 						src={img1big}
 						alt="Bild 1 stor"
 						className="images-section__img--big"
+						loading="lazy"
+						decoding="async"
 					/>
 				</figure>
 				<figure className="big-section__img-container">
@@ -44,6 +52,8 @@ function ImagesSection() {
 						src={img2big}
 						alt="Bild 2 stor"
 						className="images-section__img--big"
+						loading="lazy"
+						decoding="async"
 					/>
 				</figure>
 			</section>
