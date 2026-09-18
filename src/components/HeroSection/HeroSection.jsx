@@ -27,6 +27,8 @@ function HeroSection({ type = 'home' }) {
 				className="hero-section__img"
 				src={imageSrc}
 				alt="Hero picture"
+				fetchPriority="high"
+				decoding="async"
 			/>
 			<div className="hero-section__overlay"></div>
 			<div className="hero-section__content">

@@ -43,6 +43,8 @@ function EventCard({ event }) {
 					src={imageSrc}
 					alt={event.title.toUpperCase()}
 					className="event-card__image"
+					loading="lazy"
+					decoding="async"
 				/>
 			</div>
 			<div className="event-card__desc">

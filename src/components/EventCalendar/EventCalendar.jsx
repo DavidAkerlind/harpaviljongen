@@ -361,6 +361,8 @@ function EventCalendar() {
 															)}
 															alt={event.type}
 															className="event-calendar__card-img"
+															loading="lazy"
+															decoding="async"
 														/>
 													</div>
 													<div className="event-calendar__card-info">
