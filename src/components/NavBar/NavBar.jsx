@@ -58,7 +58,12 @@ function NavBar({ type = 'normal' }) {
 			<ul className={`nav__list${open ? ' nav__list--open' : ''}`}>
 				<li className="nav__logo-item">
 					<Link to="/" className="nav__logo" aria-label="Startsida">
-						<img src={hareImg} alt="Harpaviljongen logo" />
+						<img
+						src={hareImg}
+						alt="Café Harpaviljongens logotyp, en hare"
+						width="1024"
+						height="1024"
+					/>
 					</Link>
 				</li>
 
