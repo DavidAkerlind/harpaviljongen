@@ -42,8 +42,9 @@
 }
 
 .opening-hours-section--small {
+	margin-top: -2rem;
 	padding: 0;
-	min-width: 220px;
+	min-width: 320px;
 	.opening-hours__title {
 		margin-block: 1rem;
 		font-weight: bold;

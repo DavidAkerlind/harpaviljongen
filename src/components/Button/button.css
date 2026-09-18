@@ -21,6 +21,10 @@
 	margin-bottom: 2rem;
 }
 
+.button--hero-section {
+	background-color: var(--color-bg);
+}
+
 /* === Phones (e.g. iPhones, less than 768px) === */
 @media screen and (min-width: 767px) {
 	/* Phone-specific styles here */

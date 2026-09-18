@@ -1,9 +1,12 @@
 import './heroSection.css';
 import homePicture from '../../assets/pictures/ProImages/thumbnail_Restaurangporträtt_Harpaviljongen_IG_A-3.jpg';
 import winePicture from '../../assets/pictures/ProImages/thumbnail_Restaurangporträtt_Harpaviljongen_IG_A-11.jpg';
+import homePictureHaren from '../../assets/pictures/ProImages/thumbnail_Restaurangporträtt_Harpaviljongen_IG_A-10.jpg';
 import wineLogo from '../../assets/wine-logo.svg';
 import logoWhite from '../../assets/logo/hare-logo-green.svg';
 import NavBar from '../../components/NavBar/NavBar';
+import Button from '../Button/Button';
+import '../Button/button.css';
 
 function HeroSection({ type = 'home' }) {
 	let imageSrc = homePicture;
@@ -11,7 +14,7 @@ function HeroSection({ type = 'home' }) {
 
 	// Välj bild och logga beroende på type
 	if (type === 'home') {
-		imageSrc = homePicture;
+		imageSrc = homePictureHaren;
 		logoSrc = logoWhite;
 	} else if (type === 'wine') {
 		imageSrc = winePicture;
@@ -26,9 +29,25 @@ function HeroSection({ type = 'home' }) {
 				alt="Hero picture"
 			/>
 			<div className="hero-section__overlay"></div>
-			<figure className="hero-section__figure">
-				<img src={logoSrc} alt="hare logo" />
-			</figure>
+			<div className="hero-section__content">
+				<figure className="hero-section__figure">
+					<img src={logoSrc} alt="hare logo" />
+				</figure>
+				{type === 'home' && (
+					<div className="hero-section__cta">
+						<Button
+							className="button--hero-section"
+							text="BOKA BORD"
+							onClick={() =>
+								window.caspecoBooking?.openModal({
+									system: 'se_caferes01',
+									unit: '13',
+								})
+							}
+						/>
+					</div>
+				)}
+			</div>
 		</section>
 	);
 }

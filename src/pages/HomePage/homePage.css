@@ -6,3 +6,10 @@
 		margin-top: 3rem;
 	}
 }
+
+.home__title {
+	font-size: 1.7rem;
+	font-weight: 600;
+	letter-spacing: 0.1ch;
+	text-align: center;
+}

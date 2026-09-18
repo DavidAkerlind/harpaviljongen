@@ -30,20 +30,37 @@
 	z-index: 1;
 }
 
-.hero-section__figure {
+.hero-section__content {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+	z-index: 2;
+}
+
+.hero-section__figure {
 	margin: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 350px;
-	height: 350px;
+	width: 245px;
+	height: 245px;
 	opacity: 0;
 	animation: fadeInLogo 1.6s ease 0.4s forwards;
-	z-index: 2;
+}
+
+.hero-section__cta .button {
+	font-size: 1.3rem;
+	padding: 0.4rem 1.1rem;
+	background-color: rgba(255, 255, 255, 0.08);
+	-webkit-backdrop-filter: blur(6px);
+	backdrop-filter: blur(6px);
+	opacity: 0;
+	animation: fadeInLogo 1.6s ease 0.4s forwards;
 }
 
 .hero-section__figure img {

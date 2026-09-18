@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import './homePage.css';
 import FadeIn from '../../components/FadeIn/FadeIn';
 
@@ -10,9 +10,10 @@ import Flexbox from '../../components/Flexbox/Flexbox';
 import hareLogo from '../../assets/logo/hare-logo-blue.svg';
 import wineIllustration from '../../assets/illustrations/wineglass-filled.svg';
 import clockIllustration from '../../assets/illustrations/clock.svg';
-import PageHeader from '../../components/PageHeader/PageHeader';
+// import PageHeader from '../../components/PageHeader/PageHeader';
 import Button from '../../components/Button/Button';
-import Footer from '../../components/Footer/Footer';
+// import Footer from '../../components/Footer/Footer';
+import FooterSection from '../../components/FooterSection/FooterSection';
 import ChambreSection from '../../components/ChambreSection/ChambreSection';
 import EventCalendar from '../../components/EventCalendar/EventCalendar';
 import PageDesc from '../../components/PageDesc/PageDesc';
@@ -21,8 +22,6 @@ import SeasonBookings from '../../components/SeasonBookings/SeasonBookings';
 
 function HomePage() {
 	const location = useLocation();
-
-	const [menuUrl, setMenuUrl] = useState(null);
 
 	useEffect(() => {
 		document.title = 'Harpaviljongen – Café & Bistro i Stockholm';
@@ -39,26 +38,11 @@ function HomePage() {
 		}
 	}, [location]);
 
-	useEffect(() => {
-		fetch(
-			'https://harpaviljongen-db-api.onrender.com/api/menu-pdfs/active?type=food',
-		)
-			.then((res) => res.json())
-			.then((data) => {
-				if (data.success) {
-					const url = data.data.url.replace(
-						'/raw/upload/',
-						'/image/upload/',
-					);
-					setMenuUrl(url);
-				}
-			});
-	}, []);
 	return (
 		<section className="page page-home">
 			<NavBar />
 			<HeroSection />
-			<PageHeader text="HARPAVILJONGEN" page="home" />
+			{/* <PageHeader text="HARPAVILJONGEN" page="home" /> */}
 			{/* <PageDesc /> */}
 			{/* <Menu menuId="menu-lunch" img={hareLogo} /> */}
 			{/* <FadeIn delay={100}>
@@ -67,11 +51,11 @@ function HomePage() {
 				</Flexbox>
 			</FadeIn> */}
 
-			<FadeIn>
+			{/* <FadeIn>
 				<h2 className="section__title">
 					CAFÈ & RESTAURANG I STOCKHOLM
 				</h2>
-			</FadeIn>
+			</FadeIn> */}
 			{/* <FadeIn>
 				<h3 className="section__title">
 					<br />
@@ -79,17 +63,23 @@ function HomePage() {
 				</h3>
 			</FadeIn> */}
 
+			<FadeIn>
+				<h1 className="home__title">HARPAVILJONGEN</h1>
+			</FadeIn>
+
 			<section className="page__button-section">
-				<FadeIn>
-					<Button text="MENY" link="/MENY_HARPAN_23_JUNI.pdf" />
-				</FadeIn>
-				<FadeIn>
-					<Button
-						text="VINLISTA"
-						link="/VINLISTA_HARPAN_19_maj.pdf"
-					/>
-				</FadeIn>
-				<FadeIn>
+				<section className="page__button-section--horizontal">
+					<FadeIn>
+						<Button text="MENY" link="/Ny_meny_kommer_snart.pdf" />
+					</FadeIn>
+					<FadeIn>
+						<Button
+							text="VINLISTA"
+							link="/Ny_meny_kommer_snart.pdf"
+						/>
+					</FadeIn>
+				</section>
+				{/* <FadeIn>
 					<Button
 						text="BOKA BORD"
 						onClick={() =>
@@ -99,22 +89,22 @@ function HomePage() {
 							})
 						}
 					/>
-				</FadeIn>
-				<FadeIn>
+				</FadeIn> */}
+				{/* <FadeIn>
 					<Button text="ÖPPETTIDER" link="#openingHours" />
-				</FadeIn>
-				<FadeIn>
+				</FadeIn> */}
+				{/* <FadeIn>
 					<Button text="EVENEMANG" link="events" />
-				</FadeIn>
+				</FadeIn> */}
 				{/* <FadeIn>
 					<Button text="BOKA BORD" link={'mailto:info@harpaviljongen.com'} />
 				</FadeIn> */}
-				<FadeIn>
+				{/* <FadeIn>
 					<Button text={'CHAMBRE SÉPARÉE'} link="/chambre" />
-				</FadeIn>
-				<FadeIn>
+				</FadeIn> */}
+				{/* <FadeIn>
 					<Button text={'GALLERI'} link="/gallery" />
-				</FadeIn>
+				</FadeIn> */}
 			</section>
 			{/* <FadeIn>
 				<Flexbox gap="8rem">
@@ -139,7 +129,7 @@ function HomePage() {
 				<Button text="TILL TOPPEN" link={'#top'} />
 			</FadeIn> */}
 			<FadeIn>
-				<Footer />
+				<FooterSection />
 			</FadeIn>
 		</section>
 	);
