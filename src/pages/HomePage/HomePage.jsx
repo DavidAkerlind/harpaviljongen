@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import './homePage.css';
 import FadeIn from '../../components/FadeIn/FadeIn';
 
@@ -23,8 +23,6 @@ import SeasonBookings from '../../components/SeasonBookings/SeasonBookings';
 function HomePage() {
 	const location = useLocation();
 
-	const [menuUrl, setMenuUrl] = useState(null);
-
 	useEffect(() => {
 		document.title = 'Harpaviljongen – Café & Bistro i Stockholm';
 	}, []);
@@ -40,21 +38,6 @@ function HomePage() {
 		}
 	}, [location]);
 
-	useEffect(() => {
-		fetch(
-			'https://harpaviljongen-db-api.onrender.com/api/menu-pdfs/active?type=food',
-		)
-			.then((res) => res.json())
-			.then((data) => {
-				if (data.success) {
-					const url = data.data.url.replace(
-						'/raw/upload/',
-						'/image/upload/',
-					);
-					setMenuUrl(url);
-				}
-			});
-	}, []);
 	return (
 		<section className="page page-home">
 			<NavBar />
@@ -87,12 +70,12 @@ function HomePage() {
 			<section className="page__button-section">
 				<section className="page__button-section--horizontal">
 					<FadeIn>
-						<Button text="MENY" link="/MENY_HARPAN_23_JUNI.pdf" />
+						<Button text="MENY" link="/Ny_meny_kommer_snart.pdf" />
 					</FadeIn>
 					<FadeIn>
 						<Button
 							text="VINLISTA"
-							link="/VINLISTA_HARPAN_19_maj.pdf"
+							link="/Ny_meny_kommer_snart.pdf"
 						/>
 					</FadeIn>
 				</section>
