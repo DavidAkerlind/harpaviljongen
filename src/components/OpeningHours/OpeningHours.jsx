@@ -1,6 +1,11 @@
+import { lazy, Suspense } from 'react';
 import './openingHours.css';
 import '../Menu/menu.css';
-import BackgroundImage from '../BackgroundImage/BackgroundImage.jsx';
+
+// Lazy so framer-motion stays out of the bundle when no img is passed
+const BackgroundImage = lazy(
+	() => import('../BackgroundImage/BackgroundImage.jsx'),
+);
 import { fetchOpeningHours } from '../../API/fetchOpeningHours.js';
 import { devfetchOpeningHours } from '../../API/devfetchOpeningHours.js';
 import MenuSkeleton from '../Skeleton/Skeleton.jsx';
@@ -52,11 +57,13 @@ function OpeningHours({ img, type }) {
 				))}
 			</ul>
 			{img && (
-				<BackgroundImage
-					img={img}
-					altText={`background image opening-hours`}
-					type="opening-hours"
-				/>
+				<Suspense fallback={null}>
+					<BackgroundImage
+						img={img}
+						altText={`background image opening-hours`}
+						type="opening-hours"
+					/>
+				</Suspense>
 			)}
 		</section>
 	);

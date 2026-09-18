@@ -4,21 +4,24 @@ import './homePage.css';
 import FadeIn from '../../components/FadeIn/FadeIn';
 
 import NavBar from '../../components/NavBar/NavBar';
-import Menu from '../../components/Menu/Menu';
-import OpeningHours from '../../components/OpeningHours/OpeningHours';
-import Flexbox from '../../components/Flexbox/Flexbox';
-import hareLogo from '../../assets/logo/hare-logo-blue.svg';
-import wineIllustration from '../../assets/illustrations/wineglass-filled.svg';
-import clockIllustration from '../../assets/illustrations/clock.svg';
-// import PageHeader from '../../components/PageHeader/PageHeader';
 import Button from '../../components/Button/Button';
-// import Footer from '../../components/Footer/Footer';
 import FooterSection from '../../components/FooterSection/FooterSection';
-import ChambreSection from '../../components/ChambreSection/ChambreSection';
-import EventCalendar from '../../components/EventCalendar/EventCalendar';
-import PageDesc from '../../components/PageDesc/PageDesc';
 import HeroSection from '../../components/HeroSection/HeroSection';
-import SeasonBookings from '../../components/SeasonBookings/SeasonBookings';
+
+// Re-enable alongside the commented-out JSX below. Kept out of the import list
+// because each pulls its own CSS, so Vite cannot tree-shake them away.
+// import Menu from '../../components/Menu/Menu';
+// import OpeningHours from '../../components/OpeningHours/OpeningHours';
+// import Flexbox from '../../components/Flexbox/Flexbox';
+// import hareLogo from '../../assets/logo/hare-logo-blue.svg';
+// import wineIllustration from '../../assets/illustrations/wineglass-filled.svg';
+// import clockIllustration from '../../assets/illustrations/clock.svg';
+// import PageHeader from '../../components/PageHeader/PageHeader';
+// import Footer from '../../components/Footer/Footer';
+// import ChambreSection from '../../components/ChambreSection/ChambreSection';
+// import EventCalendar from '../../components/EventCalendar/EventCalendar';
+// import PageDesc from '../../components/PageDesc/PageDesc';
+// import SeasonBookings from '../../components/SeasonBookings/SeasonBookings';
 
 function HomePage() {
 	const location = useLocation();

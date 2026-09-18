@@ -3,7 +3,6 @@ import NavItem from '../NavItem/NavItem';
 import hareImg from '../../assets/logo/hare-logo-green.svg';
 import './NavBar.css';
 import { Link } from 'react-router-dom';
-import { link, text } from 'framer-motion/client';
 
 function NavBar({ type = 'normal' }) {
 	const [open, setOpen] = useState(false);
