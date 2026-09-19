@@ -71,5 +71,8 @@
 
 	.opening-hours-section--small {
 		border: none;
+		/* Let the surrounding column set the width instead of capping it here */
+		min-width: 0;
+		width: 100%;
 	}
 }

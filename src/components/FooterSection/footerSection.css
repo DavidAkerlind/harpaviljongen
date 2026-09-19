@@ -44,5 +44,7 @@
 
 	.footer-section__info {
 		gap: 2.5rem;
+		/* Stretch so the blocks share the grid column's width with the map */
+		align-items: stretch;
 	}
 }
