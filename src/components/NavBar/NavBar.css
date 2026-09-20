@@ -84,12 +84,13 @@
 	top: 3.8rem;
 	right: -2rem;
 	width: 60vw;
+	min-height: 92vh;
 	max-width: 320px;
 	background: var(--color-bg);
 	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
 	padding: 1.5rem;
 	border: 2px solid var(--color-blue-dark);
-	gap: 1.5rem;
+	gap: 2rem;
 	align-items: flex-start;
 	transform: translateX(100%);
 	opacity: 0;
