@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { FaInstagram, FaFacebook } from 'react-icons/fa';
 import NavItem from '../NavItem/NavItem';
 import hareImg from '../../assets/logo/hare-logo-green.svg';
 import './NavBar.css';
@@ -59,11 +60,11 @@ function NavBar({ type = 'normal' }) {
 				<li className="nav__logo-item">
 					<Link to="/" className="nav__logo" aria-label="Startsida">
 						<img
-						src={hareImg}
-						alt="Café Harpaviljongens logotyp, en hare"
-						width="1024"
-						height="1024"
-					/>
+							src={hareImg}
+							alt="Café Harpaviljongens logotyp, en hare"
+							width="1024"
+							height="1024"
+						/>
 					</Link>
 				</li>
 
@@ -89,6 +90,41 @@ function NavBar({ type = 'normal' }) {
 						<NavItem text={item.text} link={item.link} />
 					</li>
 				))}
+
+				<li className="nav__social">
+					<a
+						className="nav__social-link"
+						href="https://www.instagram.com/cafeharpaviljongen/"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Gå till våran Instagram"
+						onClick={() => setOpen(false)}>
+						<FaInstagram size={30} />
+					</a>
+					<a
+						className="nav__social-link"
+						href="https://www.facebook.com/people/Harpaviljongen/61575221844274/"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Gå till våran Facebook"
+						onClick={() => setOpen(false)}>
+						<FaFacebook size={30} />
+					</a>
+				</li>
+
+				<li className="nav__address">
+					<a
+						className="nav__address-link"
+						href="https://maps.app.goo.gl/S3mPSRHvyqAbTYzUA"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Hitta till Harpaviljongen på Google Maps"
+						onClick={() => setOpen(false)}>
+						Södra Fiskartorpsvägen 29
+						<br />
+						114 33 Stockholm
+					</a>
+				</li>
 			</ul>
 		</nav>
 	);

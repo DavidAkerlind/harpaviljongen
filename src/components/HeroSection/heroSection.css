@@ -63,6 +63,12 @@
 	animation: fadeInLogo 1.6s ease 0.4s forwards;
 }
 
+/* Solid inversion — drop the blur, sage fill, dark text */
+.hero-section__cta .button:hover {
+	background-color: var(--color-blue-dark);
+	color: var(--color-bg);
+}
+
 .hero-section__figure img {
 	width: 100%;
 	height: auto;
