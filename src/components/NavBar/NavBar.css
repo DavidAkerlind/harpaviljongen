@@ -84,7 +84,7 @@
 	top: 3.8rem;
 	right: -2rem;
 	width: 60vw;
-	min-height: 92vh;
+	min-height: 85vh;
 	max-width: 320px;
 	background: var(--color-bg);
 	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
@@ -145,6 +145,35 @@
 .nav__book-btn:hover::after {
 	transform: scaleX(1);
 	cursor: pointer;
+}
+
+/* margin-top: auto absorbs the panel's leftover height, pushing this and
+   everything after it to the bottom of the list */
+.nav__social {
+	margin-top: auto;
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.nav__social-link {
+	display: flex;
+	color: var(--color-blue-dark);
+	transition: transform 0.2s ease-in-out;
+}
+
+.nav__social-link:hover {
+	transform: scale(1.15);
+}
+
+.nav__address-link {
+	color: var(--color-blue-dark);
+	font-size: 0.9rem;
+	line-height: 1.6;
+}
+
+.nav__address-link:hover {
+	text-decoration: underline;
 }
 
 .nav__overlay {
