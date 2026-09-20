@@ -9,9 +9,13 @@
 }
 
 /* ==== CASPECO BOOKING MODAL ==== */
+/* The modal centres itself inside this iframe, so the iframe must match the
+   viewport exactly — any overshoot shifts the modal off-centre by half of it. */
 .caspeco-booking-modal-iframe {
-	width: 103% !important;
 	left: 0 !important;
+	right: 0 !important;
+	width: 100% !important;
+	max-width: 100% !important;
 }
 
 :root {

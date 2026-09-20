@@ -37,3 +37,11 @@
 .contact__link:hover {
 	text-decoration: underline;
 }
+
+@media screen and (max-width: 767px) {
+	/* Let the surrounding column set the width instead of capping it here */
+	.contact__list {
+		min-width: 0;
+		max-width: none;
+	}
+}
