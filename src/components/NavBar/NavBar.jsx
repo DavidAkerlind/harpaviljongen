@@ -4,10 +4,13 @@ import NavItem from '../NavItem/NavItem';
 import hareImg from '../../assets/logo/hare-logo-green.svg';
 import './NavBar.css';
 import { Link } from 'react-router-dom';
+import { menuPdfLink, useSiteConfig } from '../../API/useSiteConfig';
 
 function NavBar({ type = 'normal' }) {
 	const [open, setOpen] = useState(false);
 	const [scrolled, setScrolled] = useState(false);
+	const siteConfig = useSiteConfig();
+	const { pages } = siteConfig;
 
 	useEffect(() => {
 		if (type !== 'hero') return;
@@ -20,16 +23,18 @@ function NavBar({ type = 'normal' }) {
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, [type]);
 
+	// Meny/Vinlista link to the PDFs chosen in the admin; Chambre, Evenemang
+	// and Galleri are shown or hidden from the admin's "Sidor" page.
 	const navItems = [
 		{ text: 'Hem', link: '/' },
-		{ text: 'Meny', link: '/Ny_meny_kommer_snart.pdf' },
-		{ text: 'Vinlista', link: '/Ny_meny_kommer_snart.pdf' },
-		// { text: 'Chambre', link: '/chambre' },
+		{ text: 'Meny', link: menuPdfLink(siteConfig, 'food') },
+		{ text: 'Vinlista', link: menuPdfLink(siteConfig, 'wine') },
+		pages.chambre?.navbar && { text: 'Chambre', link: '/chambre' },
 		{ text: 'Öppettider', link: '#openingHours' },
-		// { text: 'Evenemang', link: '/events' },
-		// { text: 'Galleri', link: '/gallery' },
+		pages.events?.navbar && { text: 'Evenemang', link: '/events' },
+		pages.gallery?.navbar && { text: 'Galleri', link: '/gallery' },
 		// { text: 'Kontakt', link: '#contactInfo' },
-	];
+	].filter(Boolean);
 
 	return (
 		<nav
@@ -82,10 +87,10 @@ function NavBar({ type = 'normal' }) {
 					</button>
 				</li>
 
-				{navItems.map((item, index) => (
+				{navItems.map((item) => (
 					<li
 						className="nav__list-item"
-						key={index}
+						key={item.text}
 						onClick={() => setOpen(false)}>
 						<NavItem text={item.text} link={item.link} />
 					</li>

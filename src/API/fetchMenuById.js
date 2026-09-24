@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { API_URL } from './apiBase.js';
 
 export function fetchMenuById(menuID) {
 	const [fetchedMenu, setFetchedMenu] = useState([]);
@@ -9,9 +10,7 @@ export function fetchMenuById(menuID) {
 	useEffect(() => {
 		if (!menuID) return;
 		axios
-			.get(
-				`https://harpaviljongen-db-api.onrender.com/api/menus/${menuID}`,
-			)
+			.get(`${API_URL}/menus/${menuID}`)
 			.then((res) => {
 				setFetchedMenu(res.data.data);
 			})
