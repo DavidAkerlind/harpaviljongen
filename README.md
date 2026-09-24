@@ -20,10 +20,10 @@ npm install
 npm run dev   # http://localhost:5173
 ```
 
-För att köra mot ett lokalt API, skapa `.env.local` med:
+För att köra mot ett lokalt API:
 
-```env
-VITE_API_URL=http://localhost:7000/api
+```bash
+cp .env.example .env.local   # VITE_API_URL=http://localhost:7000/api
 ```
 
 Hela guiden (API, admin och hemsida lokalt + Postman) finns i API-repot: [docs/LOCAL_TESTING.md](https://github.com/DavidAkerlind/harpaviljongen-DB-API/blob/main/docs/LOCAL_TESTING.md).
