@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { API_URL } from './apiBase.js';
 
 export function fetchAllEvents() {
 	const [fetchedEvents, setFetchedEvents] = useState([]);
@@ -8,7 +9,7 @@ export function fetchAllEvents() {
 
 	useEffect(() => {
 		axios
-			.get(`https://harpaviljongen-db-api.onrender.com/api/events`)
+			.get(`${API_URL}/events`)
 			.then((res) => {
 				setFetchedEvents(res.data.data ?? []);
 			})

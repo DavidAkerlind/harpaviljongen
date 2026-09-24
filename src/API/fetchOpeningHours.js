@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { API_URL } from './apiBase.js';
 
 export function fetchOpeningHours() {
 	const [fetchedHours, setFetchedHours] = useState([]);
@@ -8,7 +9,7 @@ export function fetchOpeningHours() {
 
 	useEffect(() => {
 		axios
-			.get(`https://harpaviljongen-db-api.onrender.com/api/openingHours`)
+			.get(`${API_URL}/openingHours`)
 			.then((res) => {
 				setFetchedHours(res.data.data);
 			})

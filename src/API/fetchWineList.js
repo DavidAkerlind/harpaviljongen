@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { API_URL } from './apiBase.js';
 
 export function fetchWineList() {
 	const [fetchedWineList, setFetchedWineList] = useState([]);
@@ -8,7 +9,7 @@ export function fetchWineList() {
 
 	useEffect(() => {
 		axios
-			.get(`https://harpaviljongen-db-api.onrender.com/api/wine-list`)
+			.get(`${API_URL}/wine-list`)
 			.then((res) => {
 				setFetchedWineList(res.data.data);
 			})

@@ -7,6 +7,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import Button from '../../components/Button/Button';
 import FooterSection from '../../components/FooterSection/FooterSection';
 import HeroSection from '../../components/HeroSection/HeroSection';
+import { menuPdfLink, useSiteConfig } from '../../API/useSiteConfig';
 
 // Re-enable alongside the commented-out JSX below. Kept out of the import list
 // because each pulls its own CSS, so Vite cannot tree-shake them away.
@@ -25,6 +26,8 @@ import HeroSection from '../../components/HeroSection/HeroSection';
 
 function HomePage() {
 	const location = useLocation();
+	const siteConfig = useSiteConfig();
+	const { pages } = siteConfig;
 
 	useEffect(() => {
 		document.title = 'Harpaviljongen – Café & Bistro i Stockholm';
@@ -73,15 +76,34 @@ function HomePage() {
 			<section className="page__button-section">
 				<section className="page__button-section--horizontal">
 					<FadeIn>
-						<Button text="MENY" link="/Ny_meny_kommer_snart.pdf" />
+						<Button
+							text="MENY"
+							link={menuPdfLink(siteConfig, 'food')}
+						/>
 					</FadeIn>
 					<FadeIn>
 						<Button
 							text="VINLISTA"
-							link="/Ny_meny_kommer_snart.pdf"
+							link={menuPdfLink(siteConfig, 'wine')}
 						/>
 					</FadeIn>
 				</section>
+				{/* Shown or hidden from the admin's "Sidor" page */}
+				{pages.chambre?.home && (
+					<FadeIn>
+						<Button text={'CHAMBRE SÉPARÉE'} link="/chambre" />
+					</FadeIn>
+				)}
+				{pages.events?.home && (
+					<FadeIn>
+						<Button text="EVENEMANG" link="/events" />
+					</FadeIn>
+				)}
+				{pages.gallery?.home && (
+					<FadeIn>
+						<Button text={'GALLERI'} link="/gallery" />
+					</FadeIn>
+				)}
 				{/* <FadeIn>
 					<Button
 						text="BOKA BORD"
@@ -97,16 +119,7 @@ function HomePage() {
 					<Button text="ÖPPETTIDER" link="#openingHours" />
 				</FadeIn> */}
 				{/* <FadeIn>
-					<Button text="EVENEMANG" link="events" />
-				</FadeIn> */}
-				{/* <FadeIn>
 					<Button text="BOKA BORD" link={'mailto:info@harpaviljongen.com'} />
-				</FadeIn> */}
-				{/* <FadeIn>
-					<Button text={'CHAMBRE SÉPARÉE'} link="/chambre" />
-				</FadeIn> */}
-				{/* <FadeIn>
-					<Button text={'GALLERI'} link="/gallery" />
 				</FadeIn> */}
 			</section>
 			{/* <FadeIn>

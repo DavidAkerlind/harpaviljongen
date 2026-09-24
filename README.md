@@ -9,4 +9,23 @@ Den hämtar sin data så som menyer, öppettider och vinlista, från en databas 
 - **Backend**: Node.js med Express [ADMIN-repo](https://github.com/DavidAkerlind/harpaviljongen-admin-service)
 - **Datakälla**: MongoDB + REST API via Render [API-repo](https://github.com/DavidAkerlind/harpaviljongen-DB-API)
 
+## ⚙️ Styrs från admin
+
+Knapparna *Meny* och *Vinlista* (i menyn och på startsidan) öppnar den PDF som är vald i admin (admin.harpaviljongen.com). Om ingen är vald öppnas `Ny_meny_kommer_snart.pdf`. Länkarna och knapparna till Chambre, Evenemang och Galleri visas eller döljs också därifrån. Sidan hämtar detta från `/api/site-config` en gång per besök och sparar det i webbläsaren. Den väntar aldrig på API:t.
+
+## 🧪 Lokal utveckling
+
+```bash
+npm install
+npm run dev   # http://localhost:5173
+```
+
+För att köra mot ett lokalt API:
+
+```bash
+cp .env.example .env.local   # VITE_API_URL=http://localhost:7000/api
+```
+
+Hela guiden (API, admin och hemsida lokalt + Postman) finns i API-repot: [docs/LOCAL_TESTING.md](https://github.com/DavidAkerlind/harpaviljongen-DB-API/blob/main/docs/LOCAL_TESTING.md).
+
 🧑‍💻 Byggt av [David Åkerlind](https://github.com/DavidAkerlind)
