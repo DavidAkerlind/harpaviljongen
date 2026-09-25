@@ -12,7 +12,8 @@ const enabled =
 		/(^|\.)harpaviljongen\.com$/.test(window.location.hostname));
 
 function send(path, referrer) {
-	const url = `${API_URL}/analytics/hit`;
+	// Not /analytics/…: ad blockers and privacy browsers block such addresses
+	const url = `${API_URL}/site-config/seen`;
 	const body = JSON.stringify({ p: path, r: referrer });
 	try {
 		// A string is sent as text/plain, so the browser needs no CORS preflight

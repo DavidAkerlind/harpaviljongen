@@ -15,7 +15,7 @@ Knapparna *Meny* och *Vinlista* (i menyn och på startsidan) öppnar den PDF som
 
 ### Besöksstatistik
 
-På harpaviljongen.com skickar sidan en liten anonym räkning till API:t för varje sidvisning (`POST /api/analytics/hit`): bara sidans adress och vilken sida besökaren kom från. Inga cookies, inget sparas i webbläsaren och ingen IP-adress sparas. Siffrorna visas under *Statistik* i admin, bredvid Cloudflare Web Analytics om det är kopplat. Lokalt räknas inget, om du inte sätter `VITE_ANALYTICS=on` i `.env.local` (se `src/components/PageViews/PageViews.jsx`).
+På harpaviljongen.com skickar sidan en liten anonym räkning till API:t för varje sidvisning (`POST /api/site-config/seen`): bara sidans adress och vilken sida besökaren kom från. Inga cookies, inget sparas i webbläsaren och ingen IP-adress sparas. Siffrorna visas under *Statistik* i admin, bredvid Cloudflares siffror om det är kopplat. Cloudflares siffror räknar bara sidorna som finns i `PAGES` i API:ts `services/cloudflareAnalytics.js`, så lägg till en ny sida där också. Lokalt räknas inget, om du inte sätter `VITE_ANALYTICS=on` i `.env.local` (se `src/components/PageViews/PageViews.jsx`).
 
 ## 🧪 Lokal utveckling
 
