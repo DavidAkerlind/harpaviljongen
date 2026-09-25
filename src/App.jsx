@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import PageViews from './components/PageViews/PageViews';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const ErrorPage = lazy(() => import('./pages/ErrorPage/ErrorPage'));
@@ -39,6 +40,7 @@ function App() {
 		<div className="app">
 			<BrowserRouter>
 				<ScrollToTop />
+				<PageViews />
 				<Routes>
 					<Route
 						path="/"
