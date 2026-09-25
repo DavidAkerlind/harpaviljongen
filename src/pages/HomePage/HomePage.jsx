@@ -7,7 +7,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import Button from '../../components/Button/Button';
 import FooterSection from '../../components/FooterSection/FooterSection';
 import HeroSection from '../../components/HeroSection/HeroSection';
-import { menuPdfLink, useSiteConfig } from '../../API/useSiteConfig';
+import { menuButtons, useSiteConfig } from '../../API/useSiteConfig';
 
 // Re-enable alongside the commented-out JSX below. Kept out of the import list
 // because each pulls its own CSS, so Vite cannot tree-shake them away.
@@ -28,6 +28,10 @@ function HomePage() {
 	const location = useLocation();
 	const siteConfig = useSiteConfig();
 	const { pages } = siteConfig;
+	// Two menu buttons per row, like MENY and VINLISTA
+	const menus = menuButtons(siteConfig, 'home');
+	const menuRows = [];
+	for (let i = 0; i < menus.length; i += 2) menuRows.push(menus.slice(i, i + 2));
 
 	useEffect(() => {
 		document.title = 'Harpaviljongen – Café & Bistro i Stockholm';
@@ -74,20 +78,21 @@ function HomePage() {
 			</FadeIn>
 
 			<section className="page__button-section">
-				<section className="page__button-section--horizontal">
-					<FadeIn>
-						<Button
-							text="MENY"
-							link={menuPdfLink(siteConfig, 'food')}
-						/>
-					</FadeIn>
-					<FadeIn>
-						<Button
-							text="VINLISTA"
-							link={menuPdfLink(siteConfig, 'wine')}
-						/>
-					</FadeIn>
-				</section>
+				{/* Meny, Vinlista and the menus created in the admin */}
+				{menuRows.map((row) => (
+					<section
+						className="page__button-section--horizontal"
+						key={row.map((menu) => menu.key).join('+')}>
+						{row.map((menu) => (
+							<FadeIn key={menu.key}>
+								<Button
+									text={menu.label.toUpperCase()}
+									link={menu.link}
+								/>
+							</FadeIn>
+						))}
+					</section>
+				))}
 				{/* Shown or hidden from the admin's "Sidor" page */}
 				{pages.chambre?.home && (
 					<FadeIn>

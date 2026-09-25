@@ -4,7 +4,7 @@ import NavItem from '../NavItem/NavItem';
 import hareImg from '../../assets/logo/hare-logo-green.svg';
 import './NavBar.css';
 import { Link } from 'react-router-dom';
-import { menuPdfLink, useSiteConfig } from '../../API/useSiteConfig';
+import { menuButtons, useSiteConfig } from '../../API/useSiteConfig';
 
 function NavBar({ type = 'normal' }) {
 	const [open, setOpen] = useState(false);
@@ -23,17 +23,20 @@ function NavBar({ type = 'normal' }) {
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, [type]);
 
-	// Meny/Vinlista link to the PDFs chosen in the admin; Chambre, Evenemang
-	// and Galleri are shown or hidden from the admin's "Sidor" page.
+	// The menus (Meny, Vinlista and any created in the admin) link to the PDFs chosen in
+	// the admin; Chambre, Evenemang and Galleri are shown or hidden from its "Sidor" page.
 	const navItems = [
-		{ text: 'Hem', link: '/' },
-		{ text: 'Meny', link: menuPdfLink(siteConfig, 'food') },
-		{ text: 'Vinlista', link: menuPdfLink(siteConfig, 'wine') },
-		pages.chambre?.navbar && { text: 'Chambre', link: '/chambre' },
-		{ text: 'Öppettider', link: '#openingHours' },
-		pages.events?.navbar && { text: 'Evenemang', link: '/events' },
-		pages.gallery?.navbar && { text: 'Galleri', link: '/gallery' },
-		// { text: 'Kontakt', link: '#contactInfo' },
+		{ key: 'home', text: 'Hem', link: '/' },
+		...menuButtons(siteConfig, 'navbar').map((menu) => ({
+			key: `menu-${menu.key}`,
+			text: menu.label,
+			link: menu.link,
+		})),
+		pages.chambre?.navbar && { key: 'chambre', text: 'Chambre', link: '/chambre' },
+		{ key: 'hours', text: 'Öppettider', link: '#openingHours' },
+		pages.events?.navbar && { key: 'events', text: 'Evenemang', link: '/events' },
+		pages.gallery?.navbar && { key: 'gallery', text: 'Galleri', link: '/gallery' },
+		// { key: 'contact', text: 'Kontakt', link: '#contactInfo' },
 	].filter(Boolean);
 
 	return (
@@ -90,7 +93,7 @@ function NavBar({ type = 'normal' }) {
 				{navItems.map((item) => (
 					<li
 						className="nav__list-item"
-						key={item.text}
+						key={item.key}
 						onClick={() => setOpen(false)}>
 						<NavItem text={item.text} link={item.link} />
 					</li>

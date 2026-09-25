@@ -70,3 +70,24 @@ export function useSiteConfig() {
 
 export const menuPdfLink = (config, type) =>
 	config.menus?.[type]?.url ?? FALLBACK_MENU_PDF;
+
+// Before the admin could create menus (older API or an old cached config): Meny and Vinlista
+const legacyMenuLists = (config) => [
+	{ type: 'food', label: 'Meny', navbar: true, home: true, builtIn: true, url: config.menus?.food?.url },
+	{ type: 'wine', label: 'Vinlista', navbar: true, home: true, builtIn: true, url: config.menus?.wine?.url },
+];
+
+// The menu buttons for one place on the site, placement 'navbar' or 'home', in the
+// admin's order: [{ key, label, link }]. Meny and Vinlista open the placeholder PDF
+// when none is active; menus created in the admin are left out until one is.
+export function menuButtons(config, placement) {
+	const lists = config.menuLists ?? legacyMenuLists(config);
+	return lists
+		.filter((menu) => menu[placement])
+		.map((menu) => ({
+			key: menu.type,
+			label: menu.label,
+			link: menu.url ?? (menu.builtIn ? FALLBACK_MENU_PDF : null),
+		}))
+		.filter((button) => button.link);
+}
