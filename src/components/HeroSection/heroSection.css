@@ -20,6 +20,39 @@
 	display: block;
 }
 
+/* Home: the photos lie on top of each other; the one on show is on top, and a new one
+   fades in over the old one (HeroSlideshow.jsx). Only opacity changes, which phones and
+   laptops animate smoothly without redrawing the page. */
+.hero-slideshow {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	background-color: #000;
+}
+
+.hero-slide {
+	position: absolute;
+	inset: 0;
+}
+
+.hero-slide--current {
+	z-index: 1;
+}
+
+.hero-slide--enter {
+	animation: heroSlideIn 2s ease-in-out both;
+	will-change: opacity;
+}
+
+@keyframes heroSlideIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
 .hero-section__overlay {
 	position: absolute;
 	inset: 0;

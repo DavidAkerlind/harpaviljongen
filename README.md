@@ -17,6 +17,12 @@ Knapparna *Meny* och *Vinlista* (i menyn och på startsidan) öppnar den PDF som
 
 På harpaviljongen.com skickar sidan en liten anonym räkning till API:t för varje sidvisning (`POST /api/site-config/seen`): bara sidans adress och vilken sida besökaren kom från. Inga cookies, inget sparas i webbläsaren och ingen IP-adress sparas. Siffrorna visas under *Statistik* i admin, bredvid Cloudflares siffror om det är kopplat. Cloudflares siffror räknar bara sidorna som finns i `PAGES` i API:ts `services/cloudflareAnalytics.js`, så lägg till en ny sida där också. Lokalt räknas inget, om du inte sätter `VITE_ANALYTICS=on` i `.env.local` (se `src/components/PageViews/PageViews.jsx`).
 
+### Bildspelet på startsidan
+
+Startsidans hero är ett bildspel: första bilden visas direkt, sedan tonar nästa in var 20:e sekund under det mörka filtret. Bilderna och deras ordning, alt-texter och utsnitt finns i `src/components/HeroSection/heroSlides.js`. Bildspelet pausar när det inte syns (annan flik, bortskrollat) och står still för besökare som valt mindre rörelse i sin enhet.
+
+Byta eller lägga till en bild: lägg originalbilden (så stor som möjligt, t.ex. `7-terrassen.jpg`) i en mapp och kör `node scripts/hero-images.mjs <mappen>`. Skriptet gör WebP-filer i flera bredder i `src/assets/pictures/hero/`, och webbläsaren hämtar den som passar skärmen. Lägg sedan till namnet (`7-terrassen`) i `heroSlides.js`.
+
 ## 🧪 Lokal utveckling
 
 ```bash
