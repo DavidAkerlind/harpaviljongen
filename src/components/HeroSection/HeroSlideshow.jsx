@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-const SHOW_MS = 20000; // how long each photo is shown
+const SHOW_MS = 10000; // how long each photo is shown
 // The fade itself takes 2 s: .hero-slide--enter in heroSection.css
 
 // Which width the browser downloads. The photos sit under a dark filter, so a phone held
@@ -53,7 +53,7 @@ function useRunning(ref) {
 }
 
 // The home page's hero photos: the first straight away, then a cross-fade to the next one
-// every 20 seconds. Only the photo on show and the one fading out are in the page.
+// every 10 seconds. Only the photo on show and the one fading out are in the page.
 function HeroSlideshow({ slides }) {
 	const ref = useRef(null);
 	const [{ current, previous }, setShown] = useState({ current: 0, previous: null });

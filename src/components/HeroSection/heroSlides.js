@@ -1,5 +1,5 @@
 // The photos in the home page's hero slideshow, in order. The first one is always shown
-// first (it loads with the page), then the next one fades in every 20 seconds.
+// first (it loads with the page), then the next one fades in every 10 seconds.
 //
 // name:     the files src/assets/pictures/hero/<name>-<width>.webp, made from the original
 //           photo by scripts/hero-images.mjs

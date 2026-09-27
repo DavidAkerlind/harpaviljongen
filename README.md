@@ -19,7 +19,7 @@ På harpaviljongen.com skickar sidan en liten anonym räkning till API:t för va
 
 ### Bildspelet på startsidan
 
-Startsidans hero är ett bildspel: första bilden visas direkt, sedan tonar nästa in var 20:e sekund under det mörka filtret. Bilderna och deras ordning, alt-texter och utsnitt finns i `src/components/HeroSection/heroSlides.js`. Bildspelet pausar när det inte syns (annan flik, bortskrollat) och står still för besökare som valt mindre rörelse i sin enhet.
+Startsidans hero är ett bildspel: första bilden visas direkt, sedan tonar nästa in var 10:e sekund under det mörka filtret. Bilderna och deras ordning, alt-texter och utsnitt finns i `src/components/HeroSection/heroSlides.js`. Bildspelet pausar när det inte syns (annan flik, bortskrollat) och står still för besökare som valt mindre rörelse i sin enhet.
 
 Byta eller lägga till en bild: lägg originalbilden (så stor som möjligt, t.ex. `7-terrassen.jpg`) i en mapp och kör `node scripts/hero-images.mjs <mappen>`. Skriptet gör WebP-filer i flera bredder i `src/assets/pictures/hero/`, och webbläsaren hämtar den som passar skärmen. Lägg sedan till namnet (`7-terrassen`) i `heroSlides.js`.
 
