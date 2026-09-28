@@ -1,17 +1,17 @@
 import './heroSection.css';
 import winePicture from '../../assets/pictures/ProImages/thumbnail_Restaurangporträtt_Harpaviljongen_IG_A-11.jpg';
-import homePictureHaren from '../../assets/pictures/ProImages/thumbnail_Restaurangporträtt_Harpaviljongen_IG_A-10.jpg';
 import wineLogo from '../../assets/wine-logo.svg';
 import logoWhite from '../../assets/logo/hare-logo-green.svg';
 import NavBar from '../../components/NavBar/NavBar';
 import Button from '../Button/Button';
 import '../Button/button.css';
+import HeroSlideshow from './HeroSlideshow';
+import { HERO_SLIDES } from './heroSlides';
 
 const HERO_CONTENT = {
 	home: {
-		image: homePictureHaren,
-		imageAlt:
-			'Råbiff med krispiga rotfruktschips och krasse, serverad med ett glas bourgogne på Café Harpaviljongen',
+		// A slideshow; the photos are in heroSlides.js
+		slides: HERO_SLIDES,
 		logo: logoWhite,
 		logoAlt: 'Café Harpaviljongens logotyp, en hare',
 		logoWidth: 1024,
@@ -33,13 +33,17 @@ function HeroSection({ type = 'home' }) {
 	return (
 		<section className={`hero-section hero-section--${type}`}>
 			{/* <NavBar type="hero" /> */}
-			<img
-				className="hero-section__img"
-				src={content.image}
-				alt={content.imageAlt}
-				fetchPriority="high"
-				decoding="async"
-			/>
+			{content.slides ? (
+				<HeroSlideshow slides={content.slides} />
+			) : (
+				<img
+					className="hero-section__img"
+					src={content.image}
+					alt={content.imageAlt}
+					fetchPriority="high"
+					decoding="async"
+				/>
+			)}
 			<div className="hero-section__overlay"></div>
 			<div className="hero-section__content">
 				<figure className="hero-section__figure">
