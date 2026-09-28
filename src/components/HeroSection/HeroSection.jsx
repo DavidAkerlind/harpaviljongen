@@ -6,12 +6,12 @@ import NavBar from '../../components/NavBar/NavBar';
 import Button from '../Button/Button';
 import '../Button/button.css';
 import HeroSlideshow from './HeroSlideshow';
-import { HERO_SLIDES } from './heroSlides';
+import { useHero } from './useHero';
 
 const HERO_CONTENT = {
 	home: {
-		// A slideshow; the photos are in heroSlides.js
-		slides: HERO_SLIDES,
+		// A slideshow of the photos from the admin (Startbild), see useHero.js
+		slideshow: true,
 		logo: logoWhite,
 		logoAlt: 'Café Harpaviljongens logotyp, en hare',
 		logoWidth: 1024,
@@ -28,13 +28,27 @@ const HERO_CONTENT = {
 	},
 };
 
+// The slideshow once its photos are known; until then the dark background, as while a photo loads
+function HomeSlideshow() {
+	const hero = useHero();
+	if (!hero) return <div className="hero-slideshow" />;
+	return (
+		<HeroSlideshow
+			slides={hero.slides}
+			slideshow={hero.slideshow}
+			intervalSeconds={hero.intervalSeconds}
+			shuffle={hero.shuffle}
+		/>
+	);
+}
+
 function HeroSection({ type = 'home' }) {
 	const content = HERO_CONTENT[type] ?? HERO_CONTENT.home;
 	return (
 		<section className={`hero-section hero-section--${type}`}>
 			{/* <NavBar type="hero" /> */}
-			{content.slides ? (
-				<HeroSlideshow slides={content.slides} />
+			{content.slideshow ? (
+				<HomeSlideshow />
 			) : (
 				<img
 					className="hero-section__img"
