@@ -6,6 +6,10 @@
 // alt:      what the photo shows, for screen readers and search engines
 // position: which part of the photo stays in view when the screen's shape differs from the
 //           photo's (CSS object-position, '50% 50%' = the middle)
+//
+// Photos 2–6 only existed as 480×640 px, so they were enlarged 4× with an AI upscaler
+// (Real-ESRGAN x4plus) before scripts/hero-images.mjs. If larger originals turn up, run
+// them through the script instead.
 
 const SLIDES = [
 	{
