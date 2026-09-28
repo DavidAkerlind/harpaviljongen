@@ -39,14 +39,12 @@ function prepare(slide) {
 	});
 }
 
-// Running only while it can be seen: not in a background tab, not scrolled away, and not
-// for visitors who have asked their device for less motion
+// Running only while it can be seen: not in a background tab, not scrolled away.
+// It also runs for visitors who have asked their device for less motion: nothing moves,
+// the photos only fade into each other, which is what such devices use instead of motion.
 function useRunning(ref) {
 	const [tabVisible, setTabVisible] = useState(() => !document.hidden);
 	const [inView, setInView] = useState(true);
-	const [calm] = useState(
-		() => window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false
-	);
 
 	useEffect(() => {
 		const onVisibility = () => setTabVisible(!document.hidden);
@@ -61,7 +59,7 @@ function useRunning(ref) {
 		return () => observer.disconnect();
 	}, [ref]);
 
-	return tabVisible && inView && !calm;
+	return tabVisible && inView;
 }
 
 // The home page's hero photos: the first straight away, then a cross-fade to the next one
