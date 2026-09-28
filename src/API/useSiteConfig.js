@@ -31,6 +31,9 @@ function readCache() {
 let current = readCache() ?? DEFAULT_CONFIG;
 let request = null;
 const listeners = new Set();
+// Whether the API has answered (or failed) on this page load
+let ready = false;
+const readyListeners = new Set();
 
 function loadSiteConfig() {
 	if (!request) {
@@ -50,6 +53,10 @@ function loadSiteConfig() {
 					'[useSiteConfig] Could not load site config:',
 					err.message,
 				);
+			})
+			.finally(() => {
+				ready = true;
+				readyListeners.forEach((listener) => listener(true));
 			});
 	}
 	return request;
@@ -66,6 +73,20 @@ export function useSiteConfig() {
 	}, []);
 
 	return config;
+}
+
+// true once the API has answered or failed, so something waiting for it can stop waiting
+export function useSiteConfigReady() {
+	const [isReady, setReady] = useState(ready);
+
+	useEffect(() => {
+		readyListeners.add(setReady);
+		loadSiteConfig();
+		setReady(ready);
+		return () => readyListeners.delete(setReady);
+	}, []);
+
+	return isReady;
 }
 
 export const menuPdfLink = (config, type) =>

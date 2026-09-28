@@ -1,7 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
-const SHOW_MS = 10000; // how long each photo is shown
-// The fade itself takes 2 s: .hero-slide--enter in heroSection.css
+// The fade takes 2 s (.hero-slide--enter in heroSection.css), within each photo's time
 
 // The next photo starts loading when the rest of the page has, but no later than this.
 // Something slow on the live site (the booking window, the API waking up) can keep the
@@ -62,30 +61,65 @@ function useRunning(ref) {
 	return tabVisible && inView;
 }
 
+// The order the photos are shown in on this visit. Shuffled: the first stays first and the
+// rest are shuffled once, so every photo comes before any is shown again.
+function playOrder(slides, shuffle) {
+	if (!shuffle || slides.length < 3) return slides;
+	const [first, ...rest] = slides;
+	for (let i = rest.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[rest[i], rest[j]] = [rest[j], rest[i]];
+	}
+	return [first, ...rest];
+}
+
 // The home page's hero photos: the first straight away, then a cross-fade to the next one
-// every 10 seconds. Only the photo on show and the one fading out are in the page.
-function HeroSlideshow({ slides }) {
+// every intervalSeconds. Only the photo on show and the one fading out are in the page.
+// slides: [{ key, src, srcSet, alt, position }], set in the admin (see useHero.js).
+// The list can change while it runs (the admin's photos arrive after the built-in ones);
+// the photo on show then fades to the new first photo.
+function HeroSlideshow({ slides, slideshow = true, intervalSeconds = 10, shuffle = false }) {
 	const ref = useRef(null);
-	const [{ current, previous }, setShown] = useState({ current: 0, previous: null });
+	const order = useMemo(() => playOrder(slides, shuffle), [slides, shuffle]);
+	const [{ current, previous }, setShown] = useState(() => ({
+		current: order[0]?.key,
+		previous: null,
+	}));
 	const [retries, setRetries] = useState(0);
-	const running = useRunning(ref) && slides.length > 1;
+
+	// Every photo seen, so the one fading out can still be drawn after the list has changed
+	const seen = useRef(new Map());
+	for (const slide of order) seen.current.set(slide.key, slide);
+
+	const index = order.findIndex((slide) => slide.key === current);
+	// The photo on show should give way to the first one: it's no longer in the list, or the
+	// slideshow is off and it isn't the first
+	const replaced = order.length > 0 && (index === -1 || (!slideshow && index !== 0));
+	const visible = useRunning(ref);
+	const running = visible && (replaced || (slideshow && order.length > 1));
 
 	useEffect(() => {
 		if (!running) return;
 		let cancelled = false;
 		let timer;
-		const waited = new Promise((resolve) => {
-			timer = setTimeout(resolve, SHOW_MS);
-		});
+		const waited = replaced
+			? Promise.resolve()
+			: new Promise((resolve) => {
+					timer = setTimeout(resolve, intervalSeconds * 1000);
+				});
 		// Load the next photo while this one is shown, after the rest of the page
-		const next = Promise.race([pageLoaded(), delay(PRELOAD_AFTER_MS)]).then(async () => {
-			for (let step = 1; step < slides.length; step++) {
-				const candidate = (current + step) % slides.length;
-				if (cancelled) return null;
-				if (await prepare(slides[candidate])) return candidate;
+		const start = replaced ? -1 : index;
+		const count = replaced ? order.length : order.length - 1;
+		const next = Promise.race([pageLoaded(), delay(replaced ? 0 : PRELOAD_AFTER_MS)]).then(
+			async () => {
+				for (let step = 1; step <= count; step++) {
+					const candidate = order[(start + step) % order.length];
+					if (cancelled) return null;
+					if (await prepare(candidate)) return candidate.key;
+				}
+				return null;
 			}
-			return null;
-		});
+		);
 		Promise.all([next, waited]).then(([candidate]) => {
 			if (cancelled) return;
 			if (candidate !== null) setShown({ current: candidate, previous: current });
@@ -96,20 +130,25 @@ function HeroSlideshow({ slides }) {
 			cancelled = true;
 			clearTimeout(timer);
 		};
-	}, [current, running, slides, retries]);
+	}, [current, index, order, replaced, running, intervalSeconds, retries]);
+
+	const onShow = [previous, current]
+		.filter((key, i) => key != null && (i === 1 || key !== current))
+		.map((key) => seen.current.get(key))
+		.filter(Boolean);
 
 	return (
 		<div className="hero-slideshow" ref={ref}>
-			{slides.map((slide, i) => {
-				if (i !== current && i !== previous) return null;
-				const entering = i === current && previous !== null;
+			{onShow.map((slide) => {
+				const isCurrent = slide.key === current;
+				const entering = isCurrent && previous !== null;
 				return (
 					<img
-						key={slide.name}
+						key={slide.key}
 						className={[
 							'hero-section__img',
 							'hero-slide',
-							i === current && 'hero-slide--current',
+							isCurrent && 'hero-slide--current',
 							entering && 'hero-slide--enter',
 						]
 							.filter(Boolean)
@@ -118,9 +157,9 @@ function HeroSlideshow({ slides }) {
 						sizes={SIZES}
 						srcSet={slide.srcSet}
 						src={slide.src}
-						alt={i === current ? slide.alt : ''}
+						alt={isCurrent ? (slide.alt ?? '') : ''}
 						style={{ objectPosition: slide.position }}
-						fetchPriority={i === 0 && previous === null ? 'high' : undefined}
+						fetchPriority={isCurrent && previous === null ? 'high' : undefined}
 						decoding="async"
 						onAnimationEnd={
 							entering ? () => setShown((shown) => ({ ...shown, previous: null })) : undefined

@@ -1,5 +1,6 @@
-// The photos in the home page's hero slideshow, in order. The first one is always shown
-// first (it loads with the page), then the next one fades in every 10 seconds.
+// The website's built-in photos for the home page's hero, in order. They are shown until
+// photos are uploaded in the admin (Startbild), and when the admin can't be reached on a
+// first visit. The admin's settings (slideshow on/off, time, order) apply to these too.
 //
 // name:     the files src/assets/pictures/hero/<name>-<width>.webp, made from the original
 //           photo by scripts/hero-images.mjs
@@ -65,6 +66,8 @@ function sources(name) {
 	};
 }
 
-export const HERO_SLIDES = SLIDES.map((slide) => ({ ...slide, ...sources(slide.name) })).filter(
-	(slide) => slide.src
-);
+export const HERO_SLIDES = SLIDES.map((slide) => ({
+	...slide,
+	key: slide.name,
+	...sources(slide.name),
+})).filter((slide) => slide.src);

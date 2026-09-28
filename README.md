@@ -15,13 +15,15 @@ Knapparna *Meny* och *Vinlista* (i menyn och på startsidan) öppnar den PDF som
 
 ### Besöksstatistik
 
-På harpaviljongen.com skickar sidan en liten anonym räkning till API:t för varje sidvisning (`POST /api/site-config/seen`): bara sidans adress och vilken sida besökaren kom från. Inga cookies, inget sparas i webbläsaren och ingen IP-adress sparas. Siffrorna visas under *Statistik* i admin, bredvid Cloudflares siffror om det är kopplat. Cloudflares siffror räknar bara sidorna som finns i `PAGES` i API:ts `services/cloudflareAnalytics.js`, så lägg till en ny sida där också. Lokalt räknas inget, om du inte sätter `VITE_ANALYTICS=on` i `.env.local` (se `src/components/PageViews/PageViews.jsx`).
+På harpaviljongen.com skickar sidan en liten anonym räkning till API:t för varje sidvisning (`POST /api/site-config/seen`): bara sidans adress och vilken sida besökaren kom från. Inga cookies, inget sparas i webbläsaren och ingen IP-adress sparas. Siffrorna visas under *Statistik* i admin, ihoplagda med Cloudflares siffror om det är kopplat. Cloudflares siffror räknar bara sidorna som finns i `PAGES` i API:ts `services/cloudflareAnalytics.js`, så lägg till en ny sida där också. Lokalt räknas inget, om du inte sätter `VITE_ANALYTICS=on` i `.env.local` (se `src/components/PageViews/PageViews.jsx`).
 
 ### Bildspelet på startsidan
 
-Startsidans hero är ett bildspel: första bilden visas direkt, sedan tonar nästa in var 10:e sekund under det mörka filtret. Bilderna och deras ordning, alt-texter och utsnitt finns i `src/components/HeroSection/heroSlides.js`. Bildspelet pausar när det inte syns (annan flik, bortskrollat). Det går även för besökare som valt mindre rörelse i sin enhet, eftersom bilderna bara tonar över i varandra.
+Startsidans hero är ett bildspel som styrs från admin (**Startbild**): vilka bilder som visas, i vilken ordning, vilken som visas först, tid per bild (5–30 s), slumpad ordning eller bildspelet av (då visas bara den första bilden). Hemsidan läser det från `GET /api/site-config` (`hero`) och sparar det i webbläsaren, så en återkommande besökare ser rätt bilder direkt. Bilderna ligger i Cloudinary, som ger varje skärm rätt bredd och format (WebP/AVIF). Logiken finns i `src/components/HeroSection/useHero.js` och `HeroSlideshow.jsx`.
 
-Byta eller lägga till en bild: lägg originalbilden (så stor som möjligt, t.ex. `7-terrassen.jpg`) i en mapp och kör `node scripts/hero-images.mjs <mappen>`. Skriptet gör WebP-filer i flera bredder i `src/assets/pictures/hero/`, och webbläsaren hämtar den som passar skärmen. Lägg sedan till namnet (`7-terrassen`) i `heroSlides.js`.
+Bildspelet pausar när det inte syns (annan flik, bortskrollat). Det går även för besökare som valt mindre rörelse i sin enhet, eftersom bilderna bara tonar över i varandra.
+
+**Inbyggda bilder:** tills bilder har laddats upp i admin, och om API:t inte svarar vid ett första besök (efter 1,5 s), visas hemsidans egna bilder i `src/components/HeroSection/heroSlides.js`, med admin-inställningarna när de är kända. Byta eller lägga till en inbyggd bild: lägg originalbilden (så stor som möjligt, t.ex. `7-terrassen.jpg`) i en mapp och kör `node scripts/hero-images.mjs <mappen>`. Skriptet gör WebP-filer i flera bredder i `src/assets/pictures/hero/`, och webbläsaren hämtar den som passar skärmen. Lägg sedan till namnet (`7-terrassen`) i `heroSlides.js`.
 
 ## 🧪 Lokal utveckling
 
