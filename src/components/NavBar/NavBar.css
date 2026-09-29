@@ -166,6 +166,33 @@
 	transform: scale(1.15);
 }
 
+/* "Få vårat nyhetsbrev →", above the address */
+.nav__newsletter-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+	padding: 0;
+	background: none;
+	color: var(--color-blue-dark);
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+/* Only the words are underlined, not the arrow */
+.nav__newsletter-text {
+	text-decoration: underline;
+	text-underline-offset: 4px;
+}
+
+.nav__newsletter-arrow {
+	transition: transform 0.2s ease-in-out;
+}
+
+.nav__newsletter-link:hover .nav__newsletter-arrow,
+.nav__newsletter-link:focus-visible .nav__newsletter-arrow {
+	transform: translateX(4px);
+}
+
 .nav__address-link {
 	color: var(--color-blue-dark);
 	font-size: 0.9rem;
