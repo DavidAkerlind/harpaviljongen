@@ -25,6 +25,16 @@ Bildspelet pausar när det inte syns (annan flik, bortskrollat). Det går även 
 
 **Inbyggda bilder:** tills bilder har laddats upp i admin, och om API:t inte svarar vid ett första besök (efter 1,5 s), visas hemsidans egna bilder i `src/components/HeroSection/heroSlides.js`, med admin-inställningarna när de är kända. Byta eller lägga till en inbyggd bild: lägg originalbilden (så stor som möjligt, t.ex. `7-terrassen.jpg`) i en mapp och kör `node scripts/hero-images.mjs <mappen>`. Skriptet gör WebP-filer i flera bredder i `src/assets/pictures/hero/`, och webbläsaren hämtar den som passar skärmen. Lägg sedan till namnet (`7-terrassen`) i `heroSlides.js`.
 
+### Nyhetsbrev (förslag)
+
+Nyhetsbrevets anmälningsformulär görs i restaurangens konto hos Get a Newsletter (getanewsletter.com), som en popup. Hemsidan laddar deras skript först när en besökare klickar på en av våra knappar (`src/components/Newsletter/getanewsletter.js`), så sidan är lika snabb som förut och ingen får en popup de inte bett om. Popupens visningsregel hos Get a Newsletter bör därför vara "direkt" (0 sekunder) på alla sidor.
+
+Tre förslag på hur sidan ber om anmälningar, som visas bara med `?nyhetsbrev=1`, `2` eller `3` i adressen (det kommer ihåg valet i fliken, `?nyhetsbrev=0` stänger av). Se `src/components/Newsletter/variant.js`:
+
+1. **Tidningen:** en liten tidningsförstasida på startsidan ovanför sidfoten, som vecklas ut när den syns.
+2. **Brevet:** ett kuvert nere till höger på alla sidor, där ett brev tittar upp då och då.
+3. **Vykortet:** ett vykort som glider in när besökaren tittat runt en stund. Efter "Nej tack" eller "Ja tack" kommer det inte tillbaka på 30 dagar.
+
 ## 🧪 Lokal utveckling
 
 ```bash

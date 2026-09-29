@@ -2,6 +2,15 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import PageViews from './components/PageViews/PageViews';
+import { NEWSLETTER_VARIANT } from './components/Newsletter/variant';
+
+// The newsletter suggestions that show on every page (see Newsletter/variant.js)
+const NewsletterEnvelope = lazy(
+	() => import('./components/Newsletter/NewsletterEnvelope'),
+);
+const NewsletterPostcard = lazy(
+	() => import('./components/Newsletter/NewsletterPostcard'),
+);
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const ErrorPage = lazy(() => import('./pages/ErrorPage/ErrorPage'));
@@ -41,6 +50,16 @@ function App() {
 			<BrowserRouter>
 				<ScrollToTop />
 				<PageViews />
+				{NEWSLETTER_VARIANT === '2' && (
+					<Suspense fallback={null}>
+						<NewsletterEnvelope />
+					</Suspense>
+				)}
+				{NEWSLETTER_VARIANT === '3' && (
+					<Suspense fallback={null}>
+						<NewsletterPostcard />
+					</Suspense>
+				)}
 				<Routes>
 					<Route
 						path="/"

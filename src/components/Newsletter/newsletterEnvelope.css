@@ -1,0 +1,282 @@
+/* Suggestion 2, "Brevet": the envelope button in the bottom right corner */
+.envelope {
+	position: fixed;
+	right: 1.25rem;
+	bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+	z-index: 60;
+	display: flex;
+	align-items: center;
+	gap: 0;
+	height: 60px;
+	padding: 0 12px;
+	border: 1px solid var(--color-blue-dark);
+	border-radius: 999px;
+	background-color: rgba(6, 52, 36, 0.86);
+	-webkit-backdrop-filter: blur(8px);
+	backdrop-filter: blur(8px);
+	color: var(--color-blue-dark);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+	cursor: pointer;
+	opacity: 0;
+	transform: translateY(140%);
+	pointer-events: none;
+	transition:
+		opacity 0.5s ease,
+		transform 0.7s cubic-bezier(0.3, 1.45, 0.5, 1),
+		background-color 0.25s ease,
+		gap 0.4s ease;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.envelope.is-shown {
+	opacity: 1;
+	transform: none;
+	pointer-events: auto;
+}
+
+.envelope:focus-visible {
+	outline: 2px solid var(--color-blue-dark);
+	outline-offset: 3px;
+}
+
+.envelope:active {
+	transform: scale(0.95);
+}
+
+/* ---- The text, which folds away on phones after a while ---- */
+.envelope__label {
+	max-width: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	font-family: var(--font-alt);
+	font-size: 0.95rem;
+	font-weight: 500;
+	letter-spacing: 0.16em;
+	opacity: 0;
+	transition:
+		max-width 0.45s ease,
+		opacity 0.3s ease,
+		padding 0.45s ease;
+}
+
+.envelope.is-labelled {
+	gap: 0.4rem;
+}
+
+.envelope.is-labelled .envelope__label {
+	max-width: 12rem;
+	opacity: 1;
+	padding-right: 0.5rem;
+}
+
+/* On a computer the text always shows, and the button fills on hover */
+@media (hover: hover) and (min-width: 768px) {
+	.envelope {
+		gap: 0.4rem;
+	}
+
+	.envelope .envelope__label {
+		max-width: 12rem;
+		opacity: 1;
+		padding-right: 0.5rem;
+	}
+
+	.envelope:hover {
+		background-color: var(--color-blue-dark);
+		color: var(--color-bg);
+	}
+
+	.envelope:hover .envelope__back,
+	.envelope:hover .envelope__front,
+	.envelope:hover .envelope__flap,
+	.envelope:hover .envelope__flap-open {
+		fill: var(--color-blue-dark);
+		stroke: var(--color-bg);
+	}
+
+	/* Hover: the envelope opens and the letter comes up */
+	.envelope:hover .envelope__flap {
+		animation: none !important;
+		transform: scaleY(0);
+	}
+
+	.envelope:hover .envelope__flap-open {
+		animation: none !important;
+		transform: scaleY(1);
+		transition: transform 0.2s ease 0.12s;
+	}
+
+	.envelope:hover .envelope__letter {
+		animation: none !important;
+		transform: translateY(-11px);
+		transition: transform 0.3s ease 0.22s;
+	}
+}
+
+/* ---- The envelope ---- */
+.envelope__icon {
+	position: relative;
+	display: grid;
+	place-items: center;
+	width: 36px;
+	height: 40px;
+	margin-top: -6px;
+}
+
+.envelope__icon svg {
+	overflow: visible;
+}
+
+.envelope__back,
+.envelope__front,
+.envelope__flap,
+.envelope__flap-open {
+	fill: var(--color-bg);
+	stroke: var(--color-blue-dark);
+	stroke-width: 1.4;
+	stroke-linejoin: round;
+	transition:
+		fill 0.25s ease,
+		stroke 0.25s ease;
+}
+
+.envelope__letter rect {
+	fill: #dfe5d6;
+}
+
+.envelope__letter path {
+	stroke: #405c3f;
+	stroke-width: 1.2;
+	stroke-linecap: round;
+}
+
+.envelope__flap,
+.envelope__flap-open,
+.envelope__letter {
+	transform-box: fill-box;
+}
+
+.envelope__flap {
+	transform-origin: 50% 0%;
+	transition: transform 0.15s ease;
+}
+
+.envelope__letter {
+	transition: transform 0.2s ease;
+}
+
+.envelope__flap-open {
+	transform-origin: 50% 100%;
+	transform: scaleY(0);
+}
+
+/* Every 9 seconds: the flap opens, a letter peeks up and goes back */
+.envelope.is-shown:not(.is-clicked) .envelope__flap {
+	animation: envelopeFlapClose 9s ease-in-out 1.5s infinite;
+}
+
+.envelope.is-shown:not(.is-clicked) .envelope__flap-open {
+	animation: envelopeFlapOpen 9s ease-in-out 1.5s infinite;
+}
+
+.envelope.is-shown:not(.is-clicked) .envelope__letter {
+	animation: envelopeLetter 9s ease-in-out 1.5s infinite;
+}
+
+@keyframes envelopeFlapClose {
+	0%,
+	4%,
+	40%,
+	100% {
+		transform: scaleY(1);
+	}
+	8%,
+	36% {
+		transform: scaleY(0);
+	}
+}
+
+@keyframes envelopeFlapOpen {
+	0%,
+	8%,
+	36%,
+	100% {
+		transform: scaleY(0);
+	}
+	12%,
+	32% {
+		transform: scaleY(1);
+	}
+}
+
+@keyframes envelopeLetter {
+	0%,
+	12%,
+	30%,
+	100% {
+		transform: translateY(0);
+	}
+	18%,
+	26% {
+		transform: translateY(-11px);
+	}
+}
+
+/* ---- "Something new": a dot that pulses until the first click ---- */
+.envelope__dot {
+	position: absolute;
+	top: 12px;
+	right: -3px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #d9e4c8;
+	box-shadow: 0 0 0 2px var(--color-bg);
+}
+
+.envelope__dot::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	border-radius: 50%;
+	background-color: #d9e4c8;
+	animation: envelopePulse 2.4s ease-out infinite;
+}
+
+@keyframes envelopePulse {
+	0% {
+		transform: scale(1);
+		opacity: 0.7;
+	}
+	100% {
+		transform: scale(2.8);
+		opacity: 0;
+	}
+}
+
+.envelope.is-clicked .envelope__dot {
+	display: none;
+}
+
+@media screen and (max-width: 767px) {
+	.envelope {
+		right: 1rem;
+		bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+		height: 56px;
+		padding: 0 10px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.envelope,
+	.envelope__label {
+		transition-duration: 0.01s;
+	}
+
+	.envelope__flap,
+	.envelope__flap-open,
+	.envelope__letter,
+	.envelope__dot::after {
+		animation: none !important;
+	}
+}
