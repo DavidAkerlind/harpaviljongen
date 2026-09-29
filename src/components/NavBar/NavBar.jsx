@@ -3,7 +3,7 @@ import { FaInstagram, FaFacebook } from 'react-icons/fa';
 import NavItem from '../NavItem/NavItem';
 import hareImg from '../../assets/logo/hare-logo-green.svg';
 import './NavBar.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { menuButtons, useSiteConfig } from '../../API/useSiteConfig';
 
 function NavBar({ type = 'normal' }) {
@@ -11,6 +11,7 @@ function NavBar({ type = 'normal' }) {
 	const [scrolled, setScrolled] = useState(false);
 	const siteConfig = useSiteConfig();
 	const { pages } = siteConfig;
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		if (type !== 'hero') return;
@@ -119,6 +120,25 @@ function NavBar({ type = 'normal' }) {
 						<FaFacebook size={30} />
 					</a>
 				</li>
+
+				{/* For now it takes the visitor to the signup field above the map. It should open
+				    Get a Newsletter's popup, once we know how their script opens it on a click. */}
+				{siteConfig.newsletter !== false && (
+					<li className="nav__newsletter">
+						<button
+							type="button"
+							className="nav__newsletter-link"
+							onClick={() => {
+								setOpen(false);
+								navigate('/#nyhetsbrev');
+							}}>
+							<span className="nav__newsletter-text">Få vårat nyhetsbrev</span>
+							<span className="nav__newsletter-arrow" aria-hidden="true">
+								→
+							</span>
+						</button>
+					</li>
+				)}
 
 				<li className="nav__address">
 					<a

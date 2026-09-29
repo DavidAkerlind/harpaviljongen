@@ -3,8 +3,9 @@ import axios from 'axios';
 import { API_URL } from '../../API/apiBase';
 import './newsletter.css';
 
-// The newsletter signup: an email field with the button in it. The address goes to the
-// API, which passes it on to the restaurant's Get a Newsletter account (POST /api/newsletter).
+// The newsletter signup: an email field with the button in it (under it on phones). The
+// address goes to the API, which passes it on to the restaurant's Get a Newsletter account
+// (POST /api/newsletter). "Få vårat nyhetsbrev" in the menu leads here (#nyhetsbrev).
 function errorText(err) {
 	const status = err.response?.status;
 	if (status === 400) return 'Kontrollera e-postadressen och försök igen.';
@@ -33,7 +34,7 @@ function Newsletter() {
 	};
 
 	return (
-		<section className="newsletter" aria-labelledby="newsletter-title">
+		<section className="newsletter" id="nyhetsbrev" aria-labelledby="newsletter-title">
 			<h2 className="newsletter__title" id="newsletter-title">
 				NYHETSBREV
 			</h2>

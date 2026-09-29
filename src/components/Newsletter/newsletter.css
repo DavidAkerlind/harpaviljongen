@@ -1,5 +1,5 @@
 /* The newsletter signup in the footer: title, a line of text, and one bordered field with
-   the button inside it on the right */
+   the button inside it on the right. On phones the button is on its own under the field. */
 .newsletter {
 	width: 100%;
 	display: flex;
@@ -141,8 +141,32 @@
 		font-weight: bold;
 	}
 
+	/* The field and the button apart, the button full width under the field */
+	.newsletter__form {
+		flex-direction: column;
+		gap: 0.75rem;
+		border: 0;
+	}
+
+	.newsletter__form:focus-within {
+		box-shadow: none;
+	}
+
+	.newsletter__input {
+		flex: none;
+		width: 100%;
+		border: 1px solid var(--color-blue-dark);
+		transition: box-shadow 0.2s ease;
+	}
+
+	.newsletter__input:focus {
+		box-shadow: 0 0 0 1px var(--color-blue-dark);
+	}
+
 	.newsletter__button {
-		padding: 0 1rem;
+		padding: 0.85rem 1rem;
+		border: 1px solid var(--color-blue-dark);
+		font-size: 1rem;
 	}
 }
 

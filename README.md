@@ -27,7 +27,9 @@ Bildspelet pausar när det inte syns (annan flik, bortskrollat). Det går även 
 
 ### Nyhetsbrev
 
-Sidfoten på startsidan har ett fält för e-post med knappen **Prenumerera** (sist på datorn, ovanför kartan på mobilen). Adressen skickas till API:t (`POST /api/newsletter`), som lämnar den vidare till ett prenumerationsformulär i restaurangens konto hos Get a Newsletter. Fältet visas inte när API:t säger att det inte är kopplat än (`newsletter: false` i `/api/site-config`). Se `src/components/Newsletter/Newsletter.jsx` och docs/GO_LIVE.md i API:t.
+- **Popupen:** restaurangens popup-formulär från Get a Newsletter laddas på varje sida (skriptet ligger i `<head>` i `index.html`). Hur popupen ser ut, när den visas (t.ex. efter några sekunder) och hur ofta ställs in i Get a Newsletter-kontot.
+- **Fältet i sidfoten** på startsidan: e-post och **Prenumerera** (sist på datorn, ovanför kartan på mobilen, där knappen ligger under fältet). Adressen skickas till API:t (`POST /api/newsletter`), som lämnar den vidare till ett prenumerationsformulär i Get a Newsletter. Fältet visas inte när API:t säger att det inte är kopplat än (`newsletter: false` i `/api/site-config`). Se `src/components/Newsletter/Newsletter.jsx` och docs/GO_LIVE.md i API:t.
+- **"Få vårat nyhetsbrev →"** i hamburgermenyn, ovanför adressen: leder än så länge till fältet i sidfoten (`/#nyhetsbrev`).
 
 ## 🧪 Lokal utveckling
 
