@@ -12,9 +12,26 @@
 
 .footer-section__body {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	grid-template-areas:
+		'info map'
+		'newsletter newsletter';
 	gap: 3rem;
 	align-items: stretch;
+}
+
+.footer-section__info {
+	grid-area: info;
+}
+
+.footer-section__map {
+	grid-area: map;
+}
+
+/* Last on a computer, under the hours and the map */
+.footer-section__newsletter {
+	grid-area: newsletter;
+	padding-top: 1rem;
 }
 
 .footer-section__info {
@@ -37,9 +54,18 @@
 		gap: 2.5rem;
 	}
 
+	/* On a phone the newsletter comes between the hours and the map */
 	.footer-section__body {
-		grid-template-columns: 1fr;
+		grid-template-columns: minmax(0, 1fr);
+		grid-template-areas:
+			'info'
+			'newsletter'
+			'map';
 		gap: 2.5rem;
+	}
+
+	.footer-section__newsletter {
+		padding-top: 0;
 	}
 
 	.footer-section__info {

@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import { lazy, Suspense, useEffect } from 'react';
+import { useEffect } from 'react';
 import './homePage.css';
 import FadeIn from '../../components/FadeIn/FadeIn';
 
@@ -8,12 +8,6 @@ import Button from '../../components/Button/Button';
 import FooterSection from '../../components/FooterSection/FooterSection';
 import HeroSection from '../../components/HeroSection/HeroSection';
 import { menuButtons, useSiteConfig } from '../../API/useSiteConfig';
-import { NEWSLETTER_VARIANT } from '../../components/Newsletter/variant';
-
-// Newsletter suggestion 1, above the footer (see Newsletter/variant.js)
-const NewsletterGazette = lazy(
-	() => import('../../components/Newsletter/NewsletterGazette'),
-);
 
 // Re-enable alongside the commented-out JSX below. Kept out of the import list
 // because each pulls its own CSS, so Vite cannot tree-shake them away.
@@ -155,11 +149,6 @@ function HomePage() {
 			{/* <FadeIn>
 				<Button text="TILL TOPPEN" link={'#top'} />
 			</FadeIn> */}
-			{NEWSLETTER_VARIANT === '1' && (
-				<Suspense fallback={null}>
-					<NewsletterGazette />
-				</Suspense>
-			)}
 			<FadeIn>
 				<FooterSection />
 			</FadeIn>
