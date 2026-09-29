@@ -7,11 +7,13 @@
 	align-items: center;
 	text-align: center;
 	color: var(--color-blue-dark);
+	/* A red that stands out on the dark green (about 5:1) */
+	--newsletter-error: #ec7f75;
 }
 
 .newsletter__title {
 	margin-bottom: 0.6rem;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: 600;
 	letter-spacing: 2px;
 }
@@ -29,11 +31,22 @@
 	width: 100%;
 	max-width: 30rem;
 	border: 1px solid var(--color-blue-dark);
-	transition: box-shadow 0.2s ease;
+	transition:
+		box-shadow 0.2s ease,
+		border-color 0.2s ease;
 }
 
 .newsletter__form:focus-within {
 	box-shadow: 0 0 0 1px var(--color-blue-dark);
+}
+
+/* Only red when the address is missing or wrong */
+.newsletter__form--invalid {
+	border-color: var(--newsletter-error);
+}
+
+.newsletter__form--invalid:focus-within {
+	box-shadow: 0 0 0 1px var(--newsletter-error);
 }
 
 .newsletter__label,
@@ -114,9 +127,19 @@
 }
 
 .newsletter__error {
+	max-width: 30rem;
 	margin-top: 0.75rem;
 	font-size: 0.9rem;
-	color: #e8b4a8;
+	line-height: 1.4;
+	color: var(--newsletter-error);
+	animation: newsletterError 0.25s ease both;
+}
+
+@keyframes newsletterError {
+	from {
+		opacity: 0;
+		transform: translateY(-4px);
+	}
 }
 
 .newsletter__thanks {
@@ -156,11 +179,22 @@
 		flex: none;
 		width: 100%;
 		border: 1px solid var(--color-blue-dark);
-		transition: box-shadow 0.2s ease;
+		transition:
+			box-shadow 0.2s ease,
+			border-color 0.2s ease;
 	}
 
 	.newsletter__input:focus {
 		box-shadow: 0 0 0 1px var(--color-blue-dark);
+	}
+
+	/* The border is on the field here, so the field turns red */
+	.newsletter__form--invalid .newsletter__input {
+		border-color: var(--newsletter-error);
+	}
+
+	.newsletter__form--invalid .newsletter__input:focus {
+		box-shadow: 0 0 0 1px var(--newsletter-error);
 	}
 
 	.newsletter__button {
@@ -172,6 +206,7 @@
 
 @media (prefers-reduced-motion: reduce) {
 	.newsletter__button:disabled,
+	.newsletter__error,
 	.newsletter__thanks {
 		animation: none;
 	}
