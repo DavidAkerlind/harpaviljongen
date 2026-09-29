@@ -23,3 +23,5 @@ utils
 *.njsproj
 *.sln
 *.sw?
+.claude
+diagram-haren*
