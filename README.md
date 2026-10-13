@@ -1,6 +1,6 @@
 # Harpaviljongen
 
-**Harpaviljongen** är en hemsida för resturangen Harpaviljongen i Stockholm. Den är byggd med React i JavaScript utav David Åkerlind 2025. Den innehåller en övergripande Startsida, Meny-sida, Chambre sépareé-sida,  Galleri-sida och Event-sida. Sidan är uppe på en egen domän www.harpaviljongen.com, och hostas med hjälp av Github-pages och Spaceship.com.
+**Harpaviljongen** är en hemsida för resturangen Harpaviljongen i Stockholm. Den är byggd med React i JavaScript utav David Åkerlind 2025. Den innehåller en övergripande Startsida, Meny-sida, Chambre sépareé-sida,  Galleri-sida och Event-sida. Sidan är uppe på en egen domän harpaviljongen.com och hostas på Cloudflare Pages (bygger automatiskt från `main`).
 Den hämtar sin data så som menyer, öppettider och vinlista, från en databas på MongoDB från ett API som är externt och hostas på Render. Det finns även en Admin-tänst kopplat till detta API som är byggt också med Ract och Mu-material, Som är mitta andra repo [harpaviljongen-admin-service](https://github.com/DavidAkerlind/harpaviljongen-admin-service) Där kan man ändra menyerna, eventen och öppettiderna som visas på hemsidan. Det är en relativ säker tjänst som bygger på inloggning med krypterat lösenord och separation of concerns är applicerat. Den använder dock inga JWT-Tokens. 
 
 ## 🛠️ Teknisk översikt
@@ -30,6 +30,20 @@ Bildspelet pausar när det inte syns (annan flik, bortskrollat). Det går även 
 - **Popupen:** restaurangens popup-formulär från Get a Newsletter laddas på varje sida (skriptet ligger i `<head>` i `index.html`). Hur popupen ser ut, när den visas (t.ex. efter några sekunder) och hur ofta ställs in i Get a Newsletter-kontot.
 - **Fältet i sidfoten** på startsidan: e-post och **Prenumerera** (sist på datorn, ovanför kartan på mobilen, där knappen ligger under fältet). Adressen skickas till API:t (`POST /api/newsletter`), som lämnar den vidare till ett prenumerationsformulär i Get a Newsletter. Fältet visas inte när API:t säger att det inte är kopplat än (`newsletter: false` i `/api/site-config`). Se `src/components/Newsletter/Newsletter.jsx` och docs/GO_LIVE.md i API:t.
 - **"Få vårat nyhetsbrev →"** i hamburgermenyn, ovanför adressen: leder än så länge till fältet i sidfoten (`/#nyhetsbrev`).
+
+### Säkerhetshuvuden (`public/_headers`)
+
+Cloudflare Pages skickar med det här på varje sida:
+
+- `X-Content-Type-Options`, `Referrer-Policy`, `Strict-Transport-Security` (bara HTTPS) och `X-Frame-Options: SAMEORIGIN`, så att andra webbplatser inte kan visa hemsidan i en ram.
+- En **Content-Security-Policy** med bara regler som inte kan påverka besökarna: inga plugins, ingen `<base>` och ingen inramning från andra sidor.
+- En **Content-Security-Policy-Report-Only** som listar vad sidan får ladda: egna filer, API:t, Cloudinary, Google Fonts och Maps, Caspeco (bordsbokningen) och Get a Newsletter. Den **blockerar ingenting**. Webbläsaren skriver bara `[Report Only]` i konsolen om något annat laddas. Därför slutar bordsbokningen aldrig fungera om Caspeco börjar hämta något från en ny adress. Hur man gör den skarp (så att den faktiskt stoppar främmande kod) står i [docs/SECURITY_GUIDE.md](https://github.com/DavidAkerlind/harpaviljongen-DB-API/blob/main/docs/SECURITY_GUIDE.md) i API-repot.
+
+Ändrar du Get a Newsletter-skriptet i `<head>` i `index.html` ändras dess fingeravtryck (`'sha256-…'` i `script-src`). Räkna ut det nya och byt ut det i `public/_headers`:
+
+```bash
+node -e "const s=require('fs').readFileSync('index.html','utf8').match(/<script>([\s\S]*?)<\/script>/)[1]; console.log('sha256-'+require('crypto').createHash('sha256').update(s).digest('base64'))"
+```
 
 ## 🧪 Lokal utveckling
 
