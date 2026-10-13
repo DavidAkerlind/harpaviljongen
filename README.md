@@ -37,7 +37,7 @@ Cloudflare Pages skickar med det här på varje sida:
 
 - `X-Content-Type-Options`, `Referrer-Policy`, `Strict-Transport-Security` (bara HTTPS) och `X-Frame-Options: SAMEORIGIN`, så att andra webbplatser inte kan visa hemsidan i en ram.
 - En **Content-Security-Policy** med bara regler som inte kan påverka besökarna: inga plugins, ingen `<base>` och ingen inramning från andra sidor.
-- En **Content-Security-Policy-Report-Only** som listar vad sidan får ladda: egna filer, API:t, Cloudinary, Google Fonts och Maps, Caspeco (bordsbokningen) och Get a Newsletter. Den **blockerar ingenting**. Webbläsaren skriver bara `[Report Only]` i konsolen om något annat laddas. Därför slutar bordsbokningen aldrig fungera om Caspeco börjar hämta något från en ny adress. Hur man gör den skarp (så att den faktiskt stoppar främmande kod) står i [docs/SECURITY_GUIDE.md](https://github.com/DavidAkerlind/harpaviljongen-DB-API/blob/main/docs/SECURITY_GUIDE.md) i API-repot.
+- En **Content-Security-Policy-Report-Only** som listar vad sidan får ladda: egna filer, API:t, Cloudinary, Google Fonts och Maps, Caspeco (bordsbokningen), Get a Newsletter och Cloudflares besöksstatistik. Den **blockerar ingenting**. Webbläsaren skriver bara `[Report Only]` i konsolen om något annat laddas. Därför slutar bordsbokningen aldrig fungera om Caspeco börjar hämta något från en ny adress. Hur man gör den skarp (så att den faktiskt stoppar främmande kod) står i [docs/SECURITY_GUIDE.md](https://github.com/DavidAkerlind/harpaviljongen-DB-API/blob/main/docs/SECURITY_GUIDE.md) i API-repot.
 
 Ändrar du Get a Newsletter-skriptet i `<head>` i `index.html` ändras dess fingeravtryck (`'sha256-…'` i `script-src`). Räkna ut det nya och byt ut det i `public/_headers`:
 

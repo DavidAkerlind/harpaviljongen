@@ -1,16 +1,17 @@
 # Security headers for every page. The first Content-Security-Policy is enforced and can't
 # affect visitors: no plugins, no <base> tricks, and only this site may show it in a frame.
 # The Report-Only one lists what the site is allowed to load (our own files, the API,
-# Cloudinary, Google Fonts and Maps, Caspeco's booking and Get a Newsletter). It blocks
-# nothing; the browser only writes "[Report Only]" in the console for anything else, so
-# booking keeps working when Caspeco changes. See README.md before making it enforced.
+# Cloudinary, Google Fonts and Maps, Caspeco's booking, Get a Newsletter and Cloudflare's
+# visitor statistics). It blocks nothing; the browser only writes "[Report Only]" in the
+# console for anything else, so booking keeps working when Caspeco changes. See README.md
+# before making it enforced.
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
   Strict-Transport-Security: max-age=31536000
   Content-Security-Policy: object-src 'none'; base-uri 'self'; frame-ancestors 'self'
-  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'sha256-5iT6CcbzfP7jDZ8F9gvmvvmwIrdWTJrjFofQ9jJP01I=' https://booking.caspeco.net https://*.caspeco.net https://*.caspeco.se https://cdn.getanewsletter.com https://*.getanewsletter.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.caspeco.net https://*.getanewsletter.com; font-src 'self' data: https://fonts.gstatic.com https://*.caspeco.net https://*.getanewsletter.com; img-src 'self' data: blob: https://res.cloudinary.com https://*.caspeco.net https://*.caspeco.se https://*.getanewsletter.com https://*.gansub.com https://*.google.com https://*.gstatic.com https://*.googleapis.com; connect-src 'self' https://harpaviljongen-db-api.onrender.com https://*.caspeco.net https://*.caspeco.se https://*.getanewsletter.com https://*.gansub.com; frame-src https://maps.google.com https://www.google.com https://*.caspeco.net https://*.caspeco.se https://*.getanewsletter.com https://*.gansub.com; form-action 'self' https://*.getanewsletter.com https://*.gansub.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'sha256-5iT6CcbzfP7jDZ8F9gvmvvmwIrdWTJrjFofQ9jJP01I=' https://booking.caspeco.net https://*.caspeco.net https://*.caspeco.se https://cdn.getanewsletter.com https://*.getanewsletter.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.caspeco.net https://*.getanewsletter.com; font-src 'self' data: https://fonts.gstatic.com https://*.caspeco.net https://*.getanewsletter.com; img-src 'self' data: blob: https://res.cloudinary.com https://*.caspeco.net https://*.caspeco.se https://*.getanewsletter.com https://gansub.com https://*.gansub.com https://*.google.com https://*.gstatic.com https://*.googleapis.com; connect-src 'self' https://harpaviljongen-db-api.onrender.com https://*.caspeco.net https://*.caspeco.se https://*.getanewsletter.com https://gansub.com https://*.gansub.com https://cloudflareinsights.com; frame-src https://maps.google.com https://www.google.com https://*.caspeco.net https://*.caspeco.se https://*.getanewsletter.com https://gansub.com https://*.gansub.com; form-action 'self' https://*.getanewsletter.com https://gansub.com https://*.gansub.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'
 
 /index.html
   Cache-Control: no-cache, no-store, must-revalidate
