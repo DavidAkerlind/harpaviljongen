@@ -51,7 +51,7 @@ Här byter personalen meny-PDF:er och öppettider, väljer bilderna på startsid
   <img src="docs/readme/phones-admin.webp" width="75%" alt="Adminen i mobilen: översikten, statistiken och öppettiderna, med menyraden längst ner">
 </p>
 
-| | |
+| I admin | Vad man gör där |
 |---|---|
 | **Menyer** | Ladda upp menyn och vinlistan som PDF och välj vilken som visas. Egna menyer (t.ex. *Lunchmeny*) får egna knappar. |
 | **Öppettider** | Visas i sidfoten på hemsidan. |
