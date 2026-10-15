@@ -23,7 +23,7 @@
 
 ## 🐇 Om sidan
 
-Byggd med React av David Åkerlind 2025. Hemsidan har en startsida, meny, vinlista, Chambre séparée, galleri och evenemang. Den ligger på Cloudflare Pages och bygger automatiskt från `main`.
+Byggd med React av David Åkerlind 2025-2026. Hemsidan har en startsida, meny, vinlista, Chambre séparée, galleri och evenemang. Den ligger på Cloudflare Pages och bygger automatiskt från `main`.
 
 Allt som ändras ofta (menyer, öppettider, bilderna på startsidan och vilka sidor som syns) hämtas från ett eget API på Render med en MongoDB-databas. Personalen ändrar det i en egen admin på admin.harpaviljongen.com, med inloggning och två roller (admin och personal).
 
