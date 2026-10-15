@@ -1,13 +1,13 @@
 # Harpaviljongen
 
 **Harpaviljongen** är en hemsida för resturangen Harpaviljongen i Stockholm. Den är byggd med React i JavaScript utav David Åkerlind 2025. Den innehåller en övergripande Startsida, Meny-sida, Chambre sépareé-sida,  Galleri-sida och Event-sida. Sidan är uppe på en egen domän harpaviljongen.com och hostas på Cloudflare Pages (bygger automatiskt från `main`).
-Den hämtar sin data så som menyer, öppettider och vinlista, från en databas på MongoDB från ett API som är externt och hostas på Render. Det finns även en Admin-tänst kopplat till detta API som är byggt också med Ract och Mu-material, Som är mitta andra repo [harpaviljongen-admin-service](https://github.com/DavidAkerlind/harpaviljongen-admin-service) Där kan man ändra menyerna, eventen och öppettiderna som visas på hemsidan. Det är en relativ säker tjänst som bygger på inloggning med krypterat lösenord och separation of concerns är applicerat. Den använder dock inga JWT-Tokens. 
+Den hämtar sin data så som menyer, öppettider och vinlista, från en databas på MongoDB från ett API som är externt och hostas på Render. Det finns även en Admin-tänst kopplat till detta API som är byggt också med Ract och Mu-material. Där kan man ändra menyerna, eventen och öppettiderna som visas på hemsidan. Det är en relativ säker tjänst som bygger på inloggning med krypterat lösenord och separation of concerns är applicerat. Den använder dock inga JWT-Tokens. 
 
 ## 🛠️ Teknisk översikt
 - **Frontend**: React + JavaScript [Hemsidan](https://harpaviljongen.com/)
 
-- **Backend**: Node.js med Express [ADMIN-repo](https://github.com/DavidAkerlind/harpaviljongen-admin-service)
-- **Datakälla**: MongoDB + REST API via Render [API-repo](https://github.com/DavidAkerlind/harpaviljongen-DB-API)
+- **Backend**: Node.js med Express
+- **Datakälla**: MongoDB + REST API via Render
 
 ## ⚙️ Styrs från admin
 
@@ -37,7 +37,7 @@ Cloudflare Pages skickar med det här på varje sida:
 
 - `X-Content-Type-Options`, `Referrer-Policy`, `Strict-Transport-Security` (bara HTTPS) och `X-Frame-Options: SAMEORIGIN`, så att andra webbplatser inte kan visa hemsidan i en ram.
 - En **Content-Security-Policy** med bara regler som inte kan påverka besökarna: inga plugins, ingen `<base>` och ingen inramning från andra sidor.
-- En **Content-Security-Policy-Report-Only** som listar vad sidan får ladda: egna filer, API:t, Cloudinary, Google Fonts och Maps, Caspeco (bordsbokningen), Get a Newsletter och Cloudflares besöksstatistik. Den **blockerar ingenting**. Webbläsaren skriver bara `[Report Only]` i konsolen om något annat laddas. Därför slutar bordsbokningen aldrig fungera om Caspeco börjar hämta något från en ny adress. Hur man gör den skarp (så att den faktiskt stoppar främmande kod) står i [docs/SECURITY_GUIDE.md](https://github.com/DavidAkerlind/harpaviljongen-DB-API/blob/main/docs/SECURITY_GUIDE.md) i API-repot.
+- En **Content-Security-Policy-Report-Only** som listar vad sidan får ladda: egna filer, API:t, Cloudinary, Google Fonts och Maps, Caspeco (bordsbokningen), Get a Newsletter och Cloudflares besöksstatistik. Den **blockerar ingenting**. Webbläsaren skriver bara `[Report Only]` i konsolen om något annat laddas. Därför slutar bordsbokningen aldrig fungera om Caspeco börjar hämta något från en ny adress. Hur man gör den skarp (så att den faktiskt stoppar främmande kod) står i `docs/SECURITY_GUIDE.md` i API-repot.
 
 Ändrar du Get a Newsletter-skriptet i `<head>` i `index.html` ändras dess fingeravtryck (`'sha256-…'` i `script-src`). Räkna ut det nya och byt ut det i `public/_headers`:
 
@@ -58,6 +58,6 @@ För att köra mot ett lokalt API:
 cp .env.example .env.local   # VITE_API_URL=http://localhost:7000/api
 ```
 
-Hela guiden (API, admin och hemsida lokalt + Postman) finns i API-repot: [docs/LOCAL_TESTING.md](https://github.com/DavidAkerlind/harpaviljongen-DB-API/blob/main/docs/LOCAL_TESTING.md).
+Hela guiden (API, admin och hemsida lokalt + Postman) finns i API-repot: `docs/LOCAL_TESTING.md`.
 
 🧑‍💻 Byggt av [David Åkerlind](https://github.com/DavidAkerlind)
